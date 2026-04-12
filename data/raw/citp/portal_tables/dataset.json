@@ -1,0 +1,200 @@
+[
+    {
+        "dataset_name": "SFN_dosage",
+        "manuscript_id": 11000,
+        "doi": "10.1101/2025.05.11.653363",
+        "author": "Sedore et al.",
+        "journal": "bioRxiv 2025.05.11.653363",
+        "year": 2025,
+        "dataset_description": "Sulforaphane study",
+        "plot_ids": "101850",
+        "has_stats": true
+    },
+    {
+        "dataset_name": "ATRA_reproducibility",
+        "manuscript_id": 9000,
+        "doi": "10.7554/eLife.104375",
+        "author": "Banse et al.",
+        "journal": "eLife 13:RP104375",
+        "year": 2025,
+        "dataset_description": "Retinoic acid study",
+        "plot_ids": "101660,101620,101650,101590,101600,101610,101630,101640,101670",
+        "has_stats": true
+    },
+    {
+        "dataset_name": "ATRA_PROP_briggsae_tropicalis",
+        "manuscript_id": 9000,
+        "doi": "10.7554/eLife.104375",
+        "author": "Banse et al.",
+        "journal": "eLife 13:RP104375",
+        "year": 2025,
+        "dataset_description": "ATRA, PROP briggsae and tropicalis study",
+        "plot_ids": null,
+        "has_stats": false
+    },
+    {
+        "dataset_name": "ATRA_computational_predictions",
+        "manuscript_id": 9000,
+        "doi": "10.7554/eLife.104375",
+        "author": "Banse et al.",
+        "journal": "eLife 13:RP104375",
+        "year": 2025,
+        "dataset_description": "Computational predictions study",
+        "plot_ids": "101680,101690,101700,101710,101720,101730,101740,101750,101760,101770,101780,101790,101800,101810,101820,101830,101840",
+        "has_stats": true
+    },
+    {
+        "dataset_name": "GTE_ACARB_AEST_NDGA_RAPA",
+        "manuscript_id": 4000,
+        "doi": "10.1007/s11357-023-00978-0",
+        "author": "Banse et al.",
+        "journal": "GeroScience 46:2239\u20132251",
+        "year": 2024,
+        "dataset_description": "GTE, ACARB, AEST, NDGA, and RAPA study",
+        "plot_ids": "101490,101290,101440,101140,101190,101240,101340,101390,101540,101500,101300,101450,101150,101200,101250,101350,101400,101550,101510,101310,101460,101160,101210,101260,101360,101410,101560,101520,101320,101470,101170,101220,101270,101370,101420,101570,101530,101330,101480,101180,101230,101280,101380,101430,101580",
+        "has_stats": true
+    },
+    {
+        "dataset_name": "AgingCell_metformin",
+        "manuscript_id": 3000,
+        "doi": "10.1111/acel.13488",
+        "author": "Onken et al.",
+        "journal": "Aging Cell e13488",
+        "year": 2021,
+        "dataset_description": "Metformin study",
+        "plot_ids": "100940,100900,100930,100870,100880,100890,100910,100920,100950",
+        "has_stats": true
+    },
+    {
+        "dataset_name": "AgingCell_antidiabetic",
+        "manuscript_id": 3000,
+        "doi": "10.1111/acel.13488",
+        "author": "Onken et al.",
+        "journal": "Aging Cell e13488",
+        "year": 2021,
+        "dataset_description": "Antidiabetic study",
+        "plot_ids": "101080,100960,101020,101090,100970,101030,101100,100980,101040,101110,100990,101050,101120,101000,101060,101130,101010,101070",
+        "has_stats": true
+    },
+    {
+        "dataset_name": "ALM_NP1_PG_RVL",
+        "manuscript_id": 2000,
+        "doi": "10.1007/s11357-019-00108-9",
+        "author": "Banse et al.",
+        "journal": "GeroScience 41:945\u2013960",
+        "year": 2019,
+        "dataset_description": "ALM NP1, PG, and RVL study",
+        "plot_ids": "100720,100660,100600,100630,100690,100730,100670,100610,100640,100700,100740,100680,100620,100650,100710",
+        "has_stats": false
+    },
+    {
+        "dataset_name": "ALM_AKG_ThioT",
+        "manuscript_id": 2000,
+        "doi": "10.1007/s11357-019-00108-9",
+        "author": "Banse et al.",
+        "journal": "GeroScience 41:945\u2013960",
+        "year": 2019,
+        "dataset_description": "ALM AKG and ThioT study",
+        "plot_ids": "100800,100770,100790,100750,100760,100780,100860,100830,100850,100810,100820,100840",
+        "has_stats": false
+    },
+    {
+        "dataset_name": "ALM_baseline",
+        "manuscript_id": 2000,
+        "doi": "10.1007/s11357-019-00108-9",
+        "author": "Banse et al.",
+        "journal": "GeroScience 41:945\u2013960",
+        "year": 2019,
+        "dataset_description": "Automated lifespan baseline data",
+        "plot_ids": null,
+        "has_stats": false
+    },
+    {
+        "dataset_name": "NatureComm_lifespan_chemical",
+        "manuscript_id": 1000,
+        "doi": "10.1038/ncomms14256",
+        "author": "Lucanic et al.",
+        "journal": "Nature Communications 8:14256",
+        "year": 2017,
+        "dataset_description": "Lifespan chemicals study",
+        "plot_ids": "100500,100200,100400,100000,100100,100300,100510,100210,100410,100010,100110,100310,100520,100220,100420,100020,100120,100320,100530,100230,100430,100030,100130,100330,100540,100240,100440,100040,100140,100340,100550,100250,100450,100050,100150,100350,100560,100260,100460,100060,100160,100360,100570,100270,100470,100070,100170,100370,100580,100280,100480,100080,100180,100380,100590,100290,100490,100090,100190,100390",
+        "has_stats": true
+    },
+    {
+        "dataset_name": "NatureComm_manual_baseline",
+        "manuscript_id": 1000,
+        "doi": "10.1038/ncomms14256",
+        "author": "Lucanic et al.",
+        "journal": "Nature Communications 8:14256",
+        "year": 2017,
+        "dataset_description": "Manual lifespan baseline data",
+        "plot_ids": null,
+        "has_stats": false
+    },
+    {
+        "dataset_name": "Micropub_leve",
+        "manuscript_id": 12000,
+        "doi": "10.17912/micropub.biology.001987",
+        "author": "Akella et al.",
+        "journal": "microPublication Biology 001987",
+        "year": 2026,
+        "dataset_description": "Levetiracetam negative result",
+        "plot_ids": null,
+        "has_stats": true
+    },
+    {
+        "dataset_name": "Micropub_baku_tami",
+        "manuscript_id": 10000,
+        "doi": "10.17912/micropub.biology.001517",
+        "author": "Banse et al.",
+        "journal": "microPublication Biology 001517",
+        "year": 2025,
+        "dataset_description": "Bakuchiol, tamibarotene negative result",
+        "plot_ids": null,
+        "has_stats": true
+    },
+    {
+        "dataset_name": "Micropub_diuron",
+        "manuscript_id": 8000,
+        "doi": "10.17912/micropub.biology.000448",
+        "author": "Osman et al.",
+        "journal": "microPublication Biology 000448",
+        "year": 2021,
+        "dataset_description": "Diuron negative result",
+        "plot_ids": null,
+        "has_stats": true
+    },
+    {
+        "dataset_name": "Micropub_obtca",
+        "manuscript_id": 7000,
+        "doi": "10.17912/micropub.biology.000257",
+        "author": "Morshead et al.",
+        "journal": "microPublication Biology 000257",
+        "year": 2020,
+        "dataset_description": "Obeticholic acid negative result",
+        "plot_ids": null,
+        "has_stats": true
+    },
+    {
+        "dataset_name": "Micropub_bgpa",
+        "manuscript_id": 6000,
+        "doi": "10.17912/micropub.biology.000207",
+        "author": "Coleman-Hulbert et al.",
+        "journal": "microPublication Biology 000207",
+        "year": 2020,
+        "dataset_description": "\u03b2-GPA negative result",
+        "plot_ids": null,
+        "has_stats": true
+    },
+    {
+        "dataset_name": "Micropub_imtb",
+        "manuscript_id": 5000,
+        "doi": "10.17912/micropub.biology.000131",
+        "author": "Coleman-Hulbert et al.",
+        "journal": "microPublication Biology 000131",
+        "year": 2019,
+        "dataset_description": "Imatinib negative result",
+        "plot_ids": null,
+        "has_stats": true
+    }
+]

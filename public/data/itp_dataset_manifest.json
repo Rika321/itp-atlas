@@ -1,0 +1,210 @@
+{
+  "generated_at_utc": "2026-04-12T09:01:06.980040+00:00",
+  "latest_public_cohort_downloaded": "C2020",
+  "combined_csv": "data/processed/itp_lifespan_all.csv",
+  "union_columns": [
+    "population",
+    "cohort",
+    "site",
+    "sex",
+    "id",
+    "group",
+    "Rx(ppm)",
+    "age_initiation(mo)",
+    "status",
+    "dead",
+    "age(days)",
+    "DOB",
+    "DOE",
+    "l",
+    "m",
+    "n",
+    "o"
+  ],
+  "cohorts_in_combined_csv": [
+    "C2004",
+    "C2005",
+    "C2006",
+    "C2007",
+    "C2009",
+    "C2010",
+    "C2011",
+    "C2012",
+    "C2013",
+    "C2014",
+    "C2015",
+    "C2016",
+    "C2017",
+    "C2018",
+    "C2019",
+    "C2020"
+  ],
+  "raw_sources": {
+    "normalized_csv_repo": {
+      "source": "matthost/lifespancharts",
+      "repo_url": null,
+      "repo_commit": null,
+      "files": [
+        {
+          "file": "data/raw/lifespancharts/ITP_C2004_Lifespan.csv",
+          "cohort": "C2004",
+          "bytes": 104601,
+          "row_count_excluding_header": 1969
+        },
+        {
+          "file": "data/raw/lifespancharts/ITP_C2005_Lifespan.csv",
+          "cohort": "C2005",
+          "bytes": 105806,
+          "row_count_excluding_header": 1974
+        },
+        {
+          "file": "data/raw/lifespancharts/ITP_C2006_Lifespan.csv",
+          "cohort": "C2006",
+          "bytes": 117541,
+          "row_count_excluding_header": 2172
+        },
+        {
+          "file": "data/raw/lifespancharts/ITP_C2007_Lifespan.csv",
+          "cohort": "C2007",
+          "bytes": 106179,
+          "row_count_excluding_header": 2008
+        },
+        {
+          "file": "data/raw/lifespancharts/ITP_C2009_Lifespan.csv",
+          "cohort": "C2009",
+          "bytes": 125739,
+          "row_count_excluding_header": 2332
+        },
+        {
+          "file": "data/raw/lifespancharts/ITP_C2010_Lifespan.csv",
+          "cohort": "C2010",
+          "bytes": 97788,
+          "row_count_excluding_header": 1768
+        },
+        {
+          "file": "data/raw/lifespancharts/ITP_C2011_Lifespan.csv",
+          "cohort": "C2011",
+          "bytes": 114679,
+          "row_count_excluding_header": 2082
+        },
+        {
+          "file": "data/raw/lifespancharts/ITP_C2012_Lifespan.csv",
+          "cohort": "C2012",
+          "bytes": 77851,
+          "row_count_excluding_header": 1460
+        },
+        {
+          "file": "data/raw/lifespancharts/ITP_C2013_Lifespan.csv",
+          "cohort": "C2013",
+          "bytes": 100998,
+          "row_count_excluding_header": 1847
+        },
+        {
+          "file": "data/raw/lifespancharts/ITP_C2014_Lifespan.csv",
+          "cohort": "C2014",
+          "bytes": 155225,
+          "row_count_excluding_header": 2040
+        },
+        {
+          "file": "data/raw/lifespancharts/ITP_C2015_Lifespan.csv",
+          "cohort": "C2015",
+          "bytes": 151773,
+          "row_count_excluding_header": 2624
+        },
+        {
+          "file": "data/raw/lifespancharts/ITP_C2016_Lifespan.csv",
+          "cohort": "C2016",
+          "bytes": 127055,
+          "row_count_excluding_header": 2382
+        },
+        {
+          "file": "data/raw/lifespancharts/ITP_C2017_Lifespan.csv",
+          "cohort": "C2017",
+          "bytes": 164514,
+          "row_count_excluding_header": 2916
+        },
+        {
+          "file": "data/raw/lifespancharts/ITP_C2018_Lifespan.csv",
+          "cohort": "C2018",
+          "bytes": 93424,
+          "row_count_excluding_header": 1509
+        },
+        {
+          "file": "data/raw/lifespancharts/ITP_C2019_Lifespan.csv",
+          "cohort": "C2019",
+          "bytes": 151500,
+          "row_count_excluding_header": 2635
+        },
+        {
+          "file": "data/raw/lifespancharts/ITP_C2020_Lifespan.csv",
+          "cohort": "C2020",
+          "bytes": 165742,
+          "row_count_excluding_header": 2869
+        }
+      ]
+    },
+    "mpd_workbooks": [
+      {
+        "file": "data/raw/mpd/ITP_C2017_Lifespan.xlsx",
+        "cohort": "C2017",
+        "download_url": "https://phenome.jax.org/getcurationfile?id=737&mode=download",
+        "bytes": 160705,
+        "row_count_excluding_header": 2916
+      },
+      {
+        "file": "data/raw/mpd/ITP_C2018_Lifespan.xlsx",
+        "cohort": "C2018",
+        "download_url": "https://phenome.jax.org/getcurationfile?id=651&mode=download",
+        "bytes": 85683,
+        "row_count_excluding_header": 1509
+      },
+      {
+        "file": "data/raw/mpd/ITP_C2019_Lifespan.xlsx",
+        "cohort": "C2019",
+        "download_url": "https://phenome.jax.org/getcurationfile?id=708&mode=download",
+        "bytes": 150891,
+        "row_count_excluding_header": 2635
+      },
+      {
+        "file": "data/raw/mpd/ITP_C2020_Lifespan.xlsx",
+        "cohort": "C2020",
+        "download_url": "https://phenome.jax.org/getcurationfile?id=710&mode=download",
+        "bytes": 208193,
+        "row_count_excluding_header": 2869
+      }
+    ]
+  },
+  "overlap_checks_mpd_vs_normalized_csv": [
+    {
+      "cohort": "C2017",
+      "mpd_xlsx_rows": 2916,
+      "normalized_csv_rows": 2916,
+      "row_count_match": true
+    },
+    {
+      "cohort": "C2018",
+      "mpd_xlsx_rows": 1509,
+      "normalized_csv_rows": 1509,
+      "row_count_match": true
+    },
+    {
+      "cohort": "C2019",
+      "mpd_xlsx_rows": 2635,
+      "normalized_csv_rows": 2635,
+      "row_count_match": true
+    },
+    {
+      "cohort": "C2020",
+      "mpd_xlsx_rows": 2869,
+      "normalized_csv_rows": 2869,
+      "row_count_match": true
+    }
+  ],
+  "notes": [
+    "C2008 is not present in the downloaded normalized cohort CSV set.",
+    "C2014 adds DOB and DOE columns.",
+    "C2019 and C2020 add trailing columns named l, m, n, and o.",
+    "The normalized CSV corrects the single C2017 CAPT typo to Capt, matching the MPD workbook record for mouse UM77854.",
+    "The combined CSV preserves the union schema across all cohorts."
+  ]
+}

@@ -1,0 +1,633 @@
+{
+  "downloaded_at_utc": "2026-04-12T04:38:46.934022+00:00",
+  "source": {
+    "portal_home": "https://citpaging.org/portal/home",
+    "portal_info": "https://citpaging.org/portal/info",
+    "portal_tables": {
+      "dataset": "https://citpaging.org/static/data_tables/dataset.json",
+      "summary": "https://citpaging.org/static/data_tables/summary.json",
+      "compound": "https://citpaging.org/static/data_tables/compound.json",
+      "strain": "https://citpaging.org/static/data_tables/strain.json",
+      "rnaseq": "https://citpaging.org/static/data_tables/rnaseq.json"
+    }
+  },
+  "counts": {
+    "datasets": 18,
+    "summary_rows": 453,
+    "compounds": 50,
+    "strains": 25,
+    "rnaseq_experiments": 8
+  },
+  "lifespan_bundle": {
+    "zip": {
+      "file": "data/raw/citp/lifespan/citp_all_lifespan.zip",
+      "url": "https://citpaging.org/static/downloads/citp_all_lifespan.zip",
+      "bytes": 21556856,
+      "sha256": "668469462d6d20265d8f79686c3011aaa351deafa73ddca46de19aa0bbd64e16",
+      "downloaded_this_run": false
+    },
+    "extracted_files": [
+      {
+        "file": "data/raw/citp/lifespan/citp_all_lifespan.csv",
+        "member_name": "citp_all_lifespan.csv",
+        "bytes": 91851642,
+        "sha256": "266acf885ea0f2427a4434efb73f66cc97266b33102666f0c6cdf37e6aa17031",
+        "row_count_excluding_header": 313917,
+        "extracted_this_run": false
+      },
+      {
+        "file": "data/raw/citp/lifespan/citp_all_lifespan.xlsx",
+        "member_name": "citp_all_lifespan.xlsx",
+        "bytes": 29599312,
+        "sha256": "407c18c48db313ed2bb4603608c507c3cd0296448a605410241def4785365a70",
+        "row_count_excluding_header": null,
+        "extracted_this_run": false
+      }
+    ],
+    "data_dictionary": {
+      "file": "data/raw/citp/lifespan/citp_data_dictionary.xlsx",
+      "url": "https://citpaging.org/static/citp_data_dictionary.xlsx",
+      "bytes": 7441,
+      "sha256": "69d0a9e4144e9b705562ee8cf8475360ce6efe629800574ad2418dad5b056ac4",
+      "downloaded_this_run": false
+    }
+  },
+  "portal_tables": {
+    "dataset": {
+      "file": "data/raw/citp/portal_tables/dataset.json",
+      "url": "https://citpaging.org/static/data_tables/dataset.json",
+      "bytes": 7678,
+      "sha256": "5fbcdd19baa38315fec05b58c90cd6c1e6dec0a5527e3fb851aa938989babb36",
+      "downloaded_this_run": false,
+      "record_count": 18
+    },
+    "summary": {
+      "file": "data/raw/citp/portal_tables/summary.json",
+      "url": "https://citpaging.org/static/data_tables/summary.json",
+      "bytes": 634092,
+      "sha256": "9d1e19c0cb690b6f5405f1ec125a1a17ae372ef75b5fedb47d7f57c33ba0ade8",
+      "downloaded_this_run": false,
+      "record_count": 453
+    },
+    "compound": {
+      "file": "data/raw/citp/portal_tables/compound.json",
+      "url": "https://citpaging.org/static/data_tables/compound.json",
+      "bytes": 15694,
+      "sha256": "d3ae703a2d740faea4c4d582473b24bcc712b6e9015356fef7288a35f11b7512",
+      "downloaded_this_run": false,
+      "record_count": 50
+    },
+    "strain": {
+      "file": "data/raw/citp/portal_tables/strain.json",
+      "url": "https://citpaging.org/static/data_tables/strain.json",
+      "bytes": 8313,
+      "sha256": "1aa9ba28b7dfdcb196b720abddf4c57c0ad20d7a524ce3a86c69376acb332eba",
+      "downloaded_this_run": false,
+      "record_count": 25
+    },
+    "rnaseq": {
+      "file": "data/raw/citp/portal_tables/rnaseq.json",
+      "url": "https://citpaging.org/static/data_tables/rnaseq.json",
+      "bytes": 5872,
+      "sha256": "b5940ed3a156bb2eda7a3d4af9a9d8143626c37124403c81c024aab4e7b358c8",
+      "downloaded_this_run": false,
+      "record_count": 8
+    }
+  },
+  "dataset_downloads": [
+    {
+      "dataset_name": "SFN_dosage",
+      "manuscript_id": 11000,
+      "year": 2025,
+      "doi": "10.1101/2025.05.11.653363",
+      "dataset_description": "Sulforaphane study",
+      "csv": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_SFN_dosage.csv",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_SFN_dosage.csv",
+        "bytes": 658498,
+        "sha256": "b53440614e9dafd7c5eae897e745362a534e5a4da2c5e84c5151fabb5602a16f",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 2492
+      },
+      "xlsx": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_SFN_dosage.xlsx",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_SFN_dosage.xlsx",
+        "bytes": 239320,
+        "sha256": "38d53548e026c65e4fd679026b24238035a9863e2005489287633a2539e969ab",
+        "downloaded_this_run": false
+      }
+    },
+    {
+      "dataset_name": "ATRA_reproducibility",
+      "manuscript_id": 9000,
+      "year": 2025,
+      "doi": "10.7554/eLife.104375",
+      "dataset_description": "Retinoic acid study",
+      "csv": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_ATRA_reproducibility.csv",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_ATRA_reproducibility.csv",
+        "bytes": 3774331,
+        "sha256": "c492b8eff9beab67bc150c602c8b78d8a545c3368f5bb9811dd6db714f54e992",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 14312
+      },
+      "xlsx": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_ATRA_reproducibility.xlsx",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_ATRA_reproducibility.xlsx",
+        "bytes": 1330877,
+        "sha256": "ec59b0ccb6a81bae68906b17847e0f56c1fdf30724d1110e7f7b270c924da1d0",
+        "downloaded_this_run": false
+      }
+    },
+    {
+      "dataset_name": "ATRA_PROP_briggsae_tropicalis",
+      "manuscript_id": 9000,
+      "year": 2025,
+      "doi": "10.7554/eLife.104375",
+      "dataset_description": "ATRA, PROP briggsae and tropicalis study",
+      "csv": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_ATRA_PROP_briggsae_tropicalis.csv",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_ATRA_PROP_briggsae_tropicalis.csv",
+        "bytes": 1897081,
+        "sha256": "79ea98a94367b06048fa5504feeebc05b026d0e706f6c6a4a345ab2401f7641e",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 6922
+      },
+      "xlsx": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_ATRA_PROP_briggsae_tropicalis.xlsx",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_ATRA_PROP_briggsae_tropicalis.xlsx",
+        "bytes": 656193,
+        "sha256": "60408d939e6b696e2cfa716b0f0bd57729043429839caf9030b77ef7d77b4613",
+        "downloaded_this_run": false
+      }
+    },
+    {
+      "dataset_name": "ATRA_computational_predictions",
+      "manuscript_id": 9000,
+      "year": 2025,
+      "doi": "10.7554/eLife.104375",
+      "dataset_description": "Computational predictions study",
+      "csv": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_ATRA_computational_predictions.csv",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_ATRA_computational_predictions.csv",
+        "bytes": 7895479,
+        "sha256": "aaeecfc82faeb010cfb1f2693218525e4ab767574df649fd99537e8c9862c4d6",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 28303
+      },
+      "xlsx": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_ATRA_computational_predictions.xlsx",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_ATRA_computational_predictions.xlsx",
+        "bytes": 2586928,
+        "sha256": "d7fceb37aeba0dcf7585330cd4cfa0e6a32a262573ed96d7b8924b8266165523",
+        "downloaded_this_run": false
+      }
+    },
+    {
+      "dataset_name": "GTE_ACARB_AEST_NDGA_RAPA",
+      "manuscript_id": 4000,
+      "year": 2024,
+      "doi": "10.1007/s11357-023-00978-0",
+      "dataset_description": "GTE, ACARB, AEST, NDGA, and RAPA study",
+      "csv": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_GTE_ACARB_AEST_NDGA_RAPA.csv",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_GTE_ACARB_AEST_NDGA_RAPA.csv",
+        "bytes": 22105431,
+        "sha256": "d929c146f8c5dc169f44159a0e0e6b76c748a2e2aaadbe5c12abb2589636a631",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 73003
+      },
+      "xlsx": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_GTE_ACARB_AEST_NDGA_RAPA.xlsx",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_GTE_ACARB_AEST_NDGA_RAPA.xlsx",
+        "bytes": 6725710,
+        "sha256": "2e816c89439dd803e6e025de01568a94b85b7901c64065df70d61245eb3c461a",
+        "downloaded_this_run": false
+      }
+    },
+    {
+      "dataset_name": "AgingCell_metformin",
+      "manuscript_id": 3000,
+      "year": 2021,
+      "doi": "10.1111/acel.13488",
+      "dataset_description": "Metformin study",
+      "csv": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_AgingCell_metformin.csv",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_AgingCell_metformin.csv",
+        "bytes": 8970332,
+        "sha256": "d0ba599f1b9f88cf798fdf1515bf925a329f58ae8d801057a348f93719347ac7",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 30728
+      },
+      "xlsx": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_AgingCell_metformin.xlsx",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_AgingCell_metformin.xlsx",
+        "bytes": 2854282,
+        "sha256": "42975469f3524f6a3f92906b3918c42a8c783d6ab949ac4d9003297234d1ebb8",
+        "downloaded_this_run": false
+      }
+    },
+    {
+      "dataset_name": "AgingCell_antidiabetic",
+      "manuscript_id": 3000,
+      "year": 2021,
+      "doi": "10.1111/acel.13488",
+      "dataset_description": "Antidiabetic study",
+      "csv": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_AgingCell_antidiabetic.csv",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_AgingCell_antidiabetic.csv",
+        "bytes": 5808781,
+        "sha256": "3446b1087d2161b978d0b4fe06d2f17c12225cda629eacc200a8b090158231da",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 20145
+      },
+      "xlsx": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_AgingCell_antidiabetic.xlsx",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_AgingCell_antidiabetic.xlsx",
+        "bytes": 1861395,
+        "sha256": "fcb6d947b5318fa9e93036964cd098517b3a19f2dfc1889e95367ff0a681991b",
+        "downloaded_this_run": false
+      }
+    },
+    {
+      "dataset_name": "ALM_NP1_PG_RVL",
+      "manuscript_id": 2000,
+      "year": 2019,
+      "doi": "10.1007/s11357-019-00108-9",
+      "dataset_description": "ALM NP1, PG, and RVL study",
+      "csv": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_ALM_NP1_PG_RVL.csv",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_ALM_NP1_PG_RVL.csv",
+        "bytes": 2721105,
+        "sha256": "434498be99c454f2aaee9cd17448af0faa3affa515762f69f7e9b03e50c9731f",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 8846
+      },
+      "xlsx": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_ALM_NP1_PG_RVL.xlsx",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_ALM_NP1_PG_RVL.xlsx",
+        "bytes": 864909,
+        "sha256": "cc96caadb02494ef55ee51b66c63c6694342bcc4f93a349965e4544c540ea42a",
+        "downloaded_this_run": false
+      }
+    },
+    {
+      "dataset_name": "ALM_AKG_ThioT",
+      "manuscript_id": 2000,
+      "year": 2019,
+      "doi": "10.1007/s11357-019-00108-9",
+      "dataset_description": "ALM AKG and ThioT study",
+      "csv": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_ALM_AKG_ThioT.csv",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_ALM_AKG_ThioT.csv",
+        "bytes": 4396747,
+        "sha256": "e8c7822f03ee0d0172ce2aaf53760fb2ec18508ac0e424414a22417ae33146f2",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 14079
+      },
+      "xlsx": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_ALM_AKG_ThioT.xlsx",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_ALM_AKG_ThioT.xlsx",
+        "bytes": 1367493,
+        "sha256": "c82310e811925af03578bd741c5705cbbfa7b538c344acc9de1dccee3bc9465a",
+        "downloaded_this_run": false
+      }
+    },
+    {
+      "dataset_name": "ALM_baseline",
+      "manuscript_id": 2000,
+      "year": 2019,
+      "doi": "10.1007/s11357-019-00108-9",
+      "dataset_description": "Automated lifespan baseline data",
+      "csv": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_ALM_baseline.csv",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_ALM_baseline.csv",
+        "bytes": 4117037,
+        "sha256": "39894fa8f3bb988ca43d2f3771ff84730282418f45a439a4df51adc3fcd00e0e",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 13498
+      },
+      "xlsx": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_ALM_baseline.xlsx",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_ALM_baseline.xlsx",
+        "bytes": 1316589,
+        "sha256": "5c0d0aa552e13f2f40b186ce3689d7675902b3564804cce46ee090b9ab77b86b",
+        "downloaded_this_run": false
+      }
+    },
+    {
+      "dataset_name": "NatureComm_lifespan_chemical",
+      "manuscript_id": 1000,
+      "year": 2017,
+      "doi": "10.1038/ncomms14256",
+      "dataset_description": "Lifespan chemicals study",
+      "csv": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_NatureComm_lifespan_chemical.csv",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_NatureComm_lifespan_chemical.csv",
+        "bytes": 13133979,
+        "sha256": "aef10d10cc7efd08e51faefe9353e201c80a9d1786f6201afc5ea51daa87bd73",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 44919
+      },
+      "xlsx": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_NatureComm_lifespan_chemical.xlsx",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_NatureComm_lifespan_chemical.xlsx",
+        "bytes": 4191512,
+        "sha256": "77c8f792fbc68ffaf7e95f65726bae2f8710355b5ee82ce5f129035d0d271633",
+        "downloaded_this_run": false
+      }
+    },
+    {
+      "dataset_name": "NatureComm_manual_baseline",
+      "manuscript_id": 1000,
+      "year": 2017,
+      "doi": "10.1038/ncomms14256",
+      "dataset_description": "Manual lifespan baseline data",
+      "csv": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_NatureComm_manual_baseline.csv",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_NatureComm_manual_baseline.csv",
+        "bytes": 7427331,
+        "sha256": "7029ba7ddbd9ccc48b1c777c8000d02b8232aeeb77cd13dae2c3452fa7c0575b",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 26333
+      },
+      "xlsx": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_NatureComm_manual_baseline.xlsx",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_NatureComm_manual_baseline.xlsx",
+        "bytes": 2423317,
+        "sha256": "be0fa74b374cc372adc8d6f4ba1a4ee1f064fbf5ce1ab0615e22da8254a8360e",
+        "downloaded_this_run": false
+      }
+    },
+    {
+      "dataset_name": "Micropub_leve",
+      "manuscript_id": 12000,
+      "year": 2026,
+      "doi": "10.17912/micropub.biology.001987",
+      "dataset_description": "Levetiracetam negative result",
+      "csv": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_Micropub_leve.csv",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_Micropub_leve.csv",
+        "bytes": 1418968,
+        "sha256": "6f3a536370422d38dad4f64f78667014e053875f6ef3a862dcf774c0b7a17324",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 4800
+      },
+      "xlsx": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_Micropub_leve.xlsx",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_Micropub_leve.xlsx",
+        "bytes": 449140,
+        "sha256": "eccc7109ec808725f07c020b63baabf340857567b8be9b8687d5682671b3b297",
+        "downloaded_this_run": false
+      }
+    },
+    {
+      "dataset_name": "Micropub_baku_tami",
+      "manuscript_id": 10000,
+      "year": 2025,
+      "doi": "10.17912/micropub.biology.001517",
+      "dataset_description": "Bakuchiol, tamibarotene negative result",
+      "csv": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_Micropub_baku_tami.csv",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_Micropub_baku_tami.csv",
+        "bytes": 2694502,
+        "sha256": "58cbb751cc27ddf9c718a2fe048d6d6dadc06fce74f9049a41dc3ac2944cda57",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 9709
+      },
+      "xlsx": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_Micropub_baku_tami.xlsx",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_Micropub_baku_tami.xlsx",
+        "bytes": 907748,
+        "sha256": "5491e43054671d52e989761db9a1f40a5222648740ba9c133a0ddc7a7150ef5f",
+        "downloaded_this_run": false
+      }
+    },
+    {
+      "dataset_name": "Micropub_diuron",
+      "manuscript_id": 8000,
+      "year": 2021,
+      "doi": "10.17912/micropub.biology.000448",
+      "dataset_description": "Diuron negative result",
+      "csv": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_Micropub_diuron.csv",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_Micropub_diuron.csv",
+        "bytes": 723582,
+        "sha256": "006fcaa57e5f763b9121bb051b64694bd4af20b5808485159ecbd73c84785cea",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 2505
+      },
+      "xlsx": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_Micropub_diuron.xlsx",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_Micropub_diuron.xlsx",
+        "bytes": 239145,
+        "sha256": "e8523292f6968c6540406b979eb550dcdbb2b9302ba06f704230bd258dbfdefc",
+        "downloaded_this_run": false
+      }
+    },
+    {
+      "dataset_name": "Micropub_obtca",
+      "manuscript_id": 7000,
+      "year": 2020,
+      "doi": "10.17912/micropub.biology.000257",
+      "dataset_description": "Obeticholic acid negative result",
+      "csv": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_Micropub_obtca.csv",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_Micropub_obtca.csv",
+        "bytes": 963097,
+        "sha256": "68d35ff860010fb04d4afc64b025edff4d197e56c73b1cc74db63ad1e47fc655",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 2793
+      },
+      "xlsx": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_Micropub_obtca.xlsx",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_Micropub_obtca.xlsx",
+        "bytes": 275862,
+        "sha256": "88752583e43c8a0c1bb608fb9910149accb317d4ac44c748c833b4dfc141f0ec",
+        "downloaded_this_run": false
+      }
+    },
+    {
+      "dataset_name": "Micropub_bgpa",
+      "manuscript_id": 6000,
+      "year": 2020,
+      "doi": "10.17912/micropub.biology.000207",
+      "dataset_description": "\u03b2-GPA negative result",
+      "csv": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_Micropub_bgpa.csv",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_Micropub_bgpa.csv",
+        "bytes": 1220886,
+        "sha256": "0c828d051602d6742fb902fb7bd4d3ca54de055ce191728d40b92f08170b3b5d",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 4087
+      },
+      "xlsx": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_Micropub_bgpa.xlsx",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_Micropub_bgpa.xlsx",
+        "bytes": 386396,
+        "sha256": "e07326dc5e2593d34b6a01e8a0523e109d78087aa48b9d31af4b8b2331632f06",
+        "downloaded_this_run": false
+      }
+    },
+    {
+      "dataset_name": "Micropub_imtb",
+      "manuscript_id": 5000,
+      "year": 2019,
+      "doi": "10.17912/micropub.biology.000131",
+      "dataset_description": "Imatinib negative result",
+      "csv": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_Micropub_imtb.csv",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_Micropub_imtb.csv",
+        "bytes": 1930187,
+        "sha256": "95704a5020d87d75924ace8de82458ce722088201cc88f920c831af4d80d1a57",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 6443
+      },
+      "xlsx": {
+        "file": "data/raw/citp/lifespan/by_dataset/citp_dataset_Micropub_imtb.xlsx",
+        "url": "https://citpaging.org/static/downloads/by_dataset/citp_dataset_Micropub_imtb.xlsx",
+        "bytes": 600770,
+        "sha256": "07a09a71ffdf45cfa243fd8ce0235803bb7181da14264546013346245c65c4d8",
+        "downloaded_this_run": false
+      }
+    }
+  ],
+  "rnaseq_deg_tables": [
+    {
+      "exp_id": 1030,
+      "compound": "Sulforaphane",
+      "compound_abbr": "SFN",
+      "strain_name": "N2_PD1073",
+      "adult_age": "2 days",
+      "geo_accession": "GSE289233",
+      "doi": "10.1101/2025.05.11.653363",
+      "deg_table": {
+        "file": "data/raw/citp/rnaseq/deg_tables/rnaseq_degtable_1030.json",
+        "url": "https://citpaging.org/static/data_tables/rnaseq_degtable_1030.json",
+        "bytes": 2280458,
+        "sha256": "2c08b318fd16eacac7b64a1a8098548d71c0ebed1fb042c7c4e7c595283f2b27",
+        "downloaded_this_run": false,
+        "record_count": 9402
+      }
+    },
+    {
+      "exp_id": 1040,
+      "compound": "Sulforaphane",
+      "compound_abbr": "SFN",
+      "strain_name": "N2_PD1073",
+      "adult_age": "4 days",
+      "geo_accession": "GSE289233",
+      "doi": "10.1101/2025.05.11.653363",
+      "deg_table": {
+        "file": "data/raw/citp/rnaseq/deg_tables/rnaseq_degtable_1040.json",
+        "url": "https://citpaging.org/static/data_tables/rnaseq_degtable_1040.json",
+        "bytes": 2237927,
+        "sha256": "6cb33d9f946f245959998291ac757aeeb4d1f6d1d27ac932d5944f16f567c5b8",
+        "downloaded_this_run": false,
+        "record_count": 9227
+      }
+    },
+    {
+      "exp_id": 1050,
+      "compound": "Sulforaphane",
+      "compound_abbr": "SFN",
+      "strain_name": "N2_PD1073",
+      "adult_age": "8 days",
+      "geo_accession": "GSE289233",
+      "doi": "10.1101/2025.05.11.653363",
+      "deg_table": {
+        "file": "data/raw/citp/rnaseq/deg_tables/rnaseq_degtable_1050.json",
+        "url": "https://citpaging.org/static/data_tables/rnaseq_degtable_1050.json",
+        "bytes": 2620294,
+        "sha256": "8d6b90ffd3969b954257150b6cb2839ef1904db19951f903364cc797ea6619fe",
+        "downloaded_this_run": false,
+        "record_count": 10755
+      }
+    },
+    {
+      "exp_id": 1060,
+      "compound": "Sulforaphane",
+      "compound_abbr": "SFN",
+      "strain_name": "N2_PD1073",
+      "adult_age": "12 days",
+      "geo_accession": "GSE289233",
+      "doi": "10.1101/2025.05.11.653363",
+      "deg_table": {
+        "file": "data/raw/citp/rnaseq/deg_tables/rnaseq_degtable_1060.json",
+        "url": "https://citpaging.org/static/data_tables/rnaseq_degtable_1060.json",
+        "bytes": 3101141,
+        "sha256": "5790b4590f24994fc1b6b67c50cab0f1149c0c6139ede72f06ac64c06da91793",
+        "downloaded_this_run": false,
+        "record_count": 12722
+      }
+    },
+    {
+      "exp_id": 1070,
+      "compound": "Sulforaphane",
+      "compound_abbr": "SFN",
+      "strain_name": "N2_PD1073",
+      "adult_age": "16 days",
+      "geo_accession": "GSE289233",
+      "doi": "10.1101/2025.05.11.653363",
+      "deg_table": {
+        "file": "data/raw/citp/rnaseq/deg_tables/rnaseq_degtable_1070.json",
+        "url": "https://citpaging.org/static/data_tables/rnaseq_degtable_1070.json",
+        "bytes": 2872929,
+        "sha256": "f4fffd90d622ad35116f01485c0771e630543bbd2276eaee6ab5a4ece2a7df86",
+        "downloaded_this_run": false,
+        "record_count": 11836
+      }
+    },
+    {
+      "exp_id": 1000,
+      "compound": "Retinoic acid",
+      "compound_abbr": "ATRA",
+      "strain_name": "N2",
+      "adult_age": "4 days",
+      "geo_accession": "GSE272535",
+      "doi": "10.7554/eLife.104375",
+      "deg_table": {
+        "file": "data/raw/citp/rnaseq/deg_tables/rnaseq_degtable_1000.json",
+        "url": "https://citpaging.org/static/data_tables/rnaseq_degtable_1000.json",
+        "bytes": 3105096,
+        "sha256": "728ccb3af62303d44c9dd1e101d045ddedc61224a2fef5268b4938fdbe5fdb09",
+        "downloaded_this_run": false,
+        "record_count": 12746
+      }
+    },
+    {
+      "exp_id": 1010,
+      "compound": "Retinoic acid",
+      "compound_abbr": "ATRA",
+      "strain_name": "PS3551",
+      "adult_age": "4 days",
+      "geo_accession": "GSE272535",
+      "doi": "10.7554/eLife.104375",
+      "deg_table": {
+        "file": "data/raw/citp/rnaseq/deg_tables/rnaseq_degtable_1010.json",
+        "url": "https://citpaging.org/static/data_tables/rnaseq_degtable_1010.json",
+        "bytes": 3349466,
+        "sha256": "d448abb279700d6aa77d8069bf184b3c627d64921e239a1ad85cf3e3dab090bc",
+        "downloaded_this_run": false,
+        "record_count": 13747
+      }
+    },
+    {
+      "exp_id": 1020,
+      "compound": "Retinoic acid",
+      "compound_abbr": "ATRA",
+      "strain_name": "RB754",
+      "adult_age": "4 days",
+      "geo_accession": "GSE272535",
+      "doi": "10.7554/eLife.104375",
+      "deg_table": {
+        "file": "data/raw/citp/rnaseq/deg_tables/rnaseq_degtable_1020.json",
+        "url": "https://citpaging.org/static/data_tables/rnaseq_degtable_1020.json",
+        "bytes": 3072176,
+        "sha256": "30385c50e3349198f317281c3fe4d9edffc2b9ba890b42076a4e9d6cb41b303d",
+        "downloaded_this_run": false,
+        "record_count": 12611
+      }
+    }
+  ]
+}

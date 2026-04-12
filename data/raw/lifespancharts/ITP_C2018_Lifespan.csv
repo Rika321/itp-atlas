@@ -1,0 +1,1510 @@
+population,cohort,site,sex,id,group,Rx(ppm),age_initiation(mo),status,dead,age(days)
+UM-HET3,C2018,TJL,f,JL17001,Control,0,,dead,True,977
+UM-HET3,C2018,TJL,f,JL17002,Control,0,,dead,True,977
+UM-HET3,C2018,TJL,f,JL17003,Control,0,,dead,True,1081
+UM-HET3,C2018,TJL,f,JL17004,Control,0,,dead,True,841
+UM-HET3,C2018,TJL,f,JL17029,Control,0,,dead,True,935
+UM-HET3,C2018,TJL,f,JL17030,Control,0,,dead,True,791
+UM-HET3,C2018,TJL,f,JL17031,Control,0,,dead,True,897
+UM-HET3,C2018,TJL,f,JL17032,Control,0,,dead,True,908
+UM-HET3,C2018,TJL,f,JL17037,Control,0,,dead,True,825
+UM-HET3,C2018,TJL,f,JL17038,Control,0,,dead,True,995
+UM-HET3,C2018,TJL,f,JL17039,Control,0,,dead,True,1104
+UM-HET3,C2018,TJL,f,JL17040,Control,0,,dead,True,852
+UM-HET3,C2018,TJL,f,JL17111,Control,0,,dead,True,805
+UM-HET3,C2018,TJL,f,JL17112,Control,0,,dead,True,972
+UM-HET3,C2018,TJL,f,JL17113,Control,0,,dead,True,831
+UM-HET3,C2018,TJL,f,JL17114,Control,0,,dead,True,625
+UM-HET3,C2018,TJL,f,JL17141,Control,0,,dead,True,694
+UM-HET3,C2018,TJL,f,JL17142,Control,0,,dead,True,901
+UM-HET3,C2018,TJL,f,JL17143,Control,0,,dead,True,821
+UM-HET3,C2018,TJL,f,JL17144,Control,0,,dead,True,917
+UM-HET3,C2018,TJL,f,JL17195,Control,0,,dead,True,992
+UM-HET3,C2018,TJL,f,JL17196,Control,0,,dead,True,771
+UM-HET3,C2018,TJL,f,JL17197,Control,0,,dead,True,928
+UM-HET3,C2018,TJL,f,JL17198,Control,0,,dead,True,586
+UM-HET3,C2018,TJL,f,JL17230,Control,0,,dead,True,817
+UM-HET3,C2018,TJL,f,JL17231,Control,0,,dead,True,838
+UM-HET3,C2018,TJL,f,JL17232,Control,0,,dead,True,1242
+UM-HET3,C2018,TJL,f,JL17233,Control,0,,dead,True,670
+UM-HET3,C2018,TJL,f,JL17249,Control,0,,dead,True,1173
+UM-HET3,C2018,TJL,f,JL17250,Control,0,,dead,True,608
+UM-HET3,C2018,TJL,f,JL17251,Control,0,,dead,True,1163
+UM-HET3,C2018,TJL,f,JL17252,Control,0,,dead,True,998
+UM-HET3,C2018,TJL,f,JL17257,Control,0,,dead,True,1085
+UM-HET3,C2018,TJL,f,JL17258,Control,0,,dead,True,1259
+UM-HET3,C2018,TJL,f,JL17259,Control,0,,dead,True,1154
+UM-HET3,C2018,TJL,f,JL17260,Control,0,,dead,True,545
+UM-HET3,C2018,TJL,f,JL17277,Control,0,,dead,True,949
+UM-HET3,C2018,TJL,f,JL17278,Control,0,,dead,True,845
+UM-HET3,C2018,TJL,f,JL17279,Control,0,,dead,True,749
+UM-HET3,C2018,TJL,f,JL17280,Control,0,,dead,True,1054
+UM-HET3,C2018,TJL,f,JL17335,Control,0,,dead,True,489
+UM-HET3,C2018,TJL,f,JL17336,Control,0,,dead,True,933
+UM-HET3,C2018,TJL,f,JL17337,Control,0,,dead,True,1167
+UM-HET3,C2018,TJL,f,JL17338,Control,0,,dead,True,722
+UM-HET3,C2018,TJL,f,JL17369,Control,0,,dead,True,997
+UM-HET3,C2018,TJL,f,JL17370,Control,0,,dead,True,788
+UM-HET3,C2018,TJL,f,JL17371,Control,0,,dead,True,725
+UM-HET3,C2018,TJL,f,JL17372,Control,0,,dead,True,931
+UM-HET3,C2018,TJL,f,JL17377,Control,0,,dead,True,1186
+UM-HET3,C2018,TJL,f,JL17378,Control,0,,dead,True,871
+UM-HET3,C2018,TJL,f,JL17379,Control,0,,dead,True,645
+UM-HET3,C2018,TJL,f,JL17380,Control,0,,dead,True,885
+UM-HET3,C2018,TJL,f,JL17381,Control,0,,dead,True,900
+UM-HET3,C2018,TJL,f,JL17382,Control,0,,dead,True,902
+UM-HET3,C2018,TJL,f,JL17383,Control,0,,dead,True,997
+UM-HET3,C2018,TJL,f,JL17384,Control,0,,dead,True,1318
+UM-HET3,C2018,TJL,f,JL17413,Control,0,,dead,True,976
+UM-HET3,C2018,TJL,f,JL17414,Control,0,,dead,True,1151
+UM-HET3,C2018,TJL,f,JL17415,Control,0,,dead,True,919
+UM-HET3,C2018,TJL,f,JL17416,Control,0,,dead,True,968
+UM-HET3,C2018,TJL,f,JL17432,Control,0,,dead,True,847
+UM-HET3,C2018,TJL,f,JL17433,Control,0,,dead,True,1152
+UM-HET3,C2018,TJL,f,JL17434,Control,0,,dead,True,862
+UM-HET3,C2018,TJL,f,JL17435,Control,0,,dead,True,610
+UM-HET3,C2018,TJL,f,JL17515,Control,0,,dead,True,961
+UM-HET3,C2018,TJL,f,JL17516,Control,0,,dead,True,1182
+UM-HET3,C2018,TJL,f,JL17517,Control,0,,dead,True,1227
+UM-HET3,C2018,TJL,f,JL17518,Control,0,,dead,True,749
+UM-HET3,C2018,TJL,f,JL17563,Control,0,,dead,True,851
+UM-HET3,C2018,TJL,f,JL17564,Control,0,,dead,True,618
+UM-HET3,C2018,TJL,f,JL17565,Control,0,,dead,True,687
+UM-HET3,C2018,TJL,f,JL17566,Control,0,,dead,True,908
+UM-HET3,C2018,TJL,f,JL17585,Control,0,,dead,True,921
+UM-HET3,C2018,TJL,f,JL17586,Control,0,,dead,True,705
+UM-HET3,C2018,TJL,f,JL17587,Control,0,,dead,True,661
+UM-HET3,C2018,TJL,f,JL17588,Control,0,,dead,True,623
+UM-HET3,C2018,TJL,f,JL17613,Control,0,,dead,True,830
+UM-HET3,C2018,TJL,f,JL17614,Control,0,,dead,True,1116
+UM-HET3,C2018,TJL,f,JL17615,Control,0,,dead,True,893
+UM-HET3,C2018,TJL,f,JL17616,Control,0,,dead,True,934
+UM-HET3,C2018,TJL,f,JL17666,Control,0,,dead,True,900
+UM-HET3,C2018,TJL,f,JL17667,Control,0,,dead,True,1205
+UM-HET3,C2018,TJL,f,JL17668,Control,0,,dead,True,967
+UM-HET3,C2018,TJL,f,JL17669,Control,0,,dead,True,767
+UM-HET3,C2018,TJL,f,JL17735,Control,0,,dead,True,1072
+UM-HET3,C2018,TJL,f,JL17736,Control,0,,dead,True,944
+UM-HET3,C2018,TJL,f,JL17737,Control,0,,dead,True,1170
+UM-HET3,C2018,TJL,f,JL17738,Control,0,,dead,True,923
+UM-HET3,C2018,TJL,f,JL17739,Control,0,,dead,True,814
+UM-HET3,C2018,TJL,f,JL17740,Control,0,,dead,True,1100
+UM-HET3,C2018,TJL,f,JL17741,Control,0,,dead,True,1105
+UM-HET3,C2018,TJL,f,JL17742,Control,0,,dead,True,987
+UM-HET3,C2018,TJL,f,JL17753,Control,0,,dead,True,773
+UM-HET3,C2018,TJL,f,JL17754,Control,0,,dead,True,760
+UM-HET3,C2018,TJL,f,JL17755,Control,0,,dead,True,892
+UM-HET3,C2018,TJL,f,JL17756,Control,0,,dead,True,729
+UM-HET3,C2018,TJL,m,JL17019,Control,0,,dead,True,529
+UM-HET3,C2018,TJL,m,JL17020,Control,0,,dead,True,367
+UM-HET3,C2018,TJL,m,JL17021,Control,0,,dead,True,866
+UM-HET3,C2018,TJL,m,JL17022,Control,0,,dead,True,460
+UM-HET3,C2018,TJL,m,JL17023,Control,0,,dead,True,830
+UM-HET3,C2018,TJL,m,JL17024,Control,0,,dead,True,133
+UM-HET3,C2018,TJL,m,JL17045,Control,0,,dead,True,345
+UM-HET3,C2018,TJL,m,JL17046,Control,0,,dead,True,317
+UM-HET3,C2018,TJL,m,JL17047,Control,0,,dead,True,975
+UM-HET3,C2018,TJL,m,JL17063,Control,0,,dead,True,820
+UM-HET3,C2018,TJL,m,JL17064,Control,0,,dead,True,603
+UM-HET3,C2018,TJL,m,JL17065,Control,0,,dead,True,603
+UM-HET3,C2018,TJL,m,JL17094,Control,0,,dead,True,395
+UM-HET3,C2018,TJL,m,JL17095,Control,0,,dead,True,960
+UM-HET3,C2018,TJL,m,JL17096,Control,0,,dead,True,773
+UM-HET3,C2018,TJL,m,JL17097,Control,0,,dead,True,443
+UM-HET3,C2018,TJL,m,JL17098,Control,0,,dead,True,453
+UM-HET3,C2018,TJL,m,JL17099,Control,0,,dead,True,864
+UM-HET3,C2018,TJL,m,JL17159,Control,0,,dead,True,947
+UM-HET3,C2018,TJL,m,JL17160,Control,0,,dead,True,454
+UM-HET3,C2018,TJL,m,JL17161,Control,0,,dead,True,293
+UM-HET3,C2018,TJL,m,JL17165,Control,0,,dead,True,363
+UM-HET3,C2018,TJL,m,JL17166,Control,0,,dead,True,321
+UM-HET3,C2018,TJL,m,JL17167,Control,0,,dead,True,405
+UM-HET3,C2018,TJL,m,JL17168,Control,0,,dead,True,726
+UM-HET3,C2018,TJL,m,JL17169,Control,0,,dead,True,617
+UM-HET3,C2018,TJL,m,JL17170,Control,0,,dead,True,419
+UM-HET3,C2018,TJL,m,JL17199,Control,0,,dead,True,412
+UM-HET3,C2018,TJL,m,JL17200,Control,0,,dead,True,807
+UM-HET3,C2018,TJL,m,JL17201,Control,0,,dead,True,1123
+UM-HET3,C2018,TJL,m,JL17219,Control,0,,dead,True,411
+UM-HET3,C2018,TJL,m,JL17220,Control,0,,dead,True,579
+UM-HET3,C2018,TJL,m,JL17221,Control,0,,dead,True,544
+UM-HET3,C2018,TJL,m,JL17234,Control,0,,dead,True,883
+UM-HET3,C2018,TJL,m,JL17235,Control,0,,dead,True,708
+UM-HET3,C2018,TJL,m,JL17236,Control,0,,dead,True,953
+UM-HET3,C2018,TJL,m,JL17246,Control,0,,dead,True,603
+UM-HET3,C2018,TJL,m,JL17247,Control,0,,dead,True,1116
+UM-HET3,C2018,TJL,m,JL17248,Control,0,,dead,True,1116
+UM-HET3,C2018,TJL,m,JL17264,Control,0,,dead,True,502
+UM-HET3,C2018,TJL,m,JL17265,Control,0,,dead,True,329
+UM-HET3,C2018,TJL,m,JL17266,Control,0,,dead,True,938
+UM-HET3,C2018,TJL,m,JL17289,Control,0,,dead,True,934
+UM-HET3,C2018,TJL,m,JL17290,Control,0,,dead,True,736
+UM-HET3,C2018,TJL,m,JL17291,Control,0,,dead,True,277
+UM-HET3,C2018,TJL,m,JL17295,Control,0,,dead,True,464
+UM-HET3,C2018,TJL,m,JL17296,Control,0,,dead,True,1009
+UM-HET3,C2018,TJL,m,JL17297,Control,0,,dead,True,1010
+UM-HET3,C2018,TJL,m,JL17332,Control,0,,dead,True,715
+UM-HET3,C2018,TJL,m,JL17333,Control,0,,dead,True,573
+UM-HET3,C2018,TJL,m,JL17334,Control,0,,dead,True,715
+UM-HET3,C2018,TJL,m,JL17343,Control,0,,dead,True,1197
+UM-HET3,C2018,TJL,m,JL17344,Control,0,,dead,True,174
+UM-HET3,C2018,TJL,m,JL17345,Control,0,,dead,True,701
+UM-HET3,C2018,TJL,m,JL17352,Control,0,,dead,True,838
+UM-HET3,C2018,TJL,m,JL17353,Control,0,,dead,True,572
+UM-HET3,C2018,TJL,m,JL17354,Control,0,,dead,True,454
+UM-HET3,C2018,TJL,m,JL17355,Control,0,,dead,True,294
+UM-HET3,C2018,TJL,m,JL17356,Control,0,,dead,True,454
+UM-HET3,C2018,TJL,m,JL17357,Control,0,,dead,True,873
+UM-HET3,C2018,TJL,m,JL17400,Control,0,,dead,True,638
+UM-HET3,C2018,TJL,m,JL17401,Control,0,,dead,True,662
+UM-HET3,C2018,TJL,m,JL17402,Control,0,,dead,True,331
+UM-HET3,C2018,TJL,m,JL17420,Control,0,,dead,True,766
+UM-HET3,C2018,TJL,m,JL17421,Control,0,,dead,True,895
+UM-HET3,C2018,TJL,m,JL17422,Control,0,,dead,True,858
+UM-HET3,C2018,TJL,m,JL17429,Control,0,,dead,True,408
+UM-HET3,C2018,TJL,m,JL17430,Control,0,,dead,True,478
+UM-HET3,C2018,TJL,m,JL17431,Control,0,,dead,True,802
+UM-HET3,C2018,TJL,m,JL17459,Control,0,,dead,True,631
+UM-HET3,C2018,TJL,m,JL17460,Control,0,,dead,True,686
+UM-HET3,C2018,TJL,m,JL17461,Control,0,,dead,True,213
+UM-HET3,C2018,TJL,m,JL17471,Control,0,,dead,True,1003
+UM-HET3,C2018,TJL,m,JL17472,Control,0,,dead,True,940
+UM-HET3,C2018,TJL,m,JL17473,Control,0,,dead,True,1019
+UM-HET3,C2018,TJL,m,JL17493,Control,0,,dead,True,753
+UM-HET3,C2018,TJL,m,JL17494,Control,0,,dead,True,970
+UM-HET3,C2018,TJL,m,JL17495,Control,0,,dead,True,514
+UM-HET3,C2018,TJL,m,JL17505,Control,0,,dead,True,931
+UM-HET3,C2018,TJL,m,JL17506,Control,0,,dead,True,1018
+UM-HET3,C2018,TJL,m,JL17507,Control,0,,dead,True,358
+UM-HET3,C2018,TJL,m,JL17530,Control,0,,dead,True,981
+UM-HET3,C2018,TJL,m,JL17531,Control,0,,dead,True,373
+UM-HET3,C2018,TJL,m,JL17532,Control,0,,dead,True,331
+UM-HET3,C2018,TJL,m,JL17539,Control,0,,dead,True,857
+UM-HET3,C2018,TJL,m,JL17540,Control,0,,dead,True,351
+UM-HET3,C2018,TJL,m,JL17541,Control,0,,dead,True,345
+UM-HET3,C2018,TJL,m,JL17542,Control,0,,dead,True,1057
+UM-HET3,C2018,TJL,m,JL17543,Control,0,,dead,True,672
+UM-HET3,C2018,TJL,m,JL17544,Control,0,,dead,True,239
+UM-HET3,C2018,TJL,m,JL17589,Control,0,,dead,True,768
+UM-HET3,C2018,TJL,m,JL17590,Control,0,,dead,True,875
+UM-HET3,C2018,TJL,m,JL17591,Control,0,,dead,True,869
+UM-HET3,C2018,TJL,m,JL17592,Control,0,,dead,True,317
+UM-HET3,C2018,TJL,m,JL17593,Control,0,,dead,True,878
+UM-HET3,C2018,TJL,m,JL17594,Control,0,,dead,True,996
+UM-HET3,C2018,TJL,m,JL17595,Control,0,,dead,True,647
+UM-HET3,C2018,TJL,m,JL17596,Control,0,,dead,True,703
+UM-HET3,C2018,TJL,m,JL17597,Control,0,,dead,True,650
+UM-HET3,C2018,TJL,m,JL17598,Control,0,,dead,True,538
+UM-HET3,C2018,TJL,m,JL17599,Control,0,,dead,True,378
+UM-HET3,C2018,TJL,m,JL17600,Control,0,,dead,True,1014
+UM-HET3,C2018,TJL,m,JL17629,Control,0,,dead,True,801
+UM-HET3,C2018,TJL,m,JL17630,Control,0,,dead,True,950
+UM-HET3,C2018,TJL,m,JL17631,Control,0,,dead,True,934
+UM-HET3,C2018,TJL,m,JL17711,Control,0,,dead,True,1025
+UM-HET3,C2018,TJL,m,JL17712,Control,0,,dead,True,519
+UM-HET3,C2018,TJL,m,JL17713,Control,0,,dead,True,649
+UM-HET3,C2018,UM,f,UM79961,Control,0,,dead,True,1026
+UM-HET3,C2018,UM,f,UM79968,Control,0,,dead,True,730
+UM-HET3,C2018,UM,f,UM79975,Control,0,,dead,True,950
+UM-HET3,C2018,UM,f,UM79982,Control,0,,dead,True,727
+UM-HET3,C2018,UM,f,UM80262,Control,0,,dead,True,734
+UM-HET3,C2018,UM,f,UM80269,Control,0,,dead,True,619
+UM-HET3,C2018,UM,f,UM80276,Control,0,,dead,True,872
+UM-HET3,C2018,UM,f,UM80283,Control,0,,dead,True,924
+UM-HET3,C2018,UM,f,UM80605,Control,0,,dead,True,895
+UM-HET3,C2018,UM,f,UM80612,Control,0,,dead,True,573
+UM-HET3,C2018,UM,f,UM80619,Control,0,,dead,True,876
+UM-HET3,C2018,UM,f,UM80626,Control,0,,dead,True,857
+UM-HET3,C2018,UM,f,UM80654,Control,0,,dead,True,785
+UM-HET3,C2018,UM,f,UM80661,Control,0,,dead,True,825
+UM-HET3,C2018,UM,f,UM80668,Control,0,,dead,True,842
+UM-HET3,C2018,UM,f,UM80675,Control,0,,dead,True,816
+UM-HET3,C2018,UM,f,UM80948,Control,0,,dead,True,862
+UM-HET3,C2018,UM,f,UM80955,Control,0,,dead,True,690
+UM-HET3,C2018,UM,f,UM80962,Control,0,,dead,True,914
+UM-HET3,C2018,UM,f,UM80969,Control,0,,dead,True,882
+UM-HET3,C2018,UM,f,UM81179,Control,0,,dead,True,965
+UM-HET3,C2018,UM,f,UM81186,Control,0,,dead,True,788
+UM-HET3,C2018,UM,f,UM81193,Control,0,,dead,True,1016
+UM-HET3,C2018,UM,f,UM81200,Control,0,,dead,True,851
+UM-HET3,C2018,UM,f,UM81424,Control,0,,dead,True,890
+UM-HET3,C2018,UM,f,UM81431,Control,0,,dead,True,798
+UM-HET3,C2018,UM,f,UM81438,Control,0,,dead,True,830
+UM-HET3,C2018,UM,f,UM81445,Control,0,,dead,True,1027
+UM-HET3,C2018,UM,f,UM81480,Control,0,,dead,True,606
+UM-HET3,C2018,UM,f,UM81487,Control,0,,dead,True,1056
+UM-HET3,C2018,UM,f,UM81494,Control,0,,dead,True,873
+UM-HET3,C2018,UM,f,UM81501,Control,0,,dead,True,875
+UM-HET3,C2018,UM,f,UM81816,Control,0,,dead,True,698
+UM-HET3,C2018,UM,f,UM81823,Control,0,,dead,True,720
+UM-HET3,C2018,UM,f,UM81830,Control,0,,dead,True,798
+UM-HET3,C2018,UM,f,UM81837,Control,0,,dead,True,778
+UM-HET3,C2018,UM,f,UM82075,Control,0,,dead,True,865
+UM-HET3,C2018,UM,f,UM82082,Control,0,,dead,True,914
+UM-HET3,C2018,UM,f,UM82089,Control,0,,dead,True,729
+UM-HET3,C2018,UM,f,UM82096,Control,0,,dead,True,926
+UM-HET3,C2018,UM,f,UM82124,Control,0,,dead,True,945
+UM-HET3,C2018,UM,f,UM82131,Control,0,,dead,True,539
+UM-HET3,C2018,UM,f,UM82138,Control,0,,dead,True,997
+UM-HET3,C2018,UM,f,UM82145,Control,0,,dead,True,795
+UM-HET3,C2018,UM,f,UM82285,Control,0,,dead,True,527
+UM-HET3,C2018,UM,f,UM82292,Control,0,,dead,True,847
+UM-HET3,C2018,UM,f,UM82299,Control,0,,dead,True,744
+UM-HET3,C2018,UM,f,UM82306,Control,0,,dead,True,971
+UM-HET3,C2018,UM,f,UM82775,Control,0,,dead,True,807
+UM-HET3,C2018,UM,f,UM82782,Control,0,,dead,True,757
+UM-HET3,C2018,UM,f,UM82789,Control,0,,dead,True,883
+UM-HET3,C2018,UM,f,UM82796,Control,0,,dead,True,872
+UM-HET3,C2018,UM,f,UM82866,Control,0,,dead,True,940
+UM-HET3,C2018,UM,f,UM82873,Control,0,,dead,True,672
+UM-HET3,C2018,UM,f,UM82880,Control,0,,dead,True,880
+UM-HET3,C2018,UM,f,UM82887,Control,0,,dead,True,885
+UM-HET3,C2018,UM,f,UM83083,Control,0,,dead,True,906
+UM-HET3,C2018,UM,f,UM83090,Control,0,,dead,True,790
+UM-HET3,C2018,UM,f,UM83097,Control,0,,dead,True,928
+UM-HET3,C2018,UM,f,UM83104,Control,0,,dead,True,687
+UM-HET3,C2018,UM,f,UM83209,Control,0,,dead,True,683
+UM-HET3,C2018,UM,f,UM83216,Control,0,,dead,True,1071
+UM-HET3,C2018,UM,f,UM83223,Control,0,,dead,True,768
+UM-HET3,C2018,UM,f,UM83230,Control,0,,dead,True,1032
+UM-HET3,C2018,UM,f,UM83510,Control,0,,dead,True,1041
+UM-HET3,C2018,UM,f,UM83517,Control,0,,dead,True,405
+UM-HET3,C2018,UM,f,UM83524,Control,0,,dead,True,815
+UM-HET3,C2018,UM,f,UM83531,Control,0,,dead,True,559
+UM-HET3,C2018,UM,f,UM83566,Control,0,,dead,True,993
+UM-HET3,C2018,UM,f,UM83573,Control,0,,dead,True,852
+UM-HET3,C2018,UM,f,UM83580,Control,0,,dead,True,963
+UM-HET3,C2018,UM,f,UM83587,Control,0,,dead,True,551
+UM-HET3,C2018,UM,f,UM83972,Control,0,,dead,True,739
+UM-HET3,C2018,UM,f,UM83979,Control,0,,dead,True,959
+UM-HET3,C2018,UM,f,UM83986,Control,0,,dead,True,858
+UM-HET3,C2018,UM,f,UM83993,Control,0,,dead,True,1002
+UM-HET3,C2018,UM,f,UM84224,Control,0,,dead,True,788
+UM-HET3,C2018,UM,f,UM84231,Control,0,,dead,True,982
+UM-HET3,C2018,UM,f,UM84238,Control,0,,dead,True,825
+UM-HET3,C2018,UM,f,UM84245,Control,0,,dead,True,959
+UM-HET3,C2018,UM,f,UM84329,Control,0,,dead,True,826
+UM-HET3,C2018,UM,f,UM84336,Control,0,,dead,True,605
+UM-HET3,C2018,UM,f,UM84343,Control,0,,dead,True,954
+UM-HET3,C2018,UM,f,UM84350,Control,0,,dead,True,913
+UM-HET3,C2018,UM,f,UM84539,Control,0,,dead,True,697
+UM-HET3,C2018,UM,f,UM84546,Control,0,,dead,True,818
+UM-HET3,C2018,UM,f,UM84553,Control,0,,dead,True,840
+UM-HET3,C2018,UM,f,UM84560,Control,0,,dead,True,909
+UM-HET3,C2018,UM,f,UM84707,Control,0,,dead,True,786
+UM-HET3,C2018,UM,f,UM84714,Control,0,,dead,True,839
+UM-HET3,C2018,UM,f,UM84721,Control,0,,dead,True,928
+UM-HET3,C2018,UM,f,UM84728,Control,0,,dead,True,828
+UM-HET3,C2018,UM,f,UM84931,Control,0,,dead,True,873
+UM-HET3,C2018,UM,f,UM84938,Control,0,,dead,True,1124
+UM-HET3,C2018,UM,f,UM84945,Control,0,,dead,True,760
+UM-HET3,C2018,UM,f,UM84952,Control,0,,dead,True,1167
+UM-HET3,C2018,UM,m,UM80192,Control,0,,removed,False,671
+UM-HET3,C2018,UM,m,UM80199,Control,0,,dead,True,833
+UM-HET3,C2018,UM,m,UM80206,Control,0,,dead,True,670
+UM-HET3,C2018,UM,m,UM80290,Control,0,,dead,True,677
+UM-HET3,C2018,UM,m,UM80297,Control,0,,dead,True,1096
+UM-HET3,C2018,UM,m,UM80304,Control,0,,dead,True,281
+UM-HET3,C2018,UM,m,UM80451,Control,0,,dead,True,1124
+UM-HET3,C2018,UM,m,UM80458,Control,0,,dead,True,422
+UM-HET3,C2018,UM,m,UM80465,Control,0,,dead,True,744
+UM-HET3,C2018,UM,m,UM80472,Control,0,,removed,False,309
+UM-HET3,C2018,UM,m,UM80479,Control,0,,removed,False,309
+UM-HET3,C2018,UM,m,UM80486,Control,0,,removed,False,309
+UM-HET3,C2018,UM,m,UM80584,Control,0,,dead,True,188
+UM-HET3,C2018,UM,m,UM80591,Control,0,,dead,True,419
+UM-HET3,C2018,UM,m,UM80598,Control,0,,dead,True,682
+UM-HET3,C2018,UM,m,UM80682,Control,0,,dead,True,215
+UM-HET3,C2018,UM,m,UM80689,Control,0,,dead,True,876
+UM-HET3,C2018,UM,m,UM80696,Control,0,,dead,True,378
+UM-HET3,C2018,UM,m,UM80752,Control,0,,removed,False,112
+UM-HET3,C2018,UM,m,UM80759,Control,0,,removed,False,112
+UM-HET3,C2018,UM,m,UM80766,Control,0,,removed,False,112
+UM-HET3,C2018,UM,m,UM80801,Control,0,,dead,True,591
+UM-HET3,C2018,UM,m,UM80808,Control,0,,dead,True,441
+UM-HET3,C2018,UM,m,UM80815,Control,0,,dead,True,499
+UM-HET3,C2018,UM,m,UM80885,Control,0,,removed,False,289
+UM-HET3,C2018,UM,m,UM80892,Control,0,,removed,False,289
+UM-HET3,C2018,UM,m,UM80899,Control,0,,removed,False,289
+UM-HET3,C2018,UM,m,UM81130,Control,0,,dead,True,760
+UM-HET3,C2018,UM,m,UM81137,Control,0,,dead,True,843
+UM-HET3,C2018,UM,m,UM81144,Control,0,,removed,False,947
+UM-HET3,C2018,UM,m,UM81319,Control,0,,dead,True,976
+UM-HET3,C2018,UM,m,UM81326,Control,0,,removed,False,718
+UM-HET3,C2018,UM,m,UM81333,Control,0,,dead,True,1104
+UM-HET3,C2018,UM,m,UM81382,Control,0,,dead,True,927
+UM-HET3,C2018,UM,m,UM81389,Control,0,,dead,True,847
+UM-HET3,C2018,UM,m,UM81396,Control,0,,dead,True,871
+UM-HET3,C2018,UM,m,UM81529,Control,0,,dead,True,899
+UM-HET3,C2018,UM,m,UM81536,Control,0,,dead,True,765
+UM-HET3,C2018,UM,m,UM81543,Control,0,,dead,True,831
+UM-HET3,C2018,UM,m,UM81795,Control,0,,dead,True,787
+UM-HET3,C2018,UM,m,UM81802,Control,0,,dead,True,598
+UM-HET3,C2018,UM,m,UM81809,Control,0,,dead,True,824
+UM-HET3,C2018,UM,m,UM81893,Control,0,,dead,True,850
+UM-HET3,C2018,UM,m,UM81900,Control,0,,dead,True,273
+UM-HET3,C2018,UM,m,UM81907,Control,0,,dead,True,262
+UM-HET3,C2018,UM,m,UM82103,Control,0,,dead,True,456
+UM-HET3,C2018,UM,m,UM82110,Control,0,,dead,True,1029
+UM-HET3,C2018,UM,m,UM82117,Control,0,,dead,True,373
+UM-HET3,C2018,UM,m,UM82152,Control,0,,dead,True,779
+UM-HET3,C2018,UM,m,UM82159,Control,0,,dead,True,859
+UM-HET3,C2018,UM,m,UM82166,Control,0,,dead,True,828
+UM-HET3,C2018,UM,m,UM82194,Control,0,,dead,True,544
+UM-HET3,C2018,UM,m,UM82201,Control,0,,dead,True,1128
+UM-HET3,C2018,UM,m,UM82208,Control,0,,dead,True,1001
+UM-HET3,C2018,UM,m,UM82313,Control,0,,dead,True,439
+UM-HET3,C2018,UM,m,UM82320,Control,0,,dead,True,912
+UM-HET3,C2018,UM,m,UM82327,Control,0,,dead,True,786
+UM-HET3,C2018,UM,m,UM82362,Control,0,,dead,True,720
+UM-HET3,C2018,UM,m,UM82369,Control,0,,dead,True,764
+UM-HET3,C2018,UM,m,UM82376,Control,0,,dead,True,545
+UM-HET3,C2018,UM,m,UM82495,Control,0,,dead,True,897
+UM-HET3,C2018,UM,m,UM82502,Control,0,,dead,True,913
+UM-HET3,C2018,UM,m,UM82509,Control,0,,dead,True,770
+UM-HET3,C2018,UM,m,UM82803,Control,0,,removed,False,291
+UM-HET3,C2018,UM,m,UM82810,Control,0,,dead,True,212
+UM-HET3,C2018,UM,m,UM82817,Control,0,,removed,False,291
+UM-HET3,C2018,UM,m,UM82845,Control,0,,removed,False,394
+UM-HET3,C2018,UM,m,UM82852,Control,0,,removed,False,394
+UM-HET3,C2018,UM,m,UM82859,Control,0,,removed,False,394
+UM-HET3,C2018,UM,m,UM82915,Control,0,,dead,True,473
+UM-HET3,C2018,UM,m,UM82922,Control,0,,dead,True,906
+UM-HET3,C2018,UM,m,UM82929,Control,0,,dead,True,536
+UM-HET3,C2018,UM,m,UM83258,Control,0,,dead,True,509
+UM-HET3,C2018,UM,m,UM83265,Control,0,,dead,True,99
+UM-HET3,C2018,UM,m,UM83272,Control,0,,dead,True,763
+UM-HET3,C2018,UM,m,UM83328,Control,0,,dead,True,267
+UM-HET3,C2018,UM,m,UM83335,Control,0,,dead,True,325
+UM-HET3,C2018,UM,m,UM83342,Control,0,,dead,True,1055
+UM-HET3,C2018,UM,m,UM83349,Control,0,,dead,True,550
+UM-HET3,C2018,UM,m,UM83356,Control,0,,dead,True,453
+UM-HET3,C2018,UM,m,UM83363,Control,0,,dead,True,776
+UM-HET3,C2018,UM,m,UM83762,Control,0,,dead,True,878
+UM-HET3,C2018,UM,m,UM83769,Control,0,,dead,True,835
+UM-HET3,C2018,UM,m,UM83776,Control,0,,dead,True,644
+UM-HET3,C2018,UM,m,UM83783,Control,0,,removed,False,422
+UM-HET3,C2018,UM,m,UM83790,Control,0,,removed,False,422
+UM-HET3,C2018,UM,m,UM83797,Control,0,,removed,False,422
+UM-HET3,C2018,UM,m,UM83951,Control,0,,dead,True,821
+UM-HET3,C2018,UM,m,UM83958,Control,0,,dead,True,1085
+UM-HET3,C2018,UM,m,UM83965,Control,0,,dead,True,671
+UM-HET3,C2018,UM,m,UM84133,Control,0,,dead,True,718
+UM-HET3,C2018,UM,m,UM84140,Control,0,,dead,True,1008
+UM-HET3,C2018,UM,m,UM84147,Control,0,,dead,True,1017
+UM-HET3,C2018,UM,m,UM84175,Control,0,,dead,True,295
+UM-HET3,C2018,UM,m,UM84182,Control,0,,dead,True,1014
+UM-HET3,C2018,UM,m,UM84189,Control,0,,dead,True,720
+UM-HET3,C2018,UM,m,UM84357,Control,0,,dead,True,485
+UM-HET3,C2018,UM,m,UM84364,Control,0,,dead,True,844
+UM-HET3,C2018,UM,m,UM84371,Control,0,,dead,True,664
+UM-HET3,C2018,UM,m,UM84420,Control,0,,dead,True,760
+UM-HET3,C2018,UM,m,UM84427,Control,0,,dead,True,746
+UM-HET3,C2018,UM,m,UM84434,Control,0,,dead,True,442
+UM-HET3,C2018,UM,m,UM84595,Control,0,,removed,False,389
+UM-HET3,C2018,UM,m,UM84602,Control,0,,removed,False,389
+UM-HET3,C2018,UM,m,UM84609,Control,0,,removed,False,389
+UM-HET3,C2018,UT,f,UT11189,Control,0,,dead,True,852
+UM-HET3,C2018,UT,f,UT11190,Control,0,,dead,True,826
+UM-HET3,C2018,UT,f,UT11191,Control,0,,dead,True,811
+UM-HET3,C2018,UT,f,UT11192,Control,0,,dead,True,888
+UM-HET3,C2018,UT,f,UT11242,Control,0,,dead,True,709
+UM-HET3,C2018,UT,f,UT11243,Control,0,,dead,True,816
+UM-HET3,C2018,UT,f,UT11244,Control,0,,dead,True,712
+UM-HET3,C2018,UT,f,UT11245,Control,0,,dead,True,775
+UM-HET3,C2018,UT,f,UT11246,Control,0,,dead,True,1131
+UM-HET3,C2018,UT,f,UT11247,Control,0,,dead,True,966
+UM-HET3,C2018,UT,f,UT11248,Control,0,,dead,True,893
+UM-HET3,C2018,UT,f,UT11249,Control,0,,dead,True,962
+UM-HET3,C2018,UT,f,UT11270,Control,0,,dead,True,800
+UM-HET3,C2018,UT,f,UT11271,Control,0,,dead,True,782
+UM-HET3,C2018,UT,f,UT11272,Control,0,,dead,True,706
+UM-HET3,C2018,UT,f,UT11273,Control,0,,dead,True,1006
+UM-HET3,C2018,UT,f,UT11355,Control,0,,dead,True,734
+UM-HET3,C2018,UT,f,UT11356,Control,0,,dead,True,673
+UM-HET3,C2018,UT,f,UT11357,Control,0,,dead,True,890
+UM-HET3,C2018,UT,f,UT11358,Control,0,,dead,True,1035
+UM-HET3,C2018,UT,f,UT11362,Control,0,,dead,True,1101
+UM-HET3,C2018,UT,f,UT11363,Control,0,,dead,True,1027
+UM-HET3,C2018,UT,f,UT11364,Control,0,,dead,True,1127
+UM-HET3,C2018,UT,f,UT11365,Control,0,,dead,True,928
+UM-HET3,C2018,UT,f,UT11377,Control,0,,dead,True,1024
+UM-HET3,C2018,UT,f,UT11378,Control,0,,dead,True,824
+UM-HET3,C2018,UT,f,UT11379,Control,0,,dead,True,798
+UM-HET3,C2018,UT,f,UT11380,Control,0,,dead,True,880
+UM-HET3,C2018,UT,f,UT11422,Control,0,,dead,True,804
+UM-HET3,C2018,UT,f,UT11423,Control,0,,dead,True,876
+UM-HET3,C2018,UT,f,UT11424,Control,0,,dead,True,963
+UM-HET3,C2018,UT,f,UT11425,Control,0,,dead,True,868
+UM-HET3,C2018,UT,f,UT11447,Control,0,,dead,True,512
+UM-HET3,C2018,UT,f,UT11448,Control,0,,dead,True,1076
+UM-HET3,C2018,UT,f,UT11449,Control,0,,dead,True,941
+UM-HET3,C2018,UT,f,UT11450,Control,0,,dead,True,808
+UM-HET3,C2018,UT,f,UT11477,Control,0,,dead,True,825
+UM-HET3,C2018,UT,f,UT11478,Control,0,,dead,True,954
+UM-HET3,C2018,UT,f,UT11479,Control,0,,dead,True,656
+UM-HET3,C2018,UT,f,UT11480,Control,0,,dead,True,994
+UM-HET3,C2018,UT,f,UT11481,Control,0,,dead,True,901
+UM-HET3,C2018,UT,f,UT11482,Control,0,,dead,True,827
+UM-HET3,C2018,UT,f,UT11483,Control,0,,dead,True,945
+UM-HET3,C2018,UT,f,UT11484,Control,0,,dead,True,969
+UM-HET3,C2018,UT,f,UT11522,Control,0,,dead,True,881
+UM-HET3,C2018,UT,f,UT11523,Control,0,,dead,True,668
+UM-HET3,C2018,UT,f,UT11524,Control,0,,dead,True,1105
+UM-HET3,C2018,UT,f,UT11525,Control,0,,dead,True,987
+UM-HET3,C2018,UT,f,UT11597,Control,0,,dead,True,756
+UM-HET3,C2018,UT,f,UT11598,Control,0,,dead,True,852
+UM-HET3,C2018,UT,f,UT11599,Control,0,,dead,True,779
+UM-HET3,C2018,UT,f,UT11600,Control,0,,removed,False,560
+UM-HET3,C2018,UT,f,UT11620,Control,0,,dead,True,771
+UM-HET3,C2018,UT,f,UT11621,Control,0,,dead,True,889
+UM-HET3,C2018,UT,f,UT11622,Control,0,,dead,True,888
+UM-HET3,C2018,UT,f,UT11623,Control,0,,dead,True,598
+UM-HET3,C2018,UT,f,UT11627,Control,0,,dead,True,967
+UM-HET3,C2018,UT,f,UT11628,Control,0,,dead,True,851
+UM-HET3,C2018,UT,f,UT11629,Control,0,,dead,True,960
+UM-HET3,C2018,UT,f,UT11630,Control,0,,dead,True,737
+UM-HET3,C2018,UT,f,UT11682,Control,0,,removed,False,319
+UM-HET3,C2018,UT,f,UT11683,Control,0,,dead,True,934
+UM-HET3,C2018,UT,f,UT11684,Control,0,,dead,True,1038
+UM-HET3,C2018,UT,f,UT11685,Control,0,,dead,True,813
+UM-HET3,C2018,UT,f,UT11760,Control,0,,dead,True,907
+UM-HET3,C2018,UT,f,UT11761,Control,0,,dead,True,1066
+UM-HET3,C2018,UT,f,UT11762,Control,0,,dead,True,892
+UM-HET3,C2018,UT,f,UT11763,Control,0,,dead,True,784
+UM-HET3,C2018,UT,f,UT11774,Control,0,,dead,True,783
+UM-HET3,C2018,UT,f,UT11775,Control,0,,dead,True,1068
+UM-HET3,C2018,UT,f,UT11776,Control,0,,dead,True,983
+UM-HET3,C2018,UT,f,UT11777,Control,0,,dead,True,1055
+UM-HET3,C2018,UT,f,UT11782,Control,0,,dead,True,834
+UM-HET3,C2018,UT,f,UT11783,Control,0,,dead,True,722
+UM-HET3,C2018,UT,f,UT11784,Control,0,,dead,True,898
+UM-HET3,C2018,UT,f,UT11785,Control,0,,dead,True,730
+UM-HET3,C2018,UT,f,UT11832,Control,0,,dead,True,974
+UM-HET3,C2018,UT,f,UT11833,Control,0,,dead,True,763
+UM-HET3,C2018,UT,f,UT11834,Control,0,,dead,True,840
+UM-HET3,C2018,UT,f,UT11835,Control,0,,dead,True,912
+UM-HET3,C2018,UT,f,UT11859,Control,0,,dead,True,641
+UM-HET3,C2018,UT,f,UT11860,Control,0,,dead,True,841
+UM-HET3,C2018,UT,f,UT11861,Control,0,,dead,True,549
+UM-HET3,C2018,UT,f,UT11862,Control,0,,dead,True,934
+UM-HET3,C2018,UT,f,UT11897,Control,0,,dead,True,788
+UM-HET3,C2018,UT,f,UT11898,Control,0,,dead,True,1009
+UM-HET3,C2018,UT,f,UT11899,Control,0,,dead,True,897
+UM-HET3,C2018,UT,f,UT11900,Control,0,,dead,True,698
+UM-HET3,C2018,UT,f,UT11908,Control,0,,dead,True,1071
+UM-HET3,C2018,UT,f,UT11909,Control,0,,dead,True,886
+UM-HET3,C2018,UT,f,UT11910,Control,0,,dead,True,1219
+UM-HET3,C2018,UT,f,UT11911,Control,0,,dead,True,898
+UM-HET3,C2018,UT,f,UT11939,Control,0,,dead,True,935
+UM-HET3,C2018,UT,f,UT11940,Control,0,,dead,True,837
+UM-HET3,C2018,UT,f,UT11941,Control,0,,dead,True,1213
+UM-HET3,C2018,UT,f,UT11942,Control,0,,dead,True,1167
+UM-HET3,C2018,UT,m,UT11211,Control,0,,dead,True,987
+UM-HET3,C2018,UT,m,UT11212,Control,0,,dead,True,384
+UM-HET3,C2018,UT,m,UT11213,Control,0,,dead,True,619
+UM-HET3,C2018,UT,m,UT11218,Control,0,,dead,True,496
+UM-HET3,C2018,UT,m,UT11219,Control,0,,dead,True,810
+UM-HET3,C2018,UT,m,UT11220,Control,0,,dead,True,458
+UM-HET3,C2018,UT,m,UT11250,Control,0,,dead,True,1047
+UM-HET3,C2018,UT,m,UT11251,Control,0,,dead,True,734
+UM-HET3,C2018,UT,m,UT11252,Control,0,,dead,True,724
+UM-HET3,C2018,UT,m,UT11260,Control,0,,dead,True,778
+UM-HET3,C2018,UT,m,UT11261,Control,0,,dead,True,795
+UM-HET3,C2018,UT,m,UT11262,Control,0,,dead,True,1020
+UM-HET3,C2018,UT,m,UT11281,Control,0,,dead,True,790
+UM-HET3,C2018,UT,m,UT11282,Control,0,,dead,True,692
+UM-HET3,C2018,UT,m,UT11283,Control,0,,dead,True,1149
+UM-HET3,C2018,UT,m,UT11291,Control,0,,dead,True,596
+UM-HET3,C2018,UT,m,UT11292,Control,0,,dead,True,1338
+UM-HET3,C2018,UT,m,UT11293,Control,0,,dead,True,692
+UM-HET3,C2018,UT,m,UT11306,Control,0,,dead,True,887
+UM-HET3,C2018,UT,m,UT11307,Control,0,,dead,True,918
+UM-HET3,C2018,UT,m,UT11308,Control,0,,dead,True,816
+UM-HET3,C2018,UT,m,UT11309,Control,0,,dead,True,901
+UM-HET3,C2018,UT,m,UT11310,Control,0,,dead,True,792
+UM-HET3,C2018,UT,m,UT11311,Control,0,,dead,True,244
+UM-HET3,C2018,UT,m,UT11332,Control,0,,dead,True,771
+UM-HET3,C2018,UT,m,UT11333,Control,0,,dead,True,609
+UM-HET3,C2018,UT,m,UT11334,Control,0,,dead,True,913
+UM-HET3,C2018,UT,m,UT11392,Control,0,,dead,True,1028
+UM-HET3,C2018,UT,m,UT11393,Control,0,,dead,True,828
+UM-HET3,C2018,UT,m,UT11394,Control,0,,dead,True,783
+UM-HET3,C2018,UT,m,UT11395,Control,0,,dead,True,682
+UM-HET3,C2018,UT,m,UT11396,Control,0,,dead,True,638
+UM-HET3,C2018,UT,m,UT11397,Control,0,,dead,True,625
+UM-HET3,C2018,UT,m,UT11409,Control,0,,dead,True,880
+UM-HET3,C2018,UT,m,UT11410,Control,0,,dead,True,972
+UM-HET3,C2018,UT,m,UT11411,Control,0,,dead,True,511
+UM-HET3,C2018,UT,m,UT11426,Control,0,,dead,True,457
+UM-HET3,C2018,UT,m,UT11427,Control,0,,dead,True,941
+UM-HET3,C2018,UT,m,UT11428,Control,0,,dead,True,233
+UM-HET3,C2018,UT,m,UT11429,Control,0,,dead,True,339
+UM-HET3,C2018,UT,m,UT11430,Control,0,,dead,True,1036
+UM-HET3,C2018,UT,m,UT11431,Control,0,,dead,True,980
+UM-HET3,C2018,UT,m,UT11454,Control,0,,dead,True,338
+UM-HET3,C2018,UT,m,UT11455,Control,0,,dead,True,486
+UM-HET3,C2018,UT,m,UT11456,Control,0,,dead,True,943
+UM-HET3,C2018,UT,m,UT11464,Control,0,,dead,True,750
+UM-HET3,C2018,UT,m,UT11465,Control,0,,dead,True,649
+UM-HET3,C2018,UT,m,UT11466,Control,0,,dead,True,1047
+UM-HET3,C2018,UT,m,UT11471,Control,0,,removed,False,575
+UM-HET3,C2018,UT,m,UT11472,Control,0,,removed,False,576
+UM-HET3,C2018,UT,m,UT11473,Control,0,,removed,False,576
+UM-HET3,C2018,UT,m,UT11474,Control,0,,dead,True,744
+UM-HET3,C2018,UT,m,UT11475,Control,0,,dead,True,1066
+UM-HET3,C2018,UT,m,UT11476,Control,0,,dead,True,385
+UM-HET3,C2018,UT,m,UT11546,Control,0,,dead,True,832
+UM-HET3,C2018,UT,m,UT11547,Control,0,,dead,True,1048
+UM-HET3,C2018,UT,m,UT11548,Control,0,,dead,True,654
+UM-HET3,C2018,UT,m,UT11561,Control,0,,dead,True,918
+UM-HET3,C2018,UT,m,UT11562,Control,0,,dead,True,471
+UM-HET3,C2018,UT,m,UT11563,Control,0,,dead,True,924
+UM-HET3,C2018,UT,m,UT11567,Control,0,,dead,True,692
+UM-HET3,C2018,UT,m,UT11568,Control,0,,dead,True,807
+UM-HET3,C2018,UT,m,UT11569,Control,0,,dead,True,881
+UM-HET3,C2018,UT,m,UT11617,Control,0,,dead,True,897
+UM-HET3,C2018,UT,m,UT11618,Control,0,,dead,True,900
+UM-HET3,C2018,UT,m,UT11619,Control,0,,dead,True,331
+UM-HET3,C2018,UT,m,UT11631,Control,0,,dead,True,1055
+UM-HET3,C2018,UT,m,UT11632,Control,0,,dead,True,354
+UM-HET3,C2018,UT,m,UT11633,Control,0,,dead,True,856
+UM-HET3,C2018,UT,m,UT11675,Control,0,,dead,True,658
+UM-HET3,C2018,UT,m,UT11676,Control,0,,dead,True,722
+UM-HET3,C2018,UT,m,UT11677,Control,0,,dead,True,722
+UM-HET3,C2018,UT,m,UT11686,Control,0,,dead,True,423
+UM-HET3,C2018,UT,m,UT11687,Control,0,,dead,True,1026
+UM-HET3,C2018,UT,m,UT11688,Control,0,,dead,True,938
+UM-HET3,C2018,UT,m,UT11689,Control,0,,dead,True,778
+UM-HET3,C2018,UT,m,UT11690,Control,0,,dead,True,814
+UM-HET3,C2018,UT,m,UT11691,Control,0,,dead,True,861
+UM-HET3,C2018,UT,m,UT11695,Control,0,,dead,True,685
+UM-HET3,C2018,UT,m,UT11696,Control,0,,dead,True,316
+UM-HET3,C2018,UT,m,UT11697,Control,0,,dead,True,1129
+UM-HET3,C2018,UT,m,UT11712,Control,0,,dead,True,1003
+UM-HET3,C2018,UT,m,UT11713,Control,0,,dead,True,818
+UM-HET3,C2018,UT,m,UT11714,Control,0,,dead,True,903
+UM-HET3,C2018,UT,m,UT11736,Control,0,,dead,True,585
+UM-HET3,C2018,UT,m,UT11737,Control,0,,dead,True,559
+UM-HET3,C2018,UT,m,UT11738,Control,0,,dead,True,946
+UM-HET3,C2018,UT,m,UT11739,Control,0,,dead,True,937
+UM-HET3,C2018,UT,m,UT11740,Control,0,,dead,True,243
+UM-HET3,C2018,UT,m,UT11741,Control,0,,dead,True,590
+UM-HET3,C2018,UT,m,UT11771,Control,0,,dead,True,1163
+UM-HET3,C2018,UT,m,UT11772,Control,0,,dead,True,920
+UM-HET3,C2018,UT,m,UT11773,Control,0,,dead,True,190
+UM-HET3,C2018,UT,m,UT11789,Control,0,,dead,True,304
+UM-HET3,C2018,UT,m,UT11790,Control,0,,dead,True,1152
+UM-HET3,C2018,UT,m,UT11791,Control,0,,dead,True,1148
+UM-HET3,C2018,UT,m,UT11813,Control,0,,dead,True,890
+UM-HET3,C2018,UT,m,UT11814,Control,0,,dead,True,881
+UM-HET3,C2018,UT,m,UT11815,Control,0,,dead,True,524
+UM-HET3,C2018,UT,m,UT11839,Control,0,,dead,True,248
+UM-HET3,C2018,UT,m,UT11840,Control,0,,dead,True,1105
+UM-HET3,C2018,UT,m,UT11841,Control,0,,dead,True,771
+UM-HET3,C2018,UT,m,UT11874,Control,0,,dead,True,971
+UM-HET3,C2018,UT,m,UT11875,Control,0,,dead,True,762
+UM-HET3,C2018,UT,m,UT11876,Control,0,,dead,True,934
+UM-HET3,C2018,TJL,f,JL17041,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,717
+UM-HET3,C2018,TJL,f,JL17042,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1099
+UM-HET3,C2018,TJL,f,JL17043,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,373
+UM-HET3,C2018,TJL,f,JL17044,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,929
+UM-HET3,C2018,TJL,f,JL17090,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,878
+UM-HET3,C2018,TJL,f,JL17091,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1166
+UM-HET3,C2018,TJL,f,JL17092,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,833
+UM-HET3,C2018,TJL,f,JL17093,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,684
+UM-HET3,C2018,TJL,f,JL17149,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,808
+UM-HET3,C2018,TJL,f,JL17150,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,826
+UM-HET3,C2018,TJL,f,JL17151,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,781
+UM-HET3,C2018,TJL,f,JL17152,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,997
+UM-HET3,C2018,TJL,f,JL17171,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,968
+UM-HET3,C2018,TJL,f,JL17172,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1046
+UM-HET3,C2018,TJL,f,JL17173,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,844
+UM-HET3,C2018,TJL,f,JL17174,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,698
+UM-HET3,C2018,TJL,f,JL17285,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1181
+UM-HET3,C2018,TJL,f,JL17286,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,992
+UM-HET3,C2018,TJL,f,JL17287,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,760
+UM-HET3,C2018,TJL,f,JL17288,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,834
+UM-HET3,C2018,TJL,f,JL17361,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1003
+UM-HET3,C2018,TJL,f,JL17362,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,850
+UM-HET3,C2018,TJL,f,JL17363,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,670
+UM-HET3,C2018,TJL,f,JL17364,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,738
+UM-HET3,C2018,TJL,f,JL17443,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1034
+UM-HET3,C2018,TJL,f,JL17444,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,748
+UM-HET3,C2018,TJL,f,JL17445,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,992
+UM-HET3,C2018,TJL,f,JL17446,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1066
+UM-HET3,C2018,TJL,f,JL17451,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,921
+UM-HET3,C2018,TJL,f,JL17452,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1031
+UM-HET3,C2018,TJL,f,JL17453,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,891
+UM-HET3,C2018,TJL,f,JL17454,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,886
+UM-HET3,C2018,TJL,f,JL17581,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,913
+UM-HET3,C2018,TJL,f,JL17582,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1085
+UM-HET3,C2018,TJL,f,JL17583,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,766
+UM-HET3,C2018,TJL,f,JL17584,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1057
+UM-HET3,C2018,TJL,f,JL17621,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,968
+UM-HET3,C2018,TJL,f,JL17622,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,836
+UM-HET3,C2018,TJL,f,JL17623,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1112
+UM-HET3,C2018,TJL,f,JL17624,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1214
+UM-HET3,C2018,TJL,f,JL17658,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1075
+UM-HET3,C2018,TJL,f,JL17659,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,978
+UM-HET3,C2018,TJL,f,JL17660,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,871
+UM-HET3,C2018,TJL,f,JL17661,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,703
+UM-HET3,C2018,TJL,f,JL17749,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,872
+UM-HET3,C2018,TJL,f,JL17750,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1116
+UM-HET3,C2018,TJL,f,JL17751,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,961
+UM-HET3,C2018,TJL,f,JL17752,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,780
+UM-HET3,C2018,TJL,m,JL17057,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,570
+UM-HET3,C2018,TJL,m,JL17058,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,233
+UM-HET3,C2018,TJL,m,JL17059,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,833
+UM-HET3,C2018,TJL,m,JL17100,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,723
+UM-HET3,C2018,TJL,m,JL17101,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,345
+UM-HET3,C2018,TJL,m,JL17102,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,692
+UM-HET3,C2018,TJL,m,JL17115,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,565
+UM-HET3,C2018,TJL,m,JL17116,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,630
+UM-HET3,C2018,TJL,m,JL17117,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,447
+UM-HET3,C2018,TJL,m,JL17138,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1022
+UM-HET3,C2018,TJL,m,JL17139,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,593
+UM-HET3,C2018,TJL,m,JL17140,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,504
+UM-HET3,C2018,TJL,m,JL17162,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,425
+UM-HET3,C2018,TJL,m,JL17163,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,608
+UM-HET3,C2018,TJL,m,JL17164,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,196
+UM-HET3,C2018,TJL,m,JL17185,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,380
+UM-HET3,C2018,TJL,m,JL17186,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,859
+UM-HET3,C2018,TJL,m,JL17187,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,324
+UM-HET3,C2018,TJL,m,JL17267,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,881
+UM-HET3,C2018,TJL,m,JL17268,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1255
+UM-HET3,C2018,TJL,m,JL17269,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,404
+UM-HET3,C2018,TJL,m,JL17270,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1034
+UM-HET3,C2018,TJL,m,JL17271,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,656
+UM-HET3,C2018,TJL,m,JL17272,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1173
+UM-HET3,C2018,TJL,m,JL17298,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,639
+UM-HET3,C2018,TJL,m,JL17299,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,878
+UM-HET3,C2018,TJL,m,JL17300,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,829
+UM-HET3,C2018,TJL,m,JL17358,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,875
+UM-HET3,C2018,TJL,m,JL17359,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,798
+UM-HET3,C2018,TJL,m,JL17360,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,941
+UM-HET3,C2018,TJL,m,JL17394,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,303
+UM-HET3,C2018,TJL,m,JL17395,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,631
+UM-HET3,C2018,TJL,m,JL17396,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,583
+UM-HET3,C2018,TJL,m,JL17406,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,915
+UM-HET3,C2018,TJL,m,JL17407,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1011
+UM-HET3,C2018,TJL,m,JL17408,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,275
+UM-HET3,C2018,TJL,m,JL17502,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,994
+UM-HET3,C2018,TJL,m,JL17503,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1172
+UM-HET3,C2018,TJL,m,JL17504,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,826
+UM-HET3,C2018,TJL,m,JL17508,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,601
+UM-HET3,C2018,TJL,m,JL17509,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1074
+UM-HET3,C2018,TJL,m,JL17510,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,619
+UM-HET3,C2018,TJL,m,JL17536,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,833
+UM-HET3,C2018,TJL,m,JL17537,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,849
+UM-HET3,C2018,TJL,m,JL17538,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,794
+UM-HET3,C2018,TJL,m,JL17601,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1250
+UM-HET3,C2018,TJL,m,JL17602,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,446
+UM-HET3,C2018,TJL,m,JL17603,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,826
+UM-HET3,C2018,TJL,m,JL17632,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,830
+UM-HET3,C2018,TJL,m,JL17633,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,976
+UM-HET3,C2018,TJL,m,JL17634,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,641
+UM-HET3,C2018,TJL,m,JL17720,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,617
+UM-HET3,C2018,TJL,m,JL17721,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,856
+UM-HET3,C2018,TJL,m,JL17722,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,947
+UM-HET3,C2018,UM,f,UM80311,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,757
+UM-HET3,C2018,UM,f,UM80318,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,849
+UM-HET3,C2018,UM,f,UM80325,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,540
+UM-HET3,C2018,UM,f,UM80332,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,841
+UM-HET3,C2018,UM,f,UM80773,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,717
+UM-HET3,C2018,UM,f,UM80780,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,742
+UM-HET3,C2018,UM,f,UM80787,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,626
+UM-HET3,C2018,UM,f,UM80794,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,698
+UM-HET3,C2018,UM,f,UM81102,Fis_Cyc,600,20 (3 days on/11 days off,removed,False,1039
+UM-HET3,C2018,UM,f,UM81109,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,775
+UM-HET3,C2018,UM,f,UM81116,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,610
+UM-HET3,C2018,UM,f,UM81123,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,776
+UM-HET3,C2018,UM,f,UM81452,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,666
+UM-HET3,C2018,UM,f,UM81459,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,742
+UM-HET3,C2018,UM,f,UM81466,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,942
+UM-HET3,C2018,UM,f,UM81473,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,573
+UM-HET3,C2018,UM,f,UM81746,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1232
+UM-HET3,C2018,UM,f,UM81753,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,987
+UM-HET3,C2018,UM,f,UM81760,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1076
+UM-HET3,C2018,UM,f,UM81767,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,618
+UM-HET3,C2018,UM,f,UM82334,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,686
+UM-HET3,C2018,UM,f,UM82341,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1079
+UM-HET3,C2018,UM,f,UM82348,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1152
+UM-HET3,C2018,UM,f,UM82355,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,783
+UM-HET3,C2018,UM,f,UM82628,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,882
+UM-HET3,C2018,UM,f,UM82635,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1186
+UM-HET3,C2018,UM,f,UM82642,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,718
+UM-HET3,C2018,UM,f,UM82649,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,557
+UM-HET3,C2018,UM,f,UM82936,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,984
+UM-HET3,C2018,UM,f,UM82943,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,943
+UM-HET3,C2018,UM,f,UM82950,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,725
+UM-HET3,C2018,UM,f,UM82957,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,556
+UM-HET3,C2018,UM,f,UM84196,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,828
+UM-HET3,C2018,UM,f,UM84203,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1037
+UM-HET3,C2018,UM,f,UM84210,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,869
+UM-HET3,C2018,UM,f,UM84217,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1113
+UM-HET3,C2018,UM,f,UM84273,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,859
+UM-HET3,C2018,UM,f,UM84280,Fis_Cyc,600,20 (3 days on/11 days off,removed,False,956
+UM-HET3,C2018,UM,f,UM84287,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,731
+UM-HET3,C2018,UM,f,UM84294,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,794
+UM-HET3,C2018,UM,f,UM84980,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1036
+UM-HET3,C2018,UM,f,UM84987,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,802
+UM-HET3,C2018,UM,f,UM84994,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,941
+UM-HET3,C2018,UM,f,UM85001,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,935
+UM-HET3,C2018,UM,f,UM85197,Fis_Cyc,600,20 (3 days on/11 days off,removed,False,671
+UM-HET3,C2018,UM,f,UM85204,Fis_Cyc,600,20 (3 days on/11 days off,removed,False,671
+UM-HET3,C2018,UM,f,UM85211,Fis_Cyc,600,20 (3 days on/11 days off,removed,False,671
+UM-HET3,C2018,UM,f,UM85218,Fis_Cyc,600,20 (3 days on/11 days off,removed,False,671
+UM-HET3,C2018,UM,m,UM80143,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,801
+UM-HET3,C2018,UM,m,UM80150,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,578
+UM-HET3,C2018,UM,m,UM80157,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,633
+UM-HET3,C2018,UM,m,UM80360,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,898
+UM-HET3,C2018,UM,m,UM80367,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,631
+UM-HET3,C2018,UM,m,UM80374,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1202
+UM-HET3,C2018,UM,m,UM80633,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,683
+UM-HET3,C2018,UM,m,UM80640,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,631
+UM-HET3,C2018,UM,m,UM80647,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,917
+UM-HET3,C2018,UM,m,UM81004,Fis_Cyc,600,20 (3 days on/11 days off,removed,False,570
+UM-HET3,C2018,UM,m,UM81011,Fis_Cyc,600,20 (3 days on/11 days off,removed,False,570
+UM-HET3,C2018,UM,m,UM81018,Fis_Cyc,600,20 (3 days on/11 days off,removed,False,570
+UM-HET3,C2018,UM,m,UM81081,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1123
+UM-HET3,C2018,UM,m,UM81088,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,478
+UM-HET3,C2018,UM,m,UM81095,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,643
+UM-HET3,C2018,UM,m,UM81298,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,919
+UM-HET3,C2018,UM,m,UM81305,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,929
+UM-HET3,C2018,UM,m,UM81312,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1123
+UM-HET3,C2018,UM,m,UM81872,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,787
+UM-HET3,C2018,UM,m,UM81879,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,926
+UM-HET3,C2018,UM,m,UM81886,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,302
+UM-HET3,C2018,UM,m,UM81935,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,285
+UM-HET3,C2018,UM,m,UM81942,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,226
+UM-HET3,C2018,UM,m,UM81949,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,732
+UM-HET3,C2018,UM,m,UM82173,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,903
+UM-HET3,C2018,UM,m,UM82180,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,614
+UM-HET3,C2018,UM,m,UM82187,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,915
+UM-HET3,C2018,UM,m,UM82453,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,993
+UM-HET3,C2018,UM,m,UM82460,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,756
+UM-HET3,C2018,UM,m,UM82467,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,635
+UM-HET3,C2018,UM,m,UM82474,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,799
+UM-HET3,C2018,UM,m,UM82481,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,955
+UM-HET3,C2018,UM,m,UM82488,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1150
+UM-HET3,C2018,UM,m,UM82964,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,617
+UM-HET3,C2018,UM,m,UM82971,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1133
+UM-HET3,C2018,UM,m,UM82978,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,818
+UM-HET3,C2018,UM,m,UM83440,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1052
+UM-HET3,C2018,UM,m,UM83447,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,861
+UM-HET3,C2018,UM,m,UM83454,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,791
+UM-HET3,C2018,UM,m,UM83692,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,528
+UM-HET3,C2018,UM,m,UM83699,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,950
+UM-HET3,C2018,UM,m,UM83706,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,876
+UM-HET3,C2018,UM,m,UM83713,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,834
+UM-HET3,C2018,UM,m,UM83720,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,673
+UM-HET3,C2018,UM,m,UM83727,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,901
+UM-HET3,C2018,UM,m,UM84154,Fis_Cyc,600,20 (3 days on/11 days off,removed,False,177
+UM-HET3,C2018,UM,m,UM84161,Fis_Cyc,600,20 (3 days on/11 days off,removed,False,177
+UM-HET3,C2018,UM,m,UM84168,Fis_Cyc,600,20 (3 days on/11 days off,removed,False,177
+UM-HET3,C2018,UM,m,UM84252,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,423
+UM-HET3,C2018,UM,m,UM84259,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,789
+UM-HET3,C2018,UM,m,UM84266,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,844
+UM-HET3,C2018,UT,f,UT11196,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,854
+UM-HET3,C2018,UT,f,UT11197,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,877
+UM-HET3,C2018,UT,f,UT11198,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,560
+UM-HET3,C2018,UT,f,UT11199,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,877
+UM-HET3,C2018,UT,f,UT11214,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,971
+UM-HET3,C2018,UT,f,UT11215,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,711
+UM-HET3,C2018,UT,f,UT11216,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1016
+UM-HET3,C2018,UT,f,UT11217,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1119
+UM-HET3,C2018,UT,f,UT11342,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,754
+UM-HET3,C2018,UT,f,UT11343,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1015
+UM-HET3,C2018,UT,f,UT11344,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,870
+UM-HET3,C2018,UT,f,UT11345,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,888
+UM-HET3,C2018,UT,f,UT11405,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,870
+UM-HET3,C2018,UT,f,UT11406,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,978
+UM-HET3,C2018,UT,f,UT11407,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,737
+UM-HET3,C2018,UT,f,UT11408,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,901
+UM-HET3,C2018,UT,f,UT11508,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,878
+UM-HET3,C2018,UT,f,UT11509,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,808
+UM-HET3,C2018,UT,f,UT11510,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,954
+UM-HET3,C2018,UT,f,UT11511,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,662
+UM-HET3,C2018,UT,f,UT11553,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,902
+UM-HET3,C2018,UT,f,UT11554,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,762
+UM-HET3,C2018,UT,f,UT11555,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1038
+UM-HET3,C2018,UT,f,UT11556,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,961
+UM-HET3,C2018,UT,f,UT11576,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,711
+UM-HET3,C2018,UT,f,UT11577,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,760
+UM-HET3,C2018,UT,f,UT11578,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,669
+UM-HET3,C2018,UT,f,UT11579,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,922
+UM-HET3,C2018,UT,f,UT11648,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1110
+UM-HET3,C2018,UT,f,UT11649,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1082
+UM-HET3,C2018,UT,f,UT11650,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1098
+UM-HET3,C2018,UT,f,UT11651,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,983
+UM-HET3,C2018,UT,f,UT11718,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1167
+UM-HET3,C2018,UT,f,UT11719,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,634
+UM-HET3,C2018,UT,f,UT11720,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1002
+UM-HET3,C2018,UT,f,UT11721,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,745
+UM-HET3,C2018,UT,f,UT11778,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,887
+UM-HET3,C2018,UT,f,UT11779,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,582
+UM-HET3,C2018,UT,f,UT11780,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,991
+UM-HET3,C2018,UT,f,UT11781,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,203
+UM-HET3,C2018,UT,f,UT11855,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,733
+UM-HET3,C2018,UT,f,UT11856,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,873
+UM-HET3,C2018,UT,f,UT11857,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,707
+UM-HET3,C2018,UT,f,UT11858,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,759
+UM-HET3,C2018,UT,f,UT11866,Fis_Cyc,600,20 (3 days on/11 days off,removed,False,325
+UM-HET3,C2018,UT,f,UT11867,Fis_Cyc,600,20 (3 days on/11 days off,removed,False,325
+UM-HET3,C2018,UT,f,UT11868,Fis_Cyc,600,20 (3 days on/11 days off,removed,False,325
+UM-HET3,C2018,UT,f,UT11869,Fis_Cyc,600,20 (3 days on/11 days off,removed,False,325
+UM-HET3,C2018,UT,m,UT11186,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,858
+UM-HET3,C2018,UT,m,UT11187,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,270
+UM-HET3,C2018,UT,m,UT11188,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,553
+UM-HET3,C2018,UT,m,UT11274,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,906
+UM-HET3,C2018,UT,m,UT11275,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,285
+UM-HET3,C2018,UT,m,UT11276,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,507
+UM-HET3,C2018,UT,m,UT11303,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,412
+UM-HET3,C2018,UT,m,UT11304,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,887
+UM-HET3,C2018,UT,m,UT11305,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,407
+UM-HET3,C2018,UT,m,UT11325,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,872
+UM-HET3,C2018,UT,m,UT11326,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,902
+UM-HET3,C2018,UT,m,UT11327,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,802
+UM-HET3,C2018,UT,m,UT11359,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,843
+UM-HET3,C2018,UT,m,UT11360,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,467
+UM-HET3,C2018,UT,m,UT11361,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,851
+UM-HET3,C2018,UT,m,UT11366,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,807
+UM-HET3,C2018,UT,m,UT11367,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,758
+UM-HET3,C2018,UT,m,UT11368,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,831
+UM-HET3,C2018,UT,m,UT11438,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,581
+UM-HET3,C2018,UT,m,UT11439,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,799
+UM-HET3,C2018,UT,m,UT11440,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,924
+UM-HET3,C2018,UT,m,UT11457,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,970
+UM-HET3,C2018,UT,m,UT11458,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,851
+UM-HET3,C2018,UT,m,UT11459,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,815
+UM-HET3,C2018,UT,m,UT11505,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,297
+UM-HET3,C2018,UT,m,UT11506,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,951
+UM-HET3,C2018,UT,m,UT11507,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,950
+UM-HET3,C2018,UT,m,UT11543,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,1040
+UM-HET3,C2018,UT,m,UT11544,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,641
+UM-HET3,C2018,UT,m,UT11545,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,598
+UM-HET3,C2018,UT,m,UT11614,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,801
+UM-HET3,C2018,UT,m,UT11615,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,937
+UM-HET3,C2018,UT,m,UT11616,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,857
+UM-HET3,C2018,UT,m,UT11624,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,967
+UM-HET3,C2018,UT,m,UT11625,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,874
+UM-HET3,C2018,UT,m,UT11626,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,746
+UM-HET3,C2018,UT,m,UT11638,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,632
+UM-HET3,C2018,UT,m,UT11639,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,942
+UM-HET3,C2018,UT,m,UT11640,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,920
+UM-HET3,C2018,UT,m,UT11641,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,415
+UM-HET3,C2018,UT,m,UT11642,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,368
+UM-HET3,C2018,UT,m,UT11643,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,485
+UM-HET3,C2018,UT,m,UT11662,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,800
+UM-HET3,C2018,UT,m,UT11663,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,631
+UM-HET3,C2018,UT,m,UT11664,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,372
+UM-HET3,C2018,UT,m,UT11786,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,893
+UM-HET3,C2018,UT,m,UT11787,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,857
+UM-HET3,C2018,UT,m,UT11788,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,713
+UM-HET3,C2018,UT,m,UT11816,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,176
+UM-HET3,C2018,UT,m,UT11817,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,177
+UM-HET3,C2018,UT,m,UT11818,Fis_Cyc,600,20 (3 days on/11 days off,dead,True,289
+UM-HET3,C2018,TJL,f,JL17103,Fis_On,600,20 (continuous),dead,True,688
+UM-HET3,C2018,TJL,f,JL17104,Fis_On,600,20 (continuous),dead,True,719
+UM-HET3,C2018,TJL,f,JL17105,Fis_On,600,20 (continuous),dead,True,1194
+UM-HET3,C2018,TJL,f,JL17106,Fis_On,600,20 (continuous),dead,True,778
+UM-HET3,C2018,TJL,f,JL17107,Fis_On,600,20 (continuous),dead,True,684
+UM-HET3,C2018,TJL,f,JL17108,Fis_On,600,20 (continuous),dead,True,502
+UM-HET3,C2018,TJL,f,JL17109,Fis_On,600,20 (continuous),dead,True,778
+UM-HET3,C2018,TJL,f,JL17110,Fis_On,600,20 (continuous),dead,True,910
+UM-HET3,C2018,TJL,f,JL17145,Fis_On,600,20 (continuous),dead,True,670
+UM-HET3,C2018,TJL,f,JL17146,Fis_On,600,20 (continuous),dead,True,502
+UM-HET3,C2018,TJL,f,JL17147,Fis_On,600,20 (continuous),dead,True,873
+UM-HET3,C2018,TJL,f,JL17148,Fis_On,600,20 (continuous),dead,True,779
+UM-HET3,C2018,TJL,f,JL17215,Fis_On,600,20 (continuous),dead,True,887
+UM-HET3,C2018,TJL,f,JL17216,Fis_On,600,20 (continuous),dead,True,705
+UM-HET3,C2018,TJL,f,JL17217,Fis_On,600,20 (continuous),dead,True,1203
+UM-HET3,C2018,TJL,f,JL17218,Fis_On,600,20 (continuous),dead,True,943
+UM-HET3,C2018,TJL,f,JL17307,Fis_On,600,20 (continuous),dead,True,401
+UM-HET3,C2018,TJL,f,JL17308,Fis_On,600,20 (continuous),dead,True,1001
+UM-HET3,C2018,TJL,f,JL17309,Fis_On,600,20 (continuous),dead,True,753
+UM-HET3,C2018,TJL,f,JL17310,Fis_On,600,20 (continuous),dead,True,841
+UM-HET3,C2018,TJL,f,JL17365,Fis_On,600,20 (continuous),dead,True,976
+UM-HET3,C2018,TJL,f,JL17366,Fis_On,600,20 (continuous),dead,True,891
+UM-HET3,C2018,TJL,f,JL17367,Fis_On,600,20 (continuous),dead,True,857
+UM-HET3,C2018,TJL,f,JL17368,Fis_On,600,20 (continuous),dead,True,822
+UM-HET3,C2018,TJL,f,JL17436,Fis_On,600,20 (continuous),dead,True,805
+UM-HET3,C2018,TJL,f,JL17437,Fis_On,600,20 (continuous),dead,True,768
+UM-HET3,C2018,TJL,f,JL17438,Fis_On,600,20 (continuous),dead,True,412
+UM-HET3,C2018,TJL,f,JL17439,Fis_On,600,20 (continuous),dead,True,1144
+UM-HET3,C2018,TJL,f,JL17481,Fis_On,600,20 (continuous),dead,True,1063
+UM-HET3,C2018,TJL,f,JL17482,Fis_On,600,20 (continuous),dead,True,458
+UM-HET3,C2018,TJL,f,JL17483,Fis_On,600,20 (continuous),dead,True,893
+UM-HET3,C2018,TJL,f,JL17484,Fis_On,600,20 (continuous),dead,True,950
+UM-HET3,C2018,TJL,f,JL17573,Fis_On,600,20 (continuous),dead,True,869
+UM-HET3,C2018,TJL,f,JL17574,Fis_On,600,20 (continuous),dead,True,907
+UM-HET3,C2018,TJL,f,JL17575,Fis_On,600,20 (continuous),dead,True,620
+UM-HET3,C2018,TJL,f,JL17576,Fis_On,600,20 (continuous),dead,True,690
+UM-HET3,C2018,TJL,f,JL17577,Fis_On,600,20 (continuous),dead,True,769
+UM-HET3,C2018,TJL,f,JL17578,Fis_On,600,20 (continuous),dead,True,808
+UM-HET3,C2018,TJL,f,JL17579,Fis_On,600,20 (continuous),dead,True,855
+UM-HET3,C2018,TJL,f,JL17580,Fis_On,600,20 (continuous),dead,True,780
+UM-HET3,C2018,TJL,f,JL17662,Fis_On,600,20 (continuous),dead,True,1052
+UM-HET3,C2018,TJL,f,JL17663,Fis_On,600,20 (continuous),dead,True,1163
+UM-HET3,C2018,TJL,f,JL17664,Fis_On,600,20 (continuous),dead,True,975
+UM-HET3,C2018,TJL,f,JL17665,Fis_On,600,20 (continuous),dead,True,1002
+UM-HET3,C2018,TJL,f,JL17678,Fis_On,600,20 (continuous),dead,True,999
+UM-HET3,C2018,TJL,f,JL17679,Fis_On,600,20 (continuous),dead,True,1053
+UM-HET3,C2018,TJL,f,JL17680,Fis_On,600,20 (continuous),dead,True,704
+UM-HET3,C2018,TJL,f,JL17681,Fis_On,600,20 (continuous),dead,True,1053
+UM-HET3,C2018,TJL,m,JL17013,Fis_On,600,20 (continuous),dead,True,1016
+UM-HET3,C2018,TJL,m,JL17014,Fis_On,600,20 (continuous),dead,True,899
+UM-HET3,C2018,TJL,m,JL17015,Fis_On,600,20 (continuous),dead,True,694
+UM-HET3,C2018,TJL,m,JL17083,Fis_On,600,20 (continuous),dead,True,454
+UM-HET3,C2018,TJL,m,JL17084,Fis_On,600,20 (continuous),dead,True,454
+UM-HET3,C2018,TJL,m,JL17085,Fis_On,600,20 (continuous),dead,True,320
+UM-HET3,C2018,TJL,m,JL17118,Fis_On,600,20 (continuous),dead,True,710
+UM-HET3,C2018,TJL,m,JL17119,Fis_On,600,20 (continuous),dead,True,686
+UM-HET3,C2018,TJL,m,JL17120,Fis_On,600,20 (continuous),dead,True,839
+UM-HET3,C2018,TJL,m,JL17135,Fis_On,600,20 (continuous),dead,True,680
+UM-HET3,C2018,TJL,m,JL17136,Fis_On,600,20 (continuous),dead,True,828
+UM-HET3,C2018,TJL,m,JL17137,Fis_On,600,20 (continuous),dead,True,339
+UM-HET3,C2018,TJL,m,JL17153,Fis_On,600,20 (continuous),dead,True,837
+UM-HET3,C2018,TJL,m,JL17154,Fis_On,600,20 (continuous),dead,True,834
+UM-HET3,C2018,TJL,m,JL17155,Fis_On,600,20 (continuous),dead,True,1236
+UM-HET3,C2018,TJL,m,JL17179,Fis_On,600,20 (continuous),dead,True,897
+UM-HET3,C2018,TJL,m,JL17180,Fis_On,600,20 (continuous),dead,True,450
+UM-HET3,C2018,TJL,m,JL17181,Fis_On,600,20 (continuous),dead,True,764
+UM-HET3,C2018,TJL,m,JL17304,Fis_On,600,20 (continuous),removed,False,288
+UM-HET3,C2018,TJL,m,JL17305,Fis_On,600,20 (continuous),removed,False,288
+UM-HET3,C2018,TJL,m,JL17306,Fis_On,600,20 (continuous),removed,False,288
+UM-HET3,C2018,TJL,m,JL17326,Fis_On,600,20 (continuous),dead,True,338
+UM-HET3,C2018,TJL,m,JL17327,Fis_On,600,20 (continuous),dead,True,576
+UM-HET3,C2018,TJL,m,JL17328,Fis_On,600,20 (continuous),dead,True,761
+UM-HET3,C2018,TJL,m,JL17329,Fis_On,600,20 (continuous),dead,True,238
+UM-HET3,C2018,TJL,m,JL17330,Fis_On,600,20 (continuous),dead,True,355
+UM-HET3,C2018,TJL,m,JL17331,Fis_On,600,20 (continuous),dead,True,856
+UM-HET3,C2018,TJL,m,JL17391,Fis_On,600,20 (continuous),dead,True,568
+UM-HET3,C2018,TJL,m,JL17392,Fis_On,600,20 (continuous),dead,True,973
+UM-HET3,C2018,TJL,m,JL17393,Fis_On,600,20 (continuous),dead,True,642
+UM-HET3,C2018,TJL,m,JL17397,Fis_On,600,20 (continuous),dead,True,987
+UM-HET3,C2018,TJL,m,JL17398,Fis_On,600,20 (continuous),dead,True,750
+UM-HET3,C2018,TJL,m,JL17399,Fis_On,600,20 (continuous),dead,True,748
+UM-HET3,C2018,TJL,m,JL17426,Fis_On,600,20 (continuous),dead,True,1219
+UM-HET3,C2018,TJL,m,JL17427,Fis_On,600,20 (continuous),dead,True,652
+UM-HET3,C2018,TJL,m,JL17428,Fis_On,600,20 (continuous),dead,True,296
+UM-HET3,C2018,TJL,m,JL17496,Fis_On,600,20 (continuous),dead,True,1024
+UM-HET3,C2018,TJL,m,JL17497,Fis_On,600,20 (continuous),dead,True,771
+UM-HET3,C2018,TJL,m,JL17498,Fis_On,600,20 (continuous),dead,True,871
+UM-HET3,C2018,TJL,m,JL17533,Fis_On,600,20 (continuous),dead,True,971
+UM-HET3,C2018,TJL,m,JL17534,Fis_On,600,20 (continuous),dead,True,996
+UM-HET3,C2018,TJL,m,JL17535,Fis_On,600,20 (continuous),dead,True,667
+UM-HET3,C2018,TJL,m,JL17567,Fis_On,600,20 (continuous),dead,True,408
+UM-HET3,C2018,TJL,m,JL17568,Fis_On,600,20 (continuous),dead,True,638
+UM-HET3,C2018,TJL,m,JL17569,Fis_On,600,20 (continuous),dead,True,728
+UM-HET3,C2018,TJL,m,JL17604,Fis_On,600,20 (continuous),dead,True,436
+UM-HET3,C2018,TJL,m,JL17605,Fis_On,600,20 (continuous),dead,True,436
+UM-HET3,C2018,TJL,m,JL17606,Fis_On,600,20 (continuous),dead,True,436
+UM-HET3,C2018,TJL,m,JL17694,Fis_On,600,20 (continuous),dead,True,717
+UM-HET3,C2018,TJL,m,JL17695,Fis_On,600,20 (continuous),dead,True,441
+UM-HET3,C2018,TJL,m,JL17696,Fis_On,600,20 (continuous),dead,True,1165
+UM-HET3,C2018,TJL,m,JL17697,Fis_On,600,20 (continuous),dead,True,405
+UM-HET3,C2018,TJL,m,JL17698,Fis_On,600,20 (continuous),dead,True,943
+UM-HET3,C2018,TJL,m,JL17699,Fis_On,600,20 (continuous),dead,True,828
+UM-HET3,C2018,UM,f,UM80381,Fis_On,600,20 (continuous),dead,True,829
+UM-HET3,C2018,UM,f,UM80388,Fis_On,600,20 (continuous),dead,True,880
+UM-HET3,C2018,UM,f,UM80395,Fis_On,600,20 (continuous),dead,True,621
+UM-HET3,C2018,UM,f,UM80402,Fis_On,600,20 (continuous),dead,True,788
+UM-HET3,C2018,UM,f,UM80703,Fis_On,600,20 (continuous),dead,True,764
+UM-HET3,C2018,UM,f,UM80710,Fis_On,600,20 (continuous),dead,True,892
+UM-HET3,C2018,UM,f,UM80717,Fis_On,600,20 (continuous),dead,True,638
+UM-HET3,C2018,UM,f,UM80724,Fis_On,600,20 (continuous),dead,True,892
+UM-HET3,C2018,UM,f,UM81053,Fis_On,600,20 (continuous),dead,True,903
+UM-HET3,C2018,UM,f,UM81060,Fis_On,600,20 (continuous),dead,True,847
+UM-HET3,C2018,UM,f,UM81067,Fis_On,600,20 (continuous),dead,True,857
+UM-HET3,C2018,UM,f,UM81074,Fis_On,600,20 (continuous),dead,True,651
+UM-HET3,C2018,UM,f,UM81599,Fis_On,600,20 (continuous),dead,True,1024
+UM-HET3,C2018,UM,f,UM81606,Fis_On,600,20 (continuous),dead,True,862
+UM-HET3,C2018,UM,f,UM81613,Fis_On,600,20 (continuous),dead,True,901
+UM-HET3,C2018,UM,f,UM81620,Fis_On,600,20 (continuous),dead,True,913
+UM-HET3,C2018,UM,f,UM82572,Fis_On,600,20 (continuous),dead,True,1130
+UM-HET3,C2018,UM,f,UM82579,Fis_On,600,20 (continuous),dead,True,509
+UM-HET3,C2018,UM,f,UM82586,Fis_On,600,20 (continuous),dead,True,761
+UM-HET3,C2018,UM,f,UM82593,Fis_On,600,20 (continuous),dead,True,865
+UM-HET3,C2018,UM,f,UM82600,Fis_On,600,20 (continuous),dead,True,1085
+UM-HET3,C2018,UM,f,UM82607,Fis_On,600,20 (continuous),dead,True,1056
+UM-HET3,C2018,UM,f,UM82614,Fis_On,600,20 (continuous),dead,True,1038
+UM-HET3,C2018,UM,f,UM82621,Fis_On,600,20 (continuous),dead,True,856
+UM-HET3,C2018,UM,f,UM82656,Fis_On,600,20 (continuous),dead,True,855
+UM-HET3,C2018,UM,f,UM82663,Fis_On,600,20 (continuous),dead,True,901
+UM-HET3,C2018,UM,f,UM82670,Fis_On,600,20 (continuous),dead,True,926
+UM-HET3,C2018,UM,f,UM82677,Fis_On,600,20 (continuous),dead,True,708
+UM-HET3,C2018,UM,f,UM82985,Fis_On,600,20 (continuous),dead,True,913
+UM-HET3,C2018,UM,f,UM82992,Fis_On,600,20 (continuous),dead,True,883
+UM-HET3,C2018,UM,f,UM82999,Fis_On,600,20 (continuous),dead,True,461
+UM-HET3,C2018,UM,f,UM83006,Fis_On,600,20 (continuous),dead,True,966
+UM-HET3,C2018,UM,f,UM83853,Fis_On,600,20 (continuous),dead,True,1037
+UM-HET3,C2018,UM,f,UM83860,Fis_On,600,20 (continuous),dead,True,800
+UM-HET3,C2018,UM,f,UM83867,Fis_On,600,20 (continuous),dead,True,1101
+UM-HET3,C2018,UM,f,UM83874,Fis_On,600,20 (continuous),dead,True,679
+UM-HET3,C2018,UM,f,UM84063,Fis_On,600,20 (continuous),dead,True,823
+UM-HET3,C2018,UM,f,UM84070,Fis_On,600,20 (continuous),dead,True,960
+UM-HET3,C2018,UM,f,UM84077,Fis_On,600,20 (continuous),dead,True,1141
+UM-HET3,C2018,UM,f,UM84084,Fis_On,600,20 (continuous),dead,True,824
+UM-HET3,C2018,UM,f,UM84567,Fis_On,600,20 (continuous),dead,True,931
+UM-HET3,C2018,UM,f,UM84574,Fis_On,600,20 (continuous),dead,True,783
+UM-HET3,C2018,UM,f,UM84581,Fis_On,600,20 (continuous),dead,True,985
+UM-HET3,C2018,UM,f,UM84588,Fis_On,600,20 (continuous),dead,True,999
+UM-HET3,C2018,UM,f,UM84840,Fis_On,600,20 (continuous),dead,True,971
+UM-HET3,C2018,UM,f,UM84847,Fis_On,600,20 (continuous),dead,True,569
+UM-HET3,C2018,UM,f,UM84854,Fis_On,600,20 (continuous),dead,True,862
+UM-HET3,C2018,UM,f,UM84861,Fis_On,600,20 (continuous),dead,True,1053
+UM-HET3,C2018,UM,m,UM80017,Fis_On,600,20 (continuous),dead,True,827
+UM-HET3,C2018,UM,m,UM80024,Fis_On,600,20 (continuous),dead,True,819
+UM-HET3,C2018,UM,m,UM80031,Fis_On,600,20 (continuous),dead,True,868
+UM-HET3,C2018,UM,m,UM80038,Fis_On,600,20 (continuous),removed,False,197
+UM-HET3,C2018,UM,m,UM80045,Fis_On,600,20 (continuous),removed,False,197
+UM-HET3,C2018,UM,m,UM80052,Fis_On,600,20 (continuous),removed,False,197
+UM-HET3,C2018,UM,m,UM80731,Fis_On,600,20 (continuous),removed,False,513
+UM-HET3,C2018,UM,m,UM80738,Fis_On,600,20 (continuous),removed,False,513
+UM-HET3,C2018,UM,m,UM80745,Fis_On,600,20 (continuous),removed,False,513
+UM-HET3,C2018,UM,m,UM80906,Fis_On,600,20 (continuous),dead,True,1073
+UM-HET3,C2018,UM,m,UM80913,Fis_On,600,20 (continuous),dead,True,240
+UM-HET3,C2018,UM,m,UM80920,Fis_On,600,20 (continuous),dead,True,70
+UM-HET3,C2018,UM,m,UM81207,Fis_On,600,20 (continuous),dead,True,332
+UM-HET3,C2018,UM,m,UM81214,Fis_On,600,20 (continuous),dead,True,670
+UM-HET3,C2018,UM,m,UM81221,Fis_On,600,20 (continuous),dead,True,863
+UM-HET3,C2018,UM,m,UM81249,Fis_On,600,20 (continuous),removed,False,40
+UM-HET3,C2018,UM,m,UM81256,Fis_On,600,20 (continuous),dead,True,255
+UM-HET3,C2018,UM,m,UM81263,Fis_On,600,20 (continuous),dead,True,716
+UM-HET3,C2018,UM,m,UM81508,Fis_On,600,20 (continuous),dead,True,960
+UM-HET3,C2018,UM,m,UM81515,Fis_On,600,20 (continuous),dead,True,1069
+UM-HET3,C2018,UM,m,UM81522,Fis_On,600,20 (continuous),dead,True,1078
+UM-HET3,C2018,UM,m,UM81655,Fis_On,600,20 (continuous),dead,True,687
+UM-HET3,C2018,UM,m,UM81662,Fis_On,600,20 (continuous),dead,True,1100
+UM-HET3,C2018,UM,m,UM81669,Fis_On,600,20 (continuous),dead,True,513
+UM-HET3,C2018,UM,m,UM81774,Fis_On,600,20 (continuous),dead,True,847
+UM-HET3,C2018,UM,m,UM81781,Fis_On,600,20 (continuous),dead,True,907
+UM-HET3,C2018,UM,m,UM81788,Fis_On,600,20 (continuous),dead,True,443
+UM-HET3,C2018,UM,m,UM82432,Fis_On,600,20 (continuous),dead,True,458
+UM-HET3,C2018,UM,m,UM82439,Fis_On,600,20 (continuous),dead,True,322
+UM-HET3,C2018,UM,m,UM82446,Fis_On,600,20 (continuous),dead,True,815
+UM-HET3,C2018,UM,m,UM82754,Fis_On,600,20 (continuous),dead,True,881
+UM-HET3,C2018,UM,m,UM82761,Fis_On,600,20 (continuous),dead,True,350
+UM-HET3,C2018,UM,m,UM82768,Fis_On,600,20 (continuous),dead,True,799
+UM-HET3,C2018,UM,m,UM82824,Fis_On,600,20 (continuous),dead,True,647
+UM-HET3,C2018,UM,m,UM82831,Fis_On,600,20 (continuous),dead,True,500
+UM-HET3,C2018,UM,m,UM82838,Fis_On,600,20 (continuous),dead,True,513
+UM-HET3,C2018,UM,m,UM83237,Fis_On,600,20 (continuous),dead,True,1196
+UM-HET3,C2018,UM,m,UM83244,Fis_On,600,20 (continuous),dead,True,887
+UM-HET3,C2018,UM,m,UM83251,Fis_On,600,20 (continuous),dead,True,754
+UM-HET3,C2018,UM,m,UM83832,Fis_On,600,20 (continuous),dead,True,687
+UM-HET3,C2018,UM,m,UM83839,Fis_On,600,20 (continuous),dead,True,322
+UM-HET3,C2018,UM,m,UM83846,Fis_On,600,20 (continuous),dead,True,591
+UM-HET3,C2018,UM,m,UM83930,Fis_On,600,20 (continuous),removed,False,506
+UM-HET3,C2018,UM,m,UM83937,Fis_On,600,20 (continuous),removed,False,506
+UM-HET3,C2018,UM,m,UM83944,Fis_On,600,20 (continuous),removed,False,506
+UM-HET3,C2018,UM,m,UM84021,Fis_On,600,20 (continuous),dead,True,603
+UM-HET3,C2018,UM,m,UM84028,Fis_On,600,20 (continuous),dead,True,598
+UM-HET3,C2018,UM,m,UM84035,Fis_On,600,20 (continuous),dead,True,414
+UM-HET3,C2018,UM,m,UM84042,Fis_On,600,20 (continuous),dead,True,485
+UM-HET3,C2018,UM,m,UM84049,Fis_On,600,20 (continuous),dead,True,819
+UM-HET3,C2018,UM,m,UM84056,Fis_On,600,20 (continuous),dead,True,705
+UM-HET3,C2018,UM,m,UM84112,Fis_On,600,20 (continuous),dead,True,541
+UM-HET3,C2018,UM,m,UM84119,Fis_On,600,20 (continuous),dead,True,977
+UM-HET3,C2018,UM,m,UM84126,Fis_On,600,20 (continuous),dead,True,833
+UM-HET3,C2018,UT,f,UT11224,Fis_On,600,20 (continuous),dead,True,776
+UM-HET3,C2018,UT,f,UT11225,Fis_On,600,20 (continuous),dead,True,974
+UM-HET3,C2018,UT,f,UT11226,Fis_On,600,20 (continuous),dead,True,993
+UM-HET3,C2018,UT,f,UT11227,Fis_On,600,20 (continuous),dead,True,633
+UM-HET3,C2018,UT,f,UT11256,Fis_On,600,20 (continuous),dead,True,1030
+UM-HET3,C2018,UT,f,UT11257,Fis_On,600,20 (continuous),dead,True,1055
+UM-HET3,C2018,UT,f,UT11258,Fis_On,600,20 (continuous),dead,True,977
+UM-HET3,C2018,UT,f,UT11259,Fis_On,600,20 (continuous),dead,True,940
+UM-HET3,C2018,UT,f,UT11335,Fis_On,600,20 (continuous),dead,True,1021
+UM-HET3,C2018,UT,f,UT11336,Fis_On,600,20 (continuous),dead,True,1170
+UM-HET3,C2018,UT,f,UT11337,Fis_On,600,20 (continuous),dead,True,1060
+UM-HET3,C2018,UT,f,UT11338,Fis_On,600,20 (continuous),dead,True,910
+UM-HET3,C2018,UT,f,UT11388,Fis_On,600,20 (continuous),dead,True,859
+UM-HET3,C2018,UT,f,UT11389,Fis_On,600,20 (continuous),dead,True,450
+UM-HET3,C2018,UT,f,UT11390,Fis_On,600,20 (continuous),dead,True,828
+UM-HET3,C2018,UT,f,UT11391,Fis_On,600,20 (continuous),dead,True,873
+UM-HET3,C2018,UT,f,UT11491,Fis_On,600,20 (continuous),dead,True,1132
+UM-HET3,C2018,UT,f,UT11492,Fis_On,600,20 (continuous),dead,True,807
+UM-HET3,C2018,UT,f,UT11493,Fis_On,600,20 (continuous),dead,True,1044
+UM-HET3,C2018,UT,f,UT11494,Fis_On,600,20 (continuous),dead,True,800
+UM-HET3,C2018,UT,f,UT11557,Fis_On,600,20 (continuous),dead,True,936
+UM-HET3,C2018,UT,f,UT11558,Fis_On,600,20 (continuous),dead,True,948
+UM-HET3,C2018,UT,f,UT11559,Fis_On,600,20 (continuous),dead,True,819
+UM-HET3,C2018,UT,f,UT11560,Fis_On,600,20 (continuous),dead,True,720
+UM-HET3,C2018,UT,f,UT11583,Fis_On,600,20 (continuous),dead,True,923
+UM-HET3,C2018,UT,f,UT11584,Fis_On,600,20 (continuous),dead,True,702
+UM-HET3,C2018,UT,f,UT11585,Fis_On,600,20 (continuous),dead,True,1043
+UM-HET3,C2018,UT,f,UT11586,Fis_On,600,20 (continuous),dead,True,706
+UM-HET3,C2018,UT,f,UT11607,Fis_On,600,20 (continuous),dead,True,1073
+UM-HET3,C2018,UT,f,UT11608,Fis_On,600,20 (continuous),dead,True,938
+UM-HET3,C2018,UT,f,UT11609,Fis_On,600,20 (continuous),dead,True,918
+UM-HET3,C2018,UT,f,UT11610,Fis_On,600,20 (continuous),dead,True,860
+UM-HET3,C2018,UT,f,UT11732,Fis_On,600,20 (continuous),dead,True,908
+UM-HET3,C2018,UT,f,UT11733,Fis_On,600,20 (continuous),dead,True,769
+UM-HET3,C2018,UT,f,UT11734,Fis_On,600,20 (continuous),dead,True,967
+UM-HET3,C2018,UT,f,UT11735,Fis_On,600,20 (continuous),dead,True,623
+UM-HET3,C2018,UT,f,UT11742,Fis_On,600,20 (continuous),dead,True,1341
+UM-HET3,C2018,UT,f,UT11743,Fis_On,600,20 (continuous),dead,True,664
+UM-HET3,C2018,UT,f,UT11744,Fis_On,600,20 (continuous),dead,True,1131
+UM-HET3,C2018,UT,f,UT11745,Fis_On,600,20 (continuous),dead,True,818
+UM-HET3,C2018,UT,f,UT11848,Fis_On,600,20 (continuous),dead,True,1196
+UM-HET3,C2018,UT,f,UT11849,Fis_On,600,20 (continuous),dead,True,1076
+UM-HET3,C2018,UT,f,UT11850,Fis_On,600,20 (continuous),dead,True,1030
+UM-HET3,C2018,UT,f,UT11851,Fis_On,600,20 (continuous),dead,True,802
+UM-HET3,C2018,UT,f,UT11870,Fis_On,600,20 (continuous),dead,True,933
+UM-HET3,C2018,UT,f,UT11871,Fis_On,600,20 (continuous),dead,True,1043
+UM-HET3,C2018,UT,f,UT11872,Fis_On,600,20 (continuous),dead,True,976
+UM-HET3,C2018,UT,f,UT11873,Fis_On,600,20 (continuous),dead,True,664
+UM-HET3,C2018,UT,m,UT11204,Fis_On,600,20 (continuous),removed,False,612
+UM-HET3,C2018,UT,m,UT11205,Fis_On,600,20 (continuous),dead,True,1077
+UM-HET3,C2018,UT,m,UT11206,Fis_On,600,20 (continuous),dead,True,296
+UM-HET3,C2018,UT,m,UT11253,Fis_On,600,20 (continuous),dead,True,412
+UM-HET3,C2018,UT,m,UT11254,Fis_On,600,20 (continuous),dead,True,733
+UM-HET3,C2018,UT,m,UT11255,Fis_On,600,20 (continuous),dead,True,578
+UM-HET3,C2018,UT,m,UT11297,Fis_On,600,20 (continuous),dead,True,1154
+UM-HET3,C2018,UT,m,UT11298,Fis_On,600,20 (continuous),dead,True,814
+UM-HET3,C2018,UT,m,UT11299,Fis_On,600,20 (continuous),dead,True,1167
+UM-HET3,C2018,UT,m,UT11312,Fis_On,600,20 (continuous),dead,True,312
+UM-HET3,C2018,UT,m,UT11313,Fis_On,600,20 (continuous),dead,True,679
+UM-HET3,C2018,UT,m,UT11314,Fis_On,600,20 (continuous),dead,True,958
+UM-HET3,C2018,UT,m,UT11322,Fis_On,600,20 (continuous),dead,True,902
+UM-HET3,C2018,UT,m,UT11323,Fis_On,600,20 (continuous),dead,True,744
+UM-HET3,C2018,UT,m,UT11324,Fis_On,600,20 (continuous),dead,True,841
+UM-HET3,C2018,UT,m,UT11381,Fis_On,600,20 (continuous),dead,True,1039
+UM-HET3,C2018,UT,m,UT11382,Fis_On,600,20 (continuous),dead,True,1345
+UM-HET3,C2018,UT,m,UT11383,Fis_On,600,20 (continuous),dead,True,819
+UM-HET3,C2018,UT,m,UT11444,Fis_On,600,20 (continuous),dead,True,675
+UM-HET3,C2018,UT,m,UT11445,Fis_On,600,20 (continuous),dead,True,281
+UM-HET3,C2018,UT,m,UT11446,Fis_On,600,20 (continuous),dead,True,966
+UM-HET3,C2018,UT,m,UT11488,Fis_On,600,20 (continuous),dead,True,209
+UM-HET3,C2018,UT,m,UT11489,Fis_On,600,20 (continuous),dead,True,315
+UM-HET3,C2018,UT,m,UT11490,Fis_On,600,20 (continuous),dead,True,303
+UM-HET3,C2018,UT,m,UT11502,Fis_On,600,20 (continuous),dead,True,1006
+UM-HET3,C2018,UT,m,UT11503,Fis_On,600,20 (continuous),dead,True,925
+UM-HET3,C2018,UT,m,UT11504,Fis_On,600,20 (continuous),dead,True,859
+UM-HET3,C2018,UT,m,UT11526,Fis_On,600,20 (continuous),dead,True,465
+UM-HET3,C2018,UT,m,UT11527,Fis_On,600,20 (continuous),dead,True,411
+UM-HET3,C2018,UT,m,UT11528,Fis_On,600,20 (continuous),dead,True,666
+UM-HET3,C2018,UT,m,UT11537,Fis_On,600,20 (continuous),dead,True,896
+UM-HET3,C2018,UT,m,UT11538,Fis_On,600,20 (continuous),dead,True,570
+UM-HET3,C2018,UT,m,UT11539,Fis_On,600,20 (continuous),dead,True,898
+UM-HET3,C2018,UT,m,UT11604,Fis_On,600,20 (continuous),dead,True,996
+UM-HET3,C2018,UT,m,UT11605,Fis_On,600,20 (continuous),dead,True,438
+UM-HET3,C2018,UT,m,UT11606,Fis_On,600,20 (continuous),dead,True,735
+UM-HET3,C2018,UT,m,UT11652,Fis_On,600,20 (continuous),dead,True,805
+UM-HET3,C2018,UT,m,UT11653,Fis_On,600,20 (continuous),dead,True,474
+UM-HET3,C2018,UT,m,UT11654,Fis_On,600,20 (continuous),dead,True,677
+UM-HET3,C2018,UT,m,UT11665,Fis_On,600,20 (continuous),dead,True,121
+UM-HET3,C2018,UT,m,UT11666,Fis_On,600,20 (continuous),dead,True,974
+UM-HET3,C2018,UT,m,UT11667,Fis_On,600,20 (continuous),dead,True,715
+UM-HET3,C2018,UT,m,UT11692,Fis_On,600,20 (continuous),dead,True,865
+UM-HET3,C2018,UT,m,UT11693,Fis_On,600,20 (continuous),dead,True,686
+UM-HET3,C2018,UT,m,UT11694,Fis_On,600,20 (continuous),dead,True,721
+UM-HET3,C2018,UT,m,UT11764,Fis_On,600,20 (continuous),dead,True,482
+UM-HET3,C2018,UT,m,UT11765,Fis_On,600,20 (continuous),dead,True,358
+UM-HET3,C2018,UT,m,UT11766,Fis_On,600,20 (continuous),dead,True,640
+UM-HET3,C2018,UT,m,UT11799,Fis_On,600,20 (continuous),removed,False,382
+UM-HET3,C2018,UT,m,UT11800,Fis_On,600,20 (continuous),removed,False,382
+UM-HET3,C2018,UT,m,UT11801,Fis_On,600,20 (continuous),removed,False,382
+UM-HET3,C2018,TJL,f,JL17005,SG1002,240,18,dead,True,977
+UM-HET3,C2018,TJL,f,JL17006,SG1002,240,18,dead,True,866
+UM-HET3,C2018,TJL,f,JL17007,SG1002,240,18,dead,True,736
+UM-HET3,C2018,TJL,f,JL17008,SG1002,240,18,dead,True,1141
+UM-HET3,C2018,TJL,f,JL17073,SG1002,240,18,dead,True,802
+UM-HET3,C2018,TJL,f,JL17074,SG1002,240,18,dead,True,808
+UM-HET3,C2018,TJL,f,JL17075,SG1002,240,18,dead,True,904
+UM-HET3,C2018,TJL,f,JL17076,SG1002,240,18,dead,True,790
+UM-HET3,C2018,TJL,f,JL17124,SG1002,240,18,dead,True,746
+UM-HET3,C2018,TJL,f,JL17125,SG1002,240,18,dead,True,638
+UM-HET3,C2018,TJL,f,JL17126,SG1002,240,18,dead,True,911
+UM-HET3,C2018,TJL,f,JL17127,SG1002,240,18,dead,True,906
+UM-HET3,C2018,TJL,f,JL17191,SG1002,240,18,dead,True,619
+UM-HET3,C2018,TJL,f,JL17192,SG1002,240,18,dead,True,646
+UM-HET3,C2018,TJL,f,JL17193,SG1002,240,18,dead,True,924
+UM-HET3,C2018,TJL,f,JL17194,SG1002,240,18,dead,True,1084
+UM-HET3,C2018,TJL,f,JL17281,SG1002,240,18,dead,True,845
+UM-HET3,C2018,TJL,f,JL17282,SG1002,240,18,dead,True,829
+UM-HET3,C2018,TJL,f,JL17283,SG1002,240,18,dead,True,1244
+UM-HET3,C2018,TJL,f,JL17284,SG1002,240,18,dead,True,836
+UM-HET3,C2018,TJL,f,JL17315,SG1002,240,18,dead,True,817
+UM-HET3,C2018,TJL,f,JL17316,SG1002,240,18,dead,True,887
+UM-HET3,C2018,TJL,f,JL17317,SG1002,240,18,dead,True,979
+UM-HET3,C2018,TJL,f,JL17318,SG1002,240,18,dead,True,836
+UM-HET3,C2018,TJL,f,JL17447,SG1002,240,18,dead,True,797
+UM-HET3,C2018,TJL,f,JL17448,SG1002,240,18,dead,True,878
+UM-HET3,C2018,TJL,f,JL17449,SG1002,240,18,dead,True,704
+UM-HET3,C2018,TJL,f,JL17450,SG1002,240,18,dead,True,683
+UM-HET3,C2018,TJL,f,JL17485,SG1002,240,18,dead,True,1120
+UM-HET3,C2018,TJL,f,JL17486,SG1002,240,18,dead,True,1225
+UM-HET3,C2018,TJL,f,JL17487,SG1002,240,18,dead,True,983
+UM-HET3,C2018,TJL,f,JL17488,SG1002,240,18,dead,True,1186
+UM-HET3,C2018,TJL,f,JL17559,SG1002,240,18,dead,True,1218
+UM-HET3,C2018,TJL,f,JL17560,SG1002,240,18,dead,True,684
+UM-HET3,C2018,TJL,f,JL17561,SG1002,240,18,dead,True,946
+UM-HET3,C2018,TJL,f,JL17562,SG1002,240,18,dead,True,600
+UM-HET3,C2018,TJL,f,JL17617,SG1002,240,18,dead,True,1080
+UM-HET3,C2018,TJL,f,JL17618,SG1002,240,18,dead,True,1122
+UM-HET3,C2018,TJL,f,JL17619,SG1002,240,18,dead,True,975
+UM-HET3,C2018,TJL,f,JL17620,SG1002,240,18,dead,True,1020
+UM-HET3,C2018,TJL,f,JL17625,SG1002,240,18,dead,True,808
+UM-HET3,C2018,TJL,f,JL17626,SG1002,240,18,dead,True,1215
+UM-HET3,C2018,TJL,f,JL17627,SG1002,240,18,dead,True,1032
+UM-HET3,C2018,TJL,f,JL17628,SG1002,240,18,dead,True,897
+UM-HET3,C2018,TJL,f,JL17670,SG1002,240,18,dead,True,676
+UM-HET3,C2018,TJL,f,JL17671,SG1002,240,18,dead,True,933
+UM-HET3,C2018,TJL,f,JL17672,SG1002,240,18,dead,True,1150
+UM-HET3,C2018,TJL,f,JL17673,SG1002,240,18,dead,True,824
+UM-HET3,C2018,TJL,m,JL17016,SG1002,240,18,dead,True,967
+UM-HET3,C2018,TJL,m,JL17017,SG1002,240,18,dead,True,1262
+UM-HET3,C2018,TJL,m,JL17018,SG1002,240,18,dead,True,945
+UM-HET3,C2018,TJL,m,JL17051,SG1002,240,18,dead,True,1087
+UM-HET3,C2018,TJL,m,JL17052,SG1002,240,18,dead,True,803
+UM-HET3,C2018,TJL,m,JL17053,SG1002,240,18,dead,True,705
+UM-HET3,C2018,TJL,m,JL17060,SG1002,240,18,dead,True,544
+UM-HET3,C2018,TJL,m,JL17061,SG1002,240,18,dead,True,345
+UM-HET3,C2018,TJL,m,JL17062,SG1002,240,18,dead,True,615
+UM-HET3,C2018,TJL,m,JL17182,SG1002,240,18,dead,True,850
+UM-HET3,C2018,TJL,m,JL17183,SG1002,240,18,dead,True,969
+UM-HET3,C2018,TJL,m,JL17184,SG1002,240,18,dead,True,548
+UM-HET3,C2018,TJL,m,JL17209,SG1002,240,18,dead,True,855
+UM-HET3,C2018,TJL,m,JL17210,SG1002,240,18,dead,True,924
+UM-HET3,C2018,TJL,m,JL17211,SG1002,240,18,dead,True,247
+UM-HET3,C2018,TJL,m,JL17212,SG1002,240,18,dead,True,626
+UM-HET3,C2018,TJL,m,JL17213,SG1002,240,18,dead,True,443
+UM-HET3,C2018,TJL,m,JL17214,SG1002,240,18,dead,True,752
+UM-HET3,C2018,TJL,m,JL17243,SG1002,240,18,dead,True,401
+UM-HET3,C2018,TJL,m,JL17244,SG1002,240,18,dead,True,794
+UM-HET3,C2018,TJL,m,JL17245,SG1002,240,18,dead,True,275
+UM-HET3,C2018,TJL,m,JL17261,SG1002,240,18,dead,True,451
+UM-HET3,C2018,TJL,m,JL17262,SG1002,240,18,dead,True,903
+UM-HET3,C2018,TJL,m,JL17263,SG1002,240,18,dead,True,785
+UM-HET3,C2018,TJL,m,JL17323,SG1002,240,18,dead,True,1003
+UM-HET3,C2018,TJL,m,JL17324,SG1002,240,18,dead,True,1031
+UM-HET3,C2018,TJL,m,JL17325,SG1002,240,18,dead,True,478
+UM-HET3,C2018,TJL,m,JL17385,SG1002,240,18,dead,True,841
+UM-HET3,C2018,TJL,m,JL17386,SG1002,240,18,dead,True,484
+UM-HET3,C2018,TJL,m,JL17387,SG1002,240,18,dead,True,862
+UM-HET3,C2018,TJL,m,JL17388,SG1002,240,18,dead,True,767
+UM-HET3,C2018,TJL,m,JL17389,SG1002,240,18,dead,True,753
+UM-HET3,C2018,TJL,m,JL17390,SG1002,240,18,dead,True,508
+UM-HET3,C2018,TJL,m,JL17440,SG1002,240,18,dead,True,607
+UM-HET3,C2018,TJL,m,JL17441,SG1002,240,18,dead,True,286
+UM-HET3,C2018,TJL,m,JL17442,SG1002,240,18,dead,True,384
+UM-HET3,C2018,TJL,m,JL17468,SG1002,240,18,dead,True,1095
+UM-HET3,C2018,TJL,m,JL17469,SG1002,240,18,dead,True,859
+UM-HET3,C2018,TJL,m,JL17470,SG1002,240,18,dead,True,1125
+UM-HET3,C2018,TJL,m,JL17474,SG1002,240,18,dead,True,511
+UM-HET3,C2018,TJL,m,JL17475,SG1002,240,18,dead,True,477
+UM-HET3,C2018,TJL,m,JL17476,SG1002,240,18,dead,True,394
+UM-HET3,C2018,TJL,m,JL17549,SG1002,240,18,dead,True,315
+UM-HET3,C2018,TJL,m,JL17550,SG1002,240,18,dead,True,876
+UM-HET3,C2018,TJL,m,JL17551,SG1002,240,18,dead,True,219
+UM-HET3,C2018,TJL,m,JL17607,SG1002,240,18,dead,True,1002
+UM-HET3,C2018,TJL,m,JL17608,SG1002,240,18,dead,True,750
+UM-HET3,C2018,TJL,m,JL17609,SG1002,240,18,dead,True,747
+UM-HET3,C2018,TJL,m,JL17685,SG1002,240,18,dead,True,339
+UM-HET3,C2018,TJL,m,JL17686,SG1002,240,18,dead,True,707
+UM-HET3,C2018,TJL,m,JL17687,SG1002,240,18,dead,True,337
+UM-HET3,C2018,TJL,m,JL17708,SG1002,240,18,dead,True,764
+UM-HET3,C2018,TJL,m,JL17709,SG1002,240,18,dead,True,426
+UM-HET3,C2018,TJL,m,JL17710,SG1002,240,18,dead,True,1003
+UM-HET3,C2018,UM,f,UM80059,SG1002,240,18,dead,True,652
+UM-HET3,C2018,UM,f,UM80066,SG1002,240,18,dead,True,836
+UM-HET3,C2018,UM,f,UM80073,SG1002,240,18,dead,True,928
+UM-HET3,C2018,UM,f,UM80080,SG1002,240,18,dead,True,981
+UM-HET3,C2018,UM,f,UM80493,SG1002,240,18,dead,True,951
+UM-HET3,C2018,UM,f,UM80500,SG1002,240,18,dead,True,595
+UM-HET3,C2018,UM,f,UM80507,SG1002,240,18,dead,True,822
+UM-HET3,C2018,UM,f,UM80514,SG1002,240,18,dead,True,885
+UM-HET3,C2018,UM,f,UM81151,SG1002,240,18,dead,True,807
+UM-HET3,C2018,UM,f,UM81158,SG1002,240,18,dead,True,886
+UM-HET3,C2018,UM,f,UM81165,SG1002,240,18,dead,True,991
+UM-HET3,C2018,UM,f,UM81172,SG1002,240,18,dead,True,811
+UM-HET3,C2018,UM,f,UM81550,SG1002,240,18,dead,True,965
+UM-HET3,C2018,UM,f,UM81557,SG1002,240,18,dead,True,885
+UM-HET3,C2018,UM,f,UM81564,SG1002,240,18,dead,True,698
+UM-HET3,C2018,UM,f,UM81571,SG1002,240,18,dead,True,843
+UM-HET3,C2018,UM,f,UM81844,SG1002,240,18,dead,True,1120
+UM-HET3,C2018,UM,f,UM81851,SG1002,240,18,dead,True,895
+UM-HET3,C2018,UM,f,UM81858,SG1002,240,18,dead,True,909
+UM-HET3,C2018,UM,f,UM81865,SG1002,240,18,dead,True,1098
+UM-HET3,C2018,UM,f,UM82047,SG1002,240,18,dead,True,883
+UM-HET3,C2018,UM,f,UM82054,SG1002,240,18,dead,True,1267
+UM-HET3,C2018,UM,f,UM82061,SG1002,240,18,dead,True,860
+UM-HET3,C2018,UM,f,UM82068,SG1002,240,18,dead,True,768
+UM-HET3,C2018,UM,f,UM83181,SG1002,240,18,dead,True,687
+UM-HET3,C2018,UM,f,UM83188,SG1002,240,18,dead,True,874
+UM-HET3,C2018,UM,f,UM83195,SG1002,240,18,dead,True,987
+UM-HET3,C2018,UM,f,UM83202,SG1002,240,18,dead,True,778
+UM-HET3,C2018,UM,f,UM83482,SG1002,240,18,dead,True,866
+UM-HET3,C2018,UM,f,UM83489,SG1002,240,18,dead,True,351
+UM-HET3,C2018,UM,f,UM83496,SG1002,240,18,dead,True,626
+UM-HET3,C2018,UM,f,UM83503,SG1002,240,18,dead,True,829
+UM-HET3,C2018,UM,f,UM83636,SG1002,240,18,dead,True,857
+UM-HET3,C2018,UM,f,UM83643,SG1002,240,18,dead,True,969
+UM-HET3,C2018,UM,f,UM83650,SG1002,240,18,dead,True,886
+UM-HET3,C2018,UM,f,UM83657,SG1002,240,18,dead,True,619
+UM-HET3,C2018,UM,f,UM83902,SG1002,240,18,dead,True,854
+UM-HET3,C2018,UM,f,UM83909,SG1002,240,18,dead,True,676
+UM-HET3,C2018,UM,f,UM83916,SG1002,240,18,dead,True,771
+UM-HET3,C2018,UM,f,UM83923,SG1002,240,18,dead,True,599
+UM-HET3,C2018,UM,f,UM85029,SG1002,240,18,dead,True,730
+UM-HET3,C2018,UM,f,UM85036,SG1002,240,18,dead,True,930
+UM-HET3,C2018,UM,f,UM85043,SG1002,240,18,dead,True,892
+UM-HET3,C2018,UM,f,UM85050,SG1002,240,18,dead,True,1186
+UM-HET3,C2018,UM,f,UM85169,SG1002,240,18,dead,True,730
+UM-HET3,C2018,UM,f,UM85176,SG1002,240,18,dead,True,1079
+UM-HET3,C2018,UM,f,UM85183,SG1002,240,18,dead,True,799
+UM-HET3,C2018,UM,f,UM85190,SG1002,240,18,dead,True,915
+UM-HET3,C2018,UM,m,UM79940,SG1002,240,18,dead,True,295
+UM-HET3,C2018,UM,m,UM79947,SG1002,240,18,dead,True,1035
+UM-HET3,C2018,UM,m,UM79954,SG1002,240,18,dead,True,885
+UM-HET3,C2018,UM,m,UM80241,SG1002,240,18,dead,True,909
+UM-HET3,C2018,UM,m,UM80248,SG1002,240,18,dead,True,800
+UM-HET3,C2018,UM,m,UM80255,SG1002,240,18,dead,True,230
+UM-HET3,C2018,UM,m,UM80430,SG1002,240,18,dead,True,314
+UM-HET3,C2018,UM,m,UM80437,SG1002,240,18,dead,True,791
+UM-HET3,C2018,UM,m,UM80444,SG1002,240,18,dead,True,572
+UM-HET3,C2018,UM,m,UM80822,SG1002,240,18,dead,True,1095
+UM-HET3,C2018,UM,m,UM80829,SG1002,240,18,dead,True,907
+UM-HET3,C2018,UM,m,UM80836,SG1002,240,18,dead,True,1097
+UM-HET3,C2018,UM,m,UM80843,SG1002,240,18,removed,False,552
+UM-HET3,C2018,UM,m,UM80850,SG1002,240,18,dead,True,365
+UM-HET3,C2018,UM,m,UM80857,SG1002,240,18,dead,True,518
+UM-HET3,C2018,UM,m,UM81228,SG1002,240,18,dead,True,479
+UM-HET3,C2018,UM,m,UM81235,SG1002,240,18,dead,True,866
+UM-HET3,C2018,UM,m,UM81242,SG1002,240,18,removed,False,40
+UM-HET3,C2018,UM,m,UM81578,SG1002,240,18,dead,True,770
+UM-HET3,C2018,UM,m,UM81585,SG1002,240,18,dead,True,557
+UM-HET3,C2018,UM,m,UM81592,SG1002,240,18,removed,False,250
+UM-HET3,C2018,UM,m,UM81676,SG1002,240,18,dead,True,860
+UM-HET3,C2018,UM,m,UM81683,SG1002,240,18,dead,True,841
+UM-HET3,C2018,UM,m,UM81690,SG1002,240,18,dead,True,207
+UM-HET3,C2018,UM,m,UM81914,SG1002,240,18,dead,True,805
+UM-HET3,C2018,UM,m,UM81921,SG1002,240,18,dead,True,1066
+UM-HET3,C2018,UM,m,UM81928,SG1002,240,18,dead,True,292
+UM-HET3,C2018,UM,m,UM82264,SG1002,240,18,dead,True,1004
+UM-HET3,C2018,UM,m,UM82271,SG1002,240,18,dead,True,293
+UM-HET3,C2018,UM,m,UM82278,SG1002,240,18,dead,True,940
+UM-HET3,C2018,UM,m,UM82684,SG1002,240,18,dead,True,985
+UM-HET3,C2018,UM,m,UM82691,SG1002,240,18,dead,True,769
+UM-HET3,C2018,UM,m,UM82698,SG1002,240,18,dead,True,948
+UM-HET3,C2018,UM,m,UM83013,SG1002,240,18,dead,True,927
+UM-HET3,C2018,UM,m,UM83020,SG1002,240,18,dead,True,420
+UM-HET3,C2018,UM,m,UM83027,SG1002,240,18,dead,True,756
+UM-HET3,C2018,UM,m,UM83160,SG1002,240,18,dead,True,845
+UM-HET3,C2018,UM,m,UM83167,SG1002,240,18,dead,True,340
+UM-HET3,C2018,UM,m,UM83174,SG1002,240,18,dead,True,655
+UM-HET3,C2018,UM,m,UM83307,SG1002,240,18,dead,True,1032
+UM-HET3,C2018,UM,m,UM83314,SG1002,240,18,dead,True,754
+UM-HET3,C2018,UM,m,UM83321,SG1002,240,18,dead,True,690
+UM-HET3,C2018,UM,m,UM83391,SG1002,240,18,dead,True,675
+UM-HET3,C2018,UM,m,UM83398,SG1002,240,18,dead,True,306
+UM-HET3,C2018,UM,m,UM83405,SG1002,240,18,dead,True,1059
+UM-HET3,C2018,UM,m,UM84000,SG1002,240,18,dead,True,354
+UM-HET3,C2018,UM,m,UM84007,SG1002,240,18,dead,True,855
+UM-HET3,C2018,UM,m,UM84014,SG1002,240,18,dead,True,736
+UM-HET3,C2018,UM,m,UM84644,SG1002,240,18,dead,True,786
+UM-HET3,C2018,UM,m,UM84651,SG1002,240,18,dead,True,1133
+UM-HET3,C2018,UM,m,UM84658,SG1002,240,18,dead,True,843
+UM-HET3,C2018,UT,f,UT11200,SG1002,240,18,dead,True,1021
+UM-HET3,C2018,UT,f,UT11201,SG1002,240,18,dead,True,1043
+UM-HET3,C2018,UT,f,UT11202,SG1002,240,18,dead,True,1076
+UM-HET3,C2018,UT,f,UT11203,SG1002,240,18,dead,True,985
+UM-HET3,C2018,UT,f,UT11287,SG1002,240,18,removed,False,638
+UM-HET3,C2018,UT,f,UT11288,SG1002,240,18,removed,False,638
+UM-HET3,C2018,UT,f,UT11289,SG1002,240,18,removed,False,638
+UM-HET3,C2018,UT,f,UT11290,SG1002,240,18,removed,False,638
+UM-HET3,C2018,UT,f,UT11373,SG1002,240,18,dead,True,1099
+UM-HET3,C2018,UT,f,UT11374,SG1002,240,18,dead,True,954
+UM-HET3,C2018,UT,f,UT11375,SG1002,240,18,dead,True,997
+UM-HET3,C2018,UT,f,UT11376,SG1002,240,18,dead,True,1226
+UM-HET3,C2018,UT,f,UT11412,SG1002,240,18,dead,True,909
+UM-HET3,C2018,UT,f,UT11413,SG1002,240,18,dead,True,815
+UM-HET3,C2018,UT,f,UT11414,SG1002,240,18,dead,True,948
+UM-HET3,C2018,UT,f,UT11415,SG1002,240,18,dead,True,918
+UM-HET3,C2018,UT,f,UT11498,SG1002,240,18,dead,True,755
+UM-HET3,C2018,UT,f,UT11499,SG1002,240,18,dead,True,722
+UM-HET3,C2018,UT,f,UT11500,SG1002,240,18,dead,True,931
+UM-HET3,C2018,UT,f,UT11501,SG1002,240,18,dead,True,1090
+UM-HET3,C2018,UT,f,UT11533,SG1002,240,18,dead,True,1042
+UM-HET3,C2018,UT,f,UT11534,SG1002,240,18,dead,True,768
+UM-HET3,C2018,UT,f,UT11535,SG1002,240,18,removed,False,558
+UM-HET3,C2018,UT,f,UT11536,SG1002,240,18,dead,True,787
+UM-HET3,C2018,UT,f,UT11668,SG1002,240,18,dead,True,746
+UM-HET3,C2018,UT,f,UT11669,SG1002,240,18,dead,True,937
+UM-HET3,C2018,UT,f,UT11670,SG1002,240,18,dead,True,808
+UM-HET3,C2018,UT,f,UT11671,SG1002,240,18,dead,True,1047
+UM-HET3,C2018,UT,f,UT11678,SG1002,240,18,dead,True,499
+UM-HET3,C2018,UT,f,UT11679,SG1002,240,18,dead,True,975
+UM-HET3,C2018,UT,f,UT11680,SG1002,240,18,dead,True,1244
+UM-HET3,C2018,UT,f,UT11681,SG1002,240,18,dead,True,734
+UM-HET3,C2018,UT,f,UT11792,SG1002,240,18,dead,True,1216
+UM-HET3,C2018,UT,f,UT11793,SG1002,240,18,dead,True,537
+UM-HET3,C2018,UT,f,UT11794,SG1002,240,18,dead,True,900
+UM-HET3,C2018,UT,f,UT11795,SG1002,240,18,dead,True,950
+UM-HET3,C2018,UT,f,UT11828,SG1002,240,18,dead,True,789
+UM-HET3,C2018,UT,f,UT11829,SG1002,240,18,dead,True,714
+UM-HET3,C2018,UT,f,UT11830,SG1002,240,18,dead,True,1040
+UM-HET3,C2018,UT,f,UT11831,SG1002,240,18,dead,True,364
+UM-HET3,C2018,UT,f,UT11922,SG1002,240,18,dead,True,858
+UM-HET3,C2018,UT,f,UT11923,SG1002,240,18,dead,True,566
+UM-HET3,C2018,UT,f,UT11924,SG1002,240,18,dead,True,917
+UM-HET3,C2018,UT,f,UT11925,SG1002,240,18,dead,True,1124
+UM-HET3,C2018,UT,f,UT11929,SG1002,240,18,dead,True,872
+UM-HET3,C2018,UT,f,UT11930,SG1002,240,18,dead,True,942
+UM-HET3,C2018,UT,f,UT11931,SG1002,240,18,dead,True,559
+UM-HET3,C2018,UT,f,UT11932,SG1002,240,18,dead,True,764
+UM-HET3,C2018,UT,m,UT11221,SG1002,240,18,dead,True,944
+UM-HET3,C2018,UT,m,UT11222,SG1002,240,18,dead,True,668
+UM-HET3,C2018,UT,m,UT11223,SG1002,240,18,dead,True,912
+UM-HET3,C2018,UT,m,UT11263,SG1002,240,18,dead,True,760
+UM-HET3,C2018,UT,m,UT11264,SG1002,240,18,dead,True,1129
+UM-HET3,C2018,UT,m,UT11265,SG1002,240,18,dead,True,749
+UM-HET3,C2018,UT,m,UT11294,SG1002,240,18,dead,True,1002
+UM-HET3,C2018,UT,m,UT11295,SG1002,240,18,dead,True,756
+UM-HET3,C2018,UT,m,UT11296,SG1002,240,18,dead,True,474
+UM-HET3,C2018,UT,m,UT11339,SG1002,240,18,dead,True,890
+UM-HET3,C2018,UT,m,UT11340,SG1002,240,18,dead,True,868
+UM-HET3,C2018,UT,m,UT11341,SG1002,240,18,dead,True,859
+UM-HET3,C2018,UT,m,UT11346,SG1002,240,18,dead,True,927
+UM-HET3,C2018,UT,m,UT11347,SG1002,240,18,dead,True,945
+UM-HET3,C2018,UT,m,UT11348,SG1002,240,18,dead,True,701
+UM-HET3,C2018,UT,m,UT11419,SG1002,240,18,dead,True,919
+UM-HET3,C2018,UT,m,UT11420,SG1002,240,18,dead,True,1192
+UM-HET3,C2018,UT,m,UT11421,SG1002,240,18,dead,True,765
+UM-HET3,C2018,UT,m,UT11435,SG1002,240,18,dead,True,933
+UM-HET3,C2018,UT,m,UT11436,SG1002,240,18,dead,True,418
+UM-HET3,C2018,UT,m,UT11437,SG1002,240,18,dead,True,1113
+UM-HET3,C2018,UT,m,UT11495,SG1002,240,18,dead,True,647
+UM-HET3,C2018,UT,m,UT11496,SG1002,240,18,dead,True,602
+UM-HET3,C2018,UT,m,UT11497,SG1002,240,18,dead,True,436
+UM-HET3,C2018,UT,m,UT11515,SG1002,240,18,dead,True,985
+UM-HET3,C2018,UT,m,UT11516,SG1002,240,18,dead,True,755
+UM-HET3,C2018,UT,m,UT11517,SG1002,240,18,dead,True,376
+UM-HET3,C2018,UT,m,UT11540,SG1002,240,18,dead,True,702
+UM-HET3,C2018,UT,m,UT11541,SG1002,240,18,dead,True,871
+UM-HET3,C2018,UT,m,UT11542,SG1002,240,18,dead,True,652
+UM-HET3,C2018,UT,m,UT11564,SG1002,240,18,dead,True,1002
+UM-HET3,C2018,UT,m,UT11565,SG1002,240,18,dead,True,600
+UM-HET3,C2018,UT,m,UT11566,SG1002,240,18,dead,True,807
+UM-HET3,C2018,UT,m,UT11580,SG1002,240,18,dead,True,630
+UM-HET3,C2018,UT,m,UT11581,SG1002,240,18,dead,True,910
+UM-HET3,C2018,UT,m,UT11582,SG1002,240,18,dead,True,641
+UM-HET3,C2018,UT,m,UT11655,SG1002,240,18,dead,True,711
+UM-HET3,C2018,UT,m,UT11656,SG1002,240,18,dead,True,722
+UM-HET3,C2018,UT,m,UT11657,SG1002,240,18,dead,True,516
+UM-HET3,C2018,UT,m,UT11705,SG1002,240,18,dead,True,743
+UM-HET3,C2018,UT,m,UT11706,SG1002,240,18,dead,True,766
+UM-HET3,C2018,UT,m,UT11707,SG1002,240,18,dead,True,755
+UM-HET3,C2018,UT,m,UT11722,SG1002,240,18,dead,True,640
+UM-HET3,C2018,UT,m,UT11723,SG1002,240,18,dead,True,846
+UM-HET3,C2018,UT,m,UT11724,SG1002,240,18,dead,True,467
+UM-HET3,C2018,UT,m,UT11819,SG1002,240,18,dead,True,1005
+UM-HET3,C2018,UT,m,UT11820,SG1002,240,18,dead,True,1036
+UM-HET3,C2018,UT,m,UT11821,SG1002,240,18,dead,True,1041
+UM-HET3,C2018,UT,m,UT11825,SG1002,240,18,dead,True,349
+UM-HET3,C2018,UT,m,UT11826,SG1002,240,18,dead,True,923
+UM-HET3,C2018,UT,m,UT11827,SG1002,240,18,dead,True,832

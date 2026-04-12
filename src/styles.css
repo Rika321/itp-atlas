@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 41 43% 92%;
+    --foreground: 211 41% 13%;
+    --card: 43 45% 96%;
+    --card-foreground: 211 41% 13%;
+    --popover: 43 45% 96%;
+    --popover-foreground: 211 41% 13%;
+    --primary: 19 65% 52%;
+    --primary-foreground: 40 33% 98%;
+    --secondary: 38 33% 88%;
+    --secondary-foreground: 211 41% 13%;
+    --muted: 37 26% 86%;
+    --muted-foreground: 211 16% 41%;
+    --accent: 23 72% 58%;
+    --accent-foreground: 30 36% 98%;
+    --destructive: 0 68% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 211 20% 84%;
+    --input: 211 20% 84%;
+    --ring: 19 65% 52%;
+    --chart-1: 201 70% 32%;
+    --chart-2: 19 65% 52%;
+    --chart-3: 77 52% 37%;
+    --chart-4: 41 63% 48%;
+    --chart-5: 9 41% 43%;
+    --radius: 1.25rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  .itp-grid-line {
+    stroke: rgba(17, 33, 49, 0.1);
+    stroke-width: 1;
+  }
+
+  .itp-grid-line-vertical {
+    stroke-dasharray: 4 10;
+  }
+
+  .itp-axis-line {
+    stroke: rgba(17, 33, 49, 0.34);
+  }
+
+  .itp-axis-label,
+  .itp-axis-text {
+    fill: hsl(var(--muted-foreground));
+    font-size: 12px;
+  }
+
+  .itp-axis-label {
+    font-weight: 600;
+  }
+
+  .itp-axis-label-y {
+    transform: rotate(-90deg);
+    transform-origin: 18px 180px;
+  }
+
+  .itp-axis-text-bottom {
+    text-anchor: middle;
+  }
+
+  .itp-series-line {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+  }
+
+  .itp-series-line--comparison-control {
+    stroke-dasharray: 10 8;
+  }
+
+  .itp-legend-swatch {
+    display: inline-block;
+    width: 24px;
+    height: 4px;
+    border-radius: 999px;
+  }
+
+  .itp-legend-swatch--comparison-control {
+    background-image: linear-gradient(
+      90deg,
+      currentColor 0 55%,
+      transparent 55% 100%
+    );
+  }
+}

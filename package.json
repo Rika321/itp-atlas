@@ -1,0 +1,30 @@
+{
+  "name": "itp-atlas",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "download:citp": "python3 scripts/download_citp_data.py",
+    "prepare:data": "python3 scripts/build_itp_dataset.py && python3 scripts/build_citp_dataset.py && python3 scripts/sync_public_data.py",
+    "dev": "npm run prepare:data && vite",
+    "build": "npm run prepare:data && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "d3": "^7.9.0",
+    "lucide-react": "^0.511.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^3.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^3.4.17",
+    "tailwindcss-animate": "^1.0.7",
+    "vite": "^5.4.10"
+  }
+}

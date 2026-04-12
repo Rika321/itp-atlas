@@ -4,6 +4,7 @@ import {
   getInterventionLabel as getMouseInterventionLabel,
   normalizeGroupCode,
 } from "./interventions";
+import { getInterventionPathway as getKnownInterventionPathway } from "./pathways";
 
 export const CONTROL_GROUP = "Control";
 export const SEX_META = {
@@ -228,6 +229,18 @@ export function getInterventionLabel(dataset, cohort, group) {
 
 export function getInterventionDescription(dataset, cohort, group) {
   return getGroupMeta(dataset, cohort, group)?.description || null;
+}
+
+export function getInterventionPathway(dataset, cohort, group) {
+  const meta = getGroupMeta(dataset, cohort, group);
+  if (!meta && !group) {
+    return null;
+  }
+
+  return getKnownInterventionPathway(
+    meta?.compoundDisplayName || meta?.label || group,
+    meta?.description || null,
+  );
 }
 
 export function getDefaultGroupForCohort(dataset, groups) {

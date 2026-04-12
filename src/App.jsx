@@ -35,6 +35,7 @@ import {
   getInterventionDescription,
   getInterventionKey,
   getInterventionLabel,
+  getInterventionPathway,
   parseCitpDataset,
   parseItpDataset,
   parseInterventionKey,
@@ -612,6 +613,12 @@ function App() {
   const activeInterventionDescription = activeRankingRow
     ? getInterventionDescription(dataset, activeRankingRow.cohort, activeRankingRow.group)
     : null;
+  const activeInterventionPathway = activeRankingRow
+    ? getInterventionPathway(dataset, activeRankingRow.cohort, activeRankingRow.group)
+    : null;
+  const hasInsightDetails = Boolean(
+    activeInterventionDescription || activeInterventionPathway?.ascii,
+  );
 
   const compareLibrary = dataset.compareOptions.filter((option) => {
     if (option.key === selectedInterventionKey) {
@@ -780,21 +787,21 @@ function App() {
                 </div>
               </div>
 
-              <div className="flex items-center justify-between gap-4 bg-white/95 rounded-[22px] px-5 py-2.5 shadow-sm border border-primary/20 hover:border-primary/40 transition-all duration-300 group overflow-hidden relative">
+              <div className="flex flex-col gap-4 bg-white/95 rounded-[22px] px-5 py-2.5 shadow-sm border border-primary/20 hover:border-primary/40 transition-all duration-300 group overflow-hidden relative lg:flex-row lg:items-start lg:justify-between">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-transparent opacity-50 pointer-events-none" />
-                <div className="relative flex items-center gap-4 flex-1 min-w-0">
+                <div className="relative flex items-start gap-4 flex-1 min-w-0">
                   <div className="flex flex-col min-w-0">
                     <div className="flex items-center gap-2.5 min-w-0">
                       <p className="font-display text-base font-bold tracking-tight text-foreground truncate">
                         {selectedLabel}
                       </p>
-                      {activeInterventionDescription && (
+                      {hasInsightDetails && (
                         <button
                           type="button"
                           className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-primary/20 bg-primary/5 text-[10px] font-black leading-none text-primary/80 transition-colors hover:bg-primary/10 hover:text-primary"
                           aria-expanded={showInsightDescription}
-                          aria-controls="insight-description"
-                          aria-label={`${showInsightDescription ? "Hide" : "Show"} description for ${selectedLabel}`}
+                          aria-controls="insight-details"
+                          aria-label={`${showInsightDescription ? "Hide" : "Show"} details for ${selectedLabel}`}
                           onClick={() =>
                             setShowInsightDescription((current) => !current)
                           }
@@ -806,18 +813,36 @@ function App() {
                         <Badge variant="outline" className="text-[9px] py-0 px-1.5 font-bold h-4 border-primary/20 bg-primary/5 text-primary/80 whitespace-nowrap">{getCohortShortLabel(dataset, activeRankingRow.cohort)}</Badge>
                       )}
                     </div>
-                    {showInsightDescription && activeInterventionDescription && (
+                    {showInsightDescription && hasInsightDetails && (
                       <div
-                        id="insight-description"
-                        className="mt-2 max-w-2xl rounded-[14px] border border-primary/15 bg-primary/5 px-3 py-2 text-[11px] leading-5 text-muted-foreground"
+                        id="insight-details"
+                        className="mt-2 max-w-4xl rounded-[14px] border border-primary/15 bg-primary/5 px-3 py-2"
                       >
-                        {activeInterventionDescription}
+                        <div className="flex flex-col gap-3">
+                          {activeInterventionDescription ? (
+                            <p className="max-w-3xl text-[11px] leading-5 text-muted-foreground">
+                              {activeInterventionDescription}
+                            </p>
+                          ) : null}
+                          {activeInterventionPathway?.ascii ? (
+                            <div className="w-full max-w-[560px] rounded-[12px] border border-primary/12 bg-white/70 px-3 py-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.6)]">
+                              <p className="text-[9px] font-bold uppercase tracking-widest text-muted-foreground/80">
+                                {activeInterventionPathway.label}
+                              </p>
+                              <div className="mt-2 overflow-x-auto">
+                                <pre className="m-0 min-w-max whitespace-pre font-mono text-[10px] leading-4 text-foreground/85">
+                                  {activeInterventionPathway.ascii}
+                                </pre>
+                              </div>
+                            </div>
+                          ) : null}
+                        </div>
                       </div>
                     )}
                   </div>
                 </div>
 
-                <div className="relative flex items-center gap-6 shrink-0">
+                <div className="relative flex items-center gap-6 shrink-0 self-end lg:self-center">
                   <div className="w-px h-8 bg-border/70" />
                   <div className="flex flex-col items-end">
                     <div className="flex items-baseline gap-1.5">

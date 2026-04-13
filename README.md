@@ -1,5 +1,7 @@
 # How to Live Longer: A Small-Molecule Atlas
 
+> Live site: https://livelonger.pages.dev
+
 Interactive React app for comparing public longevity-intervention datasets across mice, worms, and a curated human medication evidence view.
 
 This repository focuses on:

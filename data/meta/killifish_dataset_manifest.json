@@ -1,0 +1,217 @@
+{
+  "generated_at_utc": "2026-04-13T08:22:57.811695+00:00",
+  "latest_public_cohort_downloaded": "2019-08",
+  "latest_public_release_label": "eLife 2022",
+  "combined_csv": "data/processed/killifish_lifespan_all.csv",
+  "cohort_order": [
+    "2019-04",
+    "2019-08"
+  ],
+  "cohort_meta_by_name": {
+    "2019-04": {
+      "label": "Apr 2019 cohort",
+      "short_label": "Apr 2019",
+      "secondary_label": "Apr 12-17 hatch",
+      "source_data_label": "Figure 4 source data 2",
+      "publication": {
+        "pmid": "36354233",
+        "doi": "10.7554/eLife.69008",
+        "title": "An automated feeding system for the African killifish reveals the impact of diet on lifespan and allows scalable assessment of associative learning.",
+        "author": "Hu et al.",
+        "year": 2022,
+        "journal": "eLife"
+      },
+      "hatch_date_min": "2019-04-12",
+      "hatch_date_max": "2019-04-17",
+      "death_date_min": "2019-06-11",
+      "death_date_max": "2020-05-29"
+    },
+    "2019-08": {
+      "label": "Aug-Sep 2019 cohort",
+      "short_label": "Aug-Sep 2019",
+      "secondary_label": "Aug 20-Sep 25 hatch",
+      "source_data_label": "Figure 4 source data 1",
+      "publication": {
+        "pmid": "36354233",
+        "doi": "10.7554/eLife.69008",
+        "title": "An automated feeding system for the African killifish reveals the impact of diet on lifespan and allows scalable assessment of associative learning.",
+        "author": "Hu et al.",
+        "year": 2022,
+        "journal": "eLife"
+      },
+      "hatch_date_min": "2019-08-20",
+      "hatch_date_max": "2019-09-25",
+      "death_date_min": "2019-10-14",
+      "death_date_max": "2020-05-01"
+    }
+  },
+  "site_meta": {
+    "ALL": "eLife public data"
+  },
+  "group_meta_by_key": {
+    "2019-04::AL": {
+      "cohort": "2019-04",
+      "group": "AL",
+      "control_group": "AL",
+      "label": "Ad libitum control",
+      "description": "A cohort-matched ad libitum feeding schedule used as the control condition for this African turquoise killifish experiment.",
+      "is_control": true,
+      "species": "N. furzeri",
+      "strain": "GRZ",
+      "compound": "ad_libitum",
+      "compound_display_name": "Ad libitum control",
+      "control_compound": "ad_libitum",
+      "concentration": null,
+      "units": null,
+      "condition": "automated feeding",
+      "publication": {
+        "pmid": "36354233",
+        "doi": "10.7554/eLife.69008",
+        "title": "An automated feeding system for the African killifish reveals the impact of diet on lifespan and allows scalable assessment of associative learning.",
+        "author": "Hu et al.",
+        "year": 2022,
+        "journal": "eLife"
+      }
+    },
+    "2019-04::DR": {
+      "cohort": "2019-04",
+      "group": "DR",
+      "control_group": "AL",
+      "label": "Dietary restriction",
+      "description": "A reduced feeding schedule tested against the ad libitum cohort-matched control in GRZ African turquoise killifish.",
+      "is_control": false,
+      "species": "N. furzeri",
+      "strain": "GRZ",
+      "compound": "dietary_restriction",
+      "compound_display_name": "Dietary restriction",
+      "control_compound": "ad_libitum",
+      "concentration": null,
+      "units": null,
+      "condition": "automated feeding",
+      "publication": {
+        "pmid": "36354233",
+        "doi": "10.7554/eLife.69008",
+        "title": "An automated feeding system for the African killifish reveals the impact of diet on lifespan and allows scalable assessment of associative learning.",
+        "author": "Hu et al.",
+        "year": 2022,
+        "journal": "eLife"
+      }
+    },
+    "2019-08::AL": {
+      "cohort": "2019-08",
+      "group": "AL",
+      "control_group": "AL",
+      "label": "Ad libitum control",
+      "description": "A cohort-matched ad libitum feeding schedule used as the control condition for this African turquoise killifish experiment.",
+      "is_control": true,
+      "species": "N. furzeri",
+      "strain": "GRZ",
+      "compound": "ad_libitum",
+      "compound_display_name": "Ad libitum control",
+      "control_compound": "ad_libitum",
+      "concentration": null,
+      "units": null,
+      "condition": "automated feeding",
+      "publication": {
+        "pmid": "36354233",
+        "doi": "10.7554/eLife.69008",
+        "title": "An automated feeding system for the African killifish reveals the impact of diet on lifespan and allows scalable assessment of associative learning.",
+        "author": "Hu et al.",
+        "year": 2022,
+        "journal": "eLife"
+      }
+    },
+    "2019-08::DR": {
+      "cohort": "2019-08",
+      "group": "DR",
+      "control_group": "AL",
+      "label": "Dietary restriction",
+      "description": "A reduced feeding schedule tested against the ad libitum cohort-matched control in GRZ African turquoise killifish.",
+      "is_control": false,
+      "species": "N. furzeri",
+      "strain": "GRZ",
+      "compound": "dietary_restriction",
+      "compound_display_name": "Dietary restriction",
+      "control_compound": "ad_libitum",
+      "concentration": null,
+      "units": null,
+      "condition": "automated feeding",
+      "publication": {
+        "pmid": "36354233",
+        "doi": "10.7554/eLife.69008",
+        "title": "An automated feeding system for the African killifish reveals the impact of diet on lifespan and allows scalable assessment of associative learning.",
+        "author": "Hu et al.",
+        "year": 2022,
+        "journal": "eLife"
+      }
+    }
+  },
+  "counts": {
+    "rows": 159,
+    "cohorts": 2,
+    "intervention_groups": 2,
+    "dead_events": 141,
+    "censored_rows": 18,
+    "sex_counts": {
+      "f": 81,
+      "m": 78
+    }
+  },
+  "raw_sources": [
+    {
+      "cohort": "2019-04",
+      "label": "Apr 2019 cohort",
+      "source_data_label": "Figure 4 source data 2",
+      "url": "https://cdn.elifesciences.org/articles/69008/elife-69008-fig4-data2-v2.csv",
+      "local_path": "data/raw/killifish/elife-69008-fig4-data2-v2.csv",
+      "row_count": 68,
+      "normalized_row_count": 68,
+      "group_counts": {
+        "AL": 35,
+        "DR": 33
+      },
+      "sex_counts": {
+        "m": 36,
+        "f": 32
+      },
+      "event_counts": {
+        "dead": 57,
+        "censored": 11
+      },
+      "hatch_date_min": "2019-04-12",
+      "hatch_date_max": "2019-04-17",
+      "death_date_min": "2019-06-11",
+      "death_date_max": "2020-05-29"
+    },
+    {
+      "cohort": "2019-08",
+      "label": "Aug-Sep 2019 cohort",
+      "source_data_label": "Figure 4 source data 1",
+      "url": "https://cdn.elifesciences.org/articles/69008/elife-69008-fig4-data1-v2.csv",
+      "local_path": "data/raw/killifish/elife-69008-fig4-data1-v2.csv",
+      "row_count": 91,
+      "normalized_row_count": 91,
+      "group_counts": {
+        "AL": 45,
+        "DR": 46
+      },
+      "sex_counts": {
+        "m": 42,
+        "f": 49
+      },
+      "event_counts": {
+        "dead": 84,
+        "censored": 7
+      },
+      "hatch_date_min": "2019-08-20",
+      "hatch_date_max": "2019-09-25",
+      "death_date_min": "2019-10-14",
+      "death_date_max": "2020-05-01"
+    }
+  ],
+  "notes": [
+    "Rows were normalized from eLife Figure 4 source-data CSVs into matched dietary restriction versus ad libitum survival comparisons.",
+    "Observed=1 was treated as a death event; Observed=0 was treated as censoring.",
+    "Lifespan_days was used when present, otherwise age_days was recomputed from HatchDate and DeathDate."
+  ]
+}

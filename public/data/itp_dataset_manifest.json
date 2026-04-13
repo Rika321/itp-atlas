@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-12T22:24:19.123283+00:00",
+  "generated_at_utc": "2026-04-13T08:22:49.648426+00:00",
   "latest_public_cohort_downloaded": "C2020",
   "combined_csv": "data/processed/itp_lifespan_all.csv",
   "union_columns": [
@@ -39,6 +39,791 @@
     "C2019",
     "C2020"
   ],
+  "publication_by_group_key": {
+    "C2004::4-OH-PBN": {
+      "pmid": "18631321",
+      "title": "Nordihydroguaiaretic acid and aspirin increase lifespan of genetically heterogeneous male mice.",
+      "author": "Strong et al.",
+      "year": 2008,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2004::Asp": {
+      "pmid": "18631321",
+      "title": "Nordihydroguaiaretic acid and aspirin increase lifespan of genetically heterogeneous male mice.",
+      "author": "Strong et al.",
+      "year": 2008,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2004::NDGA": {
+      "pmid": "18631321",
+      "title": "Nordihydroguaiaretic acid and aspirin increase lifespan of genetically heterogeneous male mice.",
+      "author": "Strong et al.",
+      "year": 2008,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2004::NFP": {
+      "pmid": "18631321",
+      "title": "Nordihydroguaiaretic acid and aspirin increase lifespan of genetically heterogeneous male mice.",
+      "author": "Strong et al.",
+      "year": 2008,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2005::Rapa": {
+      "pmid": "19587680",
+      "title": "Rapamycin fed late in life extends lifespan in genetically heterogeneous mice.",
+      "author": "Harrison et al.",
+      "year": 2009,
+      "journal": "Nature",
+      "kind": "primary",
+      "note": null
+    },
+    "C2005::CAPE_hi": {
+      "pmid": "38630424",
+      "title": "The Gehan test identifies life-extending compounds overlooked by the log-rank test in the NIA Interventions Testing Program: Metformin, Enalapril, caffeic acid phenethyl ester, green tea extract, and 17-dimethylaminoethylamino-17-demethoxygeldanamycin hydrochloride.",
+      "author": "Jiang et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "secondary",
+      "note": "Secondary analysis of public ITP survival data."
+    },
+    "C2005::CAPE_lo": {
+      "pmid": "38630424",
+      "title": "The Gehan test identifies life-extending compounds overlooked by the log-rank test in the NIA Interventions Testing Program: Metformin, Enalapril, caffeic acid phenethyl ester, green tea extract, and 17-dimethylaminoethylamino-17-demethoxygeldanamycin hydrochloride.",
+      "author": "Jiang et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "secondary",
+      "note": "Secondary analysis of public ITP survival data."
+    },
+    "C2005::Enal": {
+      "pmid": "38630424",
+      "title": "The Gehan test identifies life-extending compounds overlooked by the log-rank test in the NIA Interventions Testing Program: Metformin, Enalapril, caffeic acid phenethyl ester, green tea extract, and 17-dimethylaminoethylamino-17-demethoxygeldanamycin hydrochloride.",
+      "author": "Jiang et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "secondary",
+      "note": "Secondary analysis of public ITP survival data."
+    },
+    "C2006::Rapa": {
+      "pmid": "20974732",
+      "title": "Rapamycin, but not resveratrol or simvastatin, extends life span of genetically heterogeneous mice.",
+      "author": "Miller et al.",
+      "year": 2011,
+      "journal": "J Gerontol A Biol Sci Med Sci",
+      "kind": "primary",
+      "note": null
+    },
+    "C2006::Res_hi": {
+      "pmid": "20974732",
+      "title": "Rapamycin, but not resveratrol or simvastatin, extends life span of genetically heterogeneous mice.",
+      "author": "Miller et al.",
+      "year": 2011,
+      "journal": "J Gerontol A Biol Sci Med Sci",
+      "kind": "primary",
+      "note": null
+    },
+    "C2006::Res_lo": {
+      "pmid": "20974732",
+      "title": "Rapamycin, but not resveratrol or simvastatin, extends life span of genetically heterogeneous mice.",
+      "author": "Miller et al.",
+      "year": 2011,
+      "journal": "J Gerontol A Biol Sci Med Sci",
+      "kind": "primary",
+      "note": null
+    },
+    "C2006::Sim_hi": {
+      "pmid": "20974732",
+      "title": "Rapamycin, but not resveratrol or simvastatin, extends life span of genetically heterogeneous mice.",
+      "author": "Miller et al.",
+      "year": 2011,
+      "journal": "J Gerontol A Biol Sci Med Sci",
+      "kind": "primary",
+      "note": null
+    },
+    "C2006::Sim_lo": {
+      "pmid": "20974732",
+      "title": "Rapamycin, but not resveratrol or simvastatin, extends life span of genetically heterogeneous mice.",
+      "author": "Miller et al.",
+      "year": 2011,
+      "journal": "J Gerontol A Biol Sci Med Sci",
+      "kind": "primary",
+      "note": null
+    },
+    "C2007::Cur": {
+      "pmid": "22451473",
+      "title": "Evaluation of resveratrol, green tea extract, curcumin, oxaloacetic acid, and medium-chain triglyceride oil on life span of genetically heterogeneous mice.",
+      "author": "Strong et al.",
+      "year": 2013,
+      "journal": "J Gerontol A Biol Sci Med Sci",
+      "kind": "primary",
+      "note": null
+    },
+    "C2007::GTE": {
+      "pmid": "22451473",
+      "title": "Evaluation of resveratrol, green tea extract, curcumin, oxaloacetic acid, and medium-chain triglyceride oil on life span of genetically heterogeneous mice.",
+      "author": "Strong et al.",
+      "year": 2013,
+      "journal": "J Gerontol A Biol Sci Med Sci",
+      "kind": "primary",
+      "note": null
+    },
+    "C2007::MCTO": {
+      "pmid": "22451473",
+      "title": "Evaluation of resveratrol, green tea extract, curcumin, oxaloacetic acid, and medium-chain triglyceride oil on life span of genetically heterogeneous mice.",
+      "author": "Strong et al.",
+      "year": 2013,
+      "journal": "J Gerontol A Biol Sci Med Sci",
+      "kind": "primary",
+      "note": null
+    },
+    "C2007::OAA": {
+      "pmid": "22451473",
+      "title": "Evaluation of resveratrol, green tea extract, curcumin, oxaloacetic acid, and medium-chain triglyceride oil on life span of genetically heterogeneous mice.",
+      "author": "Strong et al.",
+      "year": 2013,
+      "journal": "J Gerontol A Biol Sci Med Sci",
+      "kind": "primary",
+      "note": null
+    },
+    "C2007::Res": {
+      "pmid": "22451473",
+      "title": "Evaluation of resveratrol, green tea extract, curcumin, oxaloacetic acid, and medium-chain triglyceride oil on life span of genetically heterogeneous mice.",
+      "author": "Strong et al.",
+      "year": 2013,
+      "journal": "J Gerontol A Biol Sci Med Sci",
+      "kind": "primary",
+      "note": null
+    },
+    "C2009::17aE2": {
+      "pmid": "24245565",
+      "title": "Acarbose, 17-alpha-estradiol, and nordihydroguaiaretic acid extend mouse lifespan preferentially in males.",
+      "author": "Harrison et al.",
+      "year": 2014,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2009::ACA": {
+      "pmid": "24245565",
+      "title": "Acarbose, 17-alpha-estradiol, and nordihydroguaiaretic acid extend mouse lifespan preferentially in males.",
+      "author": "Harrison et al.",
+      "year": 2014,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2009::MB": {
+      "pmid": "24245565",
+      "title": "Acarbose, 17-alpha-estradiol, and nordihydroguaiaretic acid extend mouse lifespan preferentially in males.",
+      "author": "Harrison et al.",
+      "year": 2014,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2010::NDGA_hi": {
+      "pmid": "24245565",
+      "title": "Acarbose, 17-alpha-estradiol, and nordihydroguaiaretic acid extend mouse lifespan preferentially in males.",
+      "author": "Harrison et al.",
+      "year": 2014,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2010::NDGA_lo": {
+      "pmid": "24245565",
+      "title": "Acarbose, 17-alpha-estradiol, and nordihydroguaiaretic acid extend mouse lifespan preferentially in males.",
+      "author": "Harrison et al.",
+      "year": 2014,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2010::NDGA_mid": {
+      "pmid": "24245565",
+      "title": "Acarbose, 17-alpha-estradiol, and nordihydroguaiaretic acid extend mouse lifespan preferentially in males.",
+      "author": "Harrison et al.",
+      "year": 2014,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2009::Rapa_hi": {
+      "pmid": "24341993",
+      "title": "Rapamycin-mediated lifespan increase in mice is dose and sex dependent and metabolically distinct from dietary restriction.",
+      "author": "Miller et al.",
+      "year": 2014,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2009::Rapa_lo": {
+      "pmid": "24341993",
+      "title": "Rapamycin-mediated lifespan increase in mice is dose and sex dependent and metabolically distinct from dietary restriction.",
+      "author": "Miller et al.",
+      "year": 2014,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2009::Rapa_mid": {
+      "pmid": "24341993",
+      "title": "Rapamycin-mediated lifespan increase in mice is dose and sex dependent and metabolically distinct from dietary restriction.",
+      "author": "Miller et al.",
+      "year": 2014,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2010::FO_hi": {
+      "pmid": "27312235",
+      "title": "Longer lifespan in male mice treated with a weakly estrogenic agonist, an antioxidant, an alpha-glucosidase inhibitor or a Nrf2-inducer.",
+      "author": "Strong et al.",
+      "year": 2016,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2010::FO_lo": {
+      "pmid": "27312235",
+      "title": "Longer lifespan in male mice treated with a weakly estrogenic agonist, an antioxidant, an alpha-glucosidase inhibitor or a Nrf2-inducer.",
+      "author": "Strong et al.",
+      "year": 2016,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2011::17aE2_hi": {
+      "pmid": "27312235",
+      "title": "Longer lifespan in male mice treated with a weakly estrogenic agonist, an antioxidant, an alpha-glucosidase inhibitor or a Nrf2-inducer.",
+      "author": "Strong et al.",
+      "year": 2016,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2011::Met": {
+      "pmid": "27312235",
+      "title": "Longer lifespan in male mice treated with a weakly estrogenic agonist, an antioxidant, an alpha-glucosidase inhibitor or a Nrf2-inducer.",
+      "author": "Strong et al.",
+      "year": 2016,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2011::MetRapa": {
+      "pmid": "27312235",
+      "title": "Longer lifespan in male mice treated with a weakly estrogenic agonist, an antioxidant, an alpha-glucosidase inhibitor or a Nrf2-inducer.",
+      "author": "Strong et al.",
+      "year": 2016,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2011::Prot": {
+      "pmid": "27312235",
+      "title": "Longer lifespan in male mice treated with a weakly estrogenic agonist, an antioxidant, an alpha-glucosidase inhibitor or a Nrf2-inducer.",
+      "author": "Strong et al.",
+      "year": 2016,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2011::UDCA": {
+      "pmid": "27312235",
+      "title": "Longer lifespan in male mice treated with a weakly estrogenic agonist, an antioxidant, an alpha-glucosidase inhibitor or a Nrf2-inducer.",
+      "author": "Strong et al.",
+      "year": 2016,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2012::ACA": {
+      "pmid": "27312235",
+      "title": "Longer lifespan in male mice treated with a weakly estrogenic agonist, an antioxidant, an alpha-glucosidase inhibitor or a Nrf2-inducer.",
+      "author": "Strong et al.",
+      "year": 2016,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2012::HBX": {
+      "pmid": "30688027",
+      "title": "Acarbose improves health and lifespan in aging HET3 mice.",
+      "author": "Harrison et al.",
+      "year": 2019,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2012::INT-767": {
+      "pmid": "30688027",
+      "title": "Acarbose improves health and lifespan in aging HET3 mice.",
+      "author": "Harrison et al.",
+      "year": 2019,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2013::ACA_hi": {
+      "pmid": "30688027",
+      "title": "Acarbose improves health and lifespan in aging HET3 mice.",
+      "author": "Harrison et al.",
+      "year": 2019,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2013::ACA_lo": {
+      "pmid": "30688027",
+      "title": "Acarbose improves health and lifespan in aging HET3 mice.",
+      "author": "Harrison et al.",
+      "year": 2019,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2013::ACA_mid": {
+      "pmid": "30688027",
+      "title": "Acarbose improves health and lifespan in aging HET3 mice.",
+      "author": "Harrison et al.",
+      "year": 2019,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2013::UA": {
+      "pmid": "30688027",
+      "title": "Acarbose improves health and lifespan in aging HET3 mice.",
+      "author": "Harrison et al.",
+      "year": 2019,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2014::Asp_200": {
+      "pmid": "30916479",
+      "title": "Glycine supplementation extends lifespan of male and female mice.",
+      "author": "Miller et al.",
+      "year": 2019,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2014::Asp_60": {
+      "pmid": "30916479",
+      "title": "Glycine supplementation extends lifespan of male and female mice.",
+      "author": "Miller et al.",
+      "year": 2019,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2014::Gly": {
+      "pmid": "30916479",
+      "title": "Glycine supplementation extends lifespan of male and female mice.",
+      "author": "Miller et al.",
+      "year": 2019,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2014::Inu": {
+      "pmid": "30916479",
+      "title": "Glycine supplementation extends lifespan of male and female mice.",
+      "author": "Miller et al.",
+      "year": 2019,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2014::TM5441": {
+      "pmid": "30916479",
+      "title": "Glycine supplementation extends lifespan of male and female mice.",
+      "author": "Miller et al.",
+      "year": 2019,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2015::DMAG": {
+      "pmid": "33145977",
+      "title": "Rapamycin-mediated mouse lifespan extension: Late-life dosage regimes with sex-specific effects.",
+      "author": "Strong et al.",
+      "year": 2020,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2015::Min": {
+      "pmid": "33145977",
+      "title": "Rapamycin-mediated mouse lifespan extension: Late-life dosage regimes with sex-specific effects.",
+      "author": "Strong et al.",
+      "year": 2020,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2015::MitoQ": {
+      "pmid": "33145977",
+      "title": "Rapamycin-mediated mouse lifespan extension: Late-life dosage regimes with sex-specific effects.",
+      "author": "Strong et al.",
+      "year": 2020,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2015::Rapa_hi_continuous": {
+      "pmid": "33145977",
+      "title": "Rapamycin-mediated mouse lifespan extension: Late-life dosage regimes with sex-specific effects.",
+      "author": "Strong et al.",
+      "year": 2020,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2015::Rapa_hi_cycle": {
+      "pmid": "33145977",
+      "title": "Rapamycin-mediated mouse lifespan extension: Late-life dosage regimes with sex-specific effects.",
+      "author": "Strong et al.",
+      "year": 2020,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2015::Rapa_hi_start_stop": {
+      "pmid": "33145977",
+      "title": "Rapamycin-mediated mouse lifespan extension: Late-life dosage regimes with sex-specific effects.",
+      "author": "Strong et al.",
+      "year": 2020,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2015::bGPA": {
+      "pmid": "33145977",
+      "title": "Rapamycin-mediated mouse lifespan extension: Late-life dosage regimes with sex-specific effects.",
+      "author": "Strong et al.",
+      "year": 2020,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2016::17aE2_16m": {
+      "pmid": "33788371",
+      "title": "17-a-estradiol late in life extends lifespan in aging UM-HET3 male mice; nicotinamide riboside and three other drugs do not affect lifespan in either sex.",
+      "author": "Harrison et al.",
+      "year": 2021,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2016::17aE2_20m": {
+      "pmid": "33788371",
+      "title": "17-a-estradiol late in life extends lifespan in aging UM-HET3 male mice; nicotinamide riboside and three other drugs do not affect lifespan in either sex.",
+      "author": "Harrison et al.",
+      "year": 2021,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2016::CC": {
+      "pmid": "33788371",
+      "title": "17-a-estradiol late in life extends lifespan in aging UM-HET3 male mice; nicotinamide riboside and three other drugs do not affect lifespan in either sex.",
+      "author": "Harrison et al.",
+      "year": 2021,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2016::Cana": {
+      "pmid": "33788371",
+      "title": "17-a-estradiol late in life extends lifespan in aging UM-HET3 male mice; nicotinamide riboside and three other drugs do not affect lifespan in either sex.",
+      "author": "Harrison et al.",
+      "year": 2021,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2016::GGA": {
+      "pmid": "33788371",
+      "title": "17-a-estradiol late in life extends lifespan in aging UM-HET3 male mice; nicotinamide riboside and three other drugs do not affect lifespan in either sex.",
+      "author": "Harrison et al.",
+      "year": 2021,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2016::MIF098": {
+      "pmid": "33788371",
+      "title": "17-a-estradiol late in life extends lifespan in aging UM-HET3 male mice; nicotinamide riboside and three other drugs do not affect lifespan in either sex.",
+      "author": "Harrison et al.",
+      "year": 2021,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2016::NR": {
+      "pmid": "33788371",
+      "title": "17-a-estradiol late in life extends lifespan in aging UM-HET3 male mice; nicotinamide riboside and three other drugs do not affect lifespan in either sex.",
+      "author": "Harrison et al.",
+      "year": 2021,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2017::BD": {
+      "pmid": "36179270",
+      "title": "Lifespan benefits for the combination of rapamycin plus acarbose and for captopril in genetically heterogeneous mice.",
+      "author": "Strong et al.",
+      "year": 2022,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2017::Capt": {
+      "pmid": "36179270",
+      "title": "Lifespan benefits for the combination of rapamycin plus acarbose and for captopril in genetically heterogeneous mice.",
+      "author": "Strong et al.",
+      "year": 2022,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2017::Leu": {
+      "pmid": "36179270",
+      "title": "Lifespan benefits for the combination of rapamycin plus acarbose and for captopril in genetically heterogeneous mice.",
+      "author": "Strong et al.",
+      "year": 2022,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2017::PB125": {
+      "pmid": "36179270",
+      "title": "Lifespan benefits for the combination of rapamycin plus acarbose and for captopril in genetically heterogeneous mice.",
+      "author": "Strong et al.",
+      "year": 2022,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2017::RaAc16": {
+      "pmid": "36179270",
+      "title": "Lifespan benefits for the combination of rapamycin plus acarbose and for captopril in genetically heterogeneous mice.",
+      "author": "Strong et al.",
+      "year": 2022,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2017::RaAc9": {
+      "pmid": "36179270",
+      "title": "Lifespan benefits for the combination of rapamycin plus acarbose and for captopril in genetically heterogeneous mice.",
+      "author": "Strong et al.",
+      "year": 2022,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2017::Sul": {
+      "pmid": "36179270",
+      "title": "Lifespan benefits for the combination of rapamycin plus acarbose and for captopril in genetically heterogeneous mice.",
+      "author": "Strong et al.",
+      "year": 2022,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2017::Syr": {
+      "pmid": "36179270",
+      "title": "Lifespan benefits for the combination of rapamycin plus acarbose and for captopril in genetically heterogeneous mice.",
+      "author": "Strong et al.",
+      "year": 2022,
+      "journal": "Aging Cell",
+      "kind": "primary",
+      "note": null
+    },
+    "C2018::Fis_Cyc": {
+      "pmid": "38041783",
+      "title": "Astaxanthin and meclizine extend lifespan in UM-HET3 male mice; fisetin, SG1002 (hydrogen sulfide donor), dimethyl fumarate, mycophenolic acid, and 4-phenylbutyrate do not significantly affect lifespan in either sex at the doses and schedules used.",
+      "author": "Harrison et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "primary",
+      "note": null
+    },
+    "C2018::Fis_On": {
+      "pmid": "38041783",
+      "title": "Astaxanthin and meclizine extend lifespan in UM-HET3 male mice; fisetin, SG1002 (hydrogen sulfide donor), dimethyl fumarate, mycophenolic acid, and 4-phenylbutyrate do not significantly affect lifespan in either sex at the doses and schedules used.",
+      "author": "Harrison et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "primary",
+      "note": null
+    },
+    "C2018::SG1002": {
+      "pmid": "38041783",
+      "title": "Astaxanthin and meclizine extend lifespan in UM-HET3 male mice; fisetin, SG1002 (hydrogen sulfide donor), dimethyl fumarate, mycophenolic acid, and 4-phenylbutyrate do not significantly affect lifespan in either sex at the doses and schedules used.",
+      "author": "Harrison et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "primary",
+      "note": null
+    },
+    "C2019::Asta": {
+      "pmid": "38041783",
+      "title": "Astaxanthin and meclizine extend lifespan in UM-HET3 male mice; fisetin, SG1002 (hydrogen sulfide donor), dimethyl fumarate, mycophenolic acid, and 4-phenylbutyrate do not significantly affect lifespan in either sex at the doses and schedules used.",
+      "author": "Harrison et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "primary",
+      "note": null
+    },
+    "C2019::DMF_16": {
+      "pmid": "38041783",
+      "title": "Astaxanthin and meclizine extend lifespan in UM-HET3 male mice; fisetin, SG1002 (hydrogen sulfide donor), dimethyl fumarate, mycophenolic acid, and 4-phenylbutyrate do not significantly affect lifespan in either sex at the doses and schedules used.",
+      "author": "Harrison et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "primary",
+      "note": null
+    },
+    "C2019::DMF_9": {
+      "pmid": "38041783",
+      "title": "Astaxanthin and meclizine extend lifespan in UM-HET3 male mice; fisetin, SG1002 (hydrogen sulfide donor), dimethyl fumarate, mycophenolic acid, and 4-phenylbutyrate do not significantly affect lifespan in either sex at the doses and schedules used.",
+      "author": "Harrison et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "primary",
+      "note": null
+    },
+    "C2019::MPA": {
+      "pmid": "38041783",
+      "title": "Astaxanthin and meclizine extend lifespan in UM-HET3 male mice; fisetin, SG1002 (hydrogen sulfide donor), dimethyl fumarate, mycophenolic acid, and 4-phenylbutyrate do not significantly affect lifespan in either sex at the doses and schedules used.",
+      "author": "Harrison et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "primary",
+      "note": null
+    },
+    "C2019::Mec": {
+      "pmid": "38041783",
+      "title": "Astaxanthin and meclizine extend lifespan in UM-HET3 male mice; fisetin, SG1002 (hydrogen sulfide donor), dimethyl fumarate, mycophenolic acid, and 4-phenylbutyrate do not significantly affect lifespan in either sex at the doses and schedules used.",
+      "author": "Harrison et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "primary",
+      "note": null
+    },
+    "C2019::PBA": {
+      "pmid": "38041783",
+      "title": "Astaxanthin and meclizine extend lifespan in UM-HET3 male mice; fisetin, SG1002 (hydrogen sulfide donor), dimethyl fumarate, mycophenolic acid, and 4-phenylbutyrate do not significantly affect lifespan in either sex at the doses and schedules used.",
+      "author": "Harrison et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "primary",
+      "note": null
+    },
+    "C2019::SG1002": {
+      "pmid": "38041783",
+      "title": "Astaxanthin and meclizine extend lifespan in UM-HET3 male mice; fisetin, SG1002 (hydrogen sulfide donor), dimethyl fumarate, mycophenolic acid, and 4-phenylbutyrate do not significantly affect lifespan in either sex at the doses and schedules used.",
+      "author": "Harrison et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "primary",
+      "note": null
+    },
+    "C2020::AKG_18": {
+      "pmid": "38753230",
+      "title": "Lifespan effects in male UM-HET3 mice treated with sodium thiosulfate, 16-hydroxyestriol, and late-start canagliflozin.",
+      "author": "Miller et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "primary",
+      "note": null
+    },
+    "C2020::Cana_16": {
+      "pmid": "38753230",
+      "title": "Lifespan effects in male UM-HET3 mice treated with sodium thiosulfate, 16-hydroxyestriol, and late-start canagliflozin.",
+      "author": "Miller et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "primary",
+      "note": null
+    },
+    "C2020::Cana_6": {
+      "pmid": "38753230",
+      "title": "Lifespan effects in male UM-HET3 mice treated with sodium thiosulfate, 16-hydroxyestriol, and late-start canagliflozin.",
+      "author": "Miller et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "primary",
+      "note": null
+    },
+    "C2020::DNP": {
+      "pmid": "38753230",
+      "title": "Lifespan effects in male UM-HET3 mice treated with sodium thiosulfate, 16-hydroxyestriol, and late-start canagliflozin.",
+      "author": "Miller et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "primary",
+      "note": null
+    },
+    "C2020::HYD_16": {
+      "pmid": "38753230",
+      "title": "Lifespan effects in male UM-HET3 mice treated with sodium thiosulfate, 16-hydroxyestriol, and late-start canagliflozin.",
+      "author": "Miller et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "primary",
+      "note": null
+    },
+    "C2020::HYD_6": {
+      "pmid": "38753230",
+      "title": "Lifespan effects in male UM-HET3 mice treated with sodium thiosulfate, 16-hydroxyestriol, and late-start canagliflozin.",
+      "author": "Miller et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "primary",
+      "note": null
+    },
+    "C2020::NEBI": {
+      "pmid": "38753230",
+      "title": "Lifespan effects in male UM-HET3 mice treated with sodium thiosulfate, 16-hydroxyestriol, and late-start canagliflozin.",
+      "author": "Miller et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "primary",
+      "note": null
+    },
+    "C2020::OH-EST": {
+      "pmid": "38753230",
+      "title": "Lifespan effects in male UM-HET3 mice treated with sodium thiosulfate, 16-hydroxyestriol, and late-start canagliflozin.",
+      "author": "Miller et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "primary",
+      "note": null
+    },
+    "C2020::THIO": {
+      "pmid": "38753230",
+      "title": "Lifespan effects in male UM-HET3 mice treated with sodium thiosulfate, 16-hydroxyestriol, and late-start canagliflozin.",
+      "author": "Miller et al.",
+      "year": 2024,
+      "journal": "GeroScience",
+      "kind": "primary",
+      "note": null
+    }
+  },
   "raw_sources": {
     "normalized_csv_repo": {
       "source": "matthost/lifespancharts",

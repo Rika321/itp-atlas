@@ -5,3 +5,7 @@ dist
 output
 __pycache__/
 *.pyc
+data/raw/drosophila/41467_2022_30975_MOESM16_ESM.zip
+data/raw/drosophila/source_data/Source_Data/PR_Sections.pdf
+data/raw/drosophila/source_data/__MACOSX/
+._*

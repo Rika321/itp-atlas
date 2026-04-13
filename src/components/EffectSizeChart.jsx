@@ -1,18 +1,24 @@
 import { useState } from "react";
 import { scaleLinear } from "d3";
 import { formatInteger, formatSignedDays, formatSignedPercent } from "../lib/itp";
+import { getIntlLocale, t } from "../lib/i18n";
 import { cn } from "../lib/utils";
 
-function formatTick(value) {
+function formatTick(value, locale) {
   const precision = Math.abs(value) < 5 ? 1 : 0;
-  return `${value > 0 ? "+" : ""}${value.toFixed(precision)}%`;
+  const formattedValue = new Intl.NumberFormat(getIntlLocale(locale), {
+    minimumFractionDigits: precision,
+    maximumFractionDigits: precision,
+  }).format(Math.abs(value));
+
+  return `${value > 0 ? "+" : value < 0 ? "-" : ""}${formattedValue}%`;
 }
 
 function formatRank(index) {
   return String(index + 1).padStart(2, "0");
 }
 
-function formatCurveMetricLabel(row, curveMetricKey, curveMetricLabel) {
+function formatCurveMetricLabel(row, curveMetricKey, curveMetricLabel, locale) {
   if (!curveMetricKey || !curveMetricLabel) {
     return null;
   }
@@ -22,7 +28,17 @@ function formatCurveMetricLabel(row, curveMetricKey, curveMetricLabel) {
     return null;
   }
 
-  return `${curveMetricLabel} ${formatInteger(metricDay)} d`;
+  return `${curveMetricLabel} ${formatInteger(metricDay, locale)} ${
+    locale === "zh-CN" ? "天" : "d"
+  }`;
+}
+
+function defaultValueFormatter(value, locale) {
+  return formatSignedPercent(value, locale);
+}
+
+function defaultAuxValueFormatter(value, locale) {
+  return formatSignedDays(value, locale);
 }
 
 function formatPValue(value) {
@@ -37,12 +53,20 @@ function formatPValue(value) {
   return `p=${value.toFixed(3)}`;
 }
 
-function StatisticalSignificanceBadge({ pValue, className }) {
+function StatisticalSignificanceBadge({ locale, pValue, className }) {
   const label = formatPValue(pValue) || "p<0.05";
   const detail =
     pValue != null
-      ? `Overall survival log-rank ${formatPValue(pValue)} vs matched control`
-      : "Overall survival log-rank p<0.05 vs matched control";
+      ? t(
+        locale,
+        `Overall survival log-rank ${formatPValue(pValue)} vs matched control`,
+        `总体生存 log-rank ${formatPValue(pValue)}，对比匹配对照`,
+      )
+      : t(
+        locale,
+        "Overall survival log-rank p<0.05 vs matched control",
+        "总体生存 log-rank p<0.05，对比匹配对照",
+      );
 
   return (
     <span
@@ -55,6 +79,28 @@ function StatisticalSignificanceBadge({ pValue, className }) {
     >
       {label}
     </span>
+  );
+}
+
+function PubMedBadge({ locale, pubmed, className }) {
+  if (!pubmed?.url) {
+    return null;
+  }
+
+  return (
+    <a
+      href={pubmed.url}
+      target="_blank"
+      rel="noreferrer"
+      title={pubmed.citation || t(locale, "Search PubMed", "在 PubMed 中搜索")}
+      className={cn(
+        "inline-flex items-center whitespace-nowrap rounded-full border border-primary/20 bg-primary/5 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-primary/85 transition-colors hover:bg-primary/10 hover:text-primary",
+        className,
+      )}
+      onClick={(event) => event.stopPropagation()}
+    >
+      {pubmed.label || "PubMed"}
+    </a>
   );
 }
 
@@ -107,7 +153,15 @@ function EffectLane({ value, positionScale, isSelected }) {
   );
 }
 
-function EffectValue({ value, dayValue, curveMetricValueLabel, isSelected }) {
+function EffectValue({
+  value,
+  dayValue,
+  curveMetricValueLabel,
+  isSelected,
+  locale,
+  valueFormatter,
+  auxValueFormatter,
+}) {
   const isPositive = value >= 0;
 
   return (
@@ -123,7 +177,7 @@ function EffectValue({ value, dayValue, curveMetricValueLabel, isSelected }) {
                 : "bg-[rgba(23,96,135,0.12)] text-[hsl(var(--chart-1))]",
           )}
         >
-          {formatSignedPercent(value)}
+          {valueFormatter(value, locale)}
         </span>
         {dayValue != null ? (
           <span
@@ -132,11 +186,11 @@ function EffectValue({ value, dayValue, curveMetricValueLabel, isSelected }) {
               isSelected
                 ? "text-foreground"
                 : isPositive
-                  ? "text-primary"
-                  : "text-[hsl(var(--chart-1))]",
+                ? "text-primary"
+                : "text-[hsl(var(--chart-1))]",
             )}
           >
-            {formatSignedDays(dayValue)}
+            {auxValueFormatter(dayValue, locale)}
           </span>
         ) : null}
       </div>
@@ -163,6 +217,9 @@ function EffectRow({
   showMetaLabels,
   curveMetricKey,
   curveMetricLabel,
+  locale,
+  valueFormatter,
+  auxValueFormatter,
 }) {
   const isSelected = row.key === selectedKey;
   const label = row.label || row.group;
@@ -171,7 +228,9 @@ function EffectRow({
     row,
     curveMetricKey,
     curveMetricLabel,
+    locale,
   );
+  const hasExpandedDetails = Boolean(row.description || row.pubmed?.citation);
   const [showDescription, setShowDescription] = useState(false);
 
   function handleSelect() {
@@ -219,12 +278,16 @@ function EffectRow({
                 )}
               >
                 {label}
-                {row.description ? (
+                {hasExpandedDetails ? (
                   <button
                     type="button"
                     className="ml-1.5 inline-flex h-5 w-5 shrink-0 align-bottom items-center justify-center rounded-full border border-primary/20 bg-primary/5 text-[10px] font-black leading-none text-primary/80 transition-colors hover:bg-primary/10 hover:text-primary"
                     aria-expanded={showDescription}
-                    aria-label={`${showDescription ? "Hide" : "Show"} description for ${label}`}
+                    aria-label={t(
+                      locale,
+                      `${showDescription ? "Hide" : "Show"} details for ${label}`,
+                      `${showDescription ? "隐藏" : "显示"} ${label} 的详情`,
+                    )}
                     onClick={toggleDescription}
                   >
                     ?
@@ -237,13 +300,24 @@ function EffectRow({
                     {row.metaLabel}
                   </span>
                 ) : null}
+                <PubMedBadge locale={locale} pubmed={row.pubmed} />
                 {isStatisticallySignificant ? (
-                  <StatisticalSignificanceBadge pValue={row.logRankPValue} />
+                  <StatisticalSignificanceBadge locale={locale} pValue={row.logRankPValue} />
                 ) : null}
               </div>
-              {showDescription && row.description ? (
-                <div className="rounded-[14px] border border-primary/15 bg-primary/5 px-3 py-2 text-[11px] leading-5 text-muted-foreground">
-                  {row.description}
+              {showDescription && hasExpandedDetails ? (
+                <div className="space-y-2 rounded-[14px] border border-primary/15 bg-primary/5 px-3 py-2 text-[11px] leading-5 text-muted-foreground">
+                  {row.description ? <p>{row.description}</p> : null}
+                  {row.pubmed?.citation ? (
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span>{row.pubmed.citation}</span>
+                      {row.pubmed.detail ? (
+                        <span className="text-muted-foreground/70">
+                          {row.pubmed.detail}
+                        </span>
+                      ) : null}
+                    </div>
+                  ) : null}
                 </div>
               ) : null}
             </div>
@@ -253,6 +327,9 @@ function EffectRow({
             dayValue={row.dayValue}
             curveMetricValueLabel={curveMetricValueLabel}
             isSelected={isSelected}
+            locale={locale}
+            valueFormatter={valueFormatter}
+            auxValueFormatter={auxValueFormatter}
           />
         </div>
 
@@ -276,12 +353,16 @@ function EffectRow({
             )}
           >
             {label}
-            {row.description ? (
+            {hasExpandedDetails ? (
               <button
                 type="button"
                 className="ml-1.5 inline-flex h-5 w-5 shrink-0 align-bottom items-center justify-center rounded-full border border-primary/20 bg-primary/5 text-[10px] font-black leading-none text-primary/80 transition-colors hover:bg-primary/10 hover:text-primary"
                 aria-expanded={showDescription}
-                aria-label={`${showDescription ? "Hide" : "Show"} description for ${label}`}
+                aria-label={t(
+                  locale,
+                  `${showDescription ? "Hide" : "Show"} details for ${label}`,
+                  `${showDescription ? "隐藏" : "显示"} ${label} 的详情`,
+                )}
                 onClick={toggleDescription}
               >
                 ?
@@ -294,13 +375,24 @@ function EffectRow({
                 {row.metaLabel}
               </span>
             ) : null}
+            <PubMedBadge locale={locale} pubmed={row.pubmed} />
             {isStatisticallySignificant ? (
-              <StatisticalSignificanceBadge pValue={row.logRankPValue} />
+              <StatisticalSignificanceBadge locale={locale} pValue={row.logRankPValue} />
             ) : null}
           </div>
-          {showDescription && row.description ? (
-            <div className="mt-2 rounded-[14px] border border-primary/15 bg-primary/5 px-3 py-2 text-[11px] leading-5 text-muted-foreground">
-              {row.description}
+          {showDescription && hasExpandedDetails ? (
+            <div className="mt-2 space-y-2 rounded-[14px] border border-primary/15 bg-primary/5 px-3 py-2 text-[11px] leading-5 text-muted-foreground">
+              {row.description ? <p>{row.description}</p> : null}
+              {row.pubmed?.citation ? (
+                <div className="flex flex-wrap items-center gap-2">
+                  <span>{row.pubmed.citation}</span>
+                  {row.pubmed.detail ? (
+                    <span className="text-muted-foreground/70">
+                      {row.pubmed.detail}
+                    </span>
+                  ) : null}
+                </div>
+              ) : null}
             </div>
           ) : null}
         </div>
@@ -317,6 +409,9 @@ function EffectRow({
             dayValue={row.dayValue}
             curveMetricValueLabel={curveMetricValueLabel}
             isSelected={isSelected}
+            locale={locale}
+            valueFormatter={valueFormatter}
+            auxValueFormatter={auxValueFormatter}
           />
         </div>
       </div>
@@ -332,9 +427,15 @@ export default function EffectSizeChart({
   dayMetricKey,
   curveMetricKey,
   curveMetricLabel,
+  locale = "en",
   selectedKey,
   onSelect,
   footnote,
+  valueDomain,
+  valueFormatter = defaultValueFormatter,
+  auxValueFormatter = defaultAuxValueFormatter,
+  axisStartLabel = "Lower",
+  axisEndLabel = "Higher",
 }) {
   const chartRows = rows
     .map((row) => ({
@@ -352,17 +453,19 @@ export default function EffectSizeChart({
           {title}
         </h3>
         <p className="text-sm leading-6 text-muted-foreground">{subtitle}</p>
-        <p className="text-sm text-muted-foreground">No values for this slice.</p>
+        <p className="text-sm text-muted-foreground">
+          {t(locale, "No values for this slice.", "这个切片没有可显示的数值。")}
+        </p>
       </div>
     );
   }
 
   const maxAbs = Math.max(5, ...chartRows.map((row) => Math.abs(row.value)));
-  const positionScale = scaleLinear().domain([-maxAbs, maxAbs]).range([0, 100]);
+  const positionScale = scaleLinear()
+    .domain(valueDomain || [-maxAbs, maxAbs])
+    .range([0, 100]);
   const showMetaLabels = chartRows.some((row) => row.metaLabel);
-  const showSignificanceLegend = chartRows.some(
-    (row) => row.isStatisticallySignificant,
-  );
+  const showSignificanceLegend = chartRows.some((row) => row.isStatisticallySignificant);
 
   return (
     <section className="space-y-4">
@@ -382,9 +485,9 @@ export default function EffectSizeChart({
             </div>
           ) : null}
           <div className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
-            <span>{formatTick(-maxAbs)}</span>
+            <span>{formatTick(-maxAbs, locale)}</span>
             <span>0%</span>
-            <span>{formatTick(maxAbs)}</span>
+            <span>{formatTick(maxAbs, locale)}</span>
           </div>
         </div> */}
       </div>
@@ -392,17 +495,17 @@ export default function EffectSizeChart({
       <div className="overflow-hidden rounded-[26px] border border-border/70 bg-white/88">
         <div className="hidden border-b border-border/70 px-4 py-3 md:grid md:grid-cols-[44px_minmax(0,250px)_minmax(0,1fr)_160px] md:items-center md:gap-4">
           <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-            Rank
+            {t(locale, "Rank", "排名")}
           </span>
           <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-            Intervention
+            {t(locale, "Intervention", "干预")}
           </span>
           <div className="flex items-center justify-between text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-            <span>Lower</span>
-            <span>Higher</span>
+            <span>{axisStartLabel}</span>
+            <span>{axisEndLabel}</span>
           </div>
           <span className="text-right text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-            Effect
+            {t(locale, "Effect", "效应")}
           </span>
         </div>
 
@@ -418,6 +521,9 @@ export default function EffectSizeChart({
               showMetaLabels={showMetaLabels}
               curveMetricKey={curveMetricKey}
               curveMetricLabel={curveMetricLabel}
+              locale={locale}
+              valueFormatter={valueFormatter}
+              auxValueFormatter={auxValueFormatter}
             />
           ))}
         </div>

@@ -44,8 +44,22 @@ export default {
         panel: "0 24px 60px rgba(17, 33, 49, 0.12)",
       },
       fontFamily: {
-        sans: ["IBM Plex Sans", "sans-serif"],
-        display: ["Space Grotesk", "sans-serif"],
+        sans: [
+          "IBM Plex Sans",
+          "Noto Sans SC",
+          "PingFang SC",
+          "Hiragino Sans GB",
+          "Microsoft YaHei",
+          "sans-serif",
+        ],
+        display: [
+          "Space Grotesk",
+          "Noto Sans SC",
+          "PingFang SC",
+          "Hiragino Sans GB",
+          "Microsoft YaHei",
+          "sans-serif",
+        ],
       },
       backgroundImage: {
         noise:

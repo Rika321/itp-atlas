@@ -32,6 +32,58 @@ CONTROL_COMPOUND_LABELS = {
 CONTROL_COMPOUNDS = set(CONTROL_COMPOUND_LABELS)
 DEFAULT_SITE_META = {"ALL": "All Labs"}
 
+CITP_PUBLICATION_BY_DOI = {
+    "10.1038/ncomms14256": {
+        "pmid": "28220799",
+        "title": "Impact of genetic background and experimental reproducibility on identifying chemical compounds with robust longevity effects.",
+    },
+    "10.1007/s11357-019-00108-9": {
+        "pmid": "31820364",
+        "title": "Automated lifespan determination across Caenorhabditis strains and species reveals assay-specific effects of chemical interventions.",
+    },
+    "10.17912/micropub.biology.000131": {
+        "pmid": "32010883",
+        "title": "Caenorhabditis Intervention Testing Program: the tyrosine kinase inhibitor imatinib mesylate does not extend lifespan in nematodes.",
+    },
+    "10.17912/micropub.biology.000207": {
+        "pmid": "31998863",
+        "title": "Caenorhabditis Intervention Testing Program: the creatine analog beta-guanidinopropionic acid does not extend lifespan in nematodes.",
+    },
+    "10.17912/micropub.biology.000257": {
+        "pmid": "32550518",
+        "title": "Caenorhabditis Intervention Testing Program: the farnesoid X receptor agonist obeticholic acid does not robustly extend lifespan in nematodes.",
+    },
+    "10.1111/acel.13488": {
+        "pmid": "34837316",
+        "title": "Metformin treatment of diverse Caenorhabditis species reveals the importance of genetic background in longevity and healthspan extension outcomes.",
+    },
+    "10.17912/micropub.biology.000448": {
+        "pmid": "34585102",
+        "title": "Caenorhabditis Intervention Testing Program: the herbicide diuron does not robustly extend lifespan in nematodes.",
+    },
+    "10.1007/s11357-023-00978-0": {
+        "pmid": "37923874",
+        "title": "Antioxidants green tea extract and nordihydroguaiaretic acid confer species and strain-specific lifespan and health effects in Caenorhabditis nematodes.",
+    },
+    "10.7554/eLife.104375": {
+        "pmid": "41432067",
+        "title": "Computer prediction and genetic analysis identifies retinoic acid modulation as a driver of conserved longevity pathways in genetically diverse Caenorhabditis nematodes.",
+    },
+    "10.17912/micropub.biology.001517": {
+        "pmid": "40027526",
+        "title": "Caenorhabditis Intervention Testing Program: all-trans retinoic acid-related compounds tamibarotene and bakuchiol do not extend lifespan in Caenorhabditis nematodes.",
+    },
+    "10.1101/2025.05.11.653363": {
+        "pmid": "40462948",
+        "title": "The broccoli derivative sulforaphane extends lifespan by slowing the transcriptional aging clock.",
+    },
+    "10.17912/micropub.biology.001987": {
+        "pmid": None,
+        "title": "Caenorhabditis Intervention Testing Program: the anticonvulsant leviteracetam does not extend lifespan in nematodes.",
+        "note": "PMID could not be resolved during curation.",
+    },
+}
+
 
 def utc_now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
@@ -209,12 +261,14 @@ def build_cohort_meta_by_name(
     for row in ordered_rows:
         dataset_name = str(row["dataset_name"])
         description = str(row["dataset_description"])
+        doi = str(row.get("doi") or "")
         short_label = re.sub(
             r"\s+(study|data|negative result)$",
             "",
             description,
             flags=re.IGNORECASE,
         )
+        publication_meta = CITP_PUBLICATION_BY_DOI.get(doi)
         cohort_meta_by_name[dataset_name] = {
             "label": f"{row['year']} · {description}",
             "short_label": short_label,
@@ -226,6 +280,18 @@ def build_cohort_meta_by_name(
             "journal": row.get("journal"),
             "author": row.get("author"),
             "manuscript_id": row.get("manuscript_id"),
+            "publication": {
+                "pmid": publication_meta.get("pmid") if publication_meta else None,
+                "title": publication_meta.get("title") if publication_meta else None,
+                "author": row.get("author"),
+                "year": row.get("year"),
+                "journal": row.get("journal"),
+                "doi": row.get("doi"),
+                "kind": "primary",
+                "note": publication_meta.get("note") if publication_meta else None,
+            }
+            if row.get("doi")
+            else None,
         }
 
     latest_row = max(
@@ -395,6 +461,7 @@ def main() -> None:
                     "concentration": concentration,
                     "units": units,
                     "condition": condition,
+                    "publication": cohort_meta_by_name[cohort].get("publication"),
                 }
 
             site_meta[site] = site

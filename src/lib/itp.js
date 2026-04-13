@@ -4,13 +4,14 @@ import {
   getInterventionLabel as getMouseInterventionLabel,
   normalizeGroupCode,
 } from "./interventions";
+import { getIntlLocale, isChineseLocale } from "./i18n";
 import { getInterventionPathway as getKnownInterventionPathway } from "./pathways";
 
 export const CONTROL_GROUP = "Control";
 export const SEX_META = {
-  m: { label: "Male" },
-  f: { label: "Female" },
-  all: { label: "Combined" },
+  m: { label: "Male", labelZh: "雄性" },
+  f: { label: "Female", labelZh: "雌性" },
+  all: { label: "Combined", labelZh: "合并" },
 };
 export const COMPARISON_PALETTE = ["#176087", "#d46a36", "#7f8f29", "#c8952d", "#9b4b3f"];
 
@@ -87,7 +88,15 @@ function buildParsedDataset({
     const cohortMeta = cohortMetaByName[cohort] || {};
     const interventionGroups = Object.values(groupMetaByKey)
       .filter((meta) => meta.cohort === cohort && !meta.isControl)
-      .sort((left, right) => left.label.localeCompare(right.label));
+      .sort((left, right) => {
+        const leftIndex = left.sortIndex ?? Number.POSITIVE_INFINITY;
+        const rightIndex = right.sortIndex ?? Number.POSITIVE_INFINITY;
+        if (leftIndex !== rightIndex) {
+          return leftIndex - rightIndex;
+        }
+
+        return left.label.localeCompare(right.label);
+      });
 
     groupsByCohort[cohort] = interventionGroups.map((meta) => meta.group);
     compareOptions.push(
@@ -96,6 +105,7 @@ function buildParsedDataset({
         cohort,
         group: meta.group,
         label: meta.label,
+        sortIndex: meta.sortIndex ?? null,
         searchText: [
           cohort,
           cohortMeta.label,
@@ -126,6 +136,12 @@ function buildParsedDataset({
 
   compareOptions.sort((left, right) => {
     if (left.cohort === right.cohort) {
+      const leftIndex = left.sortIndex ?? Number.POSITIVE_INFINITY;
+      const rightIndex = right.sortIndex ?? Number.POSITIVE_INFINITY;
+      if (leftIndex !== rightIndex) {
+        return leftIndex - rightIndex;
+      }
+
       return left.label.localeCompare(right.label);
     }
     return compareDatasetCohortsDescending({ cohortSortIndex }, left.cohort, right.cohort);
@@ -161,32 +177,49 @@ function buildParsedDataset({
   };
 }
 
-export function formatInteger(value) {
+export function formatInteger(value, locale = "en-US") {
   if (value == null || Number.isNaN(value)) {
     return "—";
   }
-  return new Intl.NumberFormat("en-US").format(Math.round(value));
+
+  return new Intl.NumberFormat(getIntlLocale(locale)).format(Math.round(value));
 }
 
-export function formatSignedDays(value) {
+export function formatSignedDays(value, locale = "en-US") {
   if (value == null || Number.isNaN(value)) {
     return "—";
   }
-  return `${value > 0 ? "+" : ""}${Math.round(value)} d`;
+  const formattedValue = new Intl.NumberFormat(getIntlLocale(locale)).format(
+    Math.round(Math.abs(value)),
+  );
+
+  return `${value > 0 ? "+" : value < 0 ? "-" : ""}${formattedValue} ${
+    isChineseLocale(locale) ? "天" : "d"
+  }`;
 }
 
-export function formatSignedPercent(value) {
+export function formatSignedPercent(value, locale = "en-US") {
   if (value == null || Number.isNaN(value)) {
     return "—";
   }
-  return `${value > 0 ? "+" : ""}${value.toFixed(1)}%`;
+  const formattedValue = new Intl.NumberFormat(getIntlLocale(locale), {
+    minimumFractionDigits: 1,
+    maximumFractionDigits: 1,
+  }).format(Math.abs(value));
+
+  return `${value > 0 ? "+" : value < 0 ? "-" : ""}${formattedValue}%`;
 }
 
-export function formatMonths(value) {
+export function formatMonths(value, locale = "en-US") {
   if (value == null || Number.isNaN(value)) {
     return "—";
   }
-  return `${value.toFixed(1)} mo`;
+  const formattedValue = new Intl.NumberFormat(getIntlLocale(locale), {
+    minimumFractionDigits: 1,
+    maximumFractionDigits: 1,
+  }).format(value);
+
+  return `${formattedValue} ${isChineseLocale(locale) ? "个月" : "mo"}`;
 }
 
 export function getInterventionKey(cohort, group) {
@@ -211,6 +244,7 @@ export function getCohortMeta(dataset, cohort) {
     label: cohort,
     shortLabel: cohort,
     secondaryLabel: null,
+    publication: null,
   };
 }
 
@@ -231,7 +265,56 @@ export function getInterventionDescription(dataset, cohort, group) {
   return getGroupMeta(dataset, cohort, group)?.description || null;
 }
 
+export function getInterventionEvidence(dataset, cohort, group) {
+  return getGroupMeta(dataset, cohort, group)?.evidence || null;
+}
+
+function buildPubMedUrl(pmid) {
+  if (!pmid) {
+    return null;
+  }
+
+  return `https://pubmed.ncbi.nlm.nih.gov/${pmid}/`;
+}
+
+export function getInterventionPubMedReference(dataset, cohort, group) {
+  const meta = getGroupMeta(dataset, cohort, group);
+  if (!meta || meta.isControl) {
+    return null;
+  }
+
+  const cohortMeta = getCohortMeta(dataset, cohort);
+  const publication = meta.publication || cohortMeta.publication || null;
+  if (!publication) {
+    return null;
+  }
+
+  return {
+    label: publication.pmid ? "PubMed" : null,
+    url: buildPubMedUrl(publication.pmid),
+    citation: publication.title || null,
+    detail: [
+      publication.author,
+      publication.year,
+      publication.journal,
+      publication.pmid ? `PMID ${publication.pmid}` : null,
+      publication.doi ? `DOI ${publication.doi}` : null,
+      publication.kindLabel ||
+        (publication.kind === "secondary" ? "Secondary analysis" : null),
+      publication.note || null,
+    ]
+      .filter(Boolean)
+      .join(" · "),
+    title: publication.title || null,
+    pmid: publication.pmid || null,
+  };
+}
+
 export function getInterventionPathway(dataset, cohort, group) {
+  if (dataset?.profile?.id === "human") {
+    return null;
+  }
+
   const meta = getGroupMeta(dataset, cohort, group);
   if (!meta && !group) {
     return null;
@@ -246,6 +329,9 @@ export function getInterventionPathway(dataset, cohort, group) {
 export function getDefaultGroupForCohort(dataset, groups) {
   if (!groups?.length) {
     return "";
+  }
+  if (dataset?.profile?.defaultGroup && groups.includes(dataset.profile.defaultGroup)) {
+    return dataset.profile.defaultGroup;
   }
   if (dataset?.profile?.id === "itp" && groups.includes("AKG_18")) {
     return "AKG_18";
@@ -276,6 +362,7 @@ export function parseItpDataset(csvText, manifest) {
   }).filter(Boolean);
 
   const groupMetaByKey = {};
+  const publicationByGroupKey = manifest?.publication_by_group_key || {};
   rows.forEach((row) => {
     const metaKey = getGroupMetaKey(row.cohort, row.group);
     if (groupMetaByKey[metaKey]) {
@@ -300,6 +387,7 @@ export function parseItpDataset(csvText, manifest) {
         ? "Control"
         : getMouseInterventionLabel(row.cohort, row.group),
       condition: null,
+      publication: publicationByGroupKey[metaKey] || null,
     };
   });
 
@@ -326,7 +414,7 @@ export function parseItpDataset(csvText, manifest) {
       id: "itp",
       title: "Interventions Testing Program",
       description:
-        "A widely used mouse aging study that compares treatments side by side and shows which ones helped mice live longer.",
+        "Public mouse lifespan data from the NIA's Interventions Testing Program. Compare treatments side by side and see which ones helped mice live longer.",
       badgePrefix: "gold-standard aging reference",
       sampleStatLabel: "Mice",
       interventionStatLabel: "Intv.",
@@ -350,6 +438,7 @@ export function parseItpDataset(csvText, manifest) {
       footerText:
         "Source files were downloaded from MPD and normalized against the public lifespancharts cohort CSVs.",
       comparisonSearchPlaceholder: "Search cohort or compound",
+      comparisonHelperText: "Search cohort or compound. Four overlays max.",
       explorerBody:
         "Choose a row from the leaderboard above or use the controls here to inspect a treatment against its cohort-matched control. Year and site are set in the top scope panel.",
       focusSectionBody:
@@ -401,6 +490,7 @@ export function parseCitpDataset(csvText, manifest) {
         strain: meta.strain || null,
         compoundDisplayName: meta.compound_display_name || null,
         condition: meta.condition || null,
+        publication: meta.publication || null,
       },
     ]),
   );
@@ -411,6 +501,7 @@ export function parseCitpDataset(csvText, manifest) {
         label: meta.label || cohort,
         shortLabel: meta.short_label || meta.label || cohort,
         secondaryLabel: meta.secondary_label || null,
+        publication: meta.publication || null,
       },
     ]),
   );
@@ -428,7 +519,7 @@ export function parseCitpDataset(csvText, manifest) {
       id: "citp",
       title: "Comparative Interventions Testing Program",
       description:
-        "A multi-species worm longevity resource that compares compounds across strains and conditions from the public CITP portal.",
+        "Public worm lifespan data from CITP. Compare compounds across worm species, strains, and lab conditions.",
       badgePrefix: "multi-species longevity portal",
       sampleStatLabel: "Animals",
       interventionStatLabel: "Tests",
@@ -452,12 +543,355 @@ export function parseCitpDataset(csvText, manifest) {
       footerText:
         "Source files were downloaded from the CITP Data Portal and normalized into matched treatment-control strata across dataset, strain, condition, and lab.",
       comparisonSearchPlaceholder: "Search study, strain, or compound",
+      comparisonHelperText: "Search study, strain, or compound. Four overlays max.",
       explorerBody:
         "Choose a row from the leaderboard above or use the controls here to inspect an intervention against its matched control. Study and lab are set in the top scope panel.",
       focusSectionBody:
         "Matched control overlays stay within each study, strain, condition, and lab slice so the non-mouse comparisons stay internally consistent.",
+      singlePanelNotice:
+        "CITP lifespan exports are shown as combined populations, so the worm view stays on a single panel.",
     },
     siteMeta: manifest?.site_meta || { [DEFAULT_SITE]: "All Labs" },
+    latestPublicCohort,
+    latestPublicReleaseLabel,
+    cohortOrder: manifest?.cohort_order || [],
+    cohortMetaByName,
+    groupMetaByKey,
+  });
+}
+
+export function parseHumanDataset(_csvText, manifest) {
+  const groupMetaByKey = Object.fromEntries(
+    Object.entries(manifest?.group_meta_by_key || {}).map(([key, meta]) => [
+      key,
+      {
+        cohort: meta.cohort,
+        group: meta.group,
+        controlGroup: meta.control_group || null,
+        isControl: Boolean(meta.is_control),
+        label: meta.label,
+        description: meta.description || null,
+        species: meta.species || "Human",
+        strain: meta.strain || meta.condition || null,
+        compoundDisplayName: meta.compound_display_name || meta.label || meta.group,
+        condition: meta.condition || null,
+        publication: meta.publication || null,
+        evidence: meta.evidence || null,
+        sortIndex: meta.sort_index ?? null,
+      },
+    ]),
+  );
+  const cohortMetaByName = Object.fromEntries(
+    Object.entries(manifest?.cohort_meta_by_name || {}).map(([cohort, meta]) => [
+      cohort,
+      {
+        label: meta.label || cohort,
+        shortLabel: meta.short_label || meta.label || cohort,
+        secondaryLabel: meta.secondary_label || null,
+        publication: meta.publication || null,
+      },
+    ]),
+  );
+  const rows = Object.values(groupMetaByKey)
+    .filter((meta) => !meta.isControl)
+    .map((meta, index) => ({
+      cohort: meta.cohort,
+      site: DEFAULT_SITE,
+      sex: "all",
+      id: `human-evidence-${index + 1}`,
+      group: meta.group,
+      controlGroup: null,
+      ageDays: index + 1,
+      dead: true,
+      status: "evidence",
+      ageInitiationMonths: null,
+      species: "Human",
+      strain: meta.condition || null,
+    }));
+  const latestPublicCohort =
+    manifest?.latest_public_cohort_downloaded ||
+    manifest?.cohort_order?.[manifest.cohort_order.length - 1];
+  const latestPublicReleaseLabel =
+    manifest?.latest_public_release_label || latestPublicCohort;
+  const parsed = buildParsedDataset({
+    rows,
+    manifest,
+    profile: {
+      id: "human",
+      title: "Human Medication Evidence Atlas",
+      description:
+        "A ranked list of 10 medication classes with the strongest human evidence for lower overall death risk, based on meta-analyses, population studies, and Mendelian genetics.",
+      badgePrefix: "human medication evidence",
+      sampleStatLabel: "Sources",
+      interventionStatLabel: "Meds",
+      cohortStatLabel: "Catalogs",
+      focusScopeLabel: "catalog",
+      focusScopePlural: "catalogs",
+      focusSectionLabel: "Evidence explorer",
+      explorerSectionLabel: "Medication explorer",
+      siteLabel: "Evidence",
+      siteAllLabel: "All evidence streams",
+      sampleNounPlural: "evidence sources",
+      sampleMetricLabel: "Evidence sources",
+      groupNounSingular: "medication",
+      groupNounPlural: "medications",
+      focusGroupLabel: "Focus medication",
+      compareSectionLabel: "Compare medications",
+      sexSupported: false,
+      combinedPopulationLabel: "Human evidence",
+      manifestFileName: null,
+      loadingLabel: "Loading curated human medication evidence…",
+      footerText:
+        "This human view is a curated medication leaderboard built from high-signal meta-analyses, large epidemiology, and drug-target Mendelian studies. Scores are heuristic navigation aids, not prescribing advice.",
+      comparisonSearchPlaceholder: "Search medication or population",
+      comparisonHelperText: "Search the curated top 10 medications.",
+      explorerBody:
+        "Choose a medication from the leaderboard above or the selector here to inspect the evidence anchors behind this human ranking.",
+      focusSectionBody:
+        "This human view is evidence-first. It does not display survival curves; it summarizes the meta-analysis, epidemiology, and Mendelian anchors used in the ranking.",
+      singlePanelNotice:
+        "Human evidence is summarized as a single evidence panel rather than survival curves.",
+      defaultRankingMetric: "overall",
+      allowCompare: false,
+      cohortSampleSuffix: "refs",
+      cohortInterventionSuffix: "meds",
+      footerLeadLabel: "Latest curated catalog verified locally",
+      defaultGroup: "STATINS",
+    },
+    siteMeta: manifest?.site_meta || { [DEFAULT_SITE]: "Meta + epidemiology + Mendelian" },
+    latestPublicCohort,
+    latestPublicReleaseLabel,
+    cohortOrder: manifest?.cohort_order || [],
+    cohortMetaByName,
+    groupMetaByKey,
+  });
+  const evidenceSourceCount = Object.values(groupMetaByKey).reduce(
+    (total, meta) =>
+      total +
+      ["meta", "epidemiology", "mendelian"].filter(
+        (key) => meta.evidence?.[key],
+      ).length,
+    0,
+  );
+
+  return {
+    ...parsed,
+    cohortOverview: parsed.cohortOverview.map((entry) => ({
+      ...entry,
+      sampleCount: evidenceSourceCount,
+    })),
+    overview: {
+      ...parsed.overview,
+      sampleCount: evidenceSourceCount,
+      releaseTag: `human medication evidence · curated through ${latestPublicReleaseLabel}`,
+    },
+  };
+}
+
+export function parseKillifishDataset(csvText, manifest) {
+  const rows = csvParse(csvText, (row) => {
+    const ageDays = Number(row.age_days);
+    if (!Number.isFinite(ageDays)) {
+      return null;
+    }
+
+    return {
+      cohort: row.cohort,
+      site: row.site || DEFAULT_SITE,
+      sex: row.sex || "all",
+      id: row.id,
+      group: row.group,
+      controlGroup: row.control_group || CONTROL_GROUP,
+      ageDays,
+      dead: String(row.dead).toLowerCase() === "true",
+      status: row.status,
+      ageInitiationMonths: parseInitiationMonths(row.age_initiation_months),
+      species: row.species || null,
+      strain: row.strain || null,
+    };
+  }).filter(Boolean);
+
+  const groupMetaByKey = Object.fromEntries(
+    Object.entries(manifest?.group_meta_by_key || {}).map(([key, meta]) => [
+      key,
+      {
+        cohort: meta.cohort,
+        group: meta.group,
+        controlGroup: meta.control_group,
+        isControl: Boolean(meta.is_control),
+        label: meta.label,
+        description: meta.description || null,
+        species: meta.species || null,
+        strain: meta.strain || null,
+        compoundDisplayName: meta.compound_display_name || null,
+        condition: meta.condition || null,
+        publication: meta.publication || null,
+      },
+    ]),
+  );
+  const cohortMetaByName = Object.fromEntries(
+    Object.entries(manifest?.cohort_meta_by_name || {}).map(([cohort, meta]) => [
+      cohort,
+      {
+        label: meta.label || cohort,
+        shortLabel: meta.short_label || meta.label || cohort,
+        secondaryLabel: meta.secondary_label || null,
+        publication: meta.publication || null,
+      },
+    ]),
+  );
+  const latestPublicCohort =
+    manifest?.latest_public_cohort_downloaded ||
+    manifest?.cohort_order?.[manifest.cohort_order.length - 1];
+  const latestPublicReleaseLabel = String(
+    manifest?.latest_public_release_label || latestPublicCohort || "",
+  );
+
+  return buildParsedDataset({
+    rows,
+    manifest,
+    profile: {
+      id: "killifish",
+      title: "African turquoise killifish",
+      description:
+        "Public killifish lifespan data from a dietary restriction study. Compare restricted feeding with standard feeding across two cohorts.",
+      badgePrefix: "vertebrate diet intervention study",
+      sampleStatLabel: "Fish",
+      interventionStatLabel: "Intv.",
+      cohortStatLabel: "Cohorts",
+      focusScopeLabel: "cohort",
+      focusScopePlural: "cohorts",
+      focusSectionLabel: "Focus cohort",
+      explorerSectionLabel: "Explorer",
+      siteLabel: "Source",
+      siteAllLabel: "eLife public data",
+      sampleNounPlural: "fish",
+      sampleMetricLabel: "Fish",
+      groupNounSingular: "intervention",
+      groupNounPlural: "interventions",
+      focusGroupLabel: "Focus intervention",
+      compareSectionLabel: "Compare interventions",
+      sexSupported: true,
+      combinedPopulationLabel: "Combined-sex fish",
+      manifestFileName: "killifish_dataset_manifest.json",
+      loadingLabel: "Loading the public killifish dataset…",
+      footerText:
+        "Source files were downloaded from the eLife Figure 4 source-data CSVs and normalized into dietary restriction versus ad libitum cohort comparisons.",
+      comparisonSearchPlaceholder: "Search cohort or intervention",
+      comparisonHelperText: "Search cohort or intervention. Four overlays max.",
+      explorerBody:
+        "Choose a row from the leaderboard above or use the controls here to inspect dietary restriction against its cohort-matched ad libitum control. Cohort is set in the top scope panel.",
+      focusSectionBody:
+        "Each panel overlays raw Kaplan-Meier curves for dietary restriction and the ad libitum control within the same GRZ cohort.",
+    },
+    siteMeta: manifest?.site_meta || { [DEFAULT_SITE]: "eLife public data" },
+    latestPublicCohort,
+    latestPublicReleaseLabel,
+    cohortOrder: manifest?.cohort_order || [],
+    cohortMetaByName,
+    groupMetaByKey,
+  });
+}
+
+export function parseDrosophilaDataset(csvText, manifest) {
+  const rows = csvParse(csvText, (row) => {
+    const ageDays = Number(row.age_days);
+    if (!Number.isFinite(ageDays)) {
+      return null;
+    }
+
+    return {
+      cohort: row.cohort,
+      site: row.site || DEFAULT_SITE,
+      sex: row.sex || "all",
+      id: row.id,
+      group: row.group,
+      controlGroup: row.control_group || CONTROL_GROUP,
+      ageDays,
+      dead: String(row.dead).toLowerCase() === "true",
+      status: row.status,
+      ageInitiationMonths: parseInitiationMonths(row.age_initiation_months),
+      species: row.species || null,
+      strain: row.strain || null,
+    };
+  }).filter(Boolean);
+
+  const groupMetaByKey = Object.fromEntries(
+    Object.entries(manifest?.group_meta_by_key || {}).map(([key, meta]) => [
+      key,
+      {
+        cohort: meta.cohort,
+        group: meta.group,
+        controlGroup: meta.control_group,
+        isControl: Boolean(meta.is_control),
+        label: meta.label,
+        description: meta.description || null,
+        species: meta.species || null,
+        strain: meta.strain || null,
+        compoundDisplayName: meta.compound_display_name || null,
+        condition: meta.condition || null,
+        publication: meta.publication || null,
+      },
+    ]),
+  );
+  const cohortMetaByName = Object.fromEntries(
+    Object.entries(manifest?.cohort_meta_by_name || {}).map(([cohort, meta]) => [
+      cohort,
+      {
+        label: meta.label || cohort,
+        shortLabel: meta.short_label || meta.label || cohort,
+        secondaryLabel: meta.secondary_label || null,
+        publication: meta.publication || null,
+      },
+    ]),
+  );
+  const latestPublicCohort =
+    manifest?.latest_public_cohort_downloaded ||
+    manifest?.cohort_order?.[manifest.cohort_order.length - 1];
+  const latestPublicReleaseLabel = String(
+    manifest?.latest_public_release_label || latestPublicCohort || "",
+  );
+
+  return buildParsedDataset({
+    rows,
+    manifest,
+    profile: {
+      id: "drosophila",
+      title: "Fruit fly",
+      description:
+        "Public fruit-fly lifespan data from dietary restriction experiments. Compare restricted feeding with standard feeding across fly experiments.",
+      badgePrefix: "public fly diet study",
+      sampleStatLabel: "Flies",
+      interventionStatLabel: "Intv.",
+      cohortStatLabel: "Experiments",
+      focusScopeLabel: "experiment",
+      focusScopePlural: "experiments",
+      focusSectionLabel: "Focus experiment",
+      explorerSectionLabel: "Explorer",
+      siteLabel: "Source",
+      siteAllLabel: "Nature source data",
+      sampleNounPlural: "flies",
+      sampleMetricLabel: "Flies",
+      groupNounSingular: "intervention",
+      groupNounPlural: "interventions",
+      focusGroupLabel: "Focus intervention",
+      compareSectionLabel: "Compare interventions",
+      sexSupported: false,
+      combinedPopulationLabel: "Female flies",
+      manifestFileName: "drosophila_dataset_manifest.json",
+      loadingLabel: "Loading the public fruit-fly dataset…",
+      footerText:
+        "Source files were downloaded from the Nature source-data workbook and expanded from per-replicate death counts into one row per fly.",
+      comparisonSearchPlaceholder: "Search genotype or experiment",
+      comparisonHelperText: "Search genotype or experiment. Four overlays max.",
+      explorerBody:
+        "Choose a row from the leaderboard above or use the controls here to inspect dietary restriction against its matched ad libitum control within the same fly experiment.",
+      focusSectionBody:
+        "These curves are reconstructed from workbook death-count tables, expanded into per-fly event rows so they can be compared like the mouse and worm datasets.",
+      singlePanelNotice:
+        "This fruit-fly source dataset is female-only, so the view stays on a single panel.",
+    },
+    siteMeta: manifest?.site_meta || { [DEFAULT_SITE]: "Nature source data" },
     latestPublicCohort,
     latestPublicReleaseLabel,
     cohortOrder: manifest?.cohort_order || [],
@@ -498,7 +932,7 @@ export function filterDatasetBySpecies(dataset, species) {
     profile: {
       ...dataset.profile,
       badgePrefix: species,
-      description: `Public CITP survival comparisons filtered to ${species}.`,
+      description: `Public worm lifespan data for ${species} from CITP. Compare compounds across strains and lab conditions.`,
       activeAnimalLabel: species,
       explorerBody:
         `Choose a row from the leaderboard above or use the controls here to inspect a ${species} intervention against its matched control. Study and lab are set in the top scope panel.`,
@@ -784,7 +1218,15 @@ export function summarizeAgainstControl(dataset, { cohort, group, sex, site }) {
 
 export function buildPanelSeries(
   dataset,
-  { focusCohort, focusGroup, compareKeys, sex, site, showComparisonControls },
+  {
+    focusCohort,
+    focusGroup,
+    compareKeys,
+    sex,
+    site,
+    showComparisonControls,
+    focusLabelSuffix = "focus",
+  },
 ) {
   const lines = [];
   const renderedControlKeys = new Set();
@@ -804,7 +1246,7 @@ export function buildPanelSeries(
       id: key,
       label:
         cohort === focusCohort && group === focusGroup
-          ? `${baseLabel} · ${cohortLabel} (focus)`
+          ? `${baseLabel} · ${cohortLabel} (${focusLabelSuffix})`
           : `${baseLabel} · ${cohortLabel}`,
       cohort,
       group,
@@ -852,6 +1294,31 @@ export function buildRankingRows(dataset, { cohort, cohorts, sex, site }) {
     : cohort
       ? [cohort]
       : [];
+
+  if (dataset?.profile?.id === "human") {
+    return cohortScope
+      .flatMap((rowCohort) =>
+        (dataset.groupsByCohort[rowCohort] || []).map((group) => {
+          const groupMeta = getGroupMeta(dataset, rowCohort, group);
+          const evidence = groupMeta?.evidence || {};
+
+          return {
+            cohort: rowCohort,
+            group,
+            groupMeta,
+            overallScore: evidence.overall?.score ?? null,
+            metaSupportScore: evidence.meta?.score ?? null,
+            epiSupportScore: evidence.epidemiology?.score ?? null,
+            mrSupportScore: evidence.mendelian?.score ?? null,
+            overallLabel: evidence.overall?.label ?? null,
+            metaEvidenceLabel: evidence.meta?.effect_label ?? null,
+            epiEvidenceLabel: evidence.epidemiology?.effect_label ?? null,
+            mrEvidenceLabel: evidence.mendelian?.effect_label ?? null,
+          };
+        }),
+      )
+      .filter((row) => row.groupMeta);
+  }
 
   return cohortScope
     .flatMap((rowCohort) =>

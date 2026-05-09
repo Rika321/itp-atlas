@@ -72,6 +72,10 @@ Open the local Vite URL shown in the terminal.
 | `npm run prepare:data:public` | Rebuild the published mouse/CITP datasets and sync `public/data`. |
 | `npm run prepare:data` | Rebuild all local datasets and sync the published subset. |
 | `npm run download:citp` | Refresh raw CITP portal downloads into `data/raw/citp`. |
+| `npm run download:human:acm` | Refresh the public Aging Cell UK Biobank ACM supplement into `data/raw/human_acm`. |
+| `npm run build:human:acm` | Extract and rank public human ACM rows into `data/meta/human_acm_dataset_manifest.json`. |
+| `npm run download:ukb:metadata` | Refresh public UK Biobank metadata snapshots into `data/raw/ukbiobank`. |
+| `npm run build:ukb:metadata` | Distill raw UK Biobank metadata into the site manifest in `data/meta`. |
 | `npm run build:fast` | Production Vite build without rerunning Python data prep. |
 | `npm run build` | Full data rebuild plus production build. Best smoke test before merge. |
 | `npm run preview` | Preview the production build locally. |
@@ -97,7 +101,10 @@ scripts/
   build_citp_dataset.py       Normalize CITP source files
   build_killifish_dataset.py  Normalize local killifish source files
   build_drosophila_dataset.py Normalize local fly source files
+  build_ukbiobank_metadata.py Distill public UK Biobank metadata for local reference
   download_citp_data.py       Refresh CITP raw downloads
+  download_ukbiobank_metadata.py
+                                Refresh public UK Biobank metadata snapshots
   sync_public_data.py         Copy published datasets into public/data
 
 data/
@@ -148,6 +155,40 @@ If you add new user-facing strings tied to dataset content:
 - Add the English source string where it belongs
 - Add the matching Chinese translation in `src/lib/i18n.js`
 - Prefer reusing existing translation helpers instead of duplicating translated copy in components
+
+## UK Biobank metadata refreshes
+
+To refresh the human all-cause-mortality signal table from the public Morin et al.
+Aging Cell supplement:
+
+```bash
+npm run download:human:acm
+npm run build:human:acm
+npm run prepare:data:public
+```
+
+This produces a public site manifest ranked by `1 - HR`, using the paper-level
+screen from Data Table 2 plus the Figure 5 class rows from Data Table 4. The
+source pool contains all 406 no-concentration medication ACM rows with N>=500 and
+adds the six Figure 5 rows for ACE inhibitors, estrogen therapy, PDE5 inhibitors,
+SGLT2 inhibitors, statins, and metformin. The public site displays rows with
+reported `P <= 0.05`; the top filter controls split those displayed rows by ACM
+direction. It uses the public article supplement and public UK Biobank project
+provenance only; it does not download participant-level UK Biobank data.
+
+To refresh public UK Biobank metadata snapshots:
+
+```bash
+npm run download:ukb:metadata
+```
+
+This downloads official UK Biobank Showcase schema TSVs and selected public page snapshots into `data/raw/ukbiobank`. It does not download participant-level UK Biobank data. GitHub/community resources are saved only as discovery metadata and implementation references.
+
+Then rebuild the small local reference manifest:
+
+```bash
+npm run build:ukb:metadata
+```
 
 ## Contributing
 

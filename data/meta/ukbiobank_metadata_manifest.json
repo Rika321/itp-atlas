@@ -1,0 +1,850 @@
+{
+  "generated_at_utc": "2026-05-07T23:42:58.101253+00:00",
+  "source_scope": "Public UK Biobank metadata only; no participant-level data.",
+  "download_manifest": "data/raw/ukbiobank/ukbiobank_metadata_manifest.json",
+  "official_schema_summary": {
+    "schema_count": 28,
+    "schema_catalogue_file": "data/raw/ukbiobank/showcase/pages/schema_catalogue.html",
+    "schemas": [
+      {
+        "schema_id": "1",
+        "title": "Data field properties",
+        "file": "data/raw/ukbiobank/showcase/schemas/001_data_field_properties.tsv",
+        "row_count_excluding_header": 11821,
+        "bytes": 4164390
+      },
+      {
+        "schema_id": "2",
+        "title": "Encoding dictionaries",
+        "file": "data/raw/ukbiobank/showcase/schemas/002_encoding_dictionaries.tsv",
+        "row_count_excluding_header": 858,
+        "bytes": 77591
+      },
+      {
+        "schema_id": "3",
+        "title": "Categories used to group data fields and other objects on Showcase interface",
+        "file": "data/raw/ukbiobank/showcase/schemas/003_categories_used_to_group_data_fields_and_other_objects_on_showcase_interface.tsv",
+        "row_count_excluding_header": 410,
+        "bytes": 176100
+      },
+      {
+        "schema_id": "4",
+        "title": "Returned datasets from Applications",
+        "file": "data/raw/ukbiobank/showcase/schemas/004_returned_datasets_from_applications.tsv",
+        "row_count_excluding_header": 601,
+        "bytes": 723329
+      },
+      {
+        "schema_id": "5",
+        "title": "Values for simple integer encodings",
+        "file": "data/raw/ukbiobank/showcase/schemas/005_values_for_simple_integer_encodings.tsv",
+        "row_count_excluding_header": 18078,
+        "bytes": 664626
+      },
+      {
+        "schema_id": "6",
+        "title": "Values for simple string encodings",
+        "file": "data/raw/ukbiobank/showcase/schemas/006_values_for_simple_string_encodings.tsv",
+        "row_count_excluding_header": 439346,
+        "bytes": 18783925
+      },
+      {
+        "schema_id": "7",
+        "title": "Values for simple real (floating-point) encodings",
+        "file": "data/raw/ukbiobank/showcase/schemas/007_values_for_simple_real_floating_point_encodings.tsv",
+        "row_count_excluding_header": 17,
+        "bytes": 790
+      },
+      {
+        "schema_id": "8",
+        "title": "Values for simple date encodings",
+        "file": "data/raw/ukbiobank/showcase/schemas/008_values_for_simple_date_encodings.tsv",
+        "row_count_excluding_header": 18,
+        "bytes": 1041
+      },
+      {
+        "schema_id": "9",
+        "title": "Instancing dictionaries",
+        "file": "data/raw/ukbiobank/showcase/schemas/009_instancing_dictionaries.tsv",
+        "row_count_excluding_header": 12,
+        "bytes": 1530
+      },
+      {
+        "schema_id": "10",
+        "title": "Values for instances",
+        "file": "data/raw/ukbiobank/showcase/schemas/010_values_for_instances.tsv",
+        "row_count_excluding_header": 33,
+        "bytes": 1415
+      },
+      {
+        "schema_id": "11",
+        "title": "Values for hierarchical integer encodings",
+        "file": "data/raw/ukbiobank/showcase/schemas/011_values_for_hierarchical_integer_encodings.tsv",
+        "row_count_excluding_header": 28900,
+        "bytes": 1468003
+      },
+      {
+        "schema_id": "12",
+        "title": "Values for hierarchical string encodings",
+        "file": "data/raw/ukbiobank/showcase/schemas/012_values_for_hierarchical_string_encodings.tsv",
+        "row_count_excluding_header": 46927,
+        "bytes": 3455271
+      },
+      {
+        "schema_id": "13",
+        "title": "Category browse tree structure",
+        "file": "data/raw/ukbiobank/showcase/schemas/013_category_browse_tree_structure.tsv",
+        "row_count_excluding_header": 362,
+        "bytes": 5084
+      },
+      {
+        "schema_id": "14",
+        "title": "Data field recommendations",
+        "file": "data/raw/ukbiobank/showcase/schemas/014_data_field_recommendations.tsv",
+        "row_count_excluding_header": 1975,
+        "bytes": 21764
+      },
+      {
+        "schema_id": "15",
+        "title": "Genotyped SNPs",
+        "file": "data/raw/ukbiobank/showcase/schemas/015_genotyped_snps.tsv",
+        "row_count_excluding_header": 847441,
+        "bytes": 69017336
+      },
+      {
+        "schema_id": "16",
+        "title": "Data field summary",
+        "file": "data/raw/ukbiobank/showcase/schemas/016_data_field_summary.tsv",
+        "row_count_excluding_header": 11646,
+        "bytes": 643792
+      },
+      {
+        "schema_id": "17",
+        "title": "Record tables available via data portal",
+        "file": "data/raw/ukbiobank/showcase/schemas/017_record_tables_available_via_data_portal.tsv",
+        "row_count_excluding_header": 35,
+        "bytes": 12367
+      },
+      {
+        "schema_id": "18",
+        "title": "Columns of data in Record tables",
+        "file": "data/raw/ukbiobank/showcase/schemas/018_columns_of_data_in_record_tables.tsv",
+        "row_count_excluding_header": 417,
+        "bytes": 54345
+      },
+      {
+        "schema_id": "19",
+        "title": "Publications",
+        "file": "data/raw/ukbiobank/showcase/schemas/019_publications.tsv",
+        "row_count_excluding_header": 12009,
+        "bytes": 28352583
+      },
+      {
+        "schema_id": "20",
+        "title": "Values for simple time encodings",
+        "file": "data/raw/ukbiobank/showcase/schemas/020_values_for_simple_time_encodings.tsv",
+        "row_count_excluding_header": 3,
+        "bytes": 167
+      },
+      {
+        "schema_id": "21",
+        "title": "Related data field linkages",
+        "file": "data/raw/ukbiobank/showcase/schemas/021_related_data_field_linkages.tsv",
+        "row_count_excluding_header": 9280,
+        "bytes": 620400
+      },
+      {
+        "schema_id": "22",
+        "title": "Resources (internal)",
+        "file": "data/raw/ukbiobank/showcase/schemas/022_resources_internal.tsv",
+        "row_count_excluding_header": 1711,
+        "bytes": 368480
+      },
+      {
+        "schema_id": "23",
+        "title": "Resources (external)",
+        "file": "data/raw/ukbiobank/showcase/schemas/023_resources_external.tsv",
+        "row_count_excluding_header": 9,
+        "bytes": 3310
+      },
+      {
+        "schema_id": "24",
+        "title": "Links between Applications and Publications",
+        "file": "data/raw/ukbiobank/showcase/schemas/024_links_between_applications_and_publications.tsv",
+        "row_count_excluding_header": 10307,
+        "bytes": 118694
+      },
+      {
+        "schema_id": "25",
+        "title": "Links between Fields and Resources",
+        "file": "data/raw/ukbiobank/showcase/schemas/025_links_between_fields_and_resources.tsv",
+        "row_count_excluding_header": 2170,
+        "bytes": 25065
+      },
+      {
+        "schema_id": "26",
+        "title": "Links between Categories and Resources",
+        "file": "data/raw/ukbiobank/showcase/schemas/026_links_between_categories_and_resources.tsv",
+        "row_count_excluding_header": 644,
+        "bytes": 7228
+      },
+      {
+        "schema_id": "27",
+        "title": "Applications (researcher projects)",
+        "file": "data/raw/ukbiobank/showcase/schemas/027_applications_researcher_projects.tsv",
+        "row_count_excluding_header": 33851,
+        "bytes": 12703909
+      },
+      {
+        "schema_id": "999",
+        "title": "Schema provided for the Showcase service",
+        "file": "data/raw/ukbiobank/showcase/schemas/999_schema_provided_for_the_showcase_service.tsv",
+        "row_count_excluding_header": 28,
+        "bytes": 8332
+      }
+    ]
+  },
+  "project": {
+    "app_id": "1246676",
+    "title": "Systematic identification of potential lifespan-modulating drugs and long-term health outcomes in the UK Biobank",
+    "pi": null,
+    "institution": "Charite - Universitatsmedizin Berlin",
+    "notes": "Aging is the primary driver of chronic disease. Repurposing approved drugs offers a strategy to identify human \"geroprotectors\" capable of extending healthspan and lifespan, yet evidence in humans remains limited.",
+    "showcase_url": "https://www.ukbiobank.ac.uk/enable-your-research/approved-research/1246676",
+    "project_url": "https://www.ukbiobank.ac.uk/projects/systematic-identification-of-potential-lifespan-modulating-drugs-and-long-term-health-outcomes-in-the-uk-biobank/"
+  },
+  "relevant_fields": [
+    {
+      "field_id": "42039",
+      "title": "GP prescription records",
+      "units": "records",
+      "main_category": "3001",
+      "encoding_id": "0",
+      "num_participants": 221863,
+      "item_count": 221863,
+      "debut": "2019-06-13T00:00:00",
+      "version": "2019-09-08T00:00:00",
+      "notes": "Adding this field to project basket will grant access to the primary care prescriptions table (gp_scripts) on the Data Portal. If you select this data-field your main dataset will include a column that will indicate the number of primary care prescription records available for each participant.",
+      "showcase_url": "https://biobank.ndph.ox.ac.uk/showcase/field.cgi?id=42039"
+    },
+    {
+      "field_id": "42040",
+      "title": "GP clinical event records",
+      "units": "records",
+      "main_category": "3001",
+      "encoding_id": "0",
+      "num_participants": 229839,
+      "item_count": 229839,
+      "debut": "2019-06-13T00:00:00",
+      "version": "2019-09-08T00:00:00",
+      "notes": "Adding this field to project basket will grant access to the primary care clinical events table (gp_clinical) on the Data Portal. If you select this data-field your main dataset will include a column that will indicate the number of primary care clinical event records available for each participant.",
+      "showcase_url": "https://biobank.ndph.ox.ac.uk/showcase/field.cgi?id=42040"
+    },
+    {
+      "field_id": "42038",
+      "title": "GP registration records",
+      "units": "records",
+      "main_category": "3001",
+      "encoding_id": "0",
+      "num_participants": 228691,
+      "item_count": 228691,
+      "debut": "2019-06-13T00:00:00",
+      "version": "2019-09-08T00:00:00",
+      "notes": "Adding this field to project basket will grant access to the primary care registrations table (gp_registrations) on the Data Portal. If you select this data-field your main dataset will include a column that will indicate the number of primary care registration records available for each participant. Please note that not all participants with primary care data available have a corresponding registration record.",
+      "showcase_url": "https://biobank.ndph.ox.ac.uk/showcase/field.cgi?id=42038"
+    },
+    {
+      "field_id": "40023",
+      "title": "Records in death dataset",
+      "units": "records",
+      "main_category": "100093",
+      "encoding_id": "0",
+      "num_participants": 56961,
+      "item_count": 56961,
+      "debut": "2020-05-08T00:00:00",
+      "version": "2025-08-29T00:00:00",
+      "notes": "Adding this field to a basket will grant access to the DEATH and DEATH_CAUSE tables on the Data Portal. The DEATH table replicates the information in 40000, 40018 and 40020. The DEATH_CAUSE table replicates the information in 40001 and 40002. See ~R115559~ for additional information. If included, the field will also appear in a main UK Biobank dataset where it will give a count of the number of rows for each participant in the DEATH table.",
+      "showcase_url": "https://biobank.ndph.ox.ac.uk/showcase/field.cgi?id=40023"
+    }
+  ],
+  "record_tables": [
+    {
+      "rectab_id": "1062",
+      "table_name": "gp_scripts",
+      "record_field_id": "42039",
+      "parent_id": "0",
+      "title": "GP prescriptions",
+      "available": false,
+      "private": false,
+      "nrows": 56215592,
+      "notes": "GP prescription data (for 45% of the cohort)",
+      "columns": [
+        {
+          "column_name": "eid",
+          "value_type": "11",
+          "encoding_id": "0",
+          "units": null,
+          "notes": "Encoded participant identifier."
+        },
+        {
+          "column_name": "data_provider",
+          "value_type": "11",
+          "encoding_id": "626",
+          "units": null,
+          "notes": "Data provider. Whether the record originates from England (Vision), Scotland, England (TPP) or Wales."
+        },
+        {
+          "column_name": "issue_date",
+          "value_type": "51",
+          "encoding_id": "819",
+          "units": null,
+          "notes": "Date prescription was issued. Special coded values are given in Coding 819."
+        },
+        {
+          "column_name": "read_2",
+          "value_type": "41",
+          "encoding_id": "0",
+          "units": null,
+          "notes": "Read v2 code. Read version 2 code."
+        },
+        {
+          "column_name": "bnf_code",
+          "value_type": "41",
+          "encoding_id": "0",
+          "units": null,
+          "notes": "BNF code. British National Formulary code."
+        },
+        {
+          "column_name": "dmd_code",
+          "value_type": "41",
+          "encoding_id": "0",
+          "units": null,
+          "notes": "dm+d code. Dictionary of medicines and devices (dm+d) code."
+        },
+        {
+          "column_name": "drug_name",
+          "value_type": "41",
+          "encoding_id": "0",
+          "units": null,
+          "notes": "Drug name."
+        },
+        {
+          "column_name": "quantity",
+          "value_type": "41",
+          "encoding_id": "0",
+          "units": null,
+          "notes": "Quantity issued."
+        }
+      ],
+      "column_count": 8,
+      "showcase_url": "https://biobank.ndph.ox.ac.uk/showcase/rectab.cgi?id=1062"
+    },
+    {
+      "rectab_id": "1060",
+      "table_name": "gp_clinical",
+      "record_field_id": "42040",
+      "parent_id": "0",
+      "title": "GP clinical events",
+      "available": false,
+      "private": false,
+      "nrows": 118245897,
+      "notes": "GP clinical data (for 45% of the cohort)",
+      "columns": [
+        {
+          "column_name": "eid",
+          "value_type": "11",
+          "encoding_id": "0",
+          "units": null,
+          "notes": "Encoded participant identifier."
+        },
+        {
+          "column_name": "data_provider",
+          "value_type": "11",
+          "encoding_id": "626",
+          "units": null,
+          "notes": "Data provider. Whether the record originates from England (Vision), Scotland, England (TPP) or Wales."
+        },
+        {
+          "column_name": "event_dt",
+          "value_type": "51",
+          "encoding_id": "819",
+          "units": null,
+          "notes": "Date clinical code was entered. Special coded values are given in Coding 819."
+        },
+        {
+          "column_name": "read_2",
+          "value_type": "41",
+          "encoding_id": "0",
+          "units": null,
+          "notes": "Read v2 code. Read version 2 code."
+        },
+        {
+          "column_name": "read_3",
+          "value_type": "41",
+          "encoding_id": "0",
+          "units": null,
+          "notes": "CTV3 (Read v3) code. Clinical Terms Version 3 code."
+        },
+        {
+          "column_name": "value1",
+          "value_type": "41",
+          "encoding_id": "0",
+          "units": null,
+          "notes": "Value recorded 1."
+        },
+        {
+          "column_name": "value2",
+          "value_type": "41",
+          "encoding_id": "0",
+          "units": null,
+          "notes": "Value recorded 2."
+        },
+        {
+          "column_name": "value3",
+          "value_type": "41",
+          "encoding_id": "0",
+          "units": null,
+          "notes": "Value recorded 3."
+        }
+      ],
+      "column_count": 8,
+      "showcase_url": "https://biobank.ndph.ox.ac.uk/showcase/rectab.cgi?id=1060"
+    },
+    {
+      "rectab_id": "1061",
+      "table_name": "gp_registrations",
+      "record_field_id": "42038",
+      "parent_id": "0",
+      "title": "GP registrations",
+      "available": false,
+      "private": false,
+      "nrows": 361471,
+      "notes": "GP registrations data (for 45% of the cohort)",
+      "columns": [
+        {
+          "column_name": "eid",
+          "value_type": "11",
+          "encoding_id": "0",
+          "units": null,
+          "notes": "Encoded participant identifier."
+        },
+        {
+          "column_name": "data_provider",
+          "value_type": "11",
+          "encoding_id": "626",
+          "units": null,
+          "notes": "Data provider. Whether the record originates from England (Vision), Scotland, England (TPP) or Wales."
+        },
+        {
+          "column_name": "reg_date",
+          "value_type": "51",
+          "encoding_id": "819",
+          "units": null,
+          "notes": "Registration date. Special coded values are given in Coding 819."
+        },
+        {
+          "column_name": "deduct_date",
+          "value_type": "51",
+          "encoding_id": "819",
+          "units": null,
+          "notes": "Deduction date. The date of a participant's removal from GP list. Special coded values are given in Coding 819."
+        }
+      ],
+      "column_count": 4,
+      "showcase_url": "https://biobank.ndph.ox.ac.uk/showcase/rectab.cgi?id=1061"
+    },
+    {
+      "rectab_id": "1058",
+      "table_name": "death",
+      "record_field_id": "40023",
+      "parent_id": "0",
+      "title": "Death records",
+      "available": false,
+      "private": false,
+      "nrows": 57021,
+      "notes": "Death records",
+      "columns": [
+        {
+          "column_name": "eid",
+          "value_type": "11",
+          "encoding_id": "0",
+          "units": null,
+          "notes": "Encoded participant identifier. This identifier is the same encoded id used in the main dataset."
+        },
+        {
+          "column_name": "ins_index",
+          "value_type": "11",
+          "encoding_id": "0",
+          "units": null,
+          "notes": "Instance index. A numerical index used to distinguish the cases where we have multiple death records for a participant."
+        },
+        {
+          "column_name": "dsource",
+          "value_type": "41",
+          "encoding_id": "1970",
+          "units": null,
+          "notes": "Data source. The data source is either E/W for England & Wales or SCOT for Scotland."
+        },
+        {
+          "column_name": "source",
+          "value_type": "11",
+          "encoding_id": "261",
+          "units": null,
+          "notes": "Data format. The particular data format in which this record was received."
+        },
+        {
+          "column_name": "date_of_death",
+          "value_type": "51",
+          "encoding_id": "0",
+          "units": null,
+          "notes": "Date of death. Date of death"
+        }
+      ],
+      "column_count": 5,
+      "showcase_url": "https://biobank.ndph.ox.ac.uk/showcase/rectab.cgi?id=1058"
+    },
+    {
+      "rectab_id": "1059",
+      "table_name": "death_cause",
+      "record_field_id": "40023",
+      "parent_id": "1058",
+      "title": "Death causes",
+      "available": false,
+      "private": false,
+      "nrows": 148782,
+      "notes": "Causes of death",
+      "columns": [
+        {
+          "column_name": "eid",
+          "value_type": "11",
+          "encoding_id": "0",
+          "units": null,
+          "notes": "Encoded participant identifier. This identifier is the same encoded id used in the main dataset."
+        },
+        {
+          "column_name": "ins_index",
+          "value_type": "11",
+          "encoding_id": "0",
+          "units": null,
+          "notes": "Instance index. A numerical index which together with the eid uniquely identifies the corresponding record in the main DEATH table."
+        },
+        {
+          "column_name": "arr_index",
+          "value_type": "11",
+          "encoding_id": "0",
+          "units": null,
+          "notes": "Array index. A numerical index which together with the eid & ins_index uniquely identifies this record, i.e. eid, ins_index & arr_index together form a primary key for this table."
+        },
+        {
+          "column_name": "level",
+          "value_type": "11",
+          "encoding_id": "831",
+          "units": null,
+          "notes": "Classification of cause of death. Whether the cause of death is the primary cause or a contributory cause."
+        },
+        {
+          "column_name": "cause_icd10",
+          "value_type": "41",
+          "encoding_id": "19",
+          "units": null,
+          "notes": "Cause of death - ICD-10. Coded according to the International Classification of Diseases version 10 (ICD-10)."
+        }
+      ],
+      "column_count": 5,
+      "showcase_url": "https://biobank.ndph.ox.ac.uk/showcase/rectab.cgi?id=1059"
+    }
+  ],
+  "github_discovery": {
+    "query_summaries": [
+      {
+        "query": "UK Biobank Data Showcase",
+        "total_count": 2,
+        "items": [
+          {
+            "full_name": "biobankly/ukb-ontology",
+            "html_url": "https://github.com/biobankly/ukb-ontology",
+            "description": "UK Biobank Ontology Viewer with Showcase Data",
+            "stars": 0,
+            "forks": 0,
+            "updated_at": "2024-12-10T23:57:06Z"
+          },
+          {
+            "full_name": "adswa/ohbm-2022",
+            "html_url": "https://github.com/adswa/ohbm-2022",
+            "description": "Sources for OHBM 2022 poster 2057 - \"FAIRly big: A framework for reproducible processing of large-scale data - a UK Biobank showcase\"",
+            "stars": 0,
+            "forks": 0,
+            "updated_at": "2022-05-11T06:41:19Z"
+          }
+        ],
+        "error": null
+      },
+      {
+        "query": "ukb fields",
+        "total_count": 12,
+        "items": [
+          {
+            "full_name": "Trexgiantsalamanderdoublechickenturtle/ukb-ICD10-event-extraction",
+            "html_url": "https://github.com/Trexgiantsalamanderdoublechickenturtle/ukb-ICD10-event-extraction",
+            "description": "R functions for extracting diagnoses and first diagnosis dates from \u201cData-Field 41270\u201d and \u201cData-Field 41280\u201d in the UK Biobank, based on ICD-10 codes.",
+            "stars": 30,
+            "forks": 6,
+            "updated_at": "2026-03-23T14:01:15Z"
+          },
+          {
+            "full_name": "laleoarrow/leo.ukb",
+            "html_url": "https://github.com/laleoarrow/leo.ukb",
+            "description": "R toolkit for UK Biobank data analysis - field parsing, ICD processing, and clinical variable extraction",
+            "stars": 1,
+            "forks": 2,
+            "updated_at": "2026-04-18T09:21:51Z"
+          },
+          {
+            "full_name": "Kappers/ukb-fields",
+            "html_url": "https://github.com/Kappers/ukb-fields",
+            "description": "UK Biobank utilities for identifying fields and relevant metadata",
+            "stars": 1,
+            "forks": 0,
+            "updated_at": "2026-03-24T01:18:50Z"
+          },
+          {
+            "full_name": "deeprob/ukb_field_preprocess",
+            "html_url": "https://github.com/deeprob/ukb_field_preprocess",
+            "description": "One hot encode UKBiobank field values",
+            "stars": 1,
+            "forks": 0,
+            "updated_at": "2024-06-03T11:49:49Z"
+          },
+          {
+            "full_name": "deeprob/ukb-bulk-download",
+            "html_url": "https://github.com/deeprob/ukb-bulk-download",
+            "description": "Downloades bulk field data such as exome vcfs from UKBiobank",
+            "stars": 1,
+            "forks": 0,
+            "updated_at": "2024-11-18T12:00:04Z"
+          }
+        ],
+        "error": null
+      },
+      {
+        "query": "ukb metadata",
+        "total_count": 2,
+        "items": [
+          {
+            "full_name": "Kappers/ukb-fields",
+            "html_url": "https://github.com/Kappers/ukb-fields",
+            "description": "UK Biobank utilities for identifying fields and relevant metadata",
+            "stars": 1,
+            "forks": 0,
+            "updated_at": "2026-03-24T01:18:50Z"
+          },
+          {
+            "full_name": "xlecours/ukbiobank_metadata_workout",
+            "html_url": "https://github.com/xlecours/ukbiobank_metadata_workout",
+            "description": null,
+            "stars": 0,
+            "forks": 0,
+            "updated_at": "2020-03-04T19:51:40Z"
+          }
+        ],
+        "error": null
+      },
+      {
+        "query": "ukbtools",
+        "total_count": 4,
+        "items": [
+          {
+            "full_name": "kenhanscombe/ukbtools",
+            "html_url": "https://github.com/kenhanscombe/ukbtools",
+            "description": "An R package to manipulate and explore UK Biobank data",
+            "stars": 110,
+            "forks": 25,
+            "updated_at": "2026-04-19T12:12:23Z"
+          },
+          {
+            "full_name": "conda-forge/r-ukbtools-feedstock",
+            "html_url": "https://github.com/conda-forge/r-ukbtools-feedstock",
+            "description": "A conda-smithy repository for r-ukbtools.",
+            "stars": 0,
+            "forks": 1,
+            "updated_at": "2026-04-22T23:22:47Z"
+          },
+          {
+            "full_name": "cran/ukbtools",
+            "html_url": "https://github.com/cran/ukbtools",
+            "description": ":exclamation:\u00a0This\u00a0is\u00a0a\u00a0read-only\u00a0mirror\u00a0of\u00a0the\u00a0CRAN\u00a0R\u00a0package\u00a0repository.  ukbtools\u00a0\u2014\u00a0Manipulate\u00a0and\u00a0Explore\u00a0UK\u00a0Biobank\u00a0Data.\u00a0Homepage:\u00a0https://kenhanscombe.github.io/ukbtools/  ",
+            "stars": 0,
+            "forks": 0,
+            "updated_at": "2019-05-15T13:21:40Z"
+          },
+          {
+            "full_name": "CelMcC/UKBTools",
+            "html_url": "https://github.com/CelMcC/UKBTools",
+            "description": null,
+            "stars": 0,
+            "forks": 0,
+            "updated_at": "2020-12-01T14:31:13Z"
+          }
+        ],
+        "error": null
+      },
+      {
+        "query": "ukbwranglr",
+        "total_count": 3,
+        "items": [
+          {
+            "full_name": "rmgpanw/ukbwranglr",
+            "html_url": "https://github.com/rmgpanw/ukbwranglr",
+            "description": "R package for UK Biobank data wrangling.",
+            "stars": 22,
+            "forks": 0,
+            "updated_at": "2026-03-23T14:44:18Z"
+          },
+          {
+            "full_name": "rmgpanw/ukbwranglrextra",
+            "html_url": "https://github.com/rmgpanw/ukbwranglrextra",
+            "description": "Extra add-on functions for ukbwranglr",
+            "stars": 2,
+            "forks": 0,
+            "updated_at": "2023-02-23T08:18:48Z"
+          },
+          {
+            "full_name": "rmgpanw/ukbwranglr_resources",
+            "html_url": "https://github.com/rmgpanw/ukbwranglr_resources",
+            "description": "Supporting resources for ukbwranglr",
+            "stars": 2,
+            "forks": 0,
+            "updated_at": "2022-10-05T14:34:51Z"
+          }
+        ],
+        "error": null
+      },
+      {
+        "query": "UKBiobank",
+        "total_count": 192,
+        "items": [
+          {
+            "full_name": "dnanexus/UKB_RAP",
+            "html_url": "https://github.com/dnanexus/UKB_RAP",
+            "description": "Access share reviewed code & Jupyter Notebooks for use on the UK Biobank (UKBB) Research Application Platform. Includes resources from DNAnexus webinars, online trainings and workshops.",
+            "stars": 257,
+            "forks": 64,
+            "updated_at": "2026-04-29T03:17:05Z"
+          },
+          {
+            "full_name": "OxWearables/biobankAccelerometerAnalysis",
+            "html_url": "https://github.com/OxWearables/biobankAccelerometerAnalysis",
+            "description": "Extracting meaningful health information from large accelerometer datasets",
+            "stars": 242,
+            "forks": 73,
+            "updated_at": "2026-04-21T07:01:17Z"
+          },
+          {
+            "full_name": "ha-ha-ha-han/UKBiobank_deep_pretrain",
+            "html_url": "https://github.com/ha-ha-ha-han/UKBiobank_deep_pretrain",
+            "description": "Pretrained neural networks for UK Biobank brain MRI images. SFCN, 3D-ResNet etc.",
+            "stars": 173,
+            "forks": 44,
+            "updated_at": "2026-05-04T07:27:30Z"
+          },
+          {
+            "full_name": "spiros/tofu",
+            "html_url": "https://github.com/spiros/tofu",
+            "description": "Tofu is a Python tool for generating synthetic UK Biobank data.",
+            "stars": 70,
+            "forks": 9,
+            "updated_at": "2026-04-26T20:23:38Z"
+          },
+          {
+            "full_name": "spiros/ukbiobank-resources",
+            "html_url": "https://github.com/spiros/ukbiobank-resources",
+            "description": "A curated list for preprocessing, cleaning, mapping and analyzing UK Biobank data.",
+            "stars": 62,
+            "forks": 5,
+            "updated_at": "2026-04-24T04:52:04Z"
+          }
+        ],
+        "error": null
+      }
+    ],
+    "resource_snapshots": [
+      {
+        "file": "data/raw/ukbiobank/github/Kappers_ukb-fields_README.md",
+        "url": "https://raw.githubusercontent.com/Kappers/ukb-fields/HEAD/README.md",
+        "bytes": 1896,
+        "sha256": "3a79ef6f26fedb404f81d1db09506d23796e43c35abe466e38ef12f8ba892475",
+        "downloaded_this_run": false,
+        "key": "kappers_ukb_fields_readme",
+        "repo": "Kappers/ukb-fields",
+        "note": "Community utilities that point at official UKB schema downloads.",
+        "status": "downloaded"
+      },
+      {
+        "file": "data/raw/ukbiobank/github/Kappers_ukb-fields_retrieve_ukb_schemas.py",
+        "url": "https://raw.githubusercontent.com/Kappers/ukb-fields/HEAD/retrieve_ukb_schemas.py",
+        "bytes": 1330,
+        "sha256": "21ec0d5f398208ef9ffec349c56e5475a3c5dded7c0c0f4cefef48ada7f5d172",
+        "downloaded_this_run": false,
+        "key": "kappers_ukb_fields_schema_script",
+        "repo": "Kappers/ukb-fields",
+        "note": "Community schema downloader; kept for implementation comparison only.",
+        "status": "downloaded"
+      },
+      {
+        "file": "data/raw/ukbiobank/github/biobankly_ukb-ontology_README.md",
+        "url": "https://raw.githubusercontent.com/biobankly/ukb-ontology/HEAD/README.md",
+        "bytes": 3669,
+        "sha256": "e6669663d733911d01551c9c4e4f6369f215bb7e9a9a1b2b0c6b7fe302834a72",
+        "downloaded_this_run": false,
+        "key": "biobankly_ukb_ontology_readme",
+        "repo": "biobankly/ukb-ontology",
+        "note": "Community ontology viewer built around UK Biobank Showcase data.",
+        "status": "downloaded"
+      },
+      {
+        "file": "data/raw/ukbiobank/github/spiros_ukbiobank-resources_README.md",
+        "url": "https://raw.githubusercontent.com/spiros/ukbiobank-resources/HEAD/README.md",
+        "bytes": 3904,
+        "sha256": "e3b64709ea8208727acf0ba224757b97bb31b8731862e84b0cc561f1d540d5e9",
+        "downloaded_this_run": false,
+        "key": "spiros_ukbiobank_resources_readme",
+        "repo": "spiros/ukbiobank-resources",
+        "note": "Community curated list of UK Biobank resources.",
+        "status": "downloaded"
+      },
+      {
+        "file": "data/raw/ukbiobank/github/dnanexus_UKB_RAP_README.md",
+        "url": "https://raw.githubusercontent.com/dnanexus/UKB_RAP/HEAD/README.md",
+        "bytes": 586,
+        "sha256": "c76249d7c5f2961396c1b64859deb079cf084589f2b9d918d7f546c22025f8f0",
+        "downloaded_this_run": false,
+        "key": "dnanexus_ukb_rap_readme",
+        "repo": "dnanexus/UKB_RAP",
+        "note": "RAP notebooks and examples; not a source of participant data.",
+        "status": "downloaded"
+      },
+      {
+        "file": "data/raw/ukbiobank/github/kenhanscombe_ukbtools_README.md",
+        "url": "https://raw.githubusercontent.com/kenhanscombe/ukbtools/HEAD/README.md",
+        "bytes": 3456,
+        "sha256": "a0a6cb65aa23f35d0c0b06fc76285c87c8638a70bddaada6677371ee26bba70b",
+        "downloaded_this_run": false,
+        "key": "kenhanscombe_ukbtools_readme",
+        "repo": "kenhanscombe/ukbtools",
+        "note": "R package for manipulating UK Biobank application data.",
+        "status": "downloaded"
+      },
+      {
+        "file": "data/raw/ukbiobank/github/bjcairns_ukbschemas_README.md",
+        "url": "https://raw.githubusercontent.com/bjcairns/ukbschemas/HEAD/README.md",
+        "bytes": 5416,
+        "sha256": "3e982500ad140abe5b49beede3e816de8c4f4a8384e5619bfe596368dbd29dc1",
+        "downloaded_this_run": false,
+        "key": "bjcairns_ukbschemas_readme",
+        "repo": "bjcairns/ukbschemas",
+        "note": "R package for generating a database from UK Biobank schemas.",
+        "status": "downloaded"
+      }
+    ]
+  }
+}

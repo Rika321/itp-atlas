@@ -1,0 +1,13 @@
+instance_id	descript	num_members
+0	Dummy null instance to satisfy referential integrity constraints	0
+1	The diet questionnaire information was gathered during 5 'rounds'. The initial round was carried out within the Assessment Centres at the end of the recruitment visit - this was only introduced during the latter part of recruitment and most participants were not presented with it. The subsequent rounds were conducted by sending an email invitation asking participants to complete the questionnaire online. During the first and second rounds participants were asked to complete the questionnaire up to 3 days after the invite date. During the third and fourth rounds participants were allowed 14 days after the invite.	5
+2	All participants attended an initial assessment centre. A proportion were invited several years later to repeat the assessment. For some participants the repeat visit also captured information which was not gathered during their initial visit.	4
+12	 Coronavirus serology study wave sample collection	6
+27	 Coronavirus serology study symptoms questionnaire exercise.	9
+93	Accelerometer wearing	5
+154	A Covid-19 lateral flow device was distributed a second time to those participants who had a positive result from their first test.	2
+178	Indicates during which run of the on-line cognitive assessment data was collected.	2
+604	Vaccination events for each particpant	0
+693	Used to group together items related to the same case report.	0
+9000001	Death registry reports	0
+9000002	Cancer registry reports	0

@@ -12,6 +12,7 @@ PUBLIC_DATA_DIR = ROOT / "public" / "data"
 PUBLIC_SOURCES = [
     ROOT / "data" / "processed" / "itp_lifespan_all.csv",
     ROOT / "data" / "meta" / "itp_dataset_manifest.json",
+    ROOT / "data" / "meta" / "human_acm_dataset_manifest.json",
 ]
 CITP_CSV_SOURCE = ROOT / "data" / "processed" / "citp_lifespan_all.csv"
 CITP_MANIFEST_SOURCE = ROOT / "data" / "meta" / "citp_dataset_manifest.json"
@@ -21,6 +22,7 @@ PRIVATE_ONLY_PUBLIC_FILES = [
     "killifish_dataset_manifest.json",
     "drosophila_lifespan_all.csv",
     "drosophila_dataset_manifest.json",
+    "ukbiobank_metadata_manifest.json",
 ]
 
 

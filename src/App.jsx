@@ -5,8 +5,10 @@ import {
   Database,
   FlaskConical,
   MessageCircle,
+  Moon,
   Search,
   SlidersHorizontal,
+  Sun,
 } from "lucide-react";
 import {
   startTransition,
@@ -15,7 +17,6 @@ import {
   useState,
 } from "react";
 import EffectSizeChart from "./components/EffectSizeChart";
-import HumanEvidenceExplorer from "./components/HumanEvidenceExplorer";
 import SurvivalChart from "./components/SurvivalChart";
 import { Badge } from "./components/ui/badge";
 import { Button } from "./components/ui/button";
@@ -88,6 +89,21 @@ async function loadCitpSource(base) {
   return { csvText, manifest };
 }
 
+async function loadHumanSource(base) {
+  let humanManifest = null;
+
+  try {
+    humanManifest = await fetchJsonAsset(base, "data/human_acm_dataset_manifest.json");
+  } catch {
+    humanManifest = HUMAN_DATASET_MANIFEST;
+  }
+
+  return {
+    csvText: null,
+    manifest: humanManifest,
+  };
+}
+
 const DATA_SOURCE_CONFIG = {
   mouse: {
     csvPath: "data/itp_lifespan_all.csv",
@@ -103,12 +119,8 @@ const DATA_SOURCE_CONFIG = {
   },
   human: {
     parse: parseHumanDataset,
-    loadingLabel: "Loading curated human medication evidence…",
-    load: () =>
-      Promise.resolve({
-        csvText: null,
-        manifest: HUMAN_DATASET_MANIFEST,
-      }),
+    loadingLabel: "Loading human UK Biobank ACM signals…",
+    load: loadHumanSource,
   },
 };
 
@@ -153,7 +165,22 @@ const ANIMAL_OPTIONS = [
 const SITE_TITLE = "How to Live Longer: A Small-Molecule Atlas";
 const SITE_SHORT_TITLE = "How to Live Longer";
 const SITE_DESCRIPTION =
-  "Compare public mouse, worm, fly, killifish, and curated human datasets to see which small-molecule interventions are linked to longer life.";
+  "Compare public mouse, worm, fly, killifish, and human Biobank datasets to see which small-molecule interventions are linked to longer life.";
+const THEME_STORAGE_KEY = "itp-atlas-theme";
+const THEME_OPTIONS = [
+  {
+    value: "light",
+    label: "Light",
+    labelZh: "浅色",
+    Icon: Sun,
+  },
+  {
+    value: "dark",
+    label: "Dark",
+    labelZh: "深色",
+    Icon: Moon,
+  },
+];
 const DATASET_ACKNOWLEDGEMENTS = [
   {
     label: "Lifespan Charts",
@@ -176,7 +203,12 @@ const DATASET_ACKNOWLEDGEMENTS = [
     href: "https://www.nature.com/articles/s41467-022-30975-4",
   },
   {
-    label: "Curated human medication evidence",
+    label: "Human UK Biobank project source",
+  },
+  {
+    label: "UK Biobank lifespan-modulating drug project",
+    href:
+      "https://www.ukbiobank.ac.uk/projects/systematic-identification-of-potential-lifespan-modulating-drugs-and-long-term-health-outcomes-in-the-uk-biobank/",
   },
 ];
 const QR_IMAGE_EXTENSIONS = ["png", "jpg", "jpeg", "webp", "svg"];
@@ -221,6 +253,23 @@ function upsertMetaTag(selector, attributeName, attributeValue, content) {
     document.head.appendChild(tag);
   }
   tag.setAttribute("content", content);
+}
+
+function normalizeTheme(value) {
+  return value === "dark" || value === "light" ? value : null;
+}
+
+function getPreferredTheme() {
+  if (typeof window === "undefined") {
+    return "light";
+  }
+
+  const storedTheme = normalizeTheme(window.localStorage?.getItem(THEME_STORAGE_KEY));
+  if (storedTheme) {
+    return storedTheme;
+  }
+
+  return window.matchMedia?.("(prefers-color-scheme: dark)")?.matches ? "dark" : "light";
 }
 
 function StatBlock({ icon: Icon, label, value, hint, className }) {
@@ -332,7 +381,7 @@ function SupportQrCard({ locale, method }) {
   return (
     <div
       className={cn(
-        "relative overflow-hidden rounded-[24px] border p-4 shadow-[0_18px_40px_-34px_rgba(17,33,49,0.42)]",
+        "relative overflow-hidden rounded-[24px] border p-4 shadow-[0_18px_40px_-34px_rgba(17,33,49,0.42)] dark:bg-none dark:bg-card/80 dark:shadow-[0_18px_40px_-34px_rgba(0,0,0,0.65)]",
         method.panelClassName,
       )}
     >
@@ -360,7 +409,7 @@ function SupportQrCard({ locale, method }) {
       </div>
       <div
         className={cn(
-          "relative mt-4 overflow-hidden rounded-[20px] border p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.75)]",
+          "relative mt-4 overflow-hidden rounded-[20px] border p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.75)] dark:bg-secondary/30 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]",
           method.frameClassName,
         )}
       >
@@ -437,6 +486,30 @@ function formatScore(value, locale) {
   return `${formatInteger(value, locale)}/100`;
 }
 
+function formatAcmEffect(value, locale) {
+  if (value == null || Number.isNaN(value)) {
+    return "—";
+  }
+
+  const formattedValue = formatInteger(Math.abs(value), locale);
+  if (value > 0) {
+    return t(locale, `${formattedValue}% lower ACM`, `全因死亡率降低 ${formattedValue}%`);
+  }
+  if (value < 0) {
+    return t(locale, `${formattedValue}% higher ACM`, `全因死亡率升高 ${formattedValue}%`);
+  }
+
+  return t(
+    locale,
+    "0% ACM effect",
+    "全因死亡率影响 0%",
+  );
+}
+
+function formatAcmEffectDelta(value, locale) {
+  return formatAcmEffect(value, locale);
+}
+
 function compareCohortsDescending(dataset, left, right) {
   const leftIndex = dataset?.cohortSortIndex?.[left] ?? -1;
   const rightIndex = dataset?.cohortSortIndex?.[right] ?? -1;
@@ -471,12 +544,12 @@ function FocusInsight({ dataset, locale, summary }) {
           ? t(
             locale,
             "No records match this slice. Adjust cohort, site, or sex.",
-            "没有记录匹配当前切片。请调整队列、站点或性别。",
+            "没有记录匹配当前筛选条件。请调整队列、站点或性别。",
           )
           : t(
             locale,
             `No records match this slice. Adjust ${dataset.profile.focusScopeLabel}, ${dataset.profile.siteLabel.toLowerCase()}, or ${dataset.profile.groupNounSingular}.`,
-            `没有记录匹配当前切片。请调整${dataset.profile.focusScopeLabel}、${dataset.profile.siteLabel}或${dataset.profile.groupNounSingular}。`,
+            `没有记录匹配当前筛选条件。请调整${dataset.profile.focusScopeLabel}、${dataset.profile.siteLabel}或${dataset.profile.groupNounSingular}。`,
           )}
       </div>
     );
@@ -492,7 +565,7 @@ function FocusInsight({ dataset, locale, summary }) {
       />
       <StatBlock
         icon={Database}
-        label={t(locale, "Focus median", "焦点组中位数")}
+        label={t(locale, "Focus median", "当前组中位数")}
         value={formatInteger(summary.treatmentCurve.medianDay, locale)}
         hint={t(
           locale,
@@ -548,6 +621,7 @@ function FocusInsight({ dataset, locale, summary }) {
 
 function App() {
   const [locale, setLocale] = useState(() => getPreferredLocale());
+  const [theme, setTheme] = useState(() => getPreferredTheme());
   const [selectedAnimal, setSelectedAnimal] = useState("mouse");
   const [datasetsByAnimal, setDatasetsByAnimal] = useState({});
   const [errorsBySource, setErrorsBySource] = useState({});
@@ -558,6 +632,7 @@ function App() {
   const [rankingSex, setRankingSex] = useState("m");
   const [rankingScope, setRankingScope] = useState("all");
   const [rankingMetric, setRankingMetric] = useState("median");
+  const [humanAcmFilter, setHumanAcmFilter] = useState("all");
   const [compareKeys, setCompareKeys] = useState([]);
   const [compareSearch, setCompareSearch] = useState("");
   const [showComparisonControls, setShowComparisonControls] = useState(true);
@@ -665,6 +740,7 @@ function App() {
       setRankingSex(dataset.profile.sexSupported ? "m" : "all");
       setRankingMetric(dataset.profile.defaultRankingMetric || "median");
       setRankingScope("all");
+      setHumanAcmFilter("all");
       setCompareKeys([]);
       setCompareSearch("");
       setShowComparisonControls(dataset.profile.allowCompare !== false);
@@ -677,6 +753,23 @@ function App() {
   useEffect(() => {
     persistLocale(locale);
   }, [locale]);
+
+  useEffect(() => {
+    if (typeof document === "undefined") {
+      return;
+    }
+
+    const isDark = theme === "dark";
+    document.documentElement.classList.toggle("dark", isDark);
+    document.documentElement.style.colorScheme = isDark ? "dark" : "light";
+    window.localStorage?.setItem(THEME_STORAGE_KEY, theme);
+    upsertMetaTag(
+      'meta[name="theme-color"]',
+      "name",
+      "theme-color",
+      isDark ? "#0b111a" : "#f5efe2",
+    );
+  }, [theme]);
 
   useEffect(() => {
     setShowInsightDescription(true);
@@ -853,7 +946,7 @@ function App() {
         sex,
         site: activeSite,
         showComparisonControls,
-        focusLabelSuffix: t(locale, "focus", "焦点"),
+        focusLabelSuffix: t(locale, "focus", "当前"),
       }),
     }));
 
@@ -865,6 +958,49 @@ function App() {
     sex: profile.sexSupported ? rankingSex : "all",
     site: activeSite,
   });
+  const humanPValueRankingRows = isHumanDataset
+    ? rankingRows.filter(
+      (row) => Number.isFinite(Number(row.acmPValue)) && Number(row.acmPValue) <= 0.05,
+    )
+    : rankingRows;
+  const humanAcmFilterCounts = isHumanDataset
+    ? humanPValueRankingRows.reduce(
+      (counts, row) => {
+        if (row.acmEffectPercent > 0) {
+          counts.lower += 1;
+        } else if (row.acmEffectPercent < 0) {
+          counts.higher += 1;
+        }
+        return counts;
+      },
+      { all: humanPValueRankingRows.length, lower: 0, higher: 0 },
+    )
+    : { all: rankingRows.length, lower: 0, higher: 0 };
+  const humanAcmFilterOptions = [
+    {
+      value: "all",
+      label: `${t(locale, "All", "全部")} ${formatInteger(humanAcmFilterCounts.all, locale)}`,
+    },
+    {
+      value: "lower",
+      label: `${t(locale, "Lower ACM", "全因死亡率降低")} ${formatInteger(humanAcmFilterCounts.lower, locale)}`,
+    },
+    {
+      value: "higher",
+      label: `${t(locale, "Higher ACM", "全因死亡率升高")} ${formatInteger(humanAcmFilterCounts.higher, locale)}`,
+    },
+  ];
+  const filteredRankingRows = isHumanDataset
+    ? humanPValueRankingRows.filter((row) => {
+      if (humanAcmFilter === "lower") {
+        return row.acmEffectPercent > 0;
+      }
+      if (humanAcmFilter === "higher") {
+        return row.acmEffectPercent < 0;
+      }
+      return true;
+    })
+    : rankingRows;
   const rankingSiteLabel = siteMeta[activeSite];
   const rankingSexLabel =
     profile.sexSupported
@@ -884,93 +1020,26 @@ function App() {
     )
     : selectedCohortLabel;
   const rankingMetricConfig = isHumanDataset
-    ? rankingMetric === "mr"
-      ? {
-        title: t(locale, "Mendelian support score", "孟德尔支持分"),
-        subtitle: t(
-          locale,
-          "Human medication evidence atlas. Ranked by the strength and specificity of the drug-target Mendelian layer.",
-          "人类药物证据图谱。按药物靶点孟德尔证据层的强度与特异性排序。",
-        ),
-        metricKey: "mrSupportScore",
-        dayMetricKey: null,
-        curveMetricKey: null,
-        curveMetricLabel: null,
-        footnote: t(
-          locale,
-          "Scores are curated 0-100 heuristics for navigation. They reflect how supportive and medication-specific the Mendelian layer is, not a direct estimate of mortality reduction.",
-          "这些 0-100 分是人工整理的导航型启发式分值，反映孟德尔证据层的支持力度和药物特异性，并非死亡率下降的直接估计。",
-        ),
-        valueDomain: [0, 100],
-        valueFormatter: formatScore,
-        axisStartLabel: t(locale, "Lower support", "支持较低"),
-        axisEndLabel: t(locale, "Higher support", "支持较高"),
-      }
-      : rankingMetric === "epi"
-        ? {
-          title: t(locale, "Epidemiology support score", "流行病学支持分"),
-          subtitle: t(
-            locale,
-            "Human medication evidence atlas. Ranked by large observational and real-world human evidence linked to lower all-cause mortality.",
-            "人类药物证据图谱。按与较低全因死亡相关的大规模观察性与真实世界人类证据排序。",
-          ),
-          metricKey: "epiSupportScore",
-          dayMetricKey: null,
-          curveMetricKey: null,
-          curveMetricLabel: null,
-          footnote: t(
-            locale,
-            "These scores summarize the quality and scale of the epidemiology layer. They are not adjusted hazard ratios and do not remove residual confounding.",
-            "这些分值总结了流行病学证据层的质量与规模，并非调整后的风险比，也不能消除残余混杂。",
-          ),
-          valueDomain: [0, 100],
-          valueFormatter: formatScore,
-          axisStartLabel: t(locale, "Lower support", "支持较低"),
-          axisEndLabel: t(locale, "Higher support", "支持较高"),
-        }
-        : rankingMetric === "meta"
-          ? {
-            title: t(locale, "Meta-analysis support score", "Meta 分析支持分"),
-            subtitle: t(
-              locale,
-              "Human medication evidence atlas. Ranked by the strength of pooled human all-cause mortality evidence.",
-              "人类药物证据图谱。按汇总后的人类全因死亡证据强度排序。",
-            ),
-            metricKey: "metaSupportScore",
-            dayMetricKey: null,
-            curveMetricKey: null,
-            curveMetricLabel: null,
-            footnote: t(
-              locale,
-              "This view weights class-level human meta-analysis and systematic-review evidence most heavily.",
-              "该视图最强调药物类别层面的人类 Meta 分析和系统综述证据。",
-            ),
-            valueDomain: [0, 100],
-            valueFormatter: formatScore,
-            axisStartLabel: t(locale, "Lower support", "支持较低"),
-            axisEndLabel: t(locale, "Higher support", "支持较高"),
-          }
-          : {
-            title: t(locale, "Overall evidence score", "总体证据分"),
-            subtitle: t(
-              locale,
-              "Human medication evidence atlas. Ranked by triangulated support across meta-analysis, epidemiology, and Mendelian evidence.",
-              "人类药物证据图谱。按 Meta 分析、流行病学与孟德尔证据三角互证的综合支持度排序。",
-            ),
-            metricKey: "overallScore",
-            dayMetricKey: null,
-            curveMetricKey: null,
-            curveMetricLabel: null,
-            footnote: t(
-              locale,
-              "Overall scores are curated heuristics, not model outputs. Randomized meta-analysis is weighted most, then epidemiology, then Mendelian support.",
-              "总体分值是人工整理的启发式结果，不是模型输出。权重依次偏向随机 Meta 分析、流行病学、再到孟德尔支持。",
-            ),
-            valueDomain: [0, 100],
-            valueFormatter: formatScore,
-            axisStartLabel: t(locale, "Lower support", "支持较低"),
-            axisEndLabel: t(locale, "Higher support", "支持较高"),
-          }
+    ? {
+      title: t(locale, "Human Biobank ACM effect", "人类 Biobank 全因死亡率影响"),
+      subtitle: t(
+        locale,
+        "Human Biobank medication signals with reported P<=0.05, drawn from all 406 Data Table 2 N>=500 medication rows plus Figure 5 class rows and ranked by the reported ACM hazard-ratio effect.",
+        "人类 Biobank 药物信号。仅展示报告 P<=0.05 的条目，来源包括 Data Table 2 中全部 406 个 N>=500 药物条目及图 5 类别条目，并按报告的全因死亡率风险比影响排序。",
+      ),
+      metricKey: "acmEffectPercent",
+      dayMetricKey: null,
+      curveMetricKey: null,
+      curveMetricLabel: null,
+      footnote: t(
+        locale,
+        "Effect is shown as 1 minus the reported ACM hazard ratio. Positive values indicate lower ACM; negative values indicate higher ACM. These retrospective Biobank associations do not remove indication or healthy-user confounding.",
+        "影响值显示为 1 减去已报告的全因死亡率风险比。正值表示全因死亡率降低；负值表示全因死亡率升高。这些回顾性 Biobank 关联不能消除适应证或健康使用者混杂。",
+      ),
+      valueFormatter: formatAcmEffectDelta,
+      axisStartLabel: t(locale, "Higher ACM", "全因死亡率升高"),
+      axisEndLabel: t(locale, "Lower ACM", "全因死亡率降低"),
+    }
     : rankingMetric === "max"
       ? {
         title: t(locale, "Oldest death age shift", "最长寿命死亡年龄变化"),
@@ -986,7 +1055,7 @@ function App() {
         footnote: t(
           locale,
           `Uses the oldest death event for each group. Longer last-observed ages from censored ${profile.sampleNounPlural} still appear in the spotlight when relevant.`,
-          `每组使用最长寿命死亡事件。若相关，删失${profile.sampleNounPlural}的更长末次观察年龄仍会在焦点信息中显示。`,
+          `每组使用最长寿命死亡事件。若相关，删失${profile.sampleNounPlural}的更长末次观察年龄仍会在当前条目信息中显示。`,
         ),
         axisStartLabel: t(locale, "Lower", "较低"),
         axisEndLabel: t(locale, "Higher", "较高"),
@@ -1032,27 +1101,47 @@ function App() {
         };
   const rankingMetricRows = sortRankingRowsByMetric(
     view,
-    rankingRows,
+    filteredRankingRows,
     rankingMetricConfig.metricKey,
   );
-  const rankingChartRows = rankingMetricRows.map((row) => ({
-    ...row,
-    key: getInterventionKey(row.cohort, row.group),
-    label: getInterventionLabel(view, row.cohort, row.group),
-    metaLabel:
-      isHumanDataset
-        ? row.groupMeta?.condition || null
-        : profile.id === "citp"
-          ? [
-            getCohortMeta(view, row.cohort).secondaryLabel,
-            getCohortMeta(view, row.cohort).shortLabel,
-          ]
-            .filter(Boolean)
-            .join(" ")
-          : getCohortShortLabel(view, row.cohort),
-    description: getInterventionDescription(view, row.cohort, row.group),
-    pubmed: getInterventionPubMedReference(view, row.cohort, row.group),
-  }));
+  const rankingChartRows = rankingMetricRows.map((row) => {
+    const sampleSizeCount = isHumanDataset
+      ? row.groupMeta?.acmPrescriptionUserCount ?? null
+      : row.treatmentCount ?? null;
+    const sampleSizeTitle = isHumanDataset
+      ? t(locale, "Prescription users", "处方使用者")
+      : t(locale, `Treatment ${profile.sampleNounPlural}`, `处理组${profile.sampleNounPlural}`);
+
+    return {
+      ...row,
+      key: getInterventionKey(row.cohort, row.group),
+      label: getInterventionLabel(view, row.cohort, row.group),
+      metaLabel:
+        isHumanDataset
+          ? row.groupMeta?.condition || null
+          : profile.id === "citp"
+            ? [
+              getCohortMeta(view, row.cohort).secondaryLabel,
+              getCohortMeta(view, row.cohort).shortLabel,
+            ]
+              .filter(Boolean)
+              .join(" ")
+            : getCohortShortLabel(view, row.cohort),
+      description: getInterventionDescription(view, row.cohort, row.group),
+      pubmed: getInterventionPubMedReference(view, row.cohort, row.group),
+      datasetLink:
+        isHumanDataset && row.groupMeta?.acmDatasetUrl
+          ? {
+            label: row.groupMeta.acmDatasetLabel || t(locale, "Dataset", "数据集"),
+            url: row.groupMeta.acmDatasetUrl,
+            title: row.groupMeta.acmDatasetDetail || row.groupMeta.acmSourceTable || null,
+          }
+          : null,
+      sampleSizeLabel:
+        sampleSizeCount != null ? `N=${formatInteger(sampleSizeCount, locale)}` : null,
+      sampleSizeTitle: sampleSizeCount != null ? sampleSizeTitle : null,
+    };
+  });
   const selectedRankingRow =
     rankingMetricRows.find(
       (row) =>
@@ -1118,8 +1207,8 @@ function App() {
   const rankingBody = isHumanDataset
     ? t(
       locale,
-      "Scan the curated top-10 medication classes, then click any row to inspect the meta-analysis, epidemiology, and Mendelian anchors behind that rank.",
-      "浏览人工整理的前 10 种药物类别，然后点击任一行，查看支撑该排名的 Meta 分析、流行病学和孟德尔证据锚点。",
+      "Scan the UK Biobank ACM intervention signals, then click any row to inspect the hazard ratio, source table, drug description, and caution notes.",
+      "浏览 UK Biobank 全因死亡率干预信号，然后点击任一条目查看风险比、来源表、药物描述和谨慎解读说明。",
     )
     : t(
       locale,
@@ -1142,49 +1231,17 @@ function App() {
     ? getInterventionLabel(view, activeRankingRow.cohort, activeRankingRow.group)
     : t(locale, "No ranked row", "暂无排名行");
   const primaryMetric = isHumanDataset
-    ? rankingMetric === "mr"
-      ? {
-        label: t(locale, "Mendelian score", "孟德尔分"),
-        value: activeRankingRow ? formatScore(activeRankingRow.mrSupportScore, locale) : "—",
-        hint: activeInterventionEvidence?.mendelian?.publication?.year
-          ? t(
-            locale,
-            `${activeInterventionEvidence.mendelian.publication.year} anchor`,
-            `${activeInterventionEvidence.mendelian.publication.year} 年锚点`,
-          )
-          : t(locale, "Drug-target genetics", "药物靶点遗传学"),
-      }
-      : rankingMetric === "epi"
-        ? {
-          label: t(locale, "Epidemiology score", "流行病学分"),
-          value: activeRankingRow ? formatScore(activeRankingRow.epiSupportScore, locale) : "—",
-          hint: activeInterventionEvidence?.epidemiology?.publication?.year
-            ? t(
-              locale,
-              `${activeInterventionEvidence.epidemiology.publication.year} anchor`,
-              `${activeInterventionEvidence.epidemiology.publication.year} 年锚点`,
-            )
-            : t(locale, "Real-world evidence", "真实世界证据"),
-        }
-        : rankingMetric === "meta"
-          ? {
-            label: t(locale, "Meta score", "Meta 分"),
-            value: activeRankingRow ? formatScore(activeRankingRow.metaSupportScore, locale) : "—",
-            hint: activeInterventionEvidence?.meta?.publication?.year
-              ? t(
-                locale,
-                `${activeInterventionEvidence.meta.publication.year} anchor`,
-                `${activeInterventionEvidence.meta.publication.year} 年锚点`,
-              )
-              : t(locale, "Pooled evidence", "汇总证据"),
-          }
-          : {
-            label: t(locale, "Overall score", "总体分"),
-            value: activeRankingRow ? formatScore(activeRankingRow.overallScore, locale) : "—",
-            hint:
-              activeInterventionEvidence?.overall?.label ||
-              t(locale, "Triangulated evidence", "三角互证"),
-          }
+    ? {
+      label: t(locale, "ACM effect", "全因死亡率影响"),
+      value: activeRankingRow ? formatAcmEffect(activeRankingRow.acmEffectPercent, locale) : "—",
+      hint: activeRankingRow?.acmHazardRatio
+        ? t(
+          locale,
+          `HR ${activeRankingRow.acmHazardRatio.toFixed(2)}`,
+          `HR ${activeRankingRow.acmHazardRatio.toFixed(2)}`,
+        )
+        : t(locale, "Biobank-only signal", "仅 Biobank 信号"),
+    }
     : rankingMetric === "max"
       ? {
         label: t(locale, "Oldest death shift", "最长寿命死亡变化"),
@@ -1215,7 +1272,7 @@ function App() {
   return (
     <div className="min-h-screen bg-noise text-foreground">
       <div className="mx-auto flex min-h-screen max-w-[1480px] flex-col gap-4 px-3 py-3 sm:gap-6 sm:px-6 sm:py-4 lg:px-8">
-        <header className="relative animate-in fade-in slide-in-from-top-4 duration-700 overflow-hidden rounded-[32px] border border-border/70 bg-[linear-gradient(155deg,rgba(255,255,255,0.94),rgba(255,255,255,0.8),rgba(232,239,242,0.92))] shadow-panel p-4 sm:p-5 flex flex-col gap-4">
+        <header className="relative animate-in fade-in slide-in-from-top-4 duration-700 overflow-hidden rounded-[32px] border border-border/70 bg-[linear-gradient(155deg,rgba(255,255,255,0.94),rgba(255,255,255,0.8),rgba(232,239,242,0.92))] shadow-panel p-4 sm:p-5 flex flex-col gap-4 dark:bg-[linear-gradient(155deg,rgba(25,36,49,0.94),rgba(15,24,35,0.92),rgba(30,39,48,0.9))]">
           <div
             aria-hidden="true"
             className="absolute inset-0 opacity-80 pointer-events-none"
@@ -1244,25 +1301,54 @@ function App() {
             </div>
 
             <div className="flex flex-col items-start gap-2.5 self-start md:items-end md:self-auto">
-              <div className="flex items-center gap-1 rounded-full border border-border/50 bg-white/55 p-1 shadow-sm">
-                <span className="px-2 text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80">
-                  {t(locale, "Language", "语言")}
-                </span>
-                {LANGUAGE_OPTIONS.map((option) => (
-                  <button
-                    key={option.value}
-                    type="button"
-                    className={cn(
-                      "rounded-full px-3 py-1 text-[10px] font-bold transition-colors",
-                      locale === option.value
-                        ? "bg-foreground text-white"
-                        : "text-muted-foreground hover:bg-white hover:text-foreground",
-                    )}
-                    onClick={() => setLocale(option.value)}
-                  >
-                    {option.shortLabel}
-                  </button>
-                ))}
+              <div className="flex flex-wrap items-center gap-2 md:justify-end">
+                <div className="flex items-center gap-1 rounded-full border border-border/50 bg-white/55 p-1 shadow-sm">
+                  <span className="px-2 text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80">
+                    {t(locale, "Language", "语言")}
+                  </span>
+                  {LANGUAGE_OPTIONS.map((option) => (
+                    <button
+                      key={option.value}
+                      type="button"
+                      className={cn(
+                        "rounded-full px-3 py-1 text-[10px] font-bold transition-colors",
+                        locale === option.value
+                          ? "bg-foreground text-background shadow-sm"
+                          : "text-muted-foreground hover:bg-white hover:text-foreground",
+                      )}
+                      onClick={() => setLocale(option.value)}
+                    >
+                      {option.shortLabel}
+                    </button>
+                  ))}
+                </div>
+
+                <div className="flex items-center gap-1 rounded-full border border-border/50 bg-white/55 p-1 shadow-sm">
+                  <span className="px-2 text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80">
+                    {t(locale, "Theme", "主题")}
+                  </span>
+                  {THEME_OPTIONS.map((option) => {
+                    const Icon = option.Icon;
+
+                    return (
+                      <button
+                        key={option.value}
+                        type="button"
+                        className={cn(
+                          "inline-flex h-6 items-center gap-1 rounded-full px-2.5 text-[10px] font-bold transition-colors",
+                          theme === option.value
+                            ? "bg-foreground text-background shadow-sm"
+                            : "text-muted-foreground hover:bg-white hover:text-foreground",
+                        )}
+                        aria-pressed={theme === option.value}
+                        onClick={() => setTheme(option.value)}
+                      >
+                        <Icon className="h-3 w-3" />
+                        <span>{t(locale, option.label, option.labelZh)}</span>
+                      </button>
+                    );
+                  })}
+                </div>
               </div>
 
               <div className="flex flex-wrap items-center gap-x-3 gap-y-2 rounded-[22px] border border-border/50 bg-white/50 px-3 py-2 shadow-sm sm:flex-nowrap sm:gap-1.5 sm:rounded-full sm:px-4 sm:py-1.5">
@@ -1366,14 +1452,11 @@ function App() {
                   <ToggleChipGroup
                     compact
                     label={t(locale, "Metric", "指标")}
-                    value={rankingMetric}
+                    value={isHumanDataset ? "acm" : rankingMetric}
                     options={
                       isHumanDataset
                         ? [
-                          { value: "overall", label: t(locale, "Overall", "总体") },
-                          { value: "meta", label: "Meta" },
-                          { value: "epi", label: t(locale, "Epi", "流行病学") },
-                          { value: "mr", label: "MR" },
+                          { value: "acm", label: t(locale, "ACM effect", "全因死亡率影响") },
                         ]
                         : [
                           { value: "median", label: t(locale, "Median", "中位数") },
@@ -1383,6 +1466,18 @@ function App() {
                     }
                     onChange={setRankingMetric}
                   />
+                  {isHumanDataset ? (
+                    <>
+                      <div className="hidden h-4 w-px bg-border/70 sm:block" />
+                      <ToggleChipGroup
+                        compact
+                        label={t(locale, "Filter", "筛选")}
+                        value={humanAcmFilter}
+                        options={humanAcmFilterOptions}
+                        onChange={setHumanAcmFilter}
+                      />
+                    </>
+                  ) : null}
                   {showScopeToggle ? (
                     <>
                       <div className="hidden h-4 w-px bg-border/70 sm:block" />
@@ -1391,7 +1486,7 @@ function App() {
                         label={t(locale, "Scope", "范围")}
                         value={rankingScope}
                         options={[
-                          { value: "focus", label: t(locale, "Focus", "焦点") },
+                          { value: "focus", label: t(locale, "Focus", "当前") },
                           { value: "all", label: t(locale, "All", "全部") },
                         ]}
                         onChange={setRankingScope}
@@ -1523,6 +1618,7 @@ function App() {
               onSelect={(row) => focusIntervention(row.cohort, row.group)}
               footnote={rankingMetricConfig.footnote}
               valueDomain={rankingMetricConfig.valueDomain}
+              visualValueCap={100}
               valueFormatter={rankingMetricConfig.valueFormatter}
               axisStartLabel={rankingMetricConfig.axisStartLabel}
               axisEndLabel={rankingMetricConfig.axisEndLabel}
@@ -1530,22 +1626,11 @@ function App() {
           </CardContent>
         </Card>
 
+        {!isHumanDataset ? (
         <Card className="overflow-hidden border-border/70 bg-card/80 shadow-none">
           <div className="grid lg:grid-cols-[340px_minmax(0,1fr)]">
             <aside className="border-b border-border/70 bg-white/45 lg:border-b-0 lg:border-r">
               <CardContent className="space-y-6 p-4 sm:p-6">
-                <div className="space-y-3">
-                  <Badge variant="outline">{profile.explorerSectionLabel}</Badge>
-                  <div className="space-y-2">
-                    <h2 className="font-display text-3xl font-semibold tracking-[-0.05em]">
-                      {focusLabel}
-                    </h2>
-                    <p className="text-sm leading-6 text-muted-foreground">
-                      {profile.explorerBody}
-                    </p>
-                  </div>
-                </div>
-
                 <div className="space-y-4">
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-foreground">
@@ -1587,15 +1672,12 @@ function App() {
                         ))}
                       </div>
                     </div>
-                  ) : (
+                  ) : profile.singlePanelNotice ? (
                     <div className="rounded-[22px] border border-border/70 bg-secondary/30 p-4 text-sm text-muted-foreground">
-                      {profile.singlePanelNotice ||
-                        t(
-                          locale,
-                          `${profile.title} survival exports are shown as combined populations, so this view stays on a single panel.`,
-                          `${profile.title} 的生存导出数据以合并人群形式展示，因此该视图保持单面板。`,
-                        )}
+                      {profile.singlePanelNotice}
                     </div>
+                  ) : (
+                    null
                   )}
                 </div>
 
@@ -1697,7 +1779,7 @@ function App() {
             </aside>
 
             <div className="space-y-6 p-4 sm:p-6">
-              <SectionHeader
+              {/* <SectionHeader
                 label={profile.focusSectionLabel}
                 title={t(
                   locale,
@@ -1711,7 +1793,7 @@ function App() {
                     <span>{profile.siteLabel}: {siteMeta[activeSite]}</span>
                   </div>
                 }
-              />
+              /> */}
 
               <div className="grid grid-cols-2 gap-2 rounded-[24px] border border-border/70 bg-white/55 p-3 sm:flex sm:flex-wrap">
                 {displayedCohortOverview.map((entry) => {
@@ -1749,47 +1831,44 @@ function App() {
                 })}
               </div>
 
-              {isHumanDataset ? (
-                <HumanEvidenceExplorer summary={activeRankingRow} locale={locale} />
-              ) : (
-                <div className={cn("grid gap-5", panelCharts.length > 1 && "xl:grid-cols-2")}>
-                  {panelCharts.map((panel, index) => (
-                    <Card
-                      key={panel.sex}
-                      className="border-border/70 bg-white/60 shadow-none"
-                    >
-                      <CardContent className="space-y-5 p-5">
-                        <FocusInsight dataset={view} locale={locale} summary={panelSummaries[index]} />
-                        <SurvivalChart
-                          locale={locale}
-                          title={t(
-                            locale,
-                            `${getSexLabel(panel.sex, locale)} survival`,
-                            `${getSexLabel(panel.sex, locale)}生存曲线`,
-                          )}
-                          subtitle={t(
-                            locale,
-                            `${focusLabel} against matched control${activeSite === view.defaultSite
-                              ? ` across ${profile.siteAllLabel.toLowerCase()}`
-                              : ` at ${siteMeta[activeSite]}`
-                            }.`,
-                            `${focusLabel} 对比匹配对照${activeSite === view.defaultSite
-                              ? `，覆盖${profile.siteAllLabel}`
-                              : `，位于 ${siteMeta[activeSite]}`
-                            }。`,
-                          )}
-                          lines={panel.lines}
-                        />
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              )}
+              <div className={cn("grid gap-5", panelCharts.length > 1 && "xl:grid-cols-2")}>
+                {panelCharts.map((panel, index) => (
+                  <Card
+                    key={panel.sex}
+                    className="border-border/70 bg-white/60 shadow-none"
+                  >
+                    <CardContent className="space-y-5 p-5">
+                      <FocusInsight dataset={view} locale={locale} summary={panelSummaries[index]} />
+                      <SurvivalChart
+                        locale={locale}
+                        title={t(
+                          locale,
+                          `${getSexLabel(panel.sex, locale)} survival`,
+                          `${getSexLabel(panel.sex, locale)}生存曲线`,
+                        )}
+                        subtitle={t(
+                          locale,
+                          `${focusLabel} against matched control${activeSite === view.defaultSite
+                            ? ` across ${profile.siteAllLabel.toLowerCase()}`
+                            : ` at ${siteMeta[activeSite]}`
+                          }.`,
+                          `${focusLabel} 对比匹配对照${activeSite === view.defaultSite
+                            ? `，覆盖${profile.siteAllLabel}`
+                            : `，位于 ${siteMeta[activeSite]}`
+                          }。`,
+                        )}
+                        lines={panel.lines}
+                      />
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
         </Card>
+        ) : null}
 
-        <Card className="relative overflow-hidden border-border/70 bg-[linear-gradient(160deg,rgba(255,255,255,0.94),rgba(246,239,228,0.92),rgba(244,246,248,0.96))] shadow-none">
+        <Card className="relative overflow-hidden border-border/70 bg-[linear-gradient(160deg,rgba(255,255,255,0.94),rgba(246,239,228,0.92),rgba(244,246,248,0.96))] shadow-none dark:bg-[linear-gradient(160deg,rgba(22,32,44,0.94),rgba(15,24,35,0.92),rgba(24,32,42,0.96))]">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 opacity-80"
@@ -1849,7 +1928,7 @@ function App() {
             {showSupportQrs ? (
               <div
                 id="support-qr-panel"
-                className="mt-5 w-full max-w-[920px] rounded-[24px] border border-border/65 bg-[linear-gradient(180deg,rgba(255,255,255,0.86),rgba(248,241,233,0.92))] p-4 shadow-[0_20px_52px_-42px_rgba(17,33,49,0.42)] sm:p-5"
+                className="mt-5 w-full max-w-[920px] rounded-[24px] border border-border/65 bg-[linear-gradient(180deg,rgba(255,255,255,0.86),rgba(248,241,233,0.92))] p-4 shadow-[0_20px_52px_-42px_rgba(17,33,49,0.42)] sm:p-5 dark:bg-[linear-gradient(180deg,rgba(22,32,44,0.86),rgba(15,24,35,0.92))] dark:shadow-[0_20px_52px_-42px_rgba(0,0,0,0.75)]"
               >
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                   <div className="max-w-xl space-y-1.5">

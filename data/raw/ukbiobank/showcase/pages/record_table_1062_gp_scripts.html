@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en-GB">
+<head>
+<title> : Record Table 1062</title>
+<link rel="stylesheet" href="ukb/styles.css" type="text/css" media="screen">
+<link rel="stylesheet" href="crystal.css" type="text/css" media="screen">
+<link rel="icon" type="image/png" href="ukb/favicon.png">
+<link rel="stylesheet" href="crystal_print.css" type="text/css" media="print">
+<script type="text/javascript" src="tabber.js"></script>
+<link rel="stylesheet" href="tree_style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="tree_style_print.css" type="text/css" media="print">
+<!--[if IE 8]><link rel="stylesheet" href="tree_style_ie_8.css" type="text/css" media="screen"><![endif]-->
+<!--[if lte IE 7]><link rel="stylesheet" href="tree_style_ie_7.css" type="text/css" media="screen"><![endif]-->
+<script type="text/javascript">document.write('<style type="text/css">.tabber{display:none;}<\/style>');</script>
+</head>
+<body>
+<div class="background">
+<div class="topbreak"></div>
+<div class="topnav">
+<a href="https://www.ukbiobank.ac.uk"><img src="ukb/toplogo.png" class="logo" alt="Project Banner" /></a>
+<ul class="topmenu">
+<li class="topmenu"><a class="topmenu" href="index.cgi">Index</a></li>
+<li class="topmenu"><a class="topmenu" href="browse.cgi?id=1062&cd=return">Browse</a></li>
+<li class="topmenu"><a class="topmenu" href="search.cgi">Search</a></li>
+<li class="topmenu"><a class="topmenu" href="catalogs.cgi">Catalogues</a></li>
+<li class="topmenu"><a class="topmenu" href="download.cgi">Downloads</a></li>
+<li class="topmenu"><a class="topmenu" href="https://ams.ukbiobank.ac.uk/ams/resApplications">Login</a></li>
+<li class="topmenr"><a class="topmenu" href="help.cgi?cd=return">Help</a></li>
+</ul>
+</div>
+<div class="topbreak"></div>
+<div id="main" class="main"><span class="screentitle">Record Table 1062</span><br>
+<table summary="Identification">
+<tr><td>Title:</td><td>GP prescriptions</td></tr>
+<tr><td>Access field:</td><td><a class="basic" href="field.cgi?id=42039">42039</a> (GP prescription records)</td></tr>
+</table>
+<br><table summary="Record Table properties" border class="wrapper" cellspacing="0"><tr><td class="txt_blu">Table name</td><td class="txt_blu">gp_scripts</td><td rowspan="3" width="50" class="spacer">&nbsp;</td><td class="txt_blu">Table group</td><td class="txt_blu">GP</td><td rowspan="3" width="50" class="spacer">&nbsp;</td><td class="txt_blu"><a class="basic" href="help.cgi?cd=debut">Debut</a></td><td class="txt_blu">Aug 2019</td></tr><tr><td class="txt_blu">Row count</td><td class="txt_blu">56,000,000+</td><td class="txt_blu">Parent table</td><td class="txt_blu">n/a</td><td class="txt_blu"><a class="basic" href="help.cgi?cd=version">Version</a></td><td class="txt_blu">Sep 2025</td></tr><tr><td class="txt_blu">Size</td><td class="txt_blu">4GB</td><td class="txt_blu"><a class="basic" href="help.cgi?cd=stability">Stability</a></td><td class="txt_blu">Ongoing</td><td class="txt_blu"><a class="basic" href="help.cgi?cd=tier">Cost Tier</a></td><td class="txt_blu">dX o1 s1</td>
+</table>
+</div>
+<noscript><p style="color: red;">
+WARNING: your browser does NOT have JavaScript enabled.
+Not all features of this website will be available to you.
+If possible, please enable JavaScript and refresh the page.
+</noscript>
+<div class="css3outer"><div class="css3warning"><p style="color: red;">WARNING: the interactive features of this website use CSS3, which your browser does not support. To use the full features of this website, please update your browser.</p></div></div>
+<div class="tabber">
+<div class="tabbertab"><h2>Notes</h2>
+GP prescription data (for 45% of the cohort)
+</div>
+<div class="tabbertab"><h2>8 Columns</h2>
+<table class="listing" summary="Columns in table"><tr><th class="int">#</th><th class="txt">Column</th><th class="txt">Type</th><th class="txt">Notes</th></tr>
+<tr class="row_odd"><td class="int">1</td><td class="txt">eid</td><td class="txt">integer</td><td class="txt">Encoded participant identifier. </td></tr>
+<tr class="row_even"><td class="int">2</td><td class="txt">data_provider</td><td class="txt">integer, <a class="basic" href="coding.cgi?id=626">coding 626</a></td><td class="txt">Data provider. Whether the record originates from England (Vision), Scotland, England (TPP) or Wales.</td></tr>
+<tr class="row_odd"><td class="int">3</td><td class="txt">issue_date</td><td class="txt">date, <a class="basic" href="coding.cgi?id=819">coding 819</a></td><td class="txt">Date prescription was issued. Special coded values are given in Coding 819.</td></tr>
+<tr class="row_even"><td class="int">4</td><td class="txt">read_2</td><td class="txt">string</td><td class="txt">Read v2 code. Read version 2 code.</td></tr>
+<tr class="row_odd"><td class="int">5</td><td class="txt">bnf_code</td><td class="txt">string</td><td class="txt">BNF code. British National Formulary code.</td></tr>
+<tr class="row_even"><td class="int">6</td><td class="txt">dmd_code</td><td class="txt">string</td><td class="txt">dm+d code. Dictionary of medicines and devices (dm+d) code.</td></tr>
+<tr class="row_odd"><td class="int">7</td><td class="txt">drug_name</td><td class="txt">string</td><td class="txt">Drug name. </td></tr>
+<tr class="row_even"><td class="int">8</td><td class="txt">quantity</td><td class="txt">string</td><td class="txt">Quantity issued. </td></tr></table>
+</div>
+<div class="tabbertab"><h2>2 Related GP Record Tables</h2>
+<table class="listing" summary="Record Tables accessed via this field"><tr><th class="txt">Table ID</th><th class="txt">Table</th><th class="txt">Title</th></tr>
+<tr class="row_odd"><td class="txt"><a class="basic" href="rectab.cgi?id=1060">1060</a></td><td><a class="subtle" href="rectab.cgi?id=1060">gp_clinical</a></td><td class="txt">GP clinical events</td></tr>
+<tr class="row_even"><td class="txt"><a class="basic" href="rectab.cgi?id=1061">1061</a></td><td><a class="subtle" href="rectab.cgi?id=1061">gp_registrations</a></td><td class="txt">GP registrations</td></tr></table>
+</div>
+</div>
+<p id="lowcph" class="outerbottom"><span class="catchphrase">Enabling scientific discoveries that improve human health</span>
+<!--
+(c) Alan Young, NDPH, Oxford University
+Nov 11 2025 15:10:30
+0.02s
+Fri May  8 00:36:35 2026
+
+-->
+</div>
+</body>
+</html>

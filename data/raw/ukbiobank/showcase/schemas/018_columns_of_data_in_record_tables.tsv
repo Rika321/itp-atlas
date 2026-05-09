@@ -1,0 +1,418 @@
+rectab_id	column_name	value_type	encoding_id	orda	units	notes
+800	eid	11	0	0		Encoded participant identifier. This identifier is the same encoded id used in the main dataset.
+800	procedure	41	0	5		Vaccination procedure carried out.
+800	procedure_uni	41	1960	6		Vaccination procedure carried out (recoded). Provides a unified coding across the various sources for the procedure.
+800	product	41	0	4		Vaccination product administered to participant.
+800	source	41	1970	2		Data source (data provider / region).
+800	vacc_date	51	819	3		Date of vaccination.
+924	condition_concept_id	11	0	0		A foreign key that refers to a standard Condition Concept identifier in the Standardized Vocabularies.
+924	condition_era_end_date	51	0	0		The end date for the Condition Era constructed from the individual instances of Condition Occurrences. It is the end date of the final continuously recorded instance of the Condition.
+924	condition_era_id	11	0	0		A unique identifier for each Condition Era.
+924	condition_era_start_date	51	0	0		The start date for the Condition Era constructed from the individual instances of Condition Occurrences. It is the start date of the very first chronologically recorded instance of the condition.
+924	condition_occurrence_count	11	0	0		The number of individual Condition Occurrences used to construct the condition era.
+924	eid	11	0	0		A foreign key identifier to the Person who is experiencing the Condition during the Condition Era.
+925	condition_concept_id	11	0	0		A foreign key that refers to a Standard Condition Concept identifier in the Standardized Vocabularies.
+925	condition_end_date	51	0	0		The date when the instance of the Condition is considered to have ended.
+925	condition_end_datetime	61	0	0		The date when the instance of the Condition is considered to have ended.
+925	condition_occurrence_id	11	0	0		A unique identifier for each Condition Era.
+925	condition_source_concept_id	11	0	0		The source code for the condition as it appears in the source data. This code is mapped to a standard condition concept in the Standardized Vocabularies and the original code is stored here for reference.
+925	condition_source_value	41	0	0		A foreign key to a Condition Concept that refers to the code used in the source.
+925	condition_start_date	51	0	0		The date when the instance of the Condition is recorded.
+925	condition_start_datetime	61	0	0		The date and time when the instance of the Condition is recorded.
+925	condition_status_concept_id	11	0	0		
+925	condition_status_source_value	41	0	0		
+925	condition_type_concept_id	11	0	0		A foreign key to the predefined Concept identifier in the Standardized Vocabularies reflecting the source data from which the condition was recorded, the level of standardization, and the type of occurrence.
+925	eid	11	0	0		A foreign key identifier to the Person who is experiencing the Condition.
+925	provider_id	11	0	0		A foreign key to the Provider in the PROVIDER table who was responsible for capturing (diagnosing) the Condition.
+925	stop_reason	41	0	0		The reason that the condition was no longer present, as indicated in the source data.
+925	visit_detail_id	11	0	0		A foreign key to the predefined concept in the standard vocabulary reflecting the condition status.
+925	visit_occurrence_id	11	0	0		A foreign key to the visit in the VISIT table during which the Condition was determined (diagnosed).
+926	cause_concept_id	11	0	0		A foreign key referring to a standard concept identifier in the Standardized Vocabularies for conditions.
+926	cause_source_concept_id	11	0	0		A foreign key to the concept that refers to the code used in the source. Note, this variable name is abbreviated to ensure it will be allowable across database platforms.
+926	cause_source_value	41	0	0		The source code for the cause of death as it appears in the source data. This code is mapped to a standard concept in the Standardized Vocabularies and the original code is, stored here for reference.
+926	death_date	51	0	0		The date the person was deceased. If the precise date including day or month is not known or not allowed, December is used as the default month, and the last day of the month the default day.
+926	death_datetime	61	0	0		The date and time the person was deceased. If the precise date including day or month is not known or not allowed, December is used as the default month, and the last day of the month the default day.
+926	death_type_concept_id	11	0	0		A foreign key referring to the predefined concept identifier in the Standardized Vocabularies reflecting how the death was represented in the source data.
+926	eid	11	0	0		A foreign key identifier to the deceased person.
+927	device_concept_id	11	0	0		A foreign key that refers to a Standard Concept identifier in the Standardized Vocabularies for the Device concept.
+927	device_exposure_end_date	51	0	0		The date the Device or supply was removed from use.
+927	device_exposure_end_datetime	61	0	0		The date and time the Device or supply was removed from use.
+927	device_exposure_id	11	0	0		A system-generated unique identifier for each Device Exposure.
+927	device_exposure_start_date	51	0	0		The date the Device or supply was applied or used.
+927	device_exposure_start_datetime	61	0	0		The date and time the Device or supply was applied or used.
+927	device_source_concept_id	11	0	0		A foreign key to a Device Concept that refers to the code used in the source.
+927	device_source_value	41	0	0		The source code for the Device as it appears in the source data. This code is mapped to a standard Device Concept in the Standardized Vocabularies and the original code is stored here for reference.
+927	device_type_concept_id	11	0	0		A foreign key to the predefined Concept identifier in the Standardized Vocabularies reflecting the type of Device Exposure recorded. It indicates how the Device Exposure was represented in the source data.
+927	eid	11	0	0		A foreign key identifier to the Person who is subjected to the Device.
+927	provider_id	11	0	0		A foreign key to the provider in the PROVIDER table who initiated of administered the Device.
+927	quantity	11	0	0		The number of individual Devices used for the exposure.
+927	unique_device_id	41	0	0		A UDI or equivalent identifying the instance of the Device used in the Person.
+927	visit_detail_id	11	0	0		
+927	visit_occurrence_id	11	0	0		A foreign key to the visit in the VISIT table during which the device was used.
+928	dose_era_end_date	51	0	0		The end date for the drug era constructed from the individual instance of drug exposures. It is the end date of the final continuously recorded instance of utilization of a drug.
+928	dose_era_id	11	0	0		A unique identifier for each Dose Era.
+928	dose_era_start_date	51	0	0		The start date for the drug era constructed from the individual instances of drug exposures. It is the start date of the very first chronologically recorded instance of utilization of a drug.
+928	dose_value	11	0	0		The numeric value of the dose.
+928	drug_concept_id	11	0	0		A foreign key that refers to a Standard Concept identifier in the Standardized Vocabularies for the active Ingredient Concept.
+928	eid	11	0	0		A foreign key identifier to the Person who is subjected to the drug during the drug era.
+928	unit_concept_id	11	0	0		A foreign key that refers to a Standard Concept identifier in the Standardized Vocabularies for the unit concept.
+929	drug_concept_id	11	0	0		A foreign key that refers to a Standard Concept identifier in the Standardized Vocabularies for the Ingredient Concept.
+929	drug_era_end_date	51	0	0		The end date for the drug era constructed from the individual instance of drug exposures. It is the end date of the final continuously recorded instance of utilization of a drug.
+929	drug_era_id	11	0	0		A unique identifier for each Drug Era.
+929	drug_era_start_date	51	0	0		The start date for the Drug Era constructed from the individual instances of Drug Exposures. It is the start date of the very first chronologically recorded instance of conutilization of a Drug.
+929	drug_exposure_count	11	0	0		The number of individual Drug Exposure occurrences used to construct the Drug Era.
+929	eid	11	0	0		A foreign key identifier to the Person who is subjected to the Drug during the Drug Era.
+929	gap_days	11	0	0		The number of days that are not covered by DRUG_EXPOSURE records that were used to make up the era record.
+930	days_supply	11	0	0		The number of days of supply of the medication as recorded in the original prescription or dispensing record.
+930	dose_unit_source_value	11	0	0		The information about the dose unit as detailed in the source.
+930	drug_concept_id	11	0	0		A foreign key that refers to a Standard Concept identifier in the Standardized Vocabularies for the Drug concept.
+930	drug_exposure_end_date	51	0	0		The end date for the current instance of Drug utilization. It is not available from all sources.
+930	drug_exposure_end_datetime	61	0	0		The end date and time for the current instance of Drug utilization. It is not available from all sources.
+930	drug_exposure_id	11	0	0		A system-generated unique identifier for each Drug utilization event.
+930	drug_exposure_start_date	51	0	0		The start date for the current instance of Drug utilization. Valid entries include a start date of a prescription, the date a prescription was filled, or the date on which a Drug administration procedure was recorded.
+930	drug_exposure_start_datetime	61	0	0		The start date and time for the current instance of Drug utilization. Valid entries include a start date of a prescription, the date a prescription was filled, or the date on which a Drug administration procedure was recorded.
+930	drug_source_concept_id	11	0	0		A foreign key to a Drug Concept that refers to the code used in the source.
+930	drug_source_value	41	0	0		The source code for the Drug as it appears in the source data. This code is mapped to a Standard Drug concept in the Standardized Vocabularies and the original code is, stored here for reference.
+930	drug_type_concept_id	11	0	0		A foreign key to the predefined Concept identifier in the Standardized Vocabularies reflecting the type of Drug Exposure recorded. It indicates how the Drug Exposure was represented in the source data.
+930	eid	11	0	0		A foreign key identifier to the person who is subjected to the Drug. The demographic details of that person are stored in the person table.
+930	lot_number	11	0	0		An identifier assigned to a particular quantity or lot of Drug product from the manufacturer.
+930	provider_id	11	0	0		A foreign key to the provider in the provider table who initiated (prescribed or administered) the Drug Exposure.
+930	quantity	31	0	0		The quantity of drug as recorded in the original prescription or dispensing record.
+930	refills	11	0	0		The number of refills after the initial prescription. The initial prescription is not counted, values start with 0.
+930	route_concept_id	11	0	0		A foreign key to a predefined concept in the Standardized Vocabularies reflecting the route of administration.
+930	route_source_value	11	0	0		The information about the route of administration as detailed in the source.
+930	sig	41	0	0		The directions on the Drug prescription as recorded in the original prescription (and printed on the container) or dispensing record.
+930	stop_reason	41	0	0		The reason the Drug was stopped. Reasons include regimen completed, changed, removed, etc.
+930	verbatim_end_date	11	0	0		
+930	visit_detail_id	11	0	0		
+930	visit_occurrence_id	11	0	0		A foreign key to the visit in the visit table during which the Drug Exposure was initiated.
+931	eid	11	0	0		A foreign key identifier to the Person about whom the measurement was recorded.
+931	measurement_concept_id	11	0	0		A foreign key to the standard measurement concept identifier in the Standardized Vocabularies.
+931	measurement_date	51	0	0		The date of the Measurement.
+931	measurement_datetime	61	0	0		The date and time of the Measurement. (Some database systems don't have a datatype of time. To accomodate all temporal analyses, datatype datetime can be used (combining measurement_date and measurement_time)Relevant Forum Discussion
+931	measurement_id	11	0	0		A unique identifier for each Measurement.
+931	measurement_source_concept_id	11	0	0		A foreign key to a Concept in the Standard Vocabularies that refers to the code used in the source.
+931	measurement_source_value	41	0	0		The Measurement name as it appears in the source data. This code is mapped to a Standard Concept in the Standardized Vocabularies and the original code is stored here for reference.
+931	measurement_time	61	0	0		A foreign key to the predefined Concept in the Standardized Vocabularies reflecting the provenance from where the Measurement record was recorded.
+931	measurement_type_concept_id	11	0	0		
+931	operator_concept_id	11	0	0		A foreign key identifier to the predefined Concept in the Standardized Vocabularies reflecting the mathematical operator that is applied to the value_as_number. Operators are <, ?, =, ?, >.
+931	provider_id	11	0	0		A foreign key to the provider in the PROVIDER table who was responsible for initiating or obtaining the measurement.
+931	range_high	31	0	0		The upper limit of the normal range of the Measurement. The upper range is assumed to be of the same unit of measure as the Measurement value.
+931	range_low	31	0	0		The lower limit of the normal range of the Measurement result. The lower range is assumed to be of the same unit of measure as the Measurement value.
+931	unit_concept_id	11	0	0		A foreign key to a Standard Concept ID of Measurement Units in the Standardized Vocabularies.
+931	unit_source_value	41	0	0		The source code for the unit as it appears in the source data. This code is mapped to a standard unit concept in the Standardized Vocabularies and the original code is stored here for reference.
+931	value_as_concept_id	11	0	0		A foreign key to a Measurement result represented as a Concept from the Standardized Vocabularies (e.g., positive/negative, present/absent, low/high, etc.).
+931	value_as_number	31	0	0		A Measurement result where the result is expressed as a numeric value.
+931	value_source_value	41	0	0		The source value associated with the content of the value_as_number or value_as_concept_id as stored in the source data.
+931	visit_detail_id	11	0	0		
+931	visit_occurrence_id	11	0	0		A foreign key to the Visit in the VISIT_OCCURRENCE table during which the Measurement was recorded.
+932	eid	11	0	0		A foreign key identifier to the Person about whom the Note was recorded.
+932	encoding_concept_id	11	0	0		A foreign key to the predefined Concept in the Standardized Vocabularies reflecting the note character encoding type.
+932	language_concept_id	11	0	0		A foreign key to the predefined Concept in the Standardized Vocabularies reflecting the language of the note.
+932	note_class_concept_id	11	0	0		A foreign key to the predefined Concept in the Standardized Vocabularies reflecting the HL7 LOINC Document Type Vocabulary classification of the note.
+932	note_date	51	0	0		The date the note was recorded.
+932	note_datetime	61	0	0		The date and time the note was recorded.
+932	note_id	11	0	0		A unique identifier for each note.
+932	note_source_value	11	0	0		
+932	note_text	41	0	0		The content of the Note.
+932	note_title	41	0	0		The title of the Note as it appears in the source.
+932	note_type_concept_id	11	0	0		A foreign key to the predefined Concept in the Standardized Vocabularies reflecting the type, origin or provenance of the Note.
+932	provider_id	11	0	0		A foreign key to the Provider in the PROVIDER table who took the Note.
+932	visit_detail_id	11	0	0		
+932	visit_occurrence_id	11	0	0		Foreign key to the Visit in the VISIT_OCCURRENCE table when the Note was taken.
+933	eid	11	0	0		A foreign key identifier to the Person about whom the observation was recorded.
+933	observation_concept_id	11	0	0		A foreign key to the standard observation concept identifier in the Standardized Vocabularies.
+933	observation_date	51	0	0		The date of the observation.
+933	observation_datetime	61	0	0		The date and time of the observation.
+933	observation_id	11	0	0		A unique identifier for each observation.
+933	observation_source_concept_id	11	0	0		A foreign key to a Concept that refers to the code used in the source.
+933	observation_source_value	41	0	0		The observation code as it appears in the source data. This code is mapped to a Standard Concept in the Standardized Vocabularies and the original code is, stored here for reference.
+933	observation_type_concept_id	11	0	0		A foreign key to the predefined concept identifier in the Standardized Vocabularies reflecting the type of the observation.
+933	provider_id	11	0	0		A foreign key to the provider in the PROVIDER table who was responsible for making the observation.
+933	qualifier_concept_id	11	0	0		A foreign key to a Standard Concept ID for a qualifier (e.g., severity of drug-drug interaction alert)
+933	qualifier_source_value	41	0	0		The source value associated with a qualifier to characterize the observation
+933	unit_concept_id	11	0	0		A foreign key to a Standard Concept ID of measurement units in the Standardized Vocabularies.
+933	unit_source_value	41	0	0		The source code for the unit as it appears in the source data. This code is mapped to a standard unit concept in the Standardized Vocabularies and the original code is, stored here for reference.
+933	value_as_concept_id	11	0	0		A foreign key to an observation result stored as a Concept ID. This is applicable to observations where the result can be expressed as a Standard Concept from the Standardized Vocabularies (e.g., positive/negative, present/absent, low/high, etc.).
+933	value_as_number	31	0	0		The observation result stored as a number. This is applicable to observations where the result is expressed as a numeric value.
+933	value_as_string	41	0	0		The observation result stored as a string. This is applicable to observations where the result is expressed as verbatim text.
+933	visit_detail_id	11	0	0		
+933	visit_occurrence_id	11	0	0		A foreign key to the visit in the VISIT_OCCURRENCE table during which the observation was recorded.
+934	eid	11	0	0		A foreign key identifier to the person for whom the observation period is defined.
+934	observation_period_end_date	51	0	0		The end date of the observation period for which data are available from the data source.
+934	observation_period_id	11	0	0		A unique identifier for each observation period.
+934	observation_period_start_date	51	0	0		The start date of the observation period for which data are available from the data source.
+934	period_type_concept_id	11	0	0		A foreign key identifier to the predefined concept in the Standardized Vocabularies reflecting the source of the observation period information
+935	birth_datetime	61	0	0		The date and time of birth of the person.
+935	care_site_id	11	0	0		A foreign key to the site of primary care in the care_site table, where the details of the care site are stored.
+935	day_of_birth	11	0	0		The day of the month of birth of the person. For data sources that provide the precise date of birth, the day is extracted and stored in this field.
+935	eid	11	0	0		A unique identifier for each person.
+935	ethnicity_concept_id	11	0	0		A foreign key that refers to the standard concept identifier in the Standardized Vocabularies for the ethnicity of the person.
+935	ethnicity_source_concept_id	11	0	0		A foreign key to the ethnicity concept that refers to the code used in the source.
+935	ethnicity_source_value	41	0	0		The source code for the ethnicity of the person as it appears in the source data. The person ethnicity is mapped to a standard ethnicity concept in the Standardized Vocabularies and the original code is, stored here for reference.
+935	gender_concept_id	11	0	0		A foreign key that refers to an identifier in the CONCEPT table for the unique gender of the person.
+935	gender_source_concept_id	11	0	0		A foreign key to the gender concept that refers to the code used in the source.
+935	gender_source_value	41	0	0		The source code for the gender of the person as it appears in the source data. The person's gender is mapped to a standard gender concept in the Standardized Vocabularies; the original value is stored here for reference.
+935	location_id	11	0	0		A foreign key to the place of residency for the person in the location table, where the detailed address information is stored.
+935	month_of_birth	11	0	0		The month of birth of the person. For data sources that provide the precise date of birth, the month is extracted and stored in this field.
+935	person_source_value	41	0	0		An (encrypted) key derived from the person identifier in the source data. This is necessary when a use case requires a link back to the person data at the source dataset.
+935	provider_id	11	0	0		A foreign key to the primary care provider the person is seeing in the provider table.
+935	race_concept_id	11	0	0		A foreign key that refers to an identifier in the CONCEPT table for the unique race of the person.
+935	race_source_concept_id	11	0	0		A foreign key to the race concept that refers to the code used in the source.
+935	race_source_value	41	0	0		The source code for the race of the person as it appears in the source data. The person race is mapped to a standard race concept in the Standardized Vocabularies and the original value is stored here for reference.
+935	year_of_birth	11	0	0		The year of birth of the person. For data sources with date of birth, the year is extracted. For data sources where the year of birth is not available, the approximate year of birth is derived based on any age group categorization available.
+936	eid	11	0	0		A foreign key identifier to the Person who is subjected to the Procedure.
+936	modifier_concept_id	11	0	0		A foreign key to a Standard Concept identifier for a modifier to the Procedure (e.g. bilateral)
+936	modifier_source_value	11	0	0		The source code for the qualifier as it appears in the source data.
+936	procedure_concept_id	11	0	0		A foreign key that refers to a standard procedure Concept identifier in the Standardized Vocabularies.
+936	procedure_date	51	0	0		The date on which the Procedure was performed.
+936	procedure_datetime	61	0	0		The date and time on which the Procedure was performed.
+936	procedure_occurrence_id	11	0	0		A system-generated unique identifier for each Procedure Occurrence.
+936	procedure_source_concept_id	11	0	0		A foreign key to a Procedure Concept that refers to the code used in the source.
+936	procedure_source_value	41	0	0		The source code for the Procedure as it appears in the source data. This code is mapped to a standard procedure Concept in the Standardized Vocabularies and the original code is, stored here for reference. Procedure source codes are typically ICD-9-Proc, CPT-4, HCPCS or OPCS-4 codes.
+936	procedure_type_concept_id	11	0	0		A foreign key to the predefined Concept identifier in the Standardized Vocabularies reflecting the type of source data from which the procedure record is derived.
+936	provider_id	11	0	0		A foreign key to the provider in the provider table who was responsible for carrying out the procedure.
+936	quantity	11	0	0		The quantity of procedures ordered or administered.
+936	visit_detail_id	11	0	0		
+936	visit_occurrence_id	11	0	0		A foreign key to the visit in the visit table during which the Procedure was carried out.
+937	anatomic_site_concept_id	11	0	0		A foreign key to a Standard Concept identifier for the anatomic location of specimen collection.
+937	anatomic_site_source_value	41	0	0		The information about the anatomic site as detailed in the source.
+937	disease_status_concept_id	11	0	0		A foreign key to a Standard Concept identifier for the Disease Status of specimen collection.
+937	disease_status_source_value	41	0	0		The information about the disease status as detailed in the source.
+937	eid	11	0	0		A foreign key identifier to the Person for whom the Specimen is recorded.
+937	quantity	31	0	0		The amount of specimen collection from the person during the sampling procedure.
+937	specimen_concept_id	11	0	0		A foreign key referring to a Standard Concept identifier in the Standardized Vocabularies for the Specimen.
+937	specimen_date	51	0	0		The date the specimen was obtained from the Person.
+937	specimen_datetime	61	0	0		The date and time on the date when the Specimen was obtained from the person.
+937	specimen_id	11	0	0		A unique identifier for each specimen.
+937	specimen_source_id	41	0	0		The Specimen identifier as it appears in the source data.
+937	specimen_source_value	41	0	0		The Specimen value as it appears in the source data. This value is mapped to a Standard Concept in the Standardized Vocabularies and the original code is, stored here for reference.
+937	specimen_type_concept_id	11	0	0		A foreign key referring to the Concept identifier in the Standardized Vocabularies reflecting the system of record from which the Specimen was represented in the source data.
+937	unit_concept_id	11	0	0		A foreign key to a Standard Concept identifier for the Unit associated with the numeric quantity of the Specimen collection.
+937	unit_source_value	41	0	0		The information about the Unit as detailed in the source.
+938	admitting_source_concept_id	11	0	0		
+938	admitting_source_value	41	0	0		The source code for the admitting source as it appears in the source data.
+938	care_site_id	11	0	0		A foreign key to the care site in the care site table that was associated with the visit detail.
+938	discharge_to_concept_id	11	0	0		
+938	discharge_to_source_value	41	0	0		The source code for the discharge disposition as it appears in the source data.
+938	eid	11	0	0		A foreign key identifier to the Person for whom the visit detail is recorded.
+938	preceding_visit_detail_id	11	0	0		
+938	provider_id	11	0	0		A foreign key to the provider in the provider table who was associated with the visit detail.
+938	visit_detail_concept_id	11	0	0		
+938	visit_detail_end_date	51	0	0		The end date of the visit detail.
+938	visit_detail_end_datetime	61	0	0		The date and time of the visit detail end.
+938	visit_detail_id	11	0	0		A system-generated unique identifier for each detail of a Person's visit or encounter at a healthcare provider.
+938	visit_detail_parent_id	11	0	0		
+938	visit_detail_source_concept_id	11	0	0		A foreign key to a Concept that refers to the code used in the source.
+938	visit_detail_source_value	11	0	0		The source code for the visit detail as it appears in the source data.
+938	visit_detail_start_date	11	0	0		The start date of when the visit detail.
+938	visit_detail_start_datetime	61	0	0		The date and time of when the visit detail started.
+938	visit_detail_type_concept_id	11	0	0		
+938	visit_occurrence_id	11	0	0		
+939	admitting_source_concept_id	11	0	0		A foreign key to the predefined concept in the Place of Service Vocabulary reflecting the admitting source for a visit.
+939	admitting_source_value	41	0	0		The source code for the admitting source as it appears in the source data.
+939	care_site_id	11	0	0		A foreign key to the care site in the care site table that was visited.
+939	discharge_to_concept_id	11	0	0		A foreign key to the predefined concept in the Place of Service Vocabulary reflecting the discharge disposition (destination) for a visit.
+939	discharge_to_source_value	41	0	0		The source code for the discharge disposition as it appears in the source data.
+939	eid	11	0	0		A foreign key identifier to the Person for whom the visit is recorded.
+939	preceding_visit_occurrence_id	11	0	0		A foreign key to the VISIT_OCCURRENCE table record of the visit immediately preceding this visit.
+939	provider_id	11	0	0		A foreign key to the provider in the provider table who was associated with the visit.
+939	visit_concept_id	11	0	0		A foreign key that refers to a visit Concept identifier in the Standardized Vocabularies.
+939	visit_end_date	51	0	0		The end date of the visit. If this is a one-day visit the end date should match the start date.
+939	visit_end_datetime	61	0	0		The date and time of the visit end.
+939	visit_occurrence_id	11	0	0		A unique identifier for each Person's visit or encounter at a healthcare provider.
+939	visit_source_concept_id	11	0	0		A foreign key to a Concept that refers to the code used in the source.
+939	visit_source_value	11	0	0		The source code for the visit as it appears in the source data.
+939	visit_start_date	51	0	0		The start date of the visit.
+939	visit_start_datetime	61	0	0		The date and time of the visit started.
+939	visit_type_concept_id	11	0	0		A foreign key to the predefined Concept identifier in the Standardized Vocabularies reflecting the type of source data from which the visit record is derived.
+1051	blood_group	41	169	1		Blood group of participant. The blood group has been extracted from imputed genotyped data (Showcase Data-Field 23165).
+1051	eid	11	0	0		Encoded participant identifier. 
+1053	acute	11	12	6		Whether the requesting organisation is from an organisation known to provide acute (emergency) care. Used in the construction of the 'origin' field.
+1053	eid	11	0	0		Encoded participant identifier. 
+1053	hosaq	11	21	7		Whether the sample is recorded as being hospital acquired. Used in the construction of the 'origin' field.
+1053	laboratory	11	1856	3		The laboratory that processed the sample. 
+1053	origin	11	1855	4		Field (possibly) indicating whether the patient was an inpatient when the sample was taken. This is based on information provided on the specimen request form and may not be reliable. See the COVID-19 test page on Showcase Essential Information for information about how this field is constructed by the data provider.
+1053	reqorg	11	3311	8		Requesting organisation description. Used in the construction of the 'origin' field.
+1053	result	11	1854	5		Whether the sample was reported as positive or negative for SARS-CoV-2. 
+1053	specdate	51	0	1		Date the specimen was taken. 
+1053	spectype	11	1853	2		Specimen type. "Specimen type as recorded on the laboratory request form (e.g. nasal, nose and throat, sputum)"
+1054	eid	11	0	0		Encoded participant identifier. 
+1054	laboratory	41	3504	2		The laboratory that submitted the sample
+1054	locauth	11	110	3		Local authority of the test site
+1054	result	11	1854	5		Whether the sample was reported as positive or negative for SARS-CoV-2. 
+1054	source	11	111	4		Specimen source type
+1054	specdate	51	0	1		Date the specimen was taken. 
+1055	eid	11	0	0		Encoded participant identifier. 
+1055	laboratory	11	3500	3		The laboratory that processed the sample. 
+1055	pattype	11	3501	4		Patient type description. 
+1055	perstype	11	3502	5		COVID test unit person type description. "Description of person tested (e.g. essential worker, inpatient, healthcare worker, education worker). Also provides additional information on whether the individual was asymptomatic or immunocompromised"
+1055	result	11	1854	6		Whether the sample was reported as positive or negative for SARS-CoV-2. 
+1055	specdate	51	0	1		Date the specimen was taken. 
+1055	spectype	11	3503	2		Specimen type. "Specimen type (e.g. nose swab,  throat swab)"
+1058	date_of_death	51	0	4		Date of death. Date of death
+1058	dsource	41	1970	2		Data source. The data source is either E/W for England & Wales or SCOT for Scotland.
+1058	eid	11	0	0		Encoded participant identifier. This identifier is the same encoded id used in the main dataset.
+1058	ins_index	11	0	1		Instance index. A numerical index used to distinguish the cases where we have multiple death records for a participant.
+1058	source	11	261	3		Data format. The particular data format in which this record was received.
+1059	arr_index	11	0	2		Array index. A numerical index which together with the eid & ins_index uniquely identifies this record, i.e. eid, ins_index & arr_index together form a primary key for this table.
+1059	cause_icd10	41	19	4		Cause of death - ICD-10. Coded according to the International Classification of Diseases version 10 (ICD-10).
+1059	eid	11	0	0		Encoded participant identifier. This identifier is the same encoded id used in the main dataset.
+1059	ins_index	11	0	1		Instance index. A numerical index which together with the eid uniquely identifies the corresponding record in the main DEATH table.
+1059	level	11	831	3		Classification of cause of death. Whether the cause of death is the primary cause or a contributory cause.
+1060	data_provider	11	626	1		Data provider. Whether the record originates from England (Vision), Scotland, England (TPP) or Wales.
+1060	eid	11	0	0		Encoded participant identifier. 
+1060	event_dt	51	819	2		Date clinical code was entered. Special coded values are given in Coding 819.
+1060	read_2	41	0	3		Read v2 code. Read version 2 code.
+1060	read_3	41	0	4		CTV3 (Read v3) code. Clinical Terms Version 3 code.
+1060	value1	41	0	5		Value recorded 1. 
+1060	value2	41	0	6		Value recorded 2. 
+1060	value3	41	0	7		Value recorded 3. 
+1061	data_provider	11	626	1		Data provider. Whether the record originates from England (Vision), Scotland, England (TPP) or Wales.
+1061	deduct_date	51	819	3		Deduction date. The date of a participant's removal from GP list. Special coded values are given in Coding 819.
+1061	eid	11	0	0		Encoded participant identifier. 
+1061	reg_date	51	819	2		Registration date. Special coded values are given in Coding 819.
+1062	bnf_code	41	0	4		BNF code. British National Formulary code.
+1062	data_provider	11	626	1		Data provider. Whether the record originates from England (Vision), Scotland, England (TPP) or Wales.
+1062	dmd_code	41	0	5		dm+d code. Dictionary of medicines and devices (dm+d) code.
+1062	drug_name	41	0	6		Drug name. 
+1062	eid	11	0	0		Encoded participant identifier. 
+1062	issue_date	51	819	2		Date prescription was issued. Special coded values are given in Coding 819.
+1062	quantity	41	0	7		Quantity issued. 
+1062	read_2	41	0	3		Read v2 code. Read version 2 code.
+1063	admidate	51	0	21		Date of admission to hospital. 
+1063	admimeth	11	0	23		Methods of admission to hospital. Method of admission to hospital identifies how a patient was admitted, e.g. an elective admission from a waiting list or an emergency admission, etc.
+1063	admimeth_uni	11	264	22		Methods of admission to hospital (recoded). A field providing a unified coding across the various sources for the admimeth field.
+1063	admisorc	11	0	25		Sources of admission to hospital. Source of admission identifies whether a patient came to the hospital from their usual place of residence or elsewhere.
+1063	admisorc_uni	11	265	24		Sources of admission to hospital (recoded). A field providing a unified coding across the various sources for the admisorc field.
+1063	bedyear	11	0	7		Duration of episode within HES data year. 
+1063	carersi	11	227	41		Carer support indicator. Carer support indicator identifies whether a carer is available to the patient at their usual place of residence.
+1063	category	11	201	18		Administrative and legal status of patient. Administrative and legal status identifies the type of patient and whether they have been formally detained under the Mental Health Act or not.
+1063	classpat	11	0	28		Patient classification on admission. Patient classification on admission identifies the type of patient, e.g. whether they are a regular attender or a maternity admission, etc.
+1063	classpat_uni	11	266	27		Patient classification on admission (recoded). A field providing a unified coding across the various sources for the classpat field.
+1063	disdate	51	0	36		Date of discharge from hospital. 
+1063	disdest	11	0	40		Destination on discharge from hospital. Destination on discharge identifies whether a patient was due to return to their usual place of residence on leaving hospital, or whether they were due to go elsewhere.
+1063	disdest_uni	11	267	39		Destination on discharge from hospital (recoded). A field providing a unified coding across the various sources for the disdest field.
+1063	dismeth	11	0	38		Method of discharge from hospital. Method of discharge from hospital identifies how a patient was discharged i.e. whether this was on clinical advice, the patient died in hospital or the patient discharged themselves.
+1063	dismeth_uni	11	268	37		Method of discharge from hospital (recoded). A field providing a unified coding across the various sources for the dismeth field.
+1063	dsource	41	1970	2		Inpatient record origin. Either HES (England), PEDW (Wales) or SMR (Scotland). This can affect the coding used for some data fields.
+1063	eid	11	0	0		Encoded participant identifier. This identifier is the same encoded id used in the main dataset.
+1063	elecdate	51	0	19		Date of decision to admit to hospital. Not available for dsource='PEDW', or for source = 68 (one of the formats for dsource='SMR').
+1063	elecdur	11	0	20		Waiting time for hospital admission. Not available for dsource='PEDW', or for source = 68 (one of the formats for dsource='SMR').
+1063	epidur	11	0	6		Duration of episode. The difference in days between the episode start date and the episode end date, where both are given.
+1063	epiend	51	0	5		Episode end date. 
+1063	epiorder	11	236	10		Episode order. The position of this episode within a spell (starting at 1).
+1063	epistart	51	0	4		Episode start date. 
+1063	epistat	11	237	8		Episode status. Whether the episode had finished before the end of the HES data-year. An unfinished episode would be replaced by its finished version when the data is next updated.
+1063	epitype	11	238	9		Episode type. Hospital episode type identifies whether the period of care in hospital was, for example, a general episode, a maternity episode or a psychiatric episode.
+1063	firstreg	11	204	26		First regular day or night of admission to hosp. 
+1063	gpprpct	41	239	17		PCT where patients GP was registered. The PCT code identifies the administrative body where the patients GP practice is registered.
+1063	ins_index	11	0	1		Instance index. A numerical index which together with the eid uniquely identifies this record, i.e. eid & ins_index together form a primary key for this table. The ins_index will not generally index records in chronological order, and may contain gaps in the numbering if records were added and then later removed for some reason.
+1063	intmanag	11	0	30		Intended management of patient. The intended management of a patient is their planned duration of hospital stay, i.e. whether an overnight stay was anticipated or not.
+1063	intmanag_uni	11	271	29		Intended management of patient (recoded). A field providing a unified coding across the various sources for the intmanag field.
+1063	mainspef	41	0	32		Main speciality of consultant. The main speciality of the consultant is the specialism under which the consultant is contracted e.g. cardiology or geriatric medicine, etc.
+1063	mainspef_uni	11	270	31		Main speciality of consultant (recoded). A field providing a unified coding across the various sources for the mainspef field.
+1063	operstat	11	207	35		Operation status. Whether an operation/procedure was carried out as part of this episode.
+1063	pctcode	41	239	16		Current PCT responsible for patient. The PCT code identifies the administrative body responsible for the patient.
+1063	source	11	263	3		Inpatient record format. A finer split of the format of data released from each dsource above. This can also affect the coding used for some data fields.
+1063	spelbgin	11	234	13		Beginning of spell indicator. An indicator that this episode is the first in a spell. Only present in English inpatient data (dsource = HES).
+1063	speldur	11	0	15		Duration of spell. 
+1063	spelend	41	235	14		End of spell indicator. An indicator that this episode is the last in a spell. Only present in English inpatient data (dsource = HES).
+1063	spell_index	11	0	11		Spell index. A numerical index indicating which spell this episode belongs to (where possible). Spells will not generally be indexed in chronological order.
+1063	spell_seq	11	0	12		Spell sequence. A numerical index, starting from 0, giving the chronological position within its spell that this episode occupies (where possible).
+1063	tretspef	41	0	34		Treatment speciality of consultant. The treatment speciality of the consultant is the specialism under which the consultant was working e.g. cardiology or geriatric medicine, etc.
+1063	tretspef_uni	11	269	33		Treatment speciality of consultant (recoded). A field providing a unified coding across the various sources for the tretspef field.
+1065	acardsupdays	11	7006	18		Advanced cardiovascular support days. Number of days of advanced cardiovascular support. For the definition of advanced cardiovascular support see Resource 141140 or the NHS CC Data Dictionary.
+1065	aressupdays	11	7006	16		Advanced respiratory support days. Number of days of advanced respiratory support. For the definition of advanced respiratory support see Resource 141140 or the NHS CC Data Dictionary.
+1065	arr_index	11	0	2		Array index. A numerical index which together with the eid and ins_index uniquely identifies this record, i.e. eid, ins_index and arr_index together form a primary key for this table.
+1065	bcardsupdays	11	7006	17		Basic cardiovascular support days. Number of days of basic cardiovascular support.  For the definition of basic cardiovascular support see Resource 141140 or the NHS CC Data Dictionary.
+1065	bressupdays	11	7006	15		Basic respiratory support days. Number of days of basic respiratory support. For the definition of basic respiratory support see Resource 141140 or the NHS CC Data Dictionary.
+1065	ccadmisorc	11	7004	7		Source of admission to critical care. Whether the patient originated from the same or a different NHS hospital, an independent hospital provider, a non-hospital UK source, or a non-UK source.
+1065	ccadmitype	11	7003	6		Critical care admission type. Whether a critical care period was initiated as a result of a non-emergency treatment plan, for example, for non-elective surgery. This relates only to the period of critical care and not to the nature of the hospital admission.
+1065	ccapcrel	11	7012	14		Critical care APC relationship id. A comparison of the dates of the critical care period and those of the associated admitted patient care episode.
+1065	ccdisdate	51	0	9		Date of discharge from critical care. Discharge date from unit if alive, date of death or date of declaration of brain stem death.
+1065	ccdisdest	11	7010	12		Critical care discharge destination. Whether the patient was discharged to the same or a different NHS hospital, an independent hospital provider, a non-hospital UK destination or to a non-UK source, or whether the patient died in the unit.
+1065	ccdisloc	11	7011	13		Critical care discharge location. The principal location that the patient was discharged to for further care at the end of the critical care period.
+1065	ccdisrdydate	51	0	10		Ready-to-discharge date from critical care. The date on which the patient has been declared clinically ready for discharge or transfer from the clinical care period.
+1065	ccdisstat	11	7009	11		Critical care discharge status. The patient status at time of discharge, for example whether they were fully ready for discharge, whether their discharge was early or delayed, whether they self-discharged, or whether they died rather than being discharged (and their organ-donor status if so).
+1065	cclev2days	11	7006	25		Critical care level 2 days. Total calendar days during which level 2 care alone was provided during the period.
+1065	cclev3days	11	7006	26		Critical care level 3 days. Total calendar days during which level 3 care alone was provided during the period.
+1065	ccsorcloc	11	7005	8		Location of the source of admission. The type of location the patient was in prior to the start of the critical care period.
+1065	ccstartdate	51	0	5		Date on which the critical care period started. 
+1065	ccunitfun	11	7001	27		Critical care unit function. The type of area to which the patient was admitted during a critical care period. This is the principal clinical service provided within the ward.
+1065	dermsupdays	11	7006	22		Dermatological support days. Number of days of dermatological support. For the definition of dermatological support see Resource 141140 or the NHS CC Data Dictionary.
+1065	dsource	41	1970	3		Critical care record origin. Currently only HES (England).
+1065	eid	11	0	0		Encoded participant identifier. This identifier is the same encoded id used in the main dataset.
+1065	gisupdays	11	7006	21		Gastrointestinal support days. Number of days of gastrointestinal support. For the definition of gastrointestinal support see Resource 141140 or the NHS CC Data Dictionary.
+1065	ins_index	11	0	1		Instance index. A numerical index which together with the eid uniquely identifies the corresponding record in the main HESIN table.
+1065	liversupdays	11	7006	23		Liver support days. Number of days of liver support. For the definition of liver support see Resource 141140 or the NHS CC Data Dictionary.
+1065	neurosupdays	11	7006	20		Neurological support days. Number of days of neurological support.  For the definition of neurological support see Resource 141140 or the NHS CC Data Dictionary.
+1065	orgsupmax	11	0	24		Organ support maximum. Maximum number of organ systems supported at any one time, at any point in the critical care period (note that both basic and advanced categories cannot be counted at the same time). This may not be the same as the total number of organs supported throughout the critical care admission. The minimum for this variable is 0 and the maximum is 7.
+1065	rensupdays	11	7006	19		Renal support days. Number of days of renal support in the context of critical illness. For the definition of renal support see Resource 141140 or the NHS CC Data Dictionary.
+1065	source	11	263	4		Critical care record format. A finer split of the format of data released from each dsource. Currently only 60.
+1065	unitbedconfig	11	7002	28		Critical care unit bed configuration. The composition of bed types for the critical care unit.
+1066	arr_index	11	0	2		Array index. A numerical index which together with the eid & ins_index uniquely identifies this record, i.e. eid, ins_index & arr_index together form a primary key for this table.
+1066	biresus	11	223	8		Resuscitation method. Resuscitation method identifies whether any procedures were required to get the baby breathing normally; for example: positive pressure (nil/by mask/by endotracheal tube) and whether drugs were administered.
+1066	birordr	41	213	6		Birth order. No longer available for source=71 (April 2018) onwards.
+1066	birstat	11	219	7		Status of baby at birth. Status baby identifies whether the baby was born alive or stillborn (ante-partum or intra-partum). No longer available for source=71 (April 2018) onwards.
+1066	birweight	11	214	10		Weight of baby. No longer available for source=71 (April 2018) onwards.
+1066	delmeth	41	216	5		Delivery method. Delivery method identifies the way in which the baby was born; for example: spontaneous, forceps, breech or caesarean section.
+1066	delplac	11	217	4		Delivery place. Delivery place identifies where the birth took place; for example: NHS hospital (with ward information) or at a domestic address.
+1066	delstat	11	225	11		Status of person conducting delivery. Status of person conducting delivery identifies whether a doctor, GP or midwife was present at the birth.
+1066	eid	11	0	0		Encoded participant identifier. This identifier is the same encoded id used in the main dataset.
+1066	gestat	11	218	3		Number of weeks of gestation. 
+1066	ins_index	11	0	1		Instance index. A numerical index which together with the eid uniquely identifies the corresponding record in the main HESIN table and the HESIN_MATERNITY table.
+1066	sexbaby	11	224	9		Sex of baby. Sex of baby determines whether the baby was male, female or indeterminate. No longer available for source=71  (April 2018) onwards.
+1067	arr_index	11	0	2		Array index. A numerical index which together with the eid & ins_index uniquely identifies this record, i.e. eid, ins_index & arr_index together form a primary key for this table.
+1067	diag_icd10	41	19	6		Diagnoses - ICD10. Diagnoses are coded according to the International Classification of Diseases version-10 (ICD 10).
+1067	diag_icd10_nb	41	41	7		Diagnoses - ICD10 addendum. 
+1067	diag_icd9	41	87	4		Diagnoses - ICD9. Diagnoses are coded according to the International Classification of Diseases version-9 (ICD 9).
+1067	diag_icd9_nb	41	41	5		Diagnoses - ICD9 addendum. 
+1067	eid	11	0	0		Encoded participant identifier. This identifier is the same encoded id used in the main dataset.
+1067	ins_index	11	0	1		Instance index. A numerical index which together with the eid uniquely identifies the corresponding record in the main HESIN table.
+1067	level	11	926	3		Classification of diagnosis. The primary diagnosis is the main condition treated or investigated during the relevant episode. A secondary diagnosis is a clinically relevant contributory factor or issue that impacts on the primary diagnosis (including chronic conditions). An external cause is an environmental event causing injury, poisoning or other type of adverse effect.
+1068	anagest	11	0	5		Gestation period at first antenatal assessment. 
+1068	anasdate	51	0	4		Date of first antenatal assessment. 
+1068	antedur	11	0	6		Antenatal days of stay. 
+1068	delchang	11	215	8		Reason for changing delivery place. Reason for changing delivery place identifies whether a decision was made during pregnancy or labour, and the reasons for the change (address change, clinical or other reasons).
+1068	delinten	11	217	7		Intended delivery place. Intended delivery place identifies where the birth was planned to take place; for example: NHS hospital (with ward information) or at a domestic address.
+1068	delonset	11	220	11		Delivery onset method. Delivery onset method identifies whether the onset of labour was spontaneous or clinically induced.
+1068	delposan	11	212	10		Anaesthetic delivered post delivery. This field identifies, for example, whether a general anaesthetic or an epidural was administered after labour or not.
+1068	delprean	11	212	9		Anaesthetic administered during delivery. This field identifies, for example, whether a general anaesthetic or an epidural was administered either before or during labour.
+1068	eid	11	0	0		Encoded participant identifier. This identifier is the same encoded id used in the main dataset.
+1068	ins_index	11	0	1		Instance index. A numerical index which together with the eid uniquely identifies this record, i.e. eid & ins_index together form a primary key for this table. The ins_index will not generally index records in chronological order. The record in HESIN corresponding to a particular HESIN_MATERNITY record will have the same eid & ins_index.
+1068	matage	11	0	13		Mother age on date of delivery. 
+1068	numbaby	11	221	2		Number of babies delivered from single pregnancy. No longer available for source=71 (April 2018) onwards.
+1068	numpreg	11	222	3		Number of previous pregnancies.
+1068	postdur	11	0	12		Postnatal stay. 
+1069	arr_index	11	0	2		Array index. A numerical index which together with the eid & ins_index uniquely identifies this record, i.e. eid, ins_index & arr_index together form a primary key for this table.
+1069	eid	11	0	0		Encoded participant identifier. This identifier is the same encoded id used in the main dataset.
+1069	ins_index	11	0	1		Instance index. A numerical index which together with the eid uniquely identifies the corresponding record in the main HESIN table.
+1069	level	11	925	3		Classification of operation/procedure. 
+1069	opdate	51	0	4		Date of operation. 
+1069	oper3	41	259	5		Operative procedures - OPCS3. Operative procedures are coded according to the Office of Population Censuses and Surveys Classification of Interventions and Procedures, version 3 (OPCS-3).
+1069	oper3_nb	41	0	6		Operative Procedures - OPCS3 addendum. 
+1069	oper4	41	240	7		Operative procedures - OPCS4. Operative procedures are coded according to the Office of Population Censuses and Surveys Classification of Interventions and Procedures, version 4 (OPCS-4).
+1069	oper4_nb	41	0	8		Operative Procedures - OPCS4 addendum. 
+1069	posopdur	11	0	9		Duration of post-operative stay. 
+1069	preopdur	11	0	10		Duration of pre-operative stay. 
+1070	admistat	11	0	7		History of psychiatric care on admission. History of psychiatric care identifies whether a patient has previously had a psychiatric episode in hospital or not.
+1070	admistat_uni	11	156	6		History of psychiatric care on admission (recoded). History of psychiatric care identifies whether a patient has previously had a psychiatric episode in hospital or not.
+1070	detncat	11	0	3		Detention category. Detention category identifies the legislation under which the patient was detained.
+1070	detncat_uni	11	155	2		Detention category (recoded). Detention category identifies the legislation under which the patient was detained.
+1070	detndate	51	0	4		Detention date. 
+1070	eid	11	0	0		Encoded participant identifier. This identifier is the same encoded id used in the main dataset.
+1070	ins_index	11	0	1		Instance index. A numerical index which together with the eid uniquely identifies this record, i.e. eid & ins_index together form a primary key for this table. The ins_index will not generally index records in chronological order. The record in HESIN corresponding to a particular HESIN_PSYCH record will have the same eid & ins_index.
+1070	leglstat	11	231	8		Legal status of patient. Legal status determines whether the patient was formally or informally detained and the relevant section of the Mental Health Act under which they were detained.
+1070	mentcat	11	228	5		Mental category of patient. The mental categories are in accordance with the Mental Health Act 1983; for example, mental illness, (severe) mental impairment, psychopathic disorder.
+1071	eid	11	0	0		Encoded participant identifier.
+1071	ins_index	11	0	0		Instance index. A numerical index used to distinguish cases.
+1071	lod	31	0	0	NPX	Plate limit of detection NPX for an assay.
+1071	plate	41	0	0		Shipment plate containing sample aliquot used for Olink Explore analysis.
+1071	protein_id	11	143	0		Encoded ID linking to UniProt Gene name and Protein name.
+1071	result	31	0	0	NPX	Normalized Protien Expression result.
+1071	well	41	0	0		Position of well containing sample aliquot used for Olink Explore analysis.
+1072	eid	11	0	0		Encoded participant identifier.
+1072	ins_index	11	0	0		Instance index. A numerical index used to distinguish cases.
+1072	protein_id	11	143	0		Encoded ID linking to UniProt Gene name and Protein name.
+1072	result	31	0	0	NPX	Normalized Protien Expression result.

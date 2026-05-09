@@ -1,0 +1,724 @@
+{
+  "downloaded_at_utc": "2026-05-07T23:37:22.701132+00:00",
+  "source_scope": "Public metadata only. This download intentionally excludes participant-level UK Biobank data.",
+  "official_showcase": {
+    "schema_catalogue": {
+      "file": "data/raw/ukbiobank/showcase/pages/schema_catalogue.html",
+      "url": "https://biobank.ndph.ox.ac.uk/showcase/schema.cgi",
+      "bytes": 6306,
+      "sha256": "f25d586fd79cf9509522d2270756e7ca8241596d3eacb2cd98d9245140c7ae3a",
+      "downloaded_this_run": false,
+      "schema_count": 28
+    },
+    "schema_download_url_template": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id={schema_id}",
+    "schema_count": 28,
+    "schemas": [
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/001_data_field_properties.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=1",
+        "bytes": 4164390,
+        "sha256": "2d7b5f394457002a5a41e278074d64c3b56811f4c50fd916599145aa10210cc6",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 11821,
+        "schema_id": "1",
+        "title": "Data field properties"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/002_encoding_dictionaries.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=2",
+        "bytes": 77591,
+        "sha256": "0d90138f567f6fb22675e44434cbbc4c2f7e3c208d83cf7609963cdca88dc7ef",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 858,
+        "schema_id": "2",
+        "title": "Encoding dictionaries"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/003_categories_used_to_group_data_fields_and_other_objects_on_showcase_interface.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=3",
+        "bytes": 176100,
+        "sha256": "1c50d4e998a57084e9a8fd67021c9aa4c72eedf17f081f5ec69ead0524b46c9d",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 410,
+        "schema_id": "3",
+        "title": "Categories used to group data fields and other objects on Showcase interface"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/004_returned_datasets_from_applications.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=4",
+        "bytes": 723329,
+        "sha256": "b9ea0b7e7bd9eede59bc4e4d162d19f97e46fb22699d423197a0b8bbad7c4a01",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 601,
+        "schema_id": "4",
+        "title": "Returned datasets from Applications"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/005_values_for_simple_integer_encodings.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=5",
+        "bytes": 664626,
+        "sha256": "19d1a4d63d3d507c3bbf208369d766059c40ac0f209a5fbf7b90306128c48088",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 18078,
+        "schema_id": "5",
+        "title": "Values for simple integer encodings"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/006_values_for_simple_string_encodings.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=6",
+        "bytes": 18783925,
+        "sha256": "f9bfe0434650e48c271d4c915353aa599991e223917e0d0e1564d2504629d2fb",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 439346,
+        "schema_id": "6",
+        "title": "Values for simple string encodings"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/007_values_for_simple_real_floating_point_encodings.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=7",
+        "bytes": 790,
+        "sha256": "99eb94602c54e72dc18e6a5cf305fe049cacb71e46121e6554db4be43dcaf524",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 17,
+        "schema_id": "7",
+        "title": "Values for simple real (floating-point) encodings"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/008_values_for_simple_date_encodings.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=8",
+        "bytes": 1041,
+        "sha256": "003465beaa2f72c83600b3cfa6be69af9635c691bac3635a493fa18943c7448a",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 18,
+        "schema_id": "8",
+        "title": "Values for simple date encodings"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/009_instancing_dictionaries.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=9",
+        "bytes": 1530,
+        "sha256": "d4177566873c9b8558e6a378d4dac2b050044b1f8a09461541e3ab064e9ffcd4",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 12,
+        "schema_id": "9",
+        "title": "Instancing dictionaries"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/010_values_for_instances.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=10",
+        "bytes": 1415,
+        "sha256": "f9ad2599b172ed34430cf89dab29070ffbd769091820e9a5182369808ed658f5",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 33,
+        "schema_id": "10",
+        "title": "Values for instances"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/011_values_for_hierarchical_integer_encodings.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=11",
+        "bytes": 1468003,
+        "sha256": "d7ef33d2825a5668b2825786ca2720ecd7ed5a18c21696e4f05e0d357bd08f20",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 28900,
+        "schema_id": "11",
+        "title": "Values for hierarchical integer encodings"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/012_values_for_hierarchical_string_encodings.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=12",
+        "bytes": 3455271,
+        "sha256": "f2eb7023dc5441bb4821a1b2bd2378b92ff30612d9d1b0065e5008d6b8f4e15d",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 46927,
+        "schema_id": "12",
+        "title": "Values for hierarchical string encodings"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/013_category_browse_tree_structure.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=13",
+        "bytes": 5084,
+        "sha256": "c2a09cf905c4e67ccc2b76b62ad73851e77e75a28d2c841b0d1f9fd9c6ef829f",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 362,
+        "schema_id": "13",
+        "title": "Category browse tree structure"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/014_data_field_recommendations.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=14",
+        "bytes": 21764,
+        "sha256": "a6a3acb8210b6d82af7902cf26b47210cd6d5edaefec361903e7e472fb211969",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 1975,
+        "schema_id": "14",
+        "title": "Data field recommendations"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/015_genotyped_snps.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=15",
+        "bytes": 69017336,
+        "sha256": "78c166a194558cf90abd40721da8586b1f442610753ea98d03f29e366950a42e",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 847441,
+        "schema_id": "15",
+        "title": "Genotyped SNPs"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/016_data_field_summary.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=16",
+        "bytes": 643792,
+        "sha256": "69c3db669c96723a7014a58ed1989283024856e493b36a850b239ba0dbf9de4c",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 11646,
+        "schema_id": "16",
+        "title": "Data field summary"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/017_record_tables_available_via_data_portal.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=17",
+        "bytes": 12367,
+        "sha256": "7eb530d9c9a0c50e3239c482288ad7b00656f7fd6349646b15b42c530244ce84",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 35,
+        "schema_id": "17",
+        "title": "Record tables available via data portal"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/018_columns_of_data_in_record_tables.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=18",
+        "bytes": 54345,
+        "sha256": "651b4d6daa1a1bad15e602b17a7c6ac417d435574a49b47fb29cb384c24b9ffa",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 417,
+        "schema_id": "18",
+        "title": "Columns of data in Record tables"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/019_publications.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=19",
+        "bytes": 28352583,
+        "sha256": "f1177b72ef9ca0498db1f12abd64f6869b2d0a34986cdaefb7239e77f6802697",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 12009,
+        "schema_id": "19",
+        "title": "Publications"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/020_values_for_simple_time_encodings.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=20",
+        "bytes": 167,
+        "sha256": "f35a9e7438960175ae6e1dda9ff5f514546beba3da68c7412db4960aebc120ca",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 3,
+        "schema_id": "20",
+        "title": "Values for simple time encodings"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/021_related_data_field_linkages.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=21",
+        "bytes": 620400,
+        "sha256": "848f6b531845ec7f329568d439c92495dd10a06a1aaaee9673ba12c723be2ff9",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 9280,
+        "schema_id": "21",
+        "title": "Related data field linkages"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/022_resources_internal.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=22",
+        "bytes": 368480,
+        "sha256": "fe41aa8ee2159352bd41af8581d89c256fb96f617844d12b479707298aec7dcf",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 1711,
+        "schema_id": "22",
+        "title": "Resources (internal)"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/023_resources_external.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=23",
+        "bytes": 3310,
+        "sha256": "db909b84a51e0ae607d08afdf299da8215bc8bb1678632161f8a5b7f1cafa81b",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 9,
+        "schema_id": "23",
+        "title": "Resources (external)"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/024_links_between_applications_and_publications.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=24",
+        "bytes": 118694,
+        "sha256": "c276bd2af9c82f5586cbddcb2dfc0d88f8264392fba9e2cf4e2545d9e967f91b",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 10307,
+        "schema_id": "24",
+        "title": "Links between Applications and Publications"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/025_links_between_fields_and_resources.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=25",
+        "bytes": 25065,
+        "sha256": "dba2cb944470e60778d12dc343ee03f50b0a87ac1b57ed6396fb26cab30332ab",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 2170,
+        "schema_id": "25",
+        "title": "Links between Fields and Resources"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/026_links_between_categories_and_resources.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=26",
+        "bytes": 7228,
+        "sha256": "eca12b1edc483b87a9b2b122bdfce87c4d4dbb004c27050dfd22e34f01148e64",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 644,
+        "schema_id": "26",
+        "title": "Links between Categories and Resources"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/027_applications_researcher_projects.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=27",
+        "bytes": 12703909,
+        "sha256": "7d5440d2ace977e30f3f3eef4dfe3e73c5c1a6f40bd4318ae5bd0cd031ceb464",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 33851,
+        "schema_id": "27",
+        "title": "Applications (researcher projects)"
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/schemas/999_schema_provided_for_the_showcase_service.tsv",
+        "url": "https://biobank.ndph.ox.ac.uk/ukb/scdown.cgi?fmt=txt&id=999",
+        "bytes": 8332,
+        "sha256": "7eabbd74f39bdcc6cf235ac26c0447f7b9871603d5e47c185ae284a885f019f6",
+        "downloaded_this_run": false,
+        "row_count_excluding_header": 28,
+        "schema_id": "999",
+        "title": "Schema provided for the Showcase service"
+      }
+    ],
+    "page_snapshots": [
+      {
+        "url": "https://www.ukbiobank.ac.uk/projects/systematic-identification-of-potential-lifespan-modulating-drugs-and-long-term-health-outcomes-in-the-uk-biobank/",
+        "status": "error",
+        "error": "HTTP 403: Forbidden",
+        "key": "ukb_project_1246676",
+        "note": "Approved UK Biobank project page for lifespan-modulating drug discovery."
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/pages/field_42039_gp_prescriptions.html",
+        "url": "https://biobank.ndph.ox.ac.uk/showcase/field.cgi?id=42039",
+        "bytes": 7321,
+        "sha256": "30efe8c7de8f125db5c89dcdcfc2a7449b23a3243cac0c2a6affba2d8712d43f",
+        "downloaded_this_run": false,
+        "status": "downloaded",
+        "key": "data_field_42039_gp_prescriptions",
+        "note": "Data-Field 42039: GP prescription record availability."
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/pages/record_table_1062_gp_scripts.html",
+        "url": "https://biobank.ndph.ox.ac.uk/showcase/rectab.cgi?id=1062",
+        "bytes": 6256,
+        "sha256": "159f6d24abe0911a985cbeee3458feb421872ae4daf3f2f243c0a7dcf50faf13",
+        "downloaded_this_run": false,
+        "status": "downloaded",
+        "key": "record_table_1062_gp_scripts",
+        "note": "Record Table 1062: GP prescriptions."
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/pages/record_table_1058_death.html",
+        "url": "https://biobank.ndph.ox.ac.uk/showcase/rectab.cgi?id=1058",
+        "bytes": 5662,
+        "sha256": "7f4e5e2f3a4408aff0ed8d5f4fe597f21d47d03d3cd958fec2edf7a3290d842b",
+        "downloaded_this_run": false,
+        "status": "downloaded",
+        "key": "record_table_1058_death",
+        "note": "Record Table 1058: death records."
+      },
+      {
+        "file": "data/raw/ukbiobank/showcase/pages/record_table_1059_death_cause.html",
+        "url": "https://biobank.ndph.ox.ac.uk/showcase/rectab.cgi?id=1059",
+        "bytes": 5889,
+        "sha256": "0e61b9faa3a3879507538501bea647064ca9482887d908054f7eea86cf326ec2",
+        "downloaded_this_run": false,
+        "status": "downloaded",
+        "key": "record_table_1059_death_cause",
+        "note": "Record Table 1059: death causes."
+      }
+    ]
+  },
+  "github_discovery": {
+    "search": {
+      "file": "data/raw/ukbiobank/github/github_repository_search_results.json",
+      "downloaded_this_run": false,
+      "queries": [
+        {
+          "query": "UK Biobank Data Showcase",
+          "url": "https://api.github.com/search/repositories?q=UK+Biobank+Data+Showcase&sort=stars&order=desc&per_page=10",
+          "total_count": 2,
+          "items": [
+            {
+              "full_name": "biobankly/ukb-ontology",
+              "html_url": "https://github.com/biobankly/ukb-ontology",
+              "description": "UK Biobank Ontology Viewer with Showcase Data",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2024-12-10T23:57:06Z"
+            },
+            {
+              "full_name": "adswa/ohbm-2022",
+              "html_url": "https://github.com/adswa/ohbm-2022",
+              "description": "Sources for OHBM 2022 poster 2057 - \"FAIRly big: A framework for reproducible processing of large-scale data - a UK Biobank showcase\"",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2022-05-11T06:41:19Z"
+            }
+          ]
+        },
+        {
+          "query": "ukb fields",
+          "url": "https://api.github.com/search/repositories?q=ukb+fields&sort=stars&order=desc&per_page=10",
+          "total_count": 12,
+          "items": [
+            {
+              "full_name": "Trexgiantsalamanderdoublechickenturtle/ukb-ICD10-event-extraction",
+              "html_url": "https://github.com/Trexgiantsalamanderdoublechickenturtle/ukb-ICD10-event-extraction",
+              "description": "R functions for extracting diagnoses and first diagnosis dates from \u201cData-Field 41270\u201d and \u201cData-Field 41280\u201d in the UK Biobank, based on ICD-10 codes.",
+              "stars": 30,
+              "forks": 6,
+              "updated_at": "2026-03-23T14:01:15Z"
+            },
+            {
+              "full_name": "laleoarrow/leo.ukb",
+              "html_url": "https://github.com/laleoarrow/leo.ukb",
+              "description": "R toolkit for UK Biobank data analysis - field parsing, ICD processing, and clinical variable extraction",
+              "stars": 1,
+              "forks": 2,
+              "updated_at": "2026-04-18T09:21:51Z"
+            },
+            {
+              "full_name": "Kappers/ukb-fields",
+              "html_url": "https://github.com/Kappers/ukb-fields",
+              "description": "UK Biobank utilities for identifying fields and relevant metadata",
+              "stars": 1,
+              "forks": 0,
+              "updated_at": "2026-03-24T01:18:50Z"
+            },
+            {
+              "full_name": "deeprob/ukb_field_preprocess",
+              "html_url": "https://github.com/deeprob/ukb_field_preprocess",
+              "description": "One hot encode UKBiobank field values",
+              "stars": 1,
+              "forks": 0,
+              "updated_at": "2024-06-03T11:49:49Z"
+            },
+            {
+              "full_name": "deeprob/ukb-bulk-download",
+              "html_url": "https://github.com/deeprob/ukb-bulk-download",
+              "description": "Downloades bulk field data such as exome vcfs from UKBiobank",
+              "stars": 1,
+              "forks": 0,
+              "updated_at": "2024-11-18T12:00:04Z"
+            },
+            {
+              "full_name": "kunert/ukb-explore",
+              "html_url": "https://github.com/kunert/ukb-explore",
+              "description": "flask app to explore/search UK Biobank variables, and export CSV with selected field IDs",
+              "stars": 1,
+              "forks": 0,
+              "updated_at": "2022-05-29T15:17:41Z"
+            },
+            {
+              "full_name": "maiho24/UKB_Processor",
+              "html_url": "https://github.com/maiho24/UKB_Processor",
+              "description": "A Python tool for processing UK Biobank data files, with a focus on efficient data conversion and field extraction.",
+              "stars": 1,
+              "forks": 0,
+              "updated_at": "2026-04-24T01:29:34Z"
+            },
+            {
+              "full_name": "adamelkholyy/ukbython",
+              "html_url": "https://github.com/adamelkholyy/ukbython",
+              "description": "ukbython allows for easy phenotype derivation in Python with simple querying, filtering, and data retrieval from the UK Biobank RAP. Features eid and earliest diagnosis date retrieval across all major coding schemas along with fast lookup and retrieval of any field in the database and functionality for custom queries using SQL with PySpark.",
+              "stars": 1,
+              "forks": 0,
+              "updated_at": "2025-10-26T16:21:32Z"
+            },
+            {
+              "full_name": "asoroosh/UKBscrape",
+              "html_url": "https://github.com/asoroosh/UKBscrape",
+              "description": "Scrapes the UKBiobank website to provide a built-in dictionary for the field IDs. Also, check which of the variable are missed from your application to the website. ",
+              "stars": 0,
+              "forks": 2,
+              "updated_at": "2019-03-31T11:42:26Z"
+            },
+            {
+              "full_name": "deeprob/ukb_field_download",
+              "html_url": "https://github.com/deeprob/ukb_field_download",
+              "description": "Downloads UKBiobank field data along with their field value encodings",
+              "stars": 1,
+              "forks": 0,
+              "updated_at": "2026-04-13T00:48:31Z"
+            }
+          ]
+        },
+        {
+          "query": "ukb metadata",
+          "url": "https://api.github.com/search/repositories?q=ukb+metadata&sort=stars&order=desc&per_page=10",
+          "total_count": 2,
+          "items": [
+            {
+              "full_name": "Kappers/ukb-fields",
+              "html_url": "https://github.com/Kappers/ukb-fields",
+              "description": "UK Biobank utilities for identifying fields and relevant metadata",
+              "stars": 1,
+              "forks": 0,
+              "updated_at": "2026-03-24T01:18:50Z"
+            },
+            {
+              "full_name": "xlecours/ukbiobank_metadata_workout",
+              "html_url": "https://github.com/xlecours/ukbiobank_metadata_workout",
+              "description": null,
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2020-03-04T19:51:40Z"
+            }
+          ]
+        },
+        {
+          "query": "ukbtools",
+          "url": "https://api.github.com/search/repositories?q=ukbtools&sort=stars&order=desc&per_page=10",
+          "total_count": 4,
+          "items": [
+            {
+              "full_name": "kenhanscombe/ukbtools",
+              "html_url": "https://github.com/kenhanscombe/ukbtools",
+              "description": "An R package to manipulate and explore UK Biobank data",
+              "stars": 110,
+              "forks": 25,
+              "updated_at": "2026-04-19T12:12:23Z"
+            },
+            {
+              "full_name": "conda-forge/r-ukbtools-feedstock",
+              "html_url": "https://github.com/conda-forge/r-ukbtools-feedstock",
+              "description": "A conda-smithy repository for r-ukbtools.",
+              "stars": 0,
+              "forks": 1,
+              "updated_at": "2026-04-22T23:22:47Z"
+            },
+            {
+              "full_name": "cran/ukbtools",
+              "html_url": "https://github.com/cran/ukbtools",
+              "description": ":exclamation:\u00a0This\u00a0is\u00a0a\u00a0read-only\u00a0mirror\u00a0of\u00a0the\u00a0CRAN\u00a0R\u00a0package\u00a0repository.  ukbtools\u00a0\u2014\u00a0Manipulate\u00a0and\u00a0Explore\u00a0UK\u00a0Biobank\u00a0Data.\u00a0Homepage:\u00a0https://kenhanscombe.github.io/ukbtools/  ",
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2019-05-15T13:21:40Z"
+            },
+            {
+              "full_name": "CelMcC/UKBTools",
+              "html_url": "https://github.com/CelMcC/UKBTools",
+              "description": null,
+              "stars": 0,
+              "forks": 0,
+              "updated_at": "2020-12-01T14:31:13Z"
+            }
+          ]
+        },
+        {
+          "query": "ukbwranglr",
+          "url": "https://api.github.com/search/repositories?q=ukbwranglr&sort=stars&order=desc&per_page=10",
+          "total_count": 3,
+          "items": [
+            {
+              "full_name": "rmgpanw/ukbwranglr",
+              "html_url": "https://github.com/rmgpanw/ukbwranglr",
+              "description": "R package for UK Biobank data wrangling.",
+              "stars": 22,
+              "forks": 0,
+              "updated_at": "2026-03-23T14:44:18Z"
+            },
+            {
+              "full_name": "rmgpanw/ukbwranglrextra",
+              "html_url": "https://github.com/rmgpanw/ukbwranglrextra",
+              "description": "Extra add-on functions for ukbwranglr",
+              "stars": 2,
+              "forks": 0,
+              "updated_at": "2023-02-23T08:18:48Z"
+            },
+            {
+              "full_name": "rmgpanw/ukbwranglr_resources",
+              "html_url": "https://github.com/rmgpanw/ukbwranglr_resources",
+              "description": "Supporting resources for ukbwranglr",
+              "stars": 2,
+              "forks": 0,
+              "updated_at": "2022-10-05T14:34:51Z"
+            }
+          ]
+        },
+        {
+          "query": "UKBiobank",
+          "url": "https://api.github.com/search/repositories?q=UKBiobank&sort=stars&order=desc&per_page=10",
+          "total_count": 192,
+          "items": [
+            {
+              "full_name": "dnanexus/UKB_RAP",
+              "html_url": "https://github.com/dnanexus/UKB_RAP",
+              "description": "Access share reviewed code & Jupyter Notebooks for use on the UK Biobank (UKBB) Research Application Platform. Includes resources from DNAnexus webinars, online trainings and workshops.",
+              "stars": 257,
+              "forks": 64,
+              "updated_at": "2026-04-29T03:17:05Z"
+            },
+            {
+              "full_name": "OxWearables/biobankAccelerometerAnalysis",
+              "html_url": "https://github.com/OxWearables/biobankAccelerometerAnalysis",
+              "description": "Extracting meaningful health information from large accelerometer datasets",
+              "stars": 242,
+              "forks": 73,
+              "updated_at": "2026-04-21T07:01:17Z"
+            },
+            {
+              "full_name": "ha-ha-ha-han/UKBiobank_deep_pretrain",
+              "html_url": "https://github.com/ha-ha-ha-han/UKBiobank_deep_pretrain",
+              "description": "Pretrained neural networks for UK Biobank brain MRI images. SFCN, 3D-ResNet etc.",
+              "stars": 173,
+              "forks": 44,
+              "updated_at": "2026-05-04T07:27:30Z"
+            },
+            {
+              "full_name": "spiros/tofu",
+              "html_url": "https://github.com/spiros/tofu",
+              "description": "Tofu is a Python tool for generating synthetic UK Biobank data.",
+              "stars": 70,
+              "forks": 9,
+              "updated_at": "2026-04-26T20:23:38Z"
+            },
+            {
+              "full_name": "spiros/ukbiobank-resources",
+              "html_url": "https://github.com/spiros/ukbiobank-resources",
+              "description": "A curated list for preprocessing, cleaning, mapping and analyzing UK Biobank data.",
+              "stars": 62,
+              "forks": 5,
+              "updated_at": "2026-04-24T04:52:04Z"
+            },
+            {
+              "full_name": "AntonellaGuo/UKbiobank",
+              "html_url": "https://github.com/AntonellaGuo/UKbiobank",
+              "description": "UKbiobank basic tutoria",
+              "stars": 38,
+              "forks": 2,
+              "updated_at": "2026-05-06T03:09:26Z"
+            },
+            {
+              "full_name": "Nealelab/UKBB_ldsc",
+              "html_url": "https://github.com/Nealelab/UKBB_ldsc",
+              "description": "Sample code for ldsc analyses in UKBB",
+              "stars": 34,
+              "forks": 13,
+              "updated_at": "2026-04-19T04:04:46Z"
+            },
+            {
+              "full_name": "sarslancs/graph_saliency_maps",
+              "html_url": "https://github.com/sarslancs/graph_saliency_maps",
+              "description": "Graph saliency maps through spectral convolutional networks for brain mapping",
+              "stars": 34,
+              "forks": 11,
+              "updated_at": "2025-11-04T17:54:01Z"
+            },
+            {
+              "full_name": "spiros/ukb-biomarker-phenotypes",
+              "html_url": "https://github.com/spiros/ukb-biomarker-phenotypes",
+              "description": "Phenotyping algorithms for common biomarkers in primary care EHR for UK Biobank",
+              "stars": 32,
+              "forks": 4,
+              "updated_at": "2026-04-24T14:50:44Z"
+            },
+            {
+              "full_name": "Trexgiantsalamanderdoublechickenturtle/ukb-ICD10-event-extraction",
+              "html_url": "https://github.com/Trexgiantsalamanderdoublechickenturtle/ukb-ICD10-event-extraction",
+              "description": "R functions for extracting diagnoses and first diagnosis dates from \u201cData-Field 41270\u201d and \u201cData-Field 41280\u201d in the UK Biobank, based on ICD-10 codes.",
+              "stars": 30,
+              "forks": 6,
+              "updated_at": "2026-03-23T14:01:15Z"
+            }
+          ]
+        }
+      ]
+    },
+    "resource_snapshots": [
+      {
+        "file": "data/raw/ukbiobank/github/Kappers_ukb-fields_README.md",
+        "url": "https://raw.githubusercontent.com/Kappers/ukb-fields/HEAD/README.md",
+        "bytes": 1896,
+        "sha256": "3a79ef6f26fedb404f81d1db09506d23796e43c35abe466e38ef12f8ba892475",
+        "downloaded_this_run": false,
+        "key": "kappers_ukb_fields_readme",
+        "repo": "Kappers/ukb-fields",
+        "note": "Community utilities that point at official UKB schema downloads.",
+        "status": "downloaded"
+      },
+      {
+        "file": "data/raw/ukbiobank/github/Kappers_ukb-fields_retrieve_ukb_schemas.py",
+        "url": "https://raw.githubusercontent.com/Kappers/ukb-fields/HEAD/retrieve_ukb_schemas.py",
+        "bytes": 1330,
+        "sha256": "21ec0d5f398208ef9ffec349c56e5475a3c5dded7c0c0f4cefef48ada7f5d172",
+        "downloaded_this_run": false,
+        "key": "kappers_ukb_fields_schema_script",
+        "repo": "Kappers/ukb-fields",
+        "note": "Community schema downloader; kept for implementation comparison only.",
+        "status": "downloaded"
+      },
+      {
+        "file": "data/raw/ukbiobank/github/biobankly_ukb-ontology_README.md",
+        "url": "https://raw.githubusercontent.com/biobankly/ukb-ontology/HEAD/README.md",
+        "bytes": 3669,
+        "sha256": "e6669663d733911d01551c9c4e4f6369f215bb7e9a9a1b2b0c6b7fe302834a72",
+        "downloaded_this_run": false,
+        "key": "biobankly_ukb_ontology_readme",
+        "repo": "biobankly/ukb-ontology",
+        "note": "Community ontology viewer built around UK Biobank Showcase data.",
+        "status": "downloaded"
+      },
+      {
+        "file": "data/raw/ukbiobank/github/spiros_ukbiobank-resources_README.md",
+        "url": "https://raw.githubusercontent.com/spiros/ukbiobank-resources/HEAD/README.md",
+        "bytes": 3904,
+        "sha256": "e3b64709ea8208727acf0ba224757b97bb31b8731862e84b0cc561f1d540d5e9",
+        "downloaded_this_run": false,
+        "key": "spiros_ukbiobank_resources_readme",
+        "repo": "spiros/ukbiobank-resources",
+        "note": "Community curated list of UK Biobank resources.",
+        "status": "downloaded"
+      },
+      {
+        "file": "data/raw/ukbiobank/github/dnanexus_UKB_RAP_README.md",
+        "url": "https://raw.githubusercontent.com/dnanexus/UKB_RAP/HEAD/README.md",
+        "bytes": 586,
+        "sha256": "c76249d7c5f2961396c1b64859deb079cf084589f2b9d918d7f546c22025f8f0",
+        "downloaded_this_run": false,
+        "key": "dnanexus_ukb_rap_readme",
+        "repo": "dnanexus/UKB_RAP",
+        "note": "RAP notebooks and examples; not a source of participant data.",
+        "status": "downloaded"
+      },
+      {
+        "file": "data/raw/ukbiobank/github/kenhanscombe_ukbtools_README.md",
+        "url": "https://raw.githubusercontent.com/kenhanscombe/ukbtools/HEAD/README.md",
+        "bytes": 3456,
+        "sha256": "a0a6cb65aa23f35d0c0b06fc76285c87c8638a70bddaada6677371ee26bba70b",
+        "downloaded_this_run": false,
+        "key": "kenhanscombe_ukbtools_readme",
+        "repo": "kenhanscombe/ukbtools",
+        "note": "R package for manipulating UK Biobank application data.",
+        "status": "downloaded"
+      },
+      {
+        "file": "data/raw/ukbiobank/github/bjcairns_ukbschemas_README.md",
+        "url": "https://raw.githubusercontent.com/bjcairns/ukbschemas/HEAD/README.md",
+        "bytes": 5416,
+        "sha256": "3e982500ad140abe5b49beede3e816de8c4f4a8384e5619bfe596368dbd29dc1",
+        "downloaded_this_run": false,
+        "key": "bjcairns_ukbschemas_readme",
+        "repo": "bjcairns/ukbschemas",
+        "note": "R package for generating a database from UK Biobank schemas.",
+        "status": "downloaded"
+      }
+    ]
+  }
+}

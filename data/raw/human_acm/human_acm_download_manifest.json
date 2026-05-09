@@ -1,0 +1,43 @@
+{
+  "downloaded_at_utc": "2026-05-08T00:04:47.038637+00:00",
+  "source_scope": "Public article supplement only; no UK Biobank participant-level data.",
+  "publication": {
+    "title": "Association between prescription drugs and all-cause mortality risk in the UK population",
+    "author": "Morin et al.",
+    "year": 2024,
+    "journal": "Aging Cell",
+    "pmid": "39364726",
+    "doi": "10.1111/acel.14334",
+    "pmc": "PMC11634711"
+  },
+  "downloads": [
+    {
+      "file": "data/raw/human_acm/ACEL-23-e14334-s001.xlsx",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11634711/bin/ACEL-23-e14334-s001.xlsx",
+      "label": "Data S1 workbook",
+      "bytes": 402779,
+      "sha256": "2a6f4139b8b239a43b4becb60bbfbfa8865ff7ec27792cb5032d7b8befc8a998",
+      "downloaded_this_run": false,
+      "used_pmc_pow_cookie": false
+    },
+    {
+      "file": "data/raw/human_acm/ACEL-23-e14334-s002.zip",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11634711/bin/ACEL-23-e14334-s002.zip",
+      "label": "Data S2 supplementary archive",
+      "bytes": 2814832,
+      "sha256": "6f9b7ea11cbadd1200baa6d8d4823f5d34cf73abc7b024f866df37dd8cd9d354",
+      "downloaded_this_run": false,
+      "used_pmc_pow_cookie": false,
+      "zip_members": [
+        {
+          "name": "Morin et al, 2024_tables.xlsx",
+          "bytes": 20112
+        },
+        {
+          "name": "Supplementry files.docx",
+          "bytes": 2863120
+        }
+      ]
+    }
+  ]
+}

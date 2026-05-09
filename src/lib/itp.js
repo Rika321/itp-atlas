@@ -311,18 +311,14 @@ export function getInterventionPubMedReference(dataset, cohort, group) {
 }
 
 export function getInterventionPathway(dataset, cohort, group) {
-  if (dataset?.profile?.id === "human") {
-    return null;
-  }
-
   const meta = getGroupMeta(dataset, cohort, group);
   if (!meta && !group) {
     return null;
   }
 
   return getKnownInterventionPathway(
-    meta?.compoundDisplayName || meta?.label || group,
-    meta?.description || null,
+    meta?.pathwayCompoundDisplayName || meta?.compoundDisplayName || meta?.label || group,
+    meta?.pathwayDescription || meta?.description || null,
   );
 }
 
@@ -548,8 +544,6 @@ export function parseCitpDataset(csvText, manifest) {
         "Choose a row from the leaderboard above or use the controls here to inspect an intervention against its matched control. Study and lab are set in the top scope panel.",
       focusSectionBody:
         "Matched control overlays stay within each study, strain, condition, and lab slice so the non-mouse comparisons stay internally consistent.",
-      singlePanelNotice:
-        "CITP lifespan exports are shown as combined populations, so the worm view stays on a single panel.",
     },
     siteMeta: manifest?.site_meta || { [DEFAULT_SITE]: "All Labs" },
     latestPublicCohort,
@@ -561,8 +555,40 @@ export function parseCitpDataset(csvText, manifest) {
 }
 
 export function parseHumanDataset(_csvText, manifest) {
+  const humanMetaEntries = Object.entries(manifest?.group_meta_by_key || {});
+  const shouldEnforceAcmScreenFilter = humanMetaEntries.some(([, meta]) => {
+    const sourceTable = meta.acm_source_table || meta.raw_result?.source_table;
+    return sourceTable === "Data Table 2";
+  });
+  const filteredHumanMetaEntries = shouldEnforceAcmScreenFilter
+    ? humanMetaEntries.filter(([, meta]) => {
+      const sourceTable = meta.acm_source_table || meta.raw_result?.source_table;
+      const sourceKind = meta.acm_source_kind || meta.raw_result?.source_kind;
+      const prescriptionUserCount =
+        meta.acm_prescription_user_count ?? meta.raw_result?.n ?? null;
+      const hazardRatio = meta.acm_hazard_ratio ?? meta.raw_result?.hr ?? null;
+      const n = Number(prescriptionUserCount);
+      const hr = Number(hazardRatio);
+
+      return (
+        (
+          sourceTable === "Data Table 2" &&
+          sourceKind === "drug" &&
+          Number.isFinite(n) &&
+          n >= 500 &&
+          Number.isFinite(hr)
+        ) ||
+        (
+          sourceTable === "Data Table 4" &&
+          sourceKind === "class" &&
+          Number.isFinite(n) &&
+          Number.isFinite(hr)
+        )
+      );
+    })
+    : humanMetaEntries;
   const groupMetaByKey = Object.fromEntries(
-    Object.entries(manifest?.group_meta_by_key || {}).map(([key, meta]) => [
+    filteredHumanMetaEntries.map(([key, meta]) => [
       key,
       {
         cohort: meta.cohort,
@@ -577,6 +603,29 @@ export function parseHumanDataset(_csvText, manifest) {
         condition: meta.condition || null,
         publication: meta.publication || null,
         evidence: meta.evidence || null,
+        acmHazardRatio: meta.acm_hazard_ratio ?? null,
+        acmConfidenceInterval: meta.acm_confidence_interval || null,
+        acmEffectPercent: meta.acm_effect_percent ?? null,
+        acmPValue: meta.acm_p_value ?? meta.raw_result?.p ?? null,
+        acmAdjustedPValue: meta.acm_adjusted_p_value ?? meta.raw_result?.fdr_or_padj ?? null,
+        acmPrescriptionUserCount: meta.acm_prescription_user_count ?? meta.raw_result?.n ?? null,
+        acmSourceKind: meta.acm_source_kind || meta.raw_result?.source_kind || null,
+        acmSourceTable: meta.acm_source_table || meta.raw_result?.source_table || null,
+        acmFdrSignificant:
+          meta.acm_fdr_significant ?? meta.raw_result?.fdr_significant ?? false,
+        acmStatisticallySignificant:
+          meta.acm_statistically_significant ??
+          meta.raw_result?.statistically_significant ??
+          meta.acm_fdr_significant ??
+          meta.raw_result?.fdr_significant ??
+          false,
+        acmDatasetLabel: meta.acm_dataset_label || meta.raw_result?.dataset_label || null,
+        acmDatasetUrl: meta.acm_dataset_url || meta.raw_result?.dataset_url || null,
+        acmDatasetDetail: meta.acm_dataset_detail || null,
+        ukbMetadata: meta.ukb_metadata || manifest?.ukb_metadata || null,
+        sourceCatalog: Array.isArray(meta.source_catalog)
+          ? meta.source_catalog
+          : manifest?.source_catalog || [],
         sortIndex: meta.sort_index ?? null,
       },
     ]),
@@ -613,66 +662,78 @@ export function parseHumanDataset(_csvText, manifest) {
     manifest?.cohort_order?.[manifest.cohort_order.length - 1];
   const latestPublicReleaseLabel =
     manifest?.latest_public_release_label || latestPublicCohort;
+  const defaultProfile = {
+    id: "human",
+    title: "Human UK Biobank ACM Interventions",
+    description:
+      "A Biobank-only human view of medication signals linked to all-cause mortality, centered on public UK Biobank prescription and mortality resources.",
+    badgePrefix: "human Biobank evidence",
+    sampleStatLabel: "Sources",
+    interventionStatLabel: "Signals",
+    cohortStatLabel: "Studies",
+    focusScopeLabel: "study",
+    focusScopePlural: "studies",
+    focusSectionLabel: "Evidence explorer",
+    explorerSectionLabel: "Biobank signal explorer",
+    siteLabel: "Evidence",
+    siteAllLabel: "UK Biobank public supplement",
+    sampleNounPlural: "evidence sources",
+    sampleMetricLabel: "Evidence sources",
+    groupNounSingular: "ACM signal",
+    groupNounPlural: "ACM signals",
+    focusGroupLabel: "Focus signal",
+    compareSectionLabel: "Compare Biobank signals",
+    sexSupported: false,
+    combinedPopulationLabel: "Human evidence",
+    manifestFileName: "human_acm_dataset_manifest.json",
+    loadingLabel: "Loading human UK Biobank ACM signals…",
+    footerText:
+      "This human view uses the public Aging Cell 2024 UK Biobank supplement plus public UK Biobank project and Showcase metadata. It does not ship participant-level UK Biobank records.",
+    comparisonSearchPlaceholder: "Search signal, drug, class, or population",
+    comparisonHelperText: "Search human Biobank ACM signals.",
+    explorerBody:
+      "Choose a UK Biobank medication or class signal to inspect the ACM estimate, source table, drug description, and caution notes.",
+    focusSectionBody:
+      "Human rows summarize reported all-cause mortality hazard-ratio associations from a retrospective UK Biobank screen rather than survival curves from an intervention trial.",
+    singlePanelNotice:
+      "Human Biobank evidence is summarized as ACM hazard-ratio signals rather than individual survival curves.",
+    defaultRankingMetric: "acm",
+    allowCompare: false,
+    cohortSampleSuffix: "sources",
+    cohortInterventionSuffix: "signals",
+    footerLeadLabel: "Latest human Biobank supplement processed",
+    defaultGroup:
+      manifest?.default_group ||
+      manifest?.profile?.defaultGroup ||
+      Object.values(groupMetaByKey).find((meta) => !meta.isControl)?.group ||
+      null,
+  };
   const parsed = buildParsedDataset({
     rows,
     manifest,
     profile: {
+      ...defaultProfile,
+      ...(manifest?.profile || {}),
       id: "human",
-      title: "Human Medication Evidence Atlas",
-      description:
-        "A ranked list of 10 medication classes with the strongest human evidence for lower overall death risk, based on meta-analyses, population studies, and Mendelian genetics.",
-      badgePrefix: "human medication evidence",
-      sampleStatLabel: "Sources",
-      interventionStatLabel: "Meds",
-      cohortStatLabel: "Catalogs",
-      focusScopeLabel: "catalog",
-      focusScopePlural: "catalogs",
-      focusSectionLabel: "Evidence explorer",
-      explorerSectionLabel: "Medication explorer",
-      siteLabel: "Evidence",
-      siteAllLabel: "All evidence streams",
-      sampleNounPlural: "evidence sources",
-      sampleMetricLabel: "Evidence sources",
-      groupNounSingular: "medication",
-      groupNounPlural: "medications",
-      focusGroupLabel: "Focus medication",
-      compareSectionLabel: "Compare medications",
-      sexSupported: false,
-      combinedPopulationLabel: "Human evidence",
-      manifestFileName: null,
-      loadingLabel: "Loading curated human medication evidence…",
-      footerText:
-        "This human view is a curated medication leaderboard built from high-signal meta-analyses, large epidemiology, and drug-target Mendelian studies. Scores are heuristic navigation aids, not prescribing advice.",
-      comparisonSearchPlaceholder: "Search medication or population",
-      comparisonHelperText: "Search the curated top 10 medications.",
-      explorerBody:
-        "Choose a medication from the leaderboard above or the selector here to inspect the evidence anchors behind this human ranking.",
-      focusSectionBody:
-        "This human view is evidence-first. It does not display survival curves; it summarizes the meta-analysis, epidemiology, and Mendelian anchors used in the ranking.",
-      singlePanelNotice:
-        "Human evidence is summarized as a single evidence panel rather than survival curves.",
-      defaultRankingMetric: "overall",
-      allowCompare: false,
-      cohortSampleSuffix: "refs",
-      cohortInterventionSuffix: "meds",
-      footerLeadLabel: "Latest curated catalog verified locally",
-      defaultGroup: "STATINS",
+      defaultGroup:
+        manifest?.profile?.defaultGroup ||
+        manifest?.default_group ||
+        defaultProfile.defaultGroup,
     },
-    siteMeta: manifest?.site_meta || { [DEFAULT_SITE]: "Meta + epidemiology + Mendelian" },
+    siteMeta: manifest?.site_meta || { [DEFAULT_SITE]: "UK Biobank project page" },
     latestPublicCohort,
     latestPublicReleaseLabel,
     cohortOrder: manifest?.cohort_order || [],
     cohortMetaByName,
     groupMetaByKey,
   });
-  const evidenceSourceCount = Object.values(groupMetaByKey).reduce(
-    (total, meta) =>
-      total +
-      ["meta", "epidemiology", "mendelian"].filter(
-        (key) => meta.evidence?.[key],
-      ).length,
-    0,
-  );
+  const cohortSourceCount = new Set(
+    Object.values(groupMetaByKey)
+      .flatMap((meta) => (Array.isArray(meta.sourceCatalog) ? meta.sourceCatalog : []))
+      .map((source) => source.key || source.publication?.pmid || source.publication?.title)
+      .filter(Boolean),
+  ).size;
+  const evidenceSourceCount = cohortSourceCount;
 
   return {
     ...parsed,
@@ -683,7 +744,7 @@ export function parseHumanDataset(_csvText, manifest) {
     overview: {
       ...parsed.overview,
       sampleCount: evidenceSourceCount,
-      releaseTag: `human medication evidence · curated through ${latestPublicReleaseLabel}`,
+      releaseTag: `human Biobank evidence · curated through ${latestPublicReleaseLabel}`,
     },
   };
 }
@@ -1306,11 +1367,27 @@ export function buildRankingRows(dataset, { cohort, cohorts, sex, site }) {
             cohort: rowCohort,
             group,
             groupMeta,
-            overallScore: evidence.overall?.score ?? null,
+            acmEffectPercent: groupMeta?.acmEffectPercent ?? null,
+            acmHazardRatio: groupMeta?.acmHazardRatio ?? null,
+            acmConfidenceInterval: groupMeta?.acmConfidenceInterval ?? null,
+            acmFdrSignificant: Boolean(groupMeta?.acmFdrSignificant),
+            acmStatisticallySignificant: Boolean(groupMeta?.acmStatisticallySignificant),
+            logRankPValue: groupMeta?.acmPValue ?? null,
+            acmPValue: groupMeta?.acmPValue ?? null,
+            acmAdjustedPValue: groupMeta?.acmAdjustedPValue ?? null,
+            isStatisticallySignificant: Boolean(groupMeta?.acmStatisticallySignificant),
+            statisticalTestLabel: "CoxPH",
+            overallScore: groupMeta?.acmEffectPercent ?? evidence.overall?.score ?? null,
+            biobankSupportScore: evidence.biobank?.score ?? null,
+            followupSupportScore: evidence.followup?.score ?? null,
+            cautionSupportScore: evidence.caution?.score ?? null,
             metaSupportScore: evidence.meta?.score ?? null,
             epiSupportScore: evidence.epidemiology?.score ?? null,
             mrSupportScore: evidence.mendelian?.score ?? null,
             overallLabel: evidence.overall?.label ?? null,
+            biobankEvidenceLabel: evidence.biobank?.effect_label ?? null,
+            followupEvidenceLabel: evidence.followup?.effect_label ?? null,
+            cautionEvidenceLabel: evidence.caution?.effect_label ?? null,
             metaEvidenceLabel: evidence.meta?.effect_label ?? null,
             epiEvidenceLabel: evidence.epidemiology?.effect_label ?? null,
             mrEvidenceLabel: evidence.mendelian?.effect_label ?? null,

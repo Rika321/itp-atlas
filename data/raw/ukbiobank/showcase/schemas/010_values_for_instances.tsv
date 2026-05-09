@@ -1,0 +1,34 @@
+instance_id	index	title	descript
+1	0	clinic	Conducted in assessment centre, April 2009 to September 2010.
+1	1	web1	On-line cycle 1, February 2011 to April 2011.
+1	2	web2	On-line cycle 2, June 2011 to September 2011.
+1	3	web3	On-line cycle 3, October 2011 to December 2011.
+1	4	web4	On-line cycle 4, April 2012 to June 2012.
+2	0	init	Initial assessment visit (2006-2010) at which participants were recruited and consent given
+2	1	rep1	First repeat assessment visit (2012-13)
+2	2	img	Imaging visit (2014+)
+2	3	irep1	First repeat imaging visit (2019+)
+12	0	w1	Wave 1 sample
+12	1	w2	Wave 2 sample
+12	2	w3	Wave 3 sample
+12	3	w4	Wave 4 sample
+12	4	w5	Wave 5 sample
+12	5	w6	Wave 6 sample
+27	0	s1	First symptom questionnaire returned
+27	1	s2	Second symptom questionnaire returned
+27	2	s3	Third symptom questionnaire returned
+27	3	s4	Fourth symptom questionnaire returned
+27	4	s5	Fifth symptom questionnaire returned
+27	5	s6	Sixth symptom questionnaire returned
+27	6	s7	Seventh symptom questionnaire returned
+27	7	s8	Eighth symptom questionnaire returned
+27	8	s9	Ninth symptom questionnaire returned
+93	0	MS	Main study
+93	1	S1	Seasonal repeat 1
+93	2	S2	Seasonal repeat 2
+93	3	S3	Seasonal repeat 3
+93	4	S4	Seasonal repeat 4
+154	0	T1st	First COVID-19 antibody test taken, Feb 2021 to July 2021
+154	1	T2nd	Repeat COVID-19 antibody test taken, March 2021 to July 2021
+178	0	c14	Assessment run 2014
+178	1	c21	Assessment run 2021

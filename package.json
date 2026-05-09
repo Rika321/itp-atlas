@@ -6,6 +6,10 @@
   "scripts": {
     "setup:python": "python3 -m pip install -r requirements.txt",
     "download:citp": "python3 scripts/download_citp_data.py",
+    "download:human:acm": "python3 scripts/download_human_acm_data.py",
+    "build:human:acm": "python3 scripts/build_human_acm_dataset.py",
+    "download:ukb:metadata": "python3 scripts/download_ukbiobank_metadata.py",
+    "build:ukb:metadata": "python3 scripts/build_ukbiobank_metadata.py",
     "prepare:data:public": "python3 scripts/build_itp_dataset.py && python3 scripts/build_citp_dataset.py && python3 scripts/sync_public_data.py",
     "prepare:data": "python3 scripts/build_itp_dataset.py && python3 scripts/build_citp_dataset.py && python3 scripts/build_killifish_dataset.py && python3 scripts/build_drosophila_dataset.py && python3 scripts/sync_public_data.py",
     "dev:fast": "vite",

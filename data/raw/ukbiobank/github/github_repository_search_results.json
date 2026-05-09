@@ -1,0 +1,292 @@
+[
+  {
+    "query": "UK Biobank Data Showcase",
+    "url": "https://api.github.com/search/repositories?q=UK+Biobank+Data+Showcase&sort=stars&order=desc&per_page=10",
+    "total_count": 2,
+    "items": [
+      {
+        "full_name": "biobankly/ukb-ontology",
+        "html_url": "https://github.com/biobankly/ukb-ontology",
+        "description": "UK Biobank Ontology Viewer with Showcase Data",
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2024-12-10T23:57:06Z"
+      },
+      {
+        "full_name": "adswa/ohbm-2022",
+        "html_url": "https://github.com/adswa/ohbm-2022",
+        "description": "Sources for OHBM 2022 poster 2057 - \"FAIRly big: A framework for reproducible processing of large-scale data - a UK Biobank showcase\"",
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2022-05-11T06:41:19Z"
+      }
+    ]
+  },
+  {
+    "query": "ukb fields",
+    "url": "https://api.github.com/search/repositories?q=ukb+fields&sort=stars&order=desc&per_page=10",
+    "total_count": 12,
+    "items": [
+      {
+        "full_name": "Trexgiantsalamanderdoublechickenturtle/ukb-ICD10-event-extraction",
+        "html_url": "https://github.com/Trexgiantsalamanderdoublechickenturtle/ukb-ICD10-event-extraction",
+        "description": "R functions for extracting diagnoses and first diagnosis dates from \u201cData-Field 41270\u201d and \u201cData-Field 41280\u201d in the UK Biobank, based on ICD-10 codes.",
+        "stars": 30,
+        "forks": 6,
+        "updated_at": "2026-03-23T14:01:15Z"
+      },
+      {
+        "full_name": "laleoarrow/leo.ukb",
+        "html_url": "https://github.com/laleoarrow/leo.ukb",
+        "description": "R toolkit for UK Biobank data analysis - field parsing, ICD processing, and clinical variable extraction",
+        "stars": 1,
+        "forks": 2,
+        "updated_at": "2026-04-18T09:21:51Z"
+      },
+      {
+        "full_name": "Kappers/ukb-fields",
+        "html_url": "https://github.com/Kappers/ukb-fields",
+        "description": "UK Biobank utilities for identifying fields and relevant metadata",
+        "stars": 1,
+        "forks": 0,
+        "updated_at": "2026-03-24T01:18:50Z"
+      },
+      {
+        "full_name": "deeprob/ukb_field_preprocess",
+        "html_url": "https://github.com/deeprob/ukb_field_preprocess",
+        "description": "One hot encode UKBiobank field values",
+        "stars": 1,
+        "forks": 0,
+        "updated_at": "2024-06-03T11:49:49Z"
+      },
+      {
+        "full_name": "deeprob/ukb-bulk-download",
+        "html_url": "https://github.com/deeprob/ukb-bulk-download",
+        "description": "Downloades bulk field data such as exome vcfs from UKBiobank",
+        "stars": 1,
+        "forks": 0,
+        "updated_at": "2024-11-18T12:00:04Z"
+      },
+      {
+        "full_name": "kunert/ukb-explore",
+        "html_url": "https://github.com/kunert/ukb-explore",
+        "description": "flask app to explore/search UK Biobank variables, and export CSV with selected field IDs",
+        "stars": 1,
+        "forks": 0,
+        "updated_at": "2022-05-29T15:17:41Z"
+      },
+      {
+        "full_name": "maiho24/UKB_Processor",
+        "html_url": "https://github.com/maiho24/UKB_Processor",
+        "description": "A Python tool for processing UK Biobank data files, with a focus on efficient data conversion and field extraction.",
+        "stars": 1,
+        "forks": 0,
+        "updated_at": "2026-04-24T01:29:34Z"
+      },
+      {
+        "full_name": "adamelkholyy/ukbython",
+        "html_url": "https://github.com/adamelkholyy/ukbython",
+        "description": "ukbython allows for easy phenotype derivation in Python with simple querying, filtering, and data retrieval from the UK Biobank RAP. Features eid and earliest diagnosis date retrieval across all major coding schemas along with fast lookup and retrieval of any field in the database and functionality for custom queries using SQL with PySpark.",
+        "stars": 1,
+        "forks": 0,
+        "updated_at": "2025-10-26T16:21:32Z"
+      },
+      {
+        "full_name": "asoroosh/UKBscrape",
+        "html_url": "https://github.com/asoroosh/UKBscrape",
+        "description": "Scrapes the UKBiobank website to provide a built-in dictionary for the field IDs. Also, check which of the variable are missed from your application to the website. ",
+        "stars": 0,
+        "forks": 2,
+        "updated_at": "2019-03-31T11:42:26Z"
+      },
+      {
+        "full_name": "deeprob/ukb_field_download",
+        "html_url": "https://github.com/deeprob/ukb_field_download",
+        "description": "Downloads UKBiobank field data along with their field value encodings",
+        "stars": 1,
+        "forks": 0,
+        "updated_at": "2026-04-13T00:48:31Z"
+      }
+    ]
+  },
+  {
+    "query": "ukb metadata",
+    "url": "https://api.github.com/search/repositories?q=ukb+metadata&sort=stars&order=desc&per_page=10",
+    "total_count": 2,
+    "items": [
+      {
+        "full_name": "Kappers/ukb-fields",
+        "html_url": "https://github.com/Kappers/ukb-fields",
+        "description": "UK Biobank utilities for identifying fields and relevant metadata",
+        "stars": 1,
+        "forks": 0,
+        "updated_at": "2026-03-24T01:18:50Z"
+      },
+      {
+        "full_name": "xlecours/ukbiobank_metadata_workout",
+        "html_url": "https://github.com/xlecours/ukbiobank_metadata_workout",
+        "description": null,
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2020-03-04T19:51:40Z"
+      }
+    ]
+  },
+  {
+    "query": "ukbtools",
+    "url": "https://api.github.com/search/repositories?q=ukbtools&sort=stars&order=desc&per_page=10",
+    "total_count": 4,
+    "items": [
+      {
+        "full_name": "kenhanscombe/ukbtools",
+        "html_url": "https://github.com/kenhanscombe/ukbtools",
+        "description": "An R package to manipulate and explore UK Biobank data",
+        "stars": 110,
+        "forks": 25,
+        "updated_at": "2026-04-19T12:12:23Z"
+      },
+      {
+        "full_name": "conda-forge/r-ukbtools-feedstock",
+        "html_url": "https://github.com/conda-forge/r-ukbtools-feedstock",
+        "description": "A conda-smithy repository for r-ukbtools.",
+        "stars": 0,
+        "forks": 1,
+        "updated_at": "2026-04-22T23:22:47Z"
+      },
+      {
+        "full_name": "cran/ukbtools",
+        "html_url": "https://github.com/cran/ukbtools",
+        "description": ":exclamation:\u00a0This\u00a0is\u00a0a\u00a0read-only\u00a0mirror\u00a0of\u00a0the\u00a0CRAN\u00a0R\u00a0package\u00a0repository.  ukbtools\u00a0\u2014\u00a0Manipulate\u00a0and\u00a0Explore\u00a0UK\u00a0Biobank\u00a0Data.\u00a0Homepage:\u00a0https://kenhanscombe.github.io/ukbtools/  ",
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2019-05-15T13:21:40Z"
+      },
+      {
+        "full_name": "CelMcC/UKBTools",
+        "html_url": "https://github.com/CelMcC/UKBTools",
+        "description": null,
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2020-12-01T14:31:13Z"
+      }
+    ]
+  },
+  {
+    "query": "ukbwranglr",
+    "url": "https://api.github.com/search/repositories?q=ukbwranglr&sort=stars&order=desc&per_page=10",
+    "total_count": 3,
+    "items": [
+      {
+        "full_name": "rmgpanw/ukbwranglr",
+        "html_url": "https://github.com/rmgpanw/ukbwranglr",
+        "description": "R package for UK Biobank data wrangling.",
+        "stars": 22,
+        "forks": 0,
+        "updated_at": "2026-03-23T14:44:18Z"
+      },
+      {
+        "full_name": "rmgpanw/ukbwranglrextra",
+        "html_url": "https://github.com/rmgpanw/ukbwranglrextra",
+        "description": "Extra add-on functions for ukbwranglr",
+        "stars": 2,
+        "forks": 0,
+        "updated_at": "2023-02-23T08:18:48Z"
+      },
+      {
+        "full_name": "rmgpanw/ukbwranglr_resources",
+        "html_url": "https://github.com/rmgpanw/ukbwranglr_resources",
+        "description": "Supporting resources for ukbwranglr",
+        "stars": 2,
+        "forks": 0,
+        "updated_at": "2022-10-05T14:34:51Z"
+      }
+    ]
+  },
+  {
+    "query": "UKBiobank",
+    "url": "https://api.github.com/search/repositories?q=UKBiobank&sort=stars&order=desc&per_page=10",
+    "total_count": 192,
+    "items": [
+      {
+        "full_name": "dnanexus/UKB_RAP",
+        "html_url": "https://github.com/dnanexus/UKB_RAP",
+        "description": "Access share reviewed code & Jupyter Notebooks for use on the UK Biobank (UKBB) Research Application Platform. Includes resources from DNAnexus webinars, online trainings and workshops.",
+        "stars": 257,
+        "forks": 64,
+        "updated_at": "2026-04-29T03:17:05Z"
+      },
+      {
+        "full_name": "OxWearables/biobankAccelerometerAnalysis",
+        "html_url": "https://github.com/OxWearables/biobankAccelerometerAnalysis",
+        "description": "Extracting meaningful health information from large accelerometer datasets",
+        "stars": 242,
+        "forks": 73,
+        "updated_at": "2026-04-21T07:01:17Z"
+      },
+      {
+        "full_name": "ha-ha-ha-han/UKBiobank_deep_pretrain",
+        "html_url": "https://github.com/ha-ha-ha-han/UKBiobank_deep_pretrain",
+        "description": "Pretrained neural networks for UK Biobank brain MRI images. SFCN, 3D-ResNet etc.",
+        "stars": 173,
+        "forks": 44,
+        "updated_at": "2026-05-04T07:27:30Z"
+      },
+      {
+        "full_name": "spiros/tofu",
+        "html_url": "https://github.com/spiros/tofu",
+        "description": "Tofu is a Python tool for generating synthetic UK Biobank data.",
+        "stars": 70,
+        "forks": 9,
+        "updated_at": "2026-04-26T20:23:38Z"
+      },
+      {
+        "full_name": "spiros/ukbiobank-resources",
+        "html_url": "https://github.com/spiros/ukbiobank-resources",
+        "description": "A curated list for preprocessing, cleaning, mapping and analyzing UK Biobank data.",
+        "stars": 62,
+        "forks": 5,
+        "updated_at": "2026-04-24T04:52:04Z"
+      },
+      {
+        "full_name": "AntonellaGuo/UKbiobank",
+        "html_url": "https://github.com/AntonellaGuo/UKbiobank",
+        "description": "UKbiobank basic tutoria",
+        "stars": 38,
+        "forks": 2,
+        "updated_at": "2026-05-06T03:09:26Z"
+      },
+      {
+        "full_name": "Nealelab/UKBB_ldsc",
+        "html_url": "https://github.com/Nealelab/UKBB_ldsc",
+        "description": "Sample code for ldsc analyses in UKBB",
+        "stars": 34,
+        "forks": 13,
+        "updated_at": "2026-04-19T04:04:46Z"
+      },
+      {
+        "full_name": "sarslancs/graph_saliency_maps",
+        "html_url": "https://github.com/sarslancs/graph_saliency_maps",
+        "description": "Graph saliency maps through spectral convolutional networks for brain mapping",
+        "stars": 34,
+        "forks": 11,
+        "updated_at": "2025-11-04T17:54:01Z"
+      },
+      {
+        "full_name": "spiros/ukb-biomarker-phenotypes",
+        "html_url": "https://github.com/spiros/ukb-biomarker-phenotypes",
+        "description": "Phenotyping algorithms for common biomarkers in primary care EHR for UK Biobank",
+        "stars": 32,
+        "forks": 4,
+        "updated_at": "2026-04-24T14:50:44Z"
+      },
+      {
+        "full_name": "Trexgiantsalamanderdoublechickenturtle/ukb-ICD10-event-extraction",
+        "html_url": "https://github.com/Trexgiantsalamanderdoublechickenturtle/ukb-ICD10-event-extraction",
+        "description": "R functions for extracting diagnoses and first diagnosis dates from \u201cData-Field 41270\u201d and \u201cData-Field 41280\u201d in the UK Biobank, based on ICD-10 codes.",
+        "stars": 30,
+        "forks": 6,
+        "updated_at": "2026-03-23T14:01:15Z"
+      }
+    ]
+  }
+]

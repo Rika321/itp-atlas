@@ -276,7 +276,7 @@ function StatBlock({ icon: Icon, label, value, hint, className }) {
   return (
     <div
       className={cn(
-        "rounded-[20px] border border-border/70 bg-white/70 p-3.5 shadow-sm",
+        "min-w-0 rounded-[18px] border border-border/70 bg-white/70 p-3 shadow-sm sm:rounded-[20px] sm:p-3.5",
         className,
       )}
     >
@@ -285,7 +285,7 @@ function StatBlock({ icon: Icon, label, value, hint, className }) {
         <span className="truncate">{label}</span>
       </div>
       <div className="space-y-0.5">
-        <p className="font-display text-xl sm:text-2xl font-semibold leading-none tracking-tight text-foreground">
+        <p className="min-w-0 break-words font-display text-lg font-semibold leading-none tracking-tight text-foreground sm:text-2xl">
           {value}
         </p>
         {hint ? <p className="text-[11px] text-muted-foreground truncate">{hint}</p> : null}
@@ -319,15 +319,15 @@ function SectionHeader({ label, title, body, actions }) {
 function ToggleChipGroup({ label, value, options, onChange, compact }) {
   if (compact) {
     return (
-      <div className="flex w-full flex-col items-start gap-1.5 sm:w-auto sm:flex-row sm:items-center sm:gap-2">
+      <div className="flex w-full min-w-0 flex-col items-start gap-1.5 sm:w-auto sm:flex-row sm:items-center sm:gap-2">
         <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80">{label}</span>
-        <div className="flex w-full flex-wrap gap-1 rounded-[18px] border border-border/50 bg-secondary/30 p-0.5 sm:w-auto sm:flex-nowrap sm:gap-0 sm:rounded-full">
+        <div className="flex w-full min-w-0 flex-wrap gap-1 rounded-[18px] border border-border/50 bg-secondary/30 p-0.5 sm:w-auto sm:flex-nowrap sm:gap-0 sm:rounded-full">
           {options.map((option) => (
             <button
               key={option.value}
               type="button"
               className={cn(
-                "flex-1 rounded-[14px] px-2.5 py-1 text-[10px] font-bold transition-all duration-200 sm:flex-none sm:rounded-full",
+                "min-h-8 min-w-0 flex-1 rounded-[14px] px-2.5 py-1 text-[10px] font-bold leading-tight transition-all duration-200 sm:min-h-0 sm:flex-none sm:rounded-full",
                 value === option.value
                   ? "bg-white text-foreground shadow-sm"
                   : "text-muted-foreground hover:text-foreground"
@@ -960,7 +960,7 @@ function App() {
   });
   const humanPValueRankingRows = isHumanDataset
     ? rankingRows.filter(
-      (row) => Number.isFinite(Number(row.acmPValue)) && Number(row.acmPValue) <= 0.05,
+      (row) => Number.isFinite(Number(row.acmPValue)),
     )
     : rankingRows;
   const humanAcmFilterCounts = isHumanDataset
@@ -1024,8 +1024,8 @@ function App() {
       title: t(locale, "Human Biobank ACM effect", "人类 Biobank 全因死亡率影响"),
       subtitle: t(
         locale,
-        "Human Biobank medication signals with reported P<=0.05, drawn from all 406 Data Table 2 N>=500 medication rows plus Figure 5 class rows and ranked by the reported ACM hazard-ratio effect.",
-        "人类 Biobank 药物信号。仅展示报告 P<=0.05 的条目，来源包括 Data Table 2 中全部 406 个 N>=500 药物条目及图 5 类别条目，并按报告的全因死亡率风险比影响排序。",
+        "Human Biobank medication signals with reported P values, drawn from all 406 Data Table 2 N>=500 medication rows plus Figure 5 class rows and ranked by the reported ACM hazard-ratio effect.",
+        "人类 Biobank 药物信号。仅展示报告 P 值的条目，来源包括 Data Table 2 中全部 406 个 N>=500 药物条目及图 5 类别条目，并按报告的全因死亡率风险比影响排序。",
       ),
       metricKey: "acmEffectPercent",
       dayMetricKey: null,
@@ -1271,8 +1271,8 @@ function App() {
 
   return (
     <div className="min-h-screen bg-noise text-foreground">
-      <div className="mx-auto flex min-h-screen max-w-[1480px] flex-col gap-4 px-3 py-3 sm:gap-6 sm:px-6 sm:py-4 lg:px-8">
-        <header className="relative animate-in fade-in slide-in-from-top-4 duration-700 overflow-hidden rounded-[32px] border border-border/70 bg-[linear-gradient(155deg,rgba(255,255,255,0.94),rgba(255,255,255,0.8),rgba(232,239,242,0.92))] shadow-panel p-4 sm:p-5 flex flex-col gap-4 dark:bg-[linear-gradient(155deg,rgba(25,36,49,0.94),rgba(15,24,35,0.92),rgba(30,39,48,0.9))]">
+      <div className="mx-auto flex min-h-screen max-w-[1480px] flex-col gap-3 px-2.5 py-2.5 sm:gap-6 sm:px-6 sm:py-4 lg:px-8">
+        <header className="relative animate-in fade-in slide-in-from-top-4 duration-700 overflow-hidden rounded-[24px] border border-border/70 bg-[linear-gradient(155deg,rgba(255,255,255,0.94),rgba(255,255,255,0.8),rgba(232,239,242,0.92))] p-3 shadow-panel sm:rounded-[32px] sm:p-5 flex flex-col gap-4 dark:bg-[linear-gradient(155deg,rgba(25,36,49,0.94),rgba(15,24,35,0.92),rgba(30,39,48,0.9))]">
           <div
             aria-hidden="true"
             className="absolute inset-0 opacity-80 pointer-events-none"
@@ -1282,8 +1282,8 @@ function App() {
             }}
           />
 
-          <div className="relative flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div className="flex flex-col gap-2">
+          <div className="relative flex flex-col justify-between gap-4 md:flex-row md:items-center">
+            <div className="flex min-w-0 flex-col gap-2">
               <div className="flex flex-wrap items-center gap-2">
                 <Badge variant="outline" className="bg-white/60 shadow-sm border-border/70 text-[10px] py-0.5">
                   {profile.title}
@@ -1292,7 +1292,7 @@ function App() {
                   {overview.releaseTag}
                 </Badge>
               </div>
-              <h1 className="font-display text-2xl sm:text-3xl font-semibold tracking-tight leading-none text-foreground">
+              <h1 className="font-display text-2xl font-semibold leading-tight tracking-tight text-foreground sm:text-3xl">
                 {siteTitle}
               </h1>
               <p className="text-xs text-muted-foreground leading-relaxed max-w-[640px]">
@@ -1300,9 +1300,9 @@ function App() {
               </p>
             </div>
 
-            <div className="flex flex-col items-start gap-2.5 self-start md:items-end md:self-auto">
-              <div className="flex flex-wrap items-center gap-2 md:justify-end">
-                <div className="flex items-center gap-1 rounded-full border border-border/50 bg-white/55 p-1 shadow-sm">
+            <div className="flex w-full flex-col items-start gap-2.5 self-start md:w-auto md:items-end md:self-auto">
+              <div className="flex w-full flex-wrap items-center gap-2 md:w-auto md:justify-end">
+                <div className="flex min-w-0 flex-1 items-center gap-1 rounded-full border border-border/50 bg-white/55 p-1 shadow-sm sm:flex-none">
                   <span className="px-2 text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80">
                     {t(locale, "Language", "语言")}
                   </span>
@@ -1323,7 +1323,7 @@ function App() {
                   ))}
                 </div>
 
-                <div className="flex items-center gap-1 rounded-full border border-border/50 bg-white/55 p-1 shadow-sm">
+                <div className="flex min-w-0 flex-1 items-center gap-1 rounded-full border border-border/50 bg-white/55 p-1 shadow-sm sm:flex-none">
                   <span className="px-2 text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80">
                     {t(locale, "Theme", "主题")}
                   </span>
@@ -1351,7 +1351,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-2 rounded-[22px] border border-border/50 bg-white/50 px-3 py-2 shadow-sm sm:flex-nowrap sm:gap-1.5 sm:rounded-full sm:px-4 sm:py-1.5">
+              <div className="flex w-full flex-wrap items-center gap-x-3 gap-y-2 rounded-[22px] border border-border/50 bg-white/50 px-3 py-2 shadow-sm sm:w-auto sm:flex-nowrap sm:gap-1.5 sm:rounded-full sm:px-4 sm:py-1.5">
                 {[
                   { label: profile.sampleStatLabel, val: overview.sampleCount },
                   { label: profile.interventionStatLabel, val: overview.interventionCount },
@@ -1375,8 +1375,8 @@ function App() {
 
         </header>
 
-        <Card className="border-border/70 bg-card/75 shadow-none mt-2">
-          <CardContent className="space-y-6 lg:p-8">
+        <Card className="mt-1 border-border/70 bg-card/75 shadow-none sm:mt-2">
+          <CardContent className="space-y-5 p-3 sm:space-y-6 sm:p-5 lg:p-8">
             {/* <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-border/70 pb-6">
               <SectionHeader
                 label="Leaderboard"
@@ -1390,7 +1390,7 @@ function App() {
             </div> */}
 
             <div className="space-y-3">
-              <div className="flex flex-col gap-3 rounded-[22px] border border-border/70 bg-white/40 p-3 shadow-sm sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 sm:p-2">
+              <div className="flex flex-col gap-2.5 rounded-[20px] border border-border/70 bg-white/40 p-2.5 shadow-sm sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 sm:rounded-[22px] sm:p-2">
                 <div className="flex flex-col gap-1.5 px-0 sm:flex-row sm:items-center sm:gap-2 sm:px-2">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80 whitespace-nowrap">
                     {t(locale, "Species", "物种")}
@@ -1398,7 +1398,7 @@ function App() {
                   <NativeSelect
                     value={selectedAnimal}
                     onChange={(event) => setSelectedAnimal(event.target.value)}
-                    className="h-7 w-full py-0 rounded-full border-border/70 bg-white text-xs sm:w-auto sm:min-w-[150px]"
+                    className="h-9 w-full rounded-full border-border/70 bg-white py-0 text-xs sm:h-7 sm:w-auto sm:min-w-[150px]"
                   >
                     {animalOptions.map((option) => (
                       <option key={option.value} value={option.value}>
@@ -1411,7 +1411,7 @@ function App() {
                 {(showCohortSelector || showSiteSelector) ? (
                   <>
                     <div className="hidden h-4 w-px bg-border/70 sm:block" />
-                    <div className="flex flex-col gap-2 border-b border-border/50 pb-3 sm:flex-row sm:items-center sm:gap-2 sm:border-b-0 sm:border-r sm:pb-0 sm:pl-2 sm:pr-3">
+                    <div className="flex min-w-0 flex-col gap-2 border-b border-border/50 pb-2.5 sm:flex-row sm:items-center sm:gap-2 sm:border-b-0 sm:border-r sm:pb-0 sm:pl-2 sm:pr-3">
                       <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80 whitespace-nowrap">
                         {t(locale, "Settings", "设置")}
                       </span>
@@ -1420,7 +1420,7 @@ function App() {
                           value={activeCohort}
                           onChange={(e) => updateCohort(e.target.value)}
                           className={cn(
-                            "h-7 w-full py-0 rounded-full border-border/70 bg-white text-xs sm:w-auto",
+                            "h-9 w-full rounded-full border-border/70 bg-white py-0 text-xs sm:h-7 sm:w-auto",
                             profile.id === "citp" ? "sm:min-w-[220px]" : "sm:min-w-[90px]",
                           )}
                         >
@@ -1435,7 +1435,7 @@ function App() {
                         <NativeSelect
                           value={activeSite}
                           onChange={(e) => setSelectedSite(e.target.value)}
-                          className="h-7 w-full py-0 rounded-full border-border/70 bg-white text-xs sm:w-auto sm:min-w-[100px]"
+                          className="h-9 w-full rounded-full border-border/70 bg-white py-0 text-xs sm:h-7 sm:w-auto sm:min-w-[100px]"
                         >
                           {view.siteOptions.map((site) => (
                             <option key={site} value={site}>
@@ -1448,7 +1448,7 @@ function App() {
                   </>
                 ) : null}
 
-                <div className="flex flex-col gap-3 px-0 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 sm:px-2">
+                <div className="flex min-w-0 flex-col gap-2.5 px-0 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 sm:px-2">
                   <ToggleChipGroup
                     compact
                     label={t(locale, "Metric", "指标")}
@@ -1512,7 +1512,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="group relative flex flex-col gap-4 overflow-hidden rounded-[22px] border border-primary/20 bg-white/95 px-4 py-4 shadow-sm transition-all duration-300 hover:border-primary/40 sm:px-5 sm:py-3 lg:flex-row lg:items-start lg:justify-between">
+              <div className="group relative flex flex-col gap-3 overflow-hidden rounded-[20px] border border-primary/20 bg-white/95 px-3 py-3 shadow-sm transition-all duration-300 hover:border-primary/40 sm:gap-4 sm:rounded-[22px] sm:px-5 lg:flex-row lg:items-start lg:justify-between">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-transparent opacity-50 pointer-events-none" />
                 <div className="relative flex min-w-0 flex-1 items-start gap-3 sm:gap-4">
                   <div className="flex flex-col min-w-0">
@@ -1556,7 +1556,7 @@ function App() {
                     {showInsightDescription && hasInsightDetails && (
                       <div
                         id="insight-details"
-                        className="mt-2 max-w-4xl rounded-[14px] border border-primary/15 bg-primary/5 px-3 py-2"
+                        className="mt-2 max-w-4xl rounded-[14px] border border-primary/15 bg-primary/5 px-2.5 py-2 sm:px-3"
                       >
                         <div className="flex flex-col gap-3">
                           {activeInterventionDescription ? (
@@ -1575,7 +1575,7 @@ function App() {
                             </div>
                           ) : null}
                           {activeInterventionPathway?.ascii ? (
-                            <div className="w-full max-w-[560px] rounded-[12px] border border-primary/12 bg-white/70 px-3 py-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.6)]">
+                            <div className="w-full max-w-[560px] rounded-[12px] border border-primary/12 bg-white/70 px-2.5 py-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.6)] sm:px-3">
                               <p className="text-[9px] font-bold uppercase tracking-widest text-muted-foreground/80">
                                 {translateDataText(activeInterventionPathway.label, locale)}
                               </p>
@@ -1594,9 +1594,9 @@ function App() {
 
                 <div className="relative flex w-full items-start justify-between gap-3 border-t border-border/60 pt-3 lg:w-auto lg:shrink-0 lg:self-center lg:border-t-0 lg:pt-0">
                   <div className="hidden h-8 w-px bg-border/70 lg:block" />
-                  <div className="flex flex-col items-start lg:items-end">
-                    <div className="flex items-baseline gap-1.5">
-                      <span className="font-display text-lg font-extrabold tracking-tight text-foreground">{primaryMetric.value}</span>
+                  <div className="flex min-w-0 flex-col items-start lg:items-end">
+                    <div className="flex min-w-0 flex-wrap items-baseline gap-x-1.5 gap-y-0.5">
+                      <span className="break-words font-display text-lg font-extrabold tracking-tight text-foreground">{primaryMetric.value}</span>
                       <span className="text-xs font-bold text-primary">{primaryMetric.hint}</span>
                     </div>
                     <p className="text-[9px] font-bold uppercase tracking-widest text-muted-foreground leading-none">{primaryMetric.label}</p>
@@ -1630,7 +1630,7 @@ function App() {
         <Card className="overflow-hidden border-border/70 bg-card/80 shadow-none">
           <div className="grid lg:grid-cols-[340px_minmax(0,1fr)]">
             <aside className="border-b border-border/70 bg-white/45 lg:border-b-0 lg:border-r">
-              <CardContent className="space-y-6 p-4 sm:p-6">
+              <CardContent className="space-y-5 p-3 sm:space-y-6 sm:p-6">
                 <div className="space-y-4">
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-foreground">
@@ -1682,7 +1682,7 @@ function App() {
                 </div>
 
                 {canCompare ? (
-                  <div className="space-y-4 rounded-[24px] border border-border/70 bg-secondary/45 p-4">
+                  <div className="space-y-4 rounded-[22px] border border-border/70 bg-secondary/45 p-3 sm:rounded-[24px] sm:p-4">
                     <div className="flex items-center justify-between gap-3">
                       <div className="space-y-1">
                         <p className="text-sm font-medium text-foreground">
@@ -1778,7 +1778,7 @@ function App() {
               </CardContent>
             </aside>
 
-            <div className="space-y-6 p-4 sm:p-6">
+            <div className="space-y-5 p-3 sm:space-y-6 sm:p-6">
               {/* <SectionHeader
                 label={profile.focusSectionLabel}
                 title={t(
@@ -1795,14 +1795,14 @@ function App() {
                 }
               /> */}
 
-              <div className="grid grid-cols-2 gap-2 rounded-[24px] border border-border/70 bg-white/55 p-3 sm:flex sm:flex-wrap">
+              <div className="-mx-1 flex gap-2 overflow-x-auto rounded-[22px] border border-border/70 bg-white/55 p-2.5 sm:mx-0 sm:flex-wrap sm:rounded-[24px] sm:p-3">
                 {displayedCohortOverview.map((entry) => {
                   return (
                     <button
                       key={entry.cohort}
                       type="button"
                       className={cn(
-                        "group flex min-h-[88px] flex-col items-center justify-center gap-1 rounded-[16px] border px-2 py-2.5 text-center transition-all duration-200 sm:min-w-[90px] sm:flex-1",
+                        "group flex min-h-[82px] min-w-[132px] flex-col items-center justify-center gap-1 rounded-[16px] border px-2 py-2.5 text-center transition-all duration-200 sm:min-h-[88px] sm:min-w-[90px] sm:flex-1",
                         entry.cohort === activeCohort
                           ? "border-primary/30 bg-primary/10 shadow-sm ring-1 ring-primary/20"
                           : "border-border/60 bg-white/70 hover:-translate-y-[2px] hover:shadow-sm hover:border-border/80 hover:bg-white",
@@ -1837,7 +1837,7 @@ function App() {
                     key={panel.sex}
                     className="border-border/70 bg-white/60 shadow-none"
                   >
-                    <CardContent className="space-y-5 p-5">
+                    <CardContent className="space-y-4 p-3 sm:space-y-5 sm:p-5">
                       <FocusInsight dataset={view} locale={locale} summary={panelSummaries[index]} />
                       <SurvivalChart
                         locale={locale}
@@ -1877,7 +1877,7 @@ function App() {
                 "radial-gradient(circle at top left, rgba(212,106,54,0.12), transparent 32%), radial-gradient(circle at bottom right, rgba(23,96,135,0.12), transparent 38%)",
             }}
           />
-          <CardContent className="relative p-6 text-sm text-muted-foreground lg:p-8">
+          <CardContent className="relative p-4 text-sm text-muted-foreground sm:p-6 lg:p-8">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <p className="text-sm leading-6 text-muted-foreground">
                 {locale === "en" ? (
@@ -1913,7 +1913,7 @@ function App() {
               <Button
                 type="button"
                 variant="outline"
-                className="rounded-full bg-white/80 px-4"
+                className="h-auto rounded-full bg-white/80 px-4 py-2 text-left whitespace-normal sm:h-10 sm:text-center"
                 aria-expanded={showSupportQrs}
                 aria-controls="support-qr-panel"
                 onClick={() => setShowSupportQrs((current) => !current)}

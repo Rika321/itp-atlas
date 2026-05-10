@@ -188,7 +188,7 @@ function EffectLane({ value, positionScale, isSelected }) {
           isPositive ? "bg-primary" : "bg-[hsl(var(--chart-1))]",
           isSelected && "ring-2 ring-foreground/55",
         )}
-        style={{ left: `clamp(0.5rem, ${valuePosition}%, calc(100% - 0.5rem))` }}
+        style={{ left: `clamp(0.75rem, ${valuePosition}%, calc(100% - 0.75rem))` }}
       />
     </div>
   );
@@ -202,15 +202,22 @@ function EffectValue({
   locale,
   valueFormatter,
   auxValueFormatter,
+  compact = false,
 }) {
   const isPositive = value >= 0;
 
   return (
-    <div className="flex min-w-[132px] flex-col items-end gap-1 text-right sm:min-w-[148px]">
-      <div className="flex flex-wrap items-center justify-end gap-2">
+    <div
+      className={cn(
+        "flex flex-col items-end gap-1 text-right",
+        compact ? "min-w-[88px]" : "min-w-[132px] sm:min-w-[148px]",
+      )}
+    >
+      <div className={cn("flex flex-wrap items-center justify-end", compact ? "gap-1" : "gap-2")}>
         <span
           className={cn(
-            "inline-flex min-w-[84px] items-center justify-center rounded-full px-3 py-1.5 text-xs font-semibold tabular-nums",
+            "inline-flex items-center justify-center rounded-full font-semibold tabular-nums",
+            compact ? "min-w-[70px] px-2 py-1 text-[11px]" : "min-w-[84px] px-3 py-1.5 text-xs",
             isSelected
               ? isPositive
                 ? "bg-primary text-primary-foreground shadow-sm"
@@ -225,7 +232,8 @@ function EffectValue({
         {dayValue != null ? (
           <span
             className={cn(
-              "text-xs font-semibold tabular-nums",
+              "font-semibold tabular-nums",
+              compact ? "text-[11px]" : "text-xs",
               isSelected
                 ? "text-foreground"
                 : isPositive
@@ -240,7 +248,7 @@ function EffectValue({
       {curveMetricValueLabel ? (
         <span
           className={cn(
-            "text-[11px] font-medium tabular-nums",
+            "max-w-full truncate text-[11px] font-medium tabular-nums",
             isSelected ? "text-foreground" : "text-muted-foreground",
           )}
         >
@@ -307,73 +315,79 @@ function EffectRow({
       onClick={handleSelect}
       onKeyDown={handleKeyDown}
     >
-      <div className="grid gap-3 px-4 py-3 md:hidden">
-        <div className="flex items-start justify-between gap-3">
-          <div className="flex min-w-0 items-start gap-3">
-            <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-secondary/70 text-[11px] font-semibold tracking-[0.14em] text-muted-foreground">
-              {formatRank(index)}
-            </span>
-            <div className="min-w-0 space-y-1">
-              <p
-                className={cn(
-                  "min-w-0 break-words text-sm leading-5 text-foreground",
-                  isSelected ? "font-semibold" : "font-medium",
-                )}
-              >
-                {label}
-                {hasExpandedDetails ? (
-                  <button
-                    type="button"
-                    className="ml-1.5 inline-flex h-5 w-5 shrink-0 align-bottom items-center justify-center rounded-full border border-primary/20 bg-primary/5 text-[10px] font-black leading-none text-primary/80 transition-colors hover:bg-primary/10 hover:text-primary"
-                    aria-expanded={showDescription}
-                    aria-label={t(
-                      locale,
-                      `${showDescription ? "Hide" : "Show"} details for ${label}`,
-                      `${showDescription ? "隐藏" : "显示"} ${label} 的详情`,
-                    )}
-                    onClick={toggleDescription}
-                  >
-                    ?
-                  </button>
-                ) : null}
-              </p>
-              <div className="mt-1 flex min-w-0 flex-nowrap items-center gap-1.5 overflow-hidden">
-                {showMetaLabels && row.metaLabel ? (
-                  <span
-                    title={row.metaLabel}
-                    className="inline-flex min-w-0 max-w-[8rem] shrink rounded-full bg-secondary/60 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-[0.08em] text-muted-foreground"
-                  >
-                    <span className="truncate">{row.metaLabel}</span>
-                  </span>
-                ) : null}
-                <SampleSizeBadge label={row.sampleSizeLabel} title={row.sampleSizeTitle} />
-                <DatasetBadge locale={locale} datasetLink={row.datasetLink} />
-                <PubMedBadge locale={locale} pubmed={row.pubmed} />
-                {isStatisticallySignificant ? (
-                  <StatisticalSignificanceBadge
-                    locale={locale}
-                    pValue={row.logRankPValue}
-                    testLabel={row.statisticalTestLabel}
-                  />
-                ) : null}
-              </div>
-              {showDescription && hasExpandedDetails ? (
-                <div className="space-y-2 rounded-[14px] border border-primary/15 bg-primary/5 px-3 py-2 text-[11px] leading-5 text-muted-foreground">
-                  {row.description ? <p>{row.description}</p> : null}
-                  {row.pubmed?.citation ? (
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span>{row.pubmed.citation}</span>
-                      {row.pubmed.detail ? (
-                        <span className="text-muted-foreground/70">
-                          {row.pubmed.detail}
-                        </span>
-                      ) : null}
-                    </div>
-                  ) : null}
-                </div>
+      <div className="grid gap-3 px-3 py-3 sm:px-4 md:hidden">
+        <div className="flex min-w-0 items-start gap-3">
+          <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-secondary/70 text-[11px] font-semibold tracking-[0.14em] text-muted-foreground">
+            {formatRank(index)}
+          </span>
+          <div className="min-w-0 flex-1 space-y-2">
+            <p
+              className={cn(
+                "min-w-0 break-words text-sm leading-5 text-foreground",
+                isSelected ? "font-semibold" : "font-medium",
+              )}
+            >
+              {label}
+              {hasExpandedDetails ? (
+                <button
+                  type="button"
+                  className="ml-1.5 inline-flex h-5 w-5 shrink-0 align-bottom items-center justify-center rounded-full border border-primary/20 bg-primary/5 text-[10px] font-black leading-none text-primary/80 transition-colors hover:bg-primary/10 hover:text-primary"
+                  aria-expanded={showDescription}
+                  aria-label={t(
+                    locale,
+                    `${showDescription ? "Hide" : "Show"} details for ${label}`,
+                    `${showDescription ? "隐藏" : "显示"} ${label} 的详情`,
+                  )}
+                  onClick={toggleDescription}
+                >
+                  ?
+                </button>
+              ) : null}
+            </p>
+            <div className="flex min-w-0 flex-wrap items-center gap-1.5">
+              {showMetaLabels && row.metaLabel ? (
+                <span
+                  title={row.metaLabel}
+                  className="inline-flex min-w-0 max-w-[9rem] shrink rounded-full bg-secondary/60 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-[0.08em] text-muted-foreground"
+                >
+                  <span className="truncate">{row.metaLabel}</span>
+                </span>
+              ) : null}
+              <SampleSizeBadge label={row.sampleSizeLabel} title={row.sampleSizeTitle} />
+              <DatasetBadge locale={locale} datasetLink={row.datasetLink} />
+              <PubMedBadge locale={locale} pubmed={row.pubmed} />
+              {isStatisticallySignificant ? (
+                <StatisticalSignificanceBadge
+                  locale={locale}
+                  pValue={row.logRankPValue}
+                  testLabel={row.statisticalTestLabel}
+                />
               ) : null}
             </div>
+            {showDescription && hasExpandedDetails ? (
+              <div className="space-y-2 rounded-[14px] border border-primary/15 bg-primary/5 px-3 py-2 text-[11px] leading-5 text-muted-foreground">
+                {row.description ? <p>{row.description}</p> : null}
+                {row.pubmed?.citation ? (
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span>{row.pubmed.citation}</span>
+                    {row.pubmed.detail ? (
+                      <span className="text-muted-foreground/70">
+                        {row.pubmed.detail}
+                      </span>
+                    ) : null}
+                  </div>
+                ) : null}
+              </div>
+            ) : null}
           </div>
+        </div>
+
+        <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2.5">
+          <EffectLane
+            value={row.visualValue}
+            positionScale={positionScale}
+            isSelected={isSelected}
+          />
           <EffectValue
             value={row.value}
             dayValue={row.dayValue}
@@ -382,14 +396,9 @@ function EffectRow({
             locale={locale}
             valueFormatter={valueFormatter}
             auxValueFormatter={auxValueFormatter}
+            compact
           />
         </div>
-
-        <EffectLane
-          value={row.visualValue}
-          positionScale={positionScale}
-          isSelected={isSelected}
-        />
       </div>
 
       <div className="hidden md:grid md:grid-cols-[44px_minmax(270px,320px)_minmax(140px,1fr)_150px] md:items-center md:gap-4 md:px-4 md:py-3">
@@ -510,8 +519,8 @@ export default function EffectSizeChart({
 
   if (!chartRows.length) {
     return (
-      <div className="space-y-2 rounded-[22px] border border-dashed border-border bg-white/65 p-5">
-        <h3 className="font-display text-2xl font-semibold tracking-[-0.04em] text-foreground">
+      <div className="space-y-2 rounded-[20px] border border-dashed border-border bg-white/65 p-4 sm:rounded-[22px] sm:p-5">
+        <h3 className="font-display text-xl font-semibold tracking-normal text-foreground sm:text-2xl">
           {title}
         </h3>
         <p className="text-sm leading-6 text-muted-foreground">{subtitle}</p>
@@ -535,7 +544,7 @@ export default function EffectSizeChart({
     <section className="space-y-4">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div className="space-y-1">
-          <h3 className="font-display text-2xl font-semibold tracking-[-0.04em] text-foreground">
+          <h3 className="font-display text-xl font-semibold tracking-normal text-foreground sm:text-2xl">
             {title}
           </h3>
           <p className="max-w-2xl text-sm leading-6 text-muted-foreground">{subtitle}</p>
@@ -556,7 +565,7 @@ export default function EffectSizeChart({
         </div> */}
       </div>
 
-      <div className="overflow-hidden rounded-[26px] border border-border/70 bg-white/88">
+      <div className="overflow-hidden rounded-[22px] border border-border/70 bg-white/88 sm:rounded-[26px]">
         <div className="hidden border-b border-border/70 px-4 py-3 md:grid md:grid-cols-[44px_minmax(270px,320px)_minmax(140px,1fr)_150px] md:items-center md:gap-4">
           <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
             {t(locale, "Rank", "排名")}

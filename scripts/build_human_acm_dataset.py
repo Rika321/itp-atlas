@@ -86,7 +86,7 @@ SOURCE_CATALOG = [
         "finding": (
             "The source pool contains all 406 public Data Table 2 no-concentration "
             "medication rows with N>=500 plus the six Figure 5 / Data Table 4 "
-            "medication-class rows; the site view displays rows with reported P<=0.05 "
+            "medication-class rows; the site view displays rows with reported P values "
             "and ranks them as 1 minus the reported ACM hazard ratio."
         ),
         "dataset_links": [
@@ -1190,7 +1190,7 @@ def build_manifest() -> dict[str, Any]:
         "source_scope": (
             "Public Aging Cell supplement source pool: all 406 Data Table 2 no-concentration "
             "medication ACM rows with N>=500, plus the six Figure 5 / Data Table 4 "
-            "medication-class rows. The site view displays rows with reported P<=0.05 "
+            "medication-class rows. The site view displays rows with reported P values "
             "and ranks them as 1 minus the reported ACM hazard ratio. Includes public UK "
             "Biobank project provenance; no participant-level UK Biobank data."
         ),
@@ -1207,7 +1207,7 @@ def build_manifest() -> dict[str, Any]:
         "profile": {
             "title": "Human UK Biobank ACM Interventions",
             "description": (
-                "A Biobank-only human view of reported P<=0.05 ACM rows from all 406 "
+                "A Biobank-only human view of ACM rows with reported P values from all 406 "
                 "Data Table 2 N>=500 medication rows plus Figure 5 medication-class rows, "
                 "ranked by the reported hazard-ratio effect."
             ),

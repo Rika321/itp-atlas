@@ -27,15 +27,15 @@ export default function SurvivalChart({ title, subtitle, lines, locale = "en" })
   return (
     <div className="space-y-4">
       <div className="space-y-1">
-        <h3 className="font-display text-2xl font-semibold tracking-[-0.04em] text-foreground">
+        <h3 className="font-display text-xl font-semibold tracking-normal text-foreground sm:text-2xl">
           {title}
         </h3>
         <p className="text-sm leading-6 text-muted-foreground">{subtitle}</p>
       </div>
 
-      <div className="overflow-hidden rounded-[24px] border border-border/70 bg-white/85 p-3 sm:p-4">
+      <div className="overflow-hidden rounded-[20px] border border-border/70 bg-white/85 p-2.5 sm:rounded-[24px] sm:p-4">
         <div className="overflow-x-auto pb-2 sm:pb-0">
-          <div className="min-w-[640px] sm:min-w-0">
+          <div className="min-w-[560px] sm:min-w-0">
             <svg
               className="h-auto w-full overflow-visible"
               viewBox={`0 0 ${width} ${height}`}
@@ -125,7 +125,7 @@ export default function SurvivalChart({ title, subtitle, lines, locale = "en" })
               className={`itp-legend-swatch itp-legend-swatch--${series.variant}`}
               style={{ backgroundColor: series.color }}
             />
-            <span>{series.label}</span>
+            <span className="min-w-0 break-words">{series.label}</span>
           </div>
         ))}
       </div>

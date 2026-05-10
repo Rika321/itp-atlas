@@ -68,7 +68,7 @@ The human tab uses public supplement data only:
 - **Data Table 2**: all 406 no-concentration medication ACM rows with `N>=500`
 - **Data Table 4**: six Figure 5 medication-class rows
 
-Rows are ranked as `1 - HR`. The UI displays rows with reported `P <= 0.05` and
+Rows are ranked as `1 - HR`. The UI displays rows with reported p-values and
 splits them by lower or higher ACM direction.
 
 Data Table 3 dose/formulation rows are excluded from the main table because they

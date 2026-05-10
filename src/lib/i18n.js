@@ -76,12 +76,12 @@ const ZH_TRANSLATIONS = {
     "人类 Biobank 药物信号。按报告的全因死亡率风险比影响排序；正值表示全因死亡率降低，负值表示全因死亡率升高。",
   "Human Biobank medication signals. Shows all 406 Data Table 2 N>=500 medication rows plus Figure 5 class rows, ranked by the reported ACM hazard-ratio effect.":
     "人类 Biobank 药物信号。展示 Data Table 2 中全部 406 个 N>=500 药物条目，并加入图 5 类别条目，按报告的全因死亡率风险比影响排序。",
-  "Human Biobank medication signals with reported P<=0.05, drawn from all 406 Data Table 2 N>=500 medication rows plus Figure 5 class rows and ranked by the reported ACM hazard-ratio effect.":
-    "人类 Biobank 药物信号。仅展示报告 P<=0.05 的条目，来源包括 Data Table 2 中全部 406 个 N>=500 药物条目及图 5 类别条目，并按报告的全因死亡率风险比影响排序。",
+  "Human Biobank medication signals with reported P values, drawn from all 406 Data Table 2 N>=500 medication rows plus Figure 5 class rows and ranked by the reported ACM hazard-ratio effect.":
+    "人类 Biobank 药物信号。仅展示报告 P 值的条目，来源包括 Data Table 2 中全部 406 个 N>=500 药物条目及图 5 类别条目，并按报告的全因死亡率风险比影响排序。",
   "A Biobank-only human view of all 406 Data Table 2 N>=500 medication ACM rows plus Figure 5 medication-class rows, ranked by the reported hazard-ratio effect.":
     "仅基于 Biobank 的人类视图，展示 Data Table 2 中全部 406 个 N>=500 药物全因死亡率条目，并加入图 5 药物类别条目，按报告的风险比影响排序。",
-  "A Biobank-only human view of reported P<=0.05 ACM rows from all 406 Data Table 2 N>=500 medication rows plus Figure 5 medication-class rows, ranked by the reported hazard-ratio effect.":
-    "仅基于 Biobank 的人类视图。展示来自 Data Table 2 全部 406 个 N>=500 药物条目及图 5 药物类别条目中报告 P<=0.05 的全因死亡率条目，并按报告的风险比影响排序。",
+  "A Biobank-only human view of ACM rows with reported P values from all 406 Data Table 2 N>=500 medication rows plus Figure 5 medication-class rows, ranked by the reported hazard-ratio effect.":
+    "仅基于 Biobank 的人类视图。展示来自 Data Table 2 全部 406 个 N>=500 药物条目及图 5 药物类别条目中报告 P 值的全因死亡率条目，并按报告的风险比影响排序。",
   "Effect is shown as 1 minus the reported ACM hazard ratio. These retrospective Biobank associations do not remove indication or healthy-user confounding.":
     "影响值显示为 1 减去已报告的全因死亡率风险比。这些回顾性 Biobank 关联不能消除适应证或健康使用者混杂。",
   "Effect is shown as 1 minus the reported ACM hazard ratio. Positive values indicate lower ACM; negative values indicate higher ACM. These retrospective Biobank associations do not remove indication or healthy-user confounding.":
@@ -93,12 +93,12 @@ const ZH_TRANSLATIONS = {
   "UK Biobank 406-medication mortality screen": "UK Biobank 406 种药物死亡率筛查",
   "Rows here are all 406 public Data Table 2 no-concentration medication rows with N>=500 plus the six Figure 5 / Data Table 4 medication-class rows, ranked as 1 minus the reported ACM hazard ratio.":
     "这里展示公开 Data Table 2 中全部 406 个 N>=500、未按浓度区分的药物条目，并加入 6 个图 5 / Data Table 4 药物类别条目，按 1 减去报告的全因死亡率风险比排序。",
-  "The source pool contains all 406 public Data Table 2 no-concentration medication rows with N>=500 plus the six Figure 5 / Data Table 4 medication-class rows; the site view displays rows with reported P<=0.05 and ranks them as 1 minus the reported ACM hazard ratio.":
-    "来源集合包含公开 Data Table 2 中全部 406 个 N>=500、未按浓度区分的药物条目，并加入 6 个图 5 / Data Table 4 药物类别条目；本站仅展示报告 P<=0.05 的条目，并按 1 减去报告的全因死亡率风险比排序。",
+  "The source pool contains all 406 public Data Table 2 no-concentration medication rows with N>=500 plus the six Figure 5 / Data Table 4 medication-class rows; the site view displays rows with reported P values and ranks them as 1 minus the reported ACM hazard ratio.":
+    "来源集合包含公开 Data Table 2 中全部 406 个 N>=500、未按浓度区分的药物条目，并加入 6 个图 5 / Data Table 4 药物类别条目；本站仅展示报告 P 值的条目，并按 1 减去报告的全因死亡率风险比排序。",
   "Public Aging Cell supplement: all 406 Data Table 2 no-concentration medication ACM rows with N>=500, plus the six Figure 5 / Data Table 4 medication-class rows, ranked as 1 minus the reported ACM hazard ratio. Includes public UK Biobank project provenance; no participant-level UK Biobank data.":
     "公开 Aging Cell 补充材料：Data Table 2 中全部 406 个 N>=500、未按浓度区分的药物全因死亡率条目，并加入 6 个图 5 / Data Table 4 药物类别条目，按 1 减去报告的全因死亡率风险比排序。包含公开 UK Biobank 项目来源信息；不包含参与者级 UK Biobank 数据。",
-  "Public Aging Cell supplement source pool: all 406 Data Table 2 no-concentration medication ACM rows with N>=500, plus the six Figure 5 / Data Table 4 medication-class rows. The site view displays rows with reported P<=0.05 and ranks them as 1 minus the reported ACM hazard ratio. Includes public UK Biobank project provenance; no participant-level UK Biobank data.":
-    "公开 Aging Cell 补充材料来源集合：Data Table 2 中全部 406 个 N>=500、未按浓度区分的药物全因死亡率条目，并加入 6 个图 5 / Data Table 4 药物类别条目。本站仅展示报告 P<=0.05 的条目，并按 1 减去报告的全因死亡率风险比排序。包含公开 UK Biobank 项目来源信息；不包含参与者级 UK Biobank 数据。",
+  "Public Aging Cell supplement source pool: all 406 Data Table 2 no-concentration medication ACM rows with N>=500, plus the six Figure 5 / Data Table 4 medication-class rows. The site view displays rows with reported P values and ranks them as 1 minus the reported ACM hazard ratio. Includes public UK Biobank project provenance; no participant-level UK Biobank data.":
+    "公开 Aging Cell 补充材料来源集合：Data Table 2 中全部 406 个 N>=500、未按浓度区分的药物全因死亡率条目，并加入 6 个图 5 / Data Table 4 药物类别条目。本站仅展示报告 P 值的条目，并按 1 减去报告的全因死亡率风险比排序。包含公开 UK Biobank 项目来源信息；不包含参与者级 UK Biobank 数据。",
   "UK Biobank lifespan-modulating drug project": "UK Biobank 寿命调节药物项目",
   "Biobank sources": "Biobank 来源",
   "Public supplement + UKB metadata": "公开补充表 + UKB 元数据",

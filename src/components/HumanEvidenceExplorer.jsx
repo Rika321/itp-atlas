@@ -78,11 +78,11 @@ function ScoreTile({ label, locale, value, valueKind, hint }) {
         : formatScore(value, locale);
 
   return (
-    <div className="rounded-[22px] border border-border/70 bg-white/75 p-4 shadow-sm">
+    <div className="min-w-0 rounded-[20px] border border-border/70 bg-white/75 p-3.5 shadow-sm sm:rounded-[22px] sm:p-4">
       <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80">
         {label}
       </p>
-      <p className="mt-2 font-display text-2xl font-semibold tracking-tight text-foreground">
+      <p className="mt-2 break-words font-display text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
         {formattedValue}
       </p>
       {hint ? <p className="mt-1 text-[11px] leading-5 text-muted-foreground">{hint}</p> : null}
@@ -141,7 +141,7 @@ function AcmResultCard({
 
   return (
     <Card className="border-border/70 bg-white/75 shadow-none xl:col-span-2">
-      <CardContent className="space-y-4 p-5">
+      <CardContent className="space-y-4 p-4 sm:p-5">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div className="space-y-1">
             <Badge variant="outline">{t(locale, "ACM result", "全因死亡率结果")}</Badge>
@@ -215,11 +215,11 @@ function EvidenceCard({ label, evidence, locale }) {
 
   return (
     <Card className="border-border/70 bg-white/75 shadow-none">
-      <CardContent className="space-y-4 p-5">
-        <div className="flex items-start justify-between gap-3">
-          <div className="space-y-1">
+      <CardContent className="space-y-4 p-4 sm:p-5">
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div className="min-w-0 space-y-1">
             <Badge variant="outline">{label}</Badge>
-            <p className="font-display text-2xl font-semibold tracking-tight text-foreground">
+            <p className="break-words font-display text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
               {formatEvidenceValue(evidence, locale)}
             </p>
           </div>
@@ -263,7 +263,7 @@ function SourceCatalogPanel({ sources, locale }) {
   }
 
   return (
-    <div className="rounded-[24px] border border-border/70 bg-white/70 p-5">
+    <div className="rounded-[22px] border border-border/70 bg-white/70 p-4 sm:rounded-[24px] sm:p-5">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex flex-wrap items-center gap-2">
           <Badge variant="outline">{t(locale, "Biobank sources", "Biobank 来源")}</Badge>
@@ -287,10 +287,10 @@ function SourceCatalogPanel({ sources, locale }) {
           return (
             <div
               key={source.key || publication?.pmid || publication?.title}
-              className="rounded-[18px] border border-border/60 bg-secondary/30 p-4"
+              className="min-w-0 rounded-[18px] border border-border/60 bg-secondary/30 p-3 sm:p-4"
             >
               <div className="flex flex-wrap items-center justify-between gap-2">
-                <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary/85">
+                <p className="min-w-0 break-words text-xs font-bold uppercase tracking-[0.14em] text-primary/85">
                   {source.label}
                 </p>
                 {publicationUrl ? (
@@ -362,7 +362,7 @@ export default function HumanEvidenceExplorer({ summary, locale = "en" }) {
 
   if (!summary || !evidence) {
     return (
-      <div className="rounded-[24px] border border-dashed border-border bg-white/55 p-5 text-sm text-muted-foreground">
+      <div className="rounded-[22px] border border-dashed border-border bg-white/55 p-4 text-sm text-muted-foreground sm:rounded-[24px] sm:p-5">
         {t(locale, "No evidence summary is available for this medication.", "该药物暂无可显示的证据摘要。")}
       </div>
     );
@@ -401,7 +401,7 @@ export default function HumanEvidenceExplorer({ summary, locale = "en" }) {
         />
       </div>
 
-      <div className="rounded-[24px] border border-border/70 bg-white/70 p-5">
+      <div className="rounded-[22px] border border-border/70 bg-white/70 p-4 sm:rounded-[24px] sm:p-5">
         <div className="flex flex-wrap items-center gap-2">
           <Badge variant="outline">{t(locale, "Biobank population", "Biobank 人群")}</Badge>
           {summary.groupMeta?.condition ? (

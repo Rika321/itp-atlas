@@ -1,32 +1,26 @@
-# How to Live Longer: A Small-Molecule Atlas
+<p align="center">
+  <h1 align="center">How to Live Longer</h1>
+  <p align="center">
+    A small-molecule atlas for public longevity-intervention signals.
+  </p>
+  <p align="center">
+    <a href="https://livelonger.pages.dev">Live Site</a>
+    ·
+    <a href="./DEPLOY.md">Deploy</a>
+    ·
+    <a href="./CONTRIBUTING.md">Contribute</a>
+  </p>
+  <p align="center">
+    <img alt="React" src="https://img.shields.io/badge/React-18-149eca">
+    <img alt="Vite" src="https://img.shields.io/badge/Vite-5-646cff">
+    <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind-CSS-38bdf8">
+    <img alt="Cloudflare Pages" src="https://img.shields.io/badge/Cloudflare-Pages-f38020">
+  </p>
+</p>
 
-Live site: https://livelonger.pages.dev
-
-Interactive React app for exploring public longevity-intervention signals. The
-site compares mouse ITP lifespan data, CITP worm lifespan data, and public UK
-Biobank medication/all-cause-mortality signals. It is a research visualization
-tool, not medical or prescribing advice.
-
-## Current App
-
-Published views:
-
-- Mouse ITP lifespan interventions
-- CITP worm interventions for `C. elegans`, `C. briggsae`, and `C. tropicalis`
-- Human UK Biobank ACM signals from Morin et al. 2024 Aging Cell supplement
-
-Local builders also exist for killifish and Drosophila diet-intervention source
-data, but those datasets are not currently exposed in the published static app.
-
-## Stack
-
-- React 18 + Vite 5
-- Tailwind CSS
-- D3 utilities for survival/effect-size calculations
-- Python data builders
-- Cloudflare Pages direct upload via Wrangler
-
-## Quick Start
+Compare public mouse and worm lifespan screens with public human UK Biobank
+medication/all-cause-mortality signals. The app is built for exploration and
+evidence review, not medical or prescribing advice.
 
 ```bash
 npm install
@@ -34,95 +28,96 @@ python3 -m pip install -r requirements.txt
 npm run dev:fast
 ```
 
-Use `npm run dev` when you want to regenerate datasets before starting Vite.
+## What It Shows
 
-## Common Commands
+- Mouse ITP lifespan interventions
+- CITP worm interventions for `C. elegans`, `C. briggsae`, and `C. tropicalis`
+- Human UK Biobank ACM medication signals from Morin et al. 2024 Aging Cell
+- English and Simplified Chinese UI copy
+- Dark and light themes
 
-| Command | Purpose |
-| --- | --- |
-| `npm run dev:fast` | Start Vite only. Best for UI/copy changes. |
-| `npm run dev` | Rebuild datasets, sync public data, then start Vite. |
-| `npm run build:fast` | Production Vite build without data rebuild. |
-| `npm run build` | Full data rebuild plus production build. |
-| `npm run preview` | Preview `dist/` locally. |
-| `npm run cf:whoami` | Check Wrangler auth. |
-| `npm run cf:deploy` | Build and deploy `dist/` to Cloudflare Pages. |
-| `npm run cf:preview` | Build and create a Cloudflare Pages preview deploy. |
+Local builders also normalize killifish and Drosophila diet-intervention source
+data. Those datasets are kept out of the published static bundle until their
+views are ready to ship.
 
-Data refresh commands:
+## Data Model
 
-| Command | Purpose |
-| --- | --- |
-| `npm run download:citp` | Refresh raw CITP portal downloads. |
-| `npm run download:human:acm` | Download the public Morin et al. ACM supplement. |
-| `npm run build:human:acm` | Build `data/meta/human_acm_dataset_manifest.json`. |
-| `npm run download:ukb:metadata` | Refresh public UK Biobank metadata snapshots. |
-| `npm run build:ukb:metadata` | Build the local UK Biobank metadata manifest. |
-| `npm run prepare:data` | Rebuild local datasets and sync the published bundle. |
-
-## Data Flow
+The app keeps the data pipeline file-based and reproducible:
 
 ```text
-data/raw/        source snapshots and downloaded files
+data/raw/        downloaded or checked-in source snapshots
 data/processed/  normalized CSV outputs
 data/meta/       generated manifests
-public/data/     static bundle loaded by the deployed app
+public/data/     deployed static data bundle
 ```
 
-`scripts/sync_public_data.py` publishes:
+Published static data currently includes:
 
 - `itp_lifespan_all.csv`
 - `itp_dataset_manifest.json`
 - split CITP CSV parts plus `citp_dataset_manifest.json`
 - `human_acm_dataset_manifest.json`
 
-It deliberately removes killifish, Drosophila, and UK Biobank metadata manifests
-from `public/data` until those views are meant to ship.
+`scripts/sync_public_data.py` copies the published subset and removes local-only
+killifish, Drosophila, and UK Biobank metadata outputs from `public/data`.
 
-## Human ACM View
+## Human ACM Source
 
-The human tab uses public supplement data only. It imports:
+The human tab uses public supplement data only:
 
-- Data Table 2: all 406 no-concentration medication ACM rows with `N>=500`
-- Data Table 4: six Figure 5 medication-class rows
+- **Data Table 2**: all 406 no-concentration medication ACM rows with `N>=500`
+- **Data Table 4**: six Figure 5 medication-class rows
 
-The UI displays rows with reported `P <= 0.05` and ranks effect as `1 - HR`.
-Top filters split the displayed rows into all, lower ACM, and higher ACM.
+Rows are ranked as `1 - HR`. The UI displays rows with reported `P <= 0.05` and
+splits them by lower or higher ACM direction.
 
-Data Table 3 dose/formulation rows are not part of the main human table because
-they would duplicate medication-level rows. Data Table 5 is used as source
-context only, not as an ACM result table.
+Data Table 3 dose/formulation rows are excluded from the main table because they
+duplicate medication-level rows. Data Table 5 is source context, not an ACM
+result table. No participant-level UK Biobank data is downloaded or included.
 
-No participant-level UK Biobank data is downloaded or included.
+## Commands
+
+| Command | Purpose |
+| --- | --- |
+| `npm run dev:fast` | Start Vite without rebuilding data. |
+| `npm run dev` | Rebuild data, sync public data, then start Vite. |
+| `npm run build:fast` | Build the app without rebuilding data. |
+| `npm run build` | Full data rebuild plus production build. |
+| `npm run preview` | Preview `dist/` locally. |
+| `npm run cf:whoami` | Check Wrangler authentication. |
+| `npm run cf:deploy` | Build and deploy to Cloudflare Pages. |
+
+Data refresh:
+
+| Command | Purpose |
+| --- | --- |
+| `npm run download:citp` | Refresh raw CITP downloads. |
+| `npm run download:human:acm` | Download the public Morin et al. ACM supplement. |
+| `npm run build:human:acm` | Generate the human ACM manifest. |
+| `npm run download:ukb:metadata` | Refresh public UK Biobank metadata snapshots. |
+| `npm run build:ukb:metadata` | Generate the local UK Biobank metadata manifest. |
+| `npm run prepare:data` | Rebuild local datasets and sync the deployed bundle. |
 
 ## Project Layout
 
 ```text
-src/App.jsx                  app state, dataset loading, page composition
+src/App.jsx                  app state, loading, page composition
 src/components/              charts and UI components
-src/lib/itp.js               dataset parsing, rankings, survival helpers
+src/lib/itp.js               parsers, rankings, survival helpers
 src/lib/humanEvidence.js     fallback human project-source manifest
 src/lib/i18n.js              translations and localization helpers
 src/lib/pathways.js          pathway diagrams and labels
-scripts/                     download, build, and sync data utilities
+scripts/                     data download/build/sync utilities
 ```
-
-## Content And Translation
-
-User-facing English source strings should have matching Simplified Chinese
-translations in `src/lib/i18n.js`. Dataset-derived text should go through the
-existing localization helpers instead of duplicating translated copy in
-components.
 
 ## Deployment
 
-The Cloudflare Pages project is `livelonger`; `wrangler.toml` points Pages to
-`dist/`.
+Cloudflare Pages project: `livelonger`.
 
 ```bash
 npm run cf:whoami
 npm run cf:deploy
 ```
 
-More setup detail is in [DEPLOY.md](./DEPLOY.md). Day-to-day contribution notes
-are in [CONTRIBUTING.md](./CONTRIBUTING.md).
+`wrangler.toml` points Pages to `dist/`. See [DEPLOY.md](./DEPLOY.md) for first
+setup steps.

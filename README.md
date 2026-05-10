@@ -1,214 +1,128 @@
 # How to Live Longer: A Small-Molecule Atlas
 
-> Live site: https://livelonger.pages.dev
+Live site: https://livelonger.pages.dev
 
-Interactive React app for comparing public longevity-intervention datasets across mice, worms, and a curated human medication evidence view.
+Interactive React app for exploring public longevity-intervention signals. The
+site compares mouse ITP lifespan data, CITP worm lifespan data, and public UK
+Biobank medication/all-cause-mortality signals. It is a research visualization
+tool, not medical or prescribing advice.
 
-This repository focuses on:
+## Current App
 
-- Mouse lifespan data from the NIA Interventions Testing Program (ITP)
-- Worm lifespan data from the Caenorhabditis Intervention Testing Program (CITP)
-- A curated human medication evidence atlas built from meta-analysis, epidemiology, and Mendelian evidence
-- Bilingual presentation (`en`, `zh-CN`) with dataset-aware translation helpers
+Published views:
 
-The app is a research and visualization tool, not prescribing advice.
+- Mouse ITP lifespan interventions
+- CITP worm interventions for `C. elegans`, `C. briggsae`, and `C. tropicalis`
+- Human UK Biobank ACM signals from Morin et al. 2024 Aging Cell supplement
 
-## What is in the app today
-
-The current UI ships three data sources:
-
-- Mouse ITP
-- CITP worm data, filtered into `C. elegans`, `C. briggsae`, and `C. tropicalis` views
-- Human medication evidence curated in code
-
-The repo also contains local dataset builders for killifish and Drosophila source data. Those builders are useful for normalization work, but their outputs are intentionally kept out of the published static bundle for now.
+Local builders also exist for killifish and Drosophila diet-intervention source
+data, but those datasets are not currently exposed in the published static app.
 
 ## Stack
 
-- React 18
-- Vite 5
+- React 18 + Vite 5
 - Tailwind CSS
 - D3 utilities for survival/effect-size calculations
-- Python scripts for raw-data normalization and manifest generation
-- Cloudflare Pages for deployment
+- Python data builders
+- Cloudflare Pages direct upload via Wrangler
 
-## Quick start
-
-### Prerequisites
-
-- Node.js 20+ recommended
-- Python 3.10+
-- `pip` for Python dependencies
-
-### Install
+## Quick Start
 
 ```bash
 npm install
 python3 -m pip install -r requirements.txt
-```
-
-### Start the app
-
-For most UI, copy, and translation changes:
-
-```bash
 npm run dev:fast
 ```
 
-For full data regeneration before starting the dev server:
+Use `npm run dev` when you want to regenerate datasets before starting Vite.
 
-```bash
-npm run dev
-```
+## Common Commands
 
-Open the local Vite URL shown in the terminal.
-
-## Available scripts
-
-| Command | What it does |
+| Command | Purpose |
 | --- | --- |
-| `npm run dev:fast` | Start Vite without rebuilding datasets. Best default for UI work. |
-| `npm run dev` | Rebuild all datasets, sync published files, then start Vite. |
-| `npm run prepare:data:public` | Rebuild the published mouse/CITP datasets and sync `public/data`. |
-| `npm run prepare:data` | Rebuild all local datasets and sync the published subset. |
-| `npm run download:citp` | Refresh raw CITP portal downloads into `data/raw/citp`. |
-| `npm run download:human:acm` | Refresh the public Aging Cell UK Biobank ACM supplement into `data/raw/human_acm`. |
-| `npm run build:human:acm` | Extract and rank public human ACM rows into `data/meta/human_acm_dataset_manifest.json`. |
-| `npm run download:ukb:metadata` | Refresh public UK Biobank metadata snapshots into `data/raw/ukbiobank`. |
-| `npm run build:ukb:metadata` | Distill raw UK Biobank metadata into the site manifest in `data/meta`. |
-| `npm run build:fast` | Production Vite build without rerunning Python data prep. |
-| `npm run build` | Full data rebuild plus production build. Best smoke test before merge. |
-| `npm run preview` | Preview the production build locally. |
-| `npm run cf:whoami` | Check Cloudflare Wrangler auth. |
-| `npm run cf:deploy` | Full build, then deploy `dist/` to Cloudflare Pages. |
-| `npm run cf:preview` | Full build, then create a preview deployment on Cloudflare Pages. |
+| `npm run dev:fast` | Start Vite only. Best for UI/copy changes. |
+| `npm run dev` | Rebuild datasets, sync public data, then start Vite. |
+| `npm run build:fast` | Production Vite build without data rebuild. |
+| `npm run build` | Full data rebuild plus production build. |
+| `npm run preview` | Preview `dist/` locally. |
+| `npm run cf:whoami` | Check Wrangler auth. |
+| `npm run cf:deploy` | Build and deploy `dist/` to Cloudflare Pages. |
+| `npm run cf:preview` | Build and create a Cloudflare Pages preview deploy. |
 
-## Project layout
+Data refresh commands:
+
+| Command | Purpose |
+| --- | --- |
+| `npm run download:citp` | Refresh raw CITP portal downloads. |
+| `npm run download:human:acm` | Download the public Morin et al. ACM supplement. |
+| `npm run build:human:acm` | Build `data/meta/human_acm_dataset_manifest.json`. |
+| `npm run download:ukb:metadata` | Refresh public UK Biobank metadata snapshots. |
+| `npm run build:ukb:metadata` | Build the local UK Biobank metadata manifest. |
+| `npm run prepare:data` | Rebuild local datasets and sync the published bundle. |
+
+## Data Flow
 
 ```text
-src/
-  App.jsx                     App-level state and dataset/view orchestration
-  components/                 Charts and UI building blocks
-  lib/
-    itp.js                    Parsing, summaries, rankings, survival utilities
-    interventions.js          Mouse intervention labels and descriptions
-    humanEvidence.js          Curated human evidence dataset
-    i18n.js                   Locale selection and translation helpers
-    pathways.js               Mechanistic pathway sketches
-
-scripts/
-  build_itp_dataset.py        Normalize mouse ITP source files
-  build_citp_dataset.py       Normalize CITP source files
-  build_killifish_dataset.py  Normalize local killifish source files
-  build_drosophila_dataset.py Normalize local fly source files
-  build_ukbiobank_metadata.py Distill public UK Biobank metadata for local reference
-  download_citp_data.py       Refresh CITP raw downloads
-  download_ukbiobank_metadata.py
-                                Refresh public UK Biobank metadata snapshots
-  sync_public_data.py         Copy published datasets into public/data
-
-data/
-  raw/                        Source snapshots and downloaded files
-  processed/                  Generated normalized CSVs
-  meta/                       Generated manifests
-
-public/data/                  Published static dataset bundle used by the app
-public/qr/                    Optional QR images rendered in the footer
+data/raw/        source snapshots and downloaded files
+data/processed/  normalized CSV outputs
+data/meta/       generated manifests
+public/data/     static bundle loaded by the deployed app
 ```
 
-## Data flow
-
-The data pipeline is intentionally simple and file-based:
-
-1. Raw source snapshots live in `data/raw`.
-2. Python builders normalize them into a common schema in `data/processed`.
-3. Each builder writes a companion manifest to `data/meta`.
-4. `scripts/sync_public_data.py` copies the published subset into `public/data`.
-5. The React app reads `public/data/*` for mouse and CITP, and imports the human dataset directly from `src/lib/humanEvidence.js`.
-
-Published today:
+`scripts/sync_public_data.py` publishes:
 
 - `itp_lifespan_all.csv`
 - `itp_dataset_manifest.json`
-- `citp_lifespan_all.csv`
-- `citp_dataset_manifest.json`
+- split CITP CSV parts plus `citp_dataset_manifest.json`
+- `human_acm_dataset_manifest.json`
 
-Local-only for now:
+It deliberately removes killifish, Drosophila, and UK Biobank metadata manifests
+from `public/data` until those views are meant to ship.
 
-- killifish outputs
-- Drosophila outputs
+## Human ACM View
 
-That split is deliberate. `sync_public_data.py` removes the local-only datasets from `public/data` so they do not ship with the deployed app.
+The human tab uses public supplement data only. It imports:
 
-## Working with content and translations
+- Data Table 2: all 406 no-concentration medication ACM rows with `N>=500`
+- Data Table 4: six Figure 5 medication-class rows
 
-The main places contributors will touch are:
+The UI displays rows with reported `P <= 0.05` and ranks effect as `1 - HR`.
+Top filters split the displayed rows into all, lower ACM, and higher ACM.
 
-- `src/App.jsx` for page composition and high-level UX
-- `src/lib/itp.js` for dataset parsing, ranking, and survival logic
-- `src/lib/interventions.js` for mouse intervention display names and descriptions
-- `src/lib/humanEvidence.js` for the curated human evidence catalog
-- `src/lib/i18n.js` for translation strings and localization helpers
+Data Table 3 dose/formulation rows are not part of the main human table because
+they would duplicate medication-level rows. Data Table 5 is used as source
+context only, not as an ACM result table.
 
-If you add new user-facing strings tied to dataset content:
+No participant-level UK Biobank data is downloaded or included.
 
-- Add the English source string where it belongs
-- Add the matching Chinese translation in `src/lib/i18n.js`
-- Prefer reusing existing translation helpers instead of duplicating translated copy in components
+## Project Layout
 
-## UK Biobank metadata refreshes
-
-To refresh the human all-cause-mortality signal table from the public Morin et al.
-Aging Cell supplement:
-
-```bash
-npm run download:human:acm
-npm run build:human:acm
-npm run prepare:data:public
+```text
+src/App.jsx                  app state, dataset loading, page composition
+src/components/              charts and UI components
+src/lib/itp.js               dataset parsing, rankings, survival helpers
+src/lib/humanEvidence.js     fallback human project-source manifest
+src/lib/i18n.js              translations and localization helpers
+src/lib/pathways.js          pathway diagrams and labels
+scripts/                     download, build, and sync data utilities
 ```
 
-This produces a public site manifest ranked by `1 - HR`, using the paper-level
-screen from Data Table 2 plus the Figure 5 class rows from Data Table 4. The
-source pool contains all 406 no-concentration medication ACM rows with N>=500 and
-adds the six Figure 5 rows for ACE inhibitors, estrogen therapy, PDE5 inhibitors,
-SGLT2 inhibitors, statins, and metformin. The public site displays rows with
-reported `P <= 0.05`; the top filter controls split those displayed rows by ACM
-direction. It uses the public article supplement and public UK Biobank project
-provenance only; it does not download participant-level UK Biobank data.
+## Content And Translation
 
-To refresh public UK Biobank metadata snapshots:
-
-```bash
-npm run download:ukb:metadata
-```
-
-This downloads official UK Biobank Showcase schema TSVs and selected public page snapshots into `data/raw/ukbiobank`. It does not download participant-level UK Biobank data. GitHub/community resources are saved only as discovery metadata and implementation references.
-
-Then rebuild the small local reference manifest:
-
-```bash
-npm run build:ukb:metadata
-```
-
-## Contributing
-
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for the day-to-day workflow, verification expectations, and data/translation conventions.
-
-If you want the short version:
-
-- Use `npm run dev:fast` for most work
-- Use `npm run build` before merging data-affecting changes
-- Include screenshots for UI changes
-- Document provenance for any dataset or evidence updates
+User-facing English source strings should have matching Simplified Chinese
+translations in `src/lib/i18n.js`. Dataset-derived text should go through the
+existing localization helpers instead of duplicating translated copy in
+components.
 
 ## Deployment
 
-Cloudflare Pages deployment notes live in [DEPLOY.md](./DEPLOY.md).
+The Cloudflare Pages project is `livelonger`; `wrangler.toml` points Pages to
+`dist/`.
 
-The repo is configured for direct upload with Wrangler via `wrangler.toml`.
+```bash
+npm run cf:whoami
+npm run cf:deploy
+```
 
-## Notes for maintainers
-
-- The human evidence view is curated in code rather than loaded from CSV.
-- The killifish and Drosophila builders are useful normalization references even though they are not currently exposed in the shipped app.
-- `public/data` should be treated as generated output, not a hand-edited source of truth.
+More setup detail is in [DEPLOY.md](./DEPLOY.md). Day-to-day contribution notes
+are in [CONTRIBUTING.md](./CONTRIBUTING.md).
